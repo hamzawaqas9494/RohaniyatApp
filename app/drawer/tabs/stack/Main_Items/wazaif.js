@@ -1,80 +1,71 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   View,
   Text,
+  Image,
   StyleSheet,
   FlatList,
   TouchableOpacity,
-  ActivityIndicator,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import CustomBackground from "../../../../../components/Background/Background";
 
+const DATA = [
+  {
+    id: "1",
+    icon: require("../../../../../assets/images/wazafIcon.png"),
+    screen: "wazaif_content",
+    text: "وظائف",
+  },
+  {
+    id: "2",
+    icon: require("../../../../../assets/images/rohanielajIcon.png"),
+    screen: "rohani_ilaj_content",
+    text: "روحانی علاج",
+  },
+];
+
 export default function TitleScreen() {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
 
-  useEffect(() => {
-    fetch(
-      "https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=wazaif"
-    )
-      .then((res) => res.json())
-      .then((result) => {
-        console.log(result.rows, "get from db");
-
-        setData(result.rows);
-      })
-      .catch((error) => console.error("Error fetching data:", error))
-      .finally(() => setLoading(false));
-  }, []);
-  // console.log(data.rows[0].title, "get from db");
   return (
     <CustomBackground>
-      <View>
-        {loading ? (
-          <ActivityIndicator size="large" color="#6C472D" />
-        ) : (
-          <FlatList
-            data={data}
-            keyExtractor={(item) => item.id.toString()}
-            contentContainerStyle={styles.list}
-            renderItem={({ item }) => {
-              return item ? (
-                <TouchableOpacity
-                  style={styles.card}
-                  onPress={() =>
-                    navigation.navigate("WazaifDetail/wazaifDetail", {
-                      id: item.id,
-                    })
-                  }
-                >
-                  <Text style={styles.text}>{item && item.title}</Text>
-                </TouchableOpacity>
-              ) : null;
-            }}
-          />
-        )}
+      <View style={styles.container}>
+        <FlatList
+          data={DATA}
+          keyExtractor={(item) => item.id}
+          contentContainerStyle={styles.list}
+          renderItem={({ item }) => (
+            <TouchableOpacity
+              style={styles.card}
+              onPress={() => navigation.navigate(`wazaif_items/${item.screen}`)}
+            >
+              <Image source={item.icon} style={{ width: 30, height: 30 }} />
+              <Text style={styles.text}>{item.text}</Text>
+            </TouchableOpacity>
+          )}
+        />
       </View>
     </CustomBackground>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  list: {
-    alignItems: "center",
-    justifyContent: "center",
-    flexGrow: 1,
-  },
+  // container: {
+  //   justifyContent: "center",
+  //   alignItems: "center",
+  // },
+  // list: {
+  //   alignItems: "center",
+  //   justifyContent: "center",
+  //   flexGrow: 1,
+  // },
   card: {
-    width: 300,
+    flexGrow: 1,
+    width: "100%", // full width
     backgroundColor: "#E4DAC1",
     paddingVertical: 15,
+    paddingHorizontal: 20, // horizontal padding for text inside
     marginBottom: 20,
     borderRadius: 10,
     alignItems: "center",
@@ -82,7 +73,8 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 20,
     fontWeight: "bold",
-    color: "red",
+    color: "#6C472D",
     textAlign: "center",
+    writingDirection: "rtl",
   },
 });

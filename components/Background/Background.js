@@ -15,8 +15,14 @@ const styles = StyleSheet.create({
   background: {
     flex: 1,
     resizeMode: "cover",
+    // height: "100%",
+    // justifyContent: "center",
+    // alignItems: "center",
   },
   container: {
     padding: 25,
+    height: "100%",
+    justifyContent: "center",
+    // alignItems: "center",
   },
 });

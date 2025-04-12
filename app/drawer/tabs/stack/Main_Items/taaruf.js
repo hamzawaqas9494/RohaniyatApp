@@ -31,7 +31,7 @@ export default function TitleScreen() {
           renderItem={({ item }) => (
             <TouchableOpacity
               style={styles.card}
-              onPress={() => navigation.navigate(`Taruf/${item.screen}`)}
+              onPress={() => navigation.navigate(`taruf_items/${item.screen}`)}
             >
               <Text style={styles.text}>{item.text}</Text>
             </TouchableOpacity>

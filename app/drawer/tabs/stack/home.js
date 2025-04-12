@@ -419,14 +419,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   circleContainer: {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
+    // position: "absolute",
+    // top: "45%",
+    // left: "50%",
     width: width,
     height: width,
     justifyContent: "center",
     alignItems: "center",
-    transform: [{ translateX: -width / 2 }, { translateY: -width / 2 }],
+    // transform: [{ translateX: -width / 2 }, { translateY: -width / 2 }],
   },
   centerCard: {
     width: CENTER_CARD_SIZE,
