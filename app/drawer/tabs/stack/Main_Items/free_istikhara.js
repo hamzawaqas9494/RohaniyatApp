@@ -10,7 +10,7 @@ import { useNavigation } from "@react-navigation/native";
 import CustomBackground from "../../../../../components/Background/Background";
 
 const DATA = [
-  { id: "1", screen: "mareedForm", text: "مرید ہونا کے لیے" },
+  { id: "1", screen: "mareedForm", text: "مرید ہونے کیلئے" },
   { id: "2", screen: "rohani_ilaj", text: "روحانی علاج کے لیے" },
   { id: "3", screen: "rohani_taskas", text: "روحانی تسکاس کے لیے" },
   { id: "4", screen: "istakhara", text: "استخارہ کے لیے" },
