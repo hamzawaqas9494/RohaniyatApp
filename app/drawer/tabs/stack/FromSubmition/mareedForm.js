@@ -265,7 +265,7 @@ export default function FormScreen() {
 
     try {
       const response = await fetch(
-        "https://rohaniyat-web.vercel.app/api/email",
+        "https://rohaniyatweb-production-99fc.up.railway.app/api/email",
         {
           method: "POST",
           headers: {
