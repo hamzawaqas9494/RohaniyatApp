@@ -362,7 +362,7 @@ export default function HomeScreen() {
               style={[{ position: "absolute", left: x, top: y }, animatedStyle]}
             >
               <Pressable
-                onPress={() => navigation.navigate(`Main_Items/${item.screen}`)}
+                onPress={() => navigation.navigate(`main_items/${item.screen}`)}
                 style={styles.iconContainer} // Pressable ko sirf iconContainer tak limit karna
               >
                 <ImageBackground

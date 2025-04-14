@@ -19,9 +19,9 @@ const DATA = [
   },
   {
     id: "2",
-    icon: require("../../../../../assets/images/rohanielajIcon.png"),
-    screen: "rohani_ilaj_content",
-    text: "روحانی علاج",
+    icon: require("../../../../../assets/images/tawizatusmaniyaIcon.png"),
+    screen: "tawaiz_content",
+    text: " تعویذات",
   },
 ];
 

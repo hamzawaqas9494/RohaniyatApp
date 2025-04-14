@@ -13,28 +13,21 @@ import CustomBackground from "../../../../../components/Background/Background";
 const DATA = [
   {
     id: "1",
-    icon: require("../../../../../assets/images/tawizatusmaniyaIcon.png"),
-    screen: "amliyat_taruf",
-    text: "عملیات کا تعارف",
+    icon: require("../../../../../assets/images/wazafIcon.png"),
+    screen: "nakosh_mazaj_tarika",
+    text: " نقوش کا مزاج اور طریقہ",
   },
   {
     id: "2",
-    icon: require("../../../../../assets/images/wazafIcon.png"),
-    screen: "aamil_ki_sharait",
-    text: "عامل کے لیے شرائط",
+    icon: require("../../../../../assets/images/tawizatusmaniyaIcon.png"),
+    screen: "nakosh_lawazmat",
+    text: "نقوش کے لوازمات",
   },
-
   {
     id: "3",
     icon: require("../../../../../assets/images/tawizatusmaniyaIcon.png"),
-    screen: "marizon_ke_ilaj",
-    text: "مریضوں کے لیے علاج کورس",
-  },
-  {
-    id: "4",
-    icon: require("../../../../../assets/images/tawizatusmaniyaIcon.png"),
-    screen: "amliyat_chilla_kashi",
-    text: "عملیات اور چلہ کشی",
+    screen: "mujrab_nakosh",
+    text: "مجرب نقوش",
   },
 ];
 
@@ -52,7 +45,7 @@ export default function TitleScreen() {
             <TouchableOpacity
               style={styles.card}
               onPress={() =>
-                navigation.navigate(`amaliyat_course_items/${item.screen}`)
+                navigation.navigate(`wazaif_items/tawaiz_items/${item.screen}`)
               }
             >
               <Image source={item.icon} style={{ width: 30, height: 30 }} />
@@ -71,12 +64,13 @@ const styles = StyleSheet.create({
     width: "100%",
     backgroundColor: "#E4DAC1",
     paddingVertical: 15,
+    paddingHorizontal: 20,
     marginBottom: 20,
     borderRadius: 10,
     alignItems: "center",
   },
   text: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: "bold",
     color: "#6C472D",
     textAlign: "center",

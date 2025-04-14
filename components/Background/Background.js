@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     // alignItems: "center",
   },
   container: {
-    padding: 25,
+    padding: 15,
     height: "100%",
     justifyContent: "center",
     // alignItems: "center",

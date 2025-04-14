@@ -77,11 +77,8 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 300,
   },
-  // content: {
-  //   marginTop: 50,
-  // },
 });
-// General styles for the HTML content
+
 const htmlStyles = StyleSheet.create({
   h1: {
     fontFamily: "Arial",

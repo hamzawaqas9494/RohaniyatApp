@@ -4,7 +4,7 @@ import CustomBackground from "../../../../../components/Background/Background";
 export default function AmliyatCourseScreen() {
   return (
     <CustomBackground>
-      <ScrollView contentContainerStyle={styles.scrollContainer}>
+      <ScrollView>
         <View>
           <Text style={styles.heading}>عملیات کورس</Text>
           <Text style={styles.description}>
@@ -18,12 +18,6 @@ export default function AmliyatCourseScreen() {
 }
 
 const styles = StyleSheet.create({
-  scrollContainer: {
-    flexGrow: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-
   heading: {
     fontSize: 30,
     fontWeight: "bold",
@@ -33,7 +27,7 @@ const styles = StyleSheet.create({
   },
 
   description: {
-    fontSize: 22,
+    fontSize: 18,
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",

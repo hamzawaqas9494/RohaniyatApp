@@ -11,14 +11,15 @@ import CustomBackground from "../../../../../components/Background/Background";
 
 const DATA = [
   { id: "1", screen: "sirprast", text: "سرپرست" },
-  { id: "2", screen: "udra_rohaniyat", text: "ادرا روحانیت" },
+  { id: "2", screen: "udra_rohaniyat", text: "ادارہ روحانیات" },
   { id: "3", screen: "taweezat_usmania", text: "تعویذات عثمانیہ" },
-  { id: "4", screen: "rohani_ishaya", text: "روحانی عشایہ" },
+  { id: "4", screen: "rohani_ishaya", text: "روحانی اشیاء" },
   { id: "5", screen: "rohani_ilaj", text: "روحانی علاج" },
   { id: "6", screen: "amliyat_course", text: "عملیات کورس" },
+  { id: "7", screen: "madrassa_taleem_ul_quran", text: "مدرسہ تعلیم القرآن" },
 ];
 
-export default function TitleScreen() {
+export default function Taaruf() {
   const navigation = useNavigation();
 
   return (
@@ -43,21 +44,21 @@ export default function TitleScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  list: {
-    alignItems: "center",
-    justifyContent: "center",
-    flexGrow: 1,
-  },
+  // // container: {
+  // //   justifyContent: "center",
+  // //   alignItems: "center",
+  // // },
+  // list: {
+  //   // alignItems: "center",
+  //   // justifyContent: "center",
+  //   // flexGrow: 1,
+  // },
   card: {
-    width: 300,
+    width: "100%",
     backgroundColor: "#E4DAC1",
     paddingVertical: 15,
     marginBottom: 20,
-    borderRadius: 10,
+    borderRadius: 5,
     alignItems: "center",
   },
   text: {
@@ -65,6 +66,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#6C472D",
     textAlign: "center",
-    writingDirection: "rtl",
+    // writingDirection: "rtl",
   },
 });

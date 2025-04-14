@@ -14,27 +14,21 @@ const DATA = [
   {
     id: "1",
     icon: require("../../../../../assets/images/tawizatusmaniyaIcon.png"),
-    screen: "amliyat_taruf",
-    text: "عملیات کا تعارف",
+    screen: "rohani_tashkhess_tararuf",
+    text: "روحانی تشخیص کا تعارف",
   },
   {
     id: "2",
     icon: require("../../../../../assets/images/wazafIcon.png"),
-    screen: "aamil_ki_sharait",
-    text: "عامل کے لیے شرائط",
+    screen: "fard_ki_tashkhess",
+    text: "فرد کی تشخیص کرنے کا طریقہ",
   },
 
   {
     id: "3",
     icon: require("../../../../../assets/images/tawizatusmaniyaIcon.png"),
-    screen: "marizon_ke_ilaj",
-    text: "مریضوں کے لیے علاج کورس",
-  },
-  {
-    id: "4",
-    icon: require("../../../../../assets/images/tawizatusmaniyaIcon.png"),
-    screen: "amliyat_chilla_kashi",
-    text: "عملیات اور چلہ کشی",
+    screen: "jaga_ki_tashkhess",
+    text: " جگہ کی تشخیص کرنے کا طریقہ",
   },
 ];
 
@@ -52,7 +46,9 @@ export default function TitleScreen() {
             <TouchableOpacity
               style={styles.card}
               onPress={() =>
-                navigation.navigate(`amaliyat_course_items/${item.screen}`)
+                navigation.navigate(
+                  `rohani_ilaj/rohani_tashkhees_items/${item.screen}`
+                )
               }
             >
               <Image source={item.icon} style={{ width: 30, height: 30 }} />

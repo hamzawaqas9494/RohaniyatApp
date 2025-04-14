@@ -4,14 +4,15 @@ import CustomBackground from "../../../../../components/Background/Background";
 export default function SirparastScreen() {
   return (
     <CustomBackground>
-      <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <Image
-          source={require("../../../../../assets/images/sarprastLogo.jpg")}
-          style={styles.image}
-        />
-
+      <ScrollView>
+        <View style={styles.image_section}>
+          <Image
+            source={require("../../../../../assets/images/sarprastLogo.jpg")}
+            style={styles.image}
+          />
+        </View>
         <View>
-          <Text style={styles.heading}>مختصر تعارف:</Text>
+          <Text style={styles.heading}>مختصر تعارف</Text>
           <Text style={styles.description}>
             بانی و سرپرست اعلی ادارہ روحانیات و مدرسہ تعلیم القرآن لاہور ۔پیر
             طریقت حضرت مولاناحافظ و قاری محمد عثمان چشتی ،قادری، نقشبندی
@@ -87,29 +88,25 @@ export default function SirparastScreen() {
 }
 
 const styles = StyleSheet.create({
-  scrollContainer: {
-    flexGrow: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-
-  image: {
-    width: 210,
-    height: 250,
-    marginTop: 10,
-    marginBottom: 30,
-  },
-
   heading: {
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: "bold",
     color: "#6C472D",
     textAlign: "right",
     marginBottom: 10,
+    writingDirection: "rtl",
   },
-
+  image_section: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  image: {
+    width: 210,
+    height: 250,
+    marginBottom: 20,
+  },
   description: {
-    fontSize: 22,
+    fontSize: 18,
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",

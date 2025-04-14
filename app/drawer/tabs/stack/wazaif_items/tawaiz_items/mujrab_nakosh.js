@@ -8,7 +8,7 @@ import {
   ActivityIndicator,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import CustomBackground from "../../../../../components/Background/Background";
+import CustomBackground from "../../../../../../components/Background/Background";
 
 export default function TitleScreen() {
   const [data, setData] = useState([]);
