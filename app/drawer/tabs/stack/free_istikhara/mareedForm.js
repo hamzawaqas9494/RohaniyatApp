@@ -1592,7 +1592,7 @@ export default function FormScreen() {
 
     try {
       const response = await fetch(
-        "https://rohaniyatweb-production-99fc.up.railway.app/api/email",
+        "https://rohaniyatweb-production-99fc.up.railway.app/api/mureed_form",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -1641,7 +1641,7 @@ export default function FormScreen() {
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <ScrollView>
           <Text style={styles.heading}>مرید ہونے کیلئے</Text>
-          <Text style={styles.content}>
+          <Text style={styles.description}>
             الحمد للہ اس سروس کے ذریعے ہزاروں لوگ ہمارے سلسلے میں داخل ہو رہے
             ہیں ان کو ای میل یا واٹس اپ کے ذریعے سلسلے کے تمام وظائف و اذکار
             بھیج دئے جاتے ہیں اور وقتا فوقتا ان کی رہنمائی بھی کی جاتی ہے یاد
@@ -1720,23 +1720,23 @@ export default function FormScreen() {
 
 const styles = StyleSheet.create({
   heading: {
-    fontSize: 26,
+    fontSize: 25,
     fontWeight: "bold",
-    color: "#6D4C41",
+    color: "#6C472D",
     textAlign: "center",
-  },
-  content: {
-    marginTop: 20,
-    marginBottom: 20,
-    fontFamily: "Arial",
-    fontSize: 18,
-
-    color: "#6D4C41",
-    lineHeight: 24,
-    justifyContent: "center",
+    marginBottom: 10,
     writingDirection: "rtl",
-    textAlign: "right",
   },
+
+  description: {
+    fontSize: 18,
+    color: "#6C472D",
+    lineHeight: 30,
+    textAlign: "right",
+    writingDirection: "rtl",
+    marginBottom: 10,
+  },
+
   input: {
     width: "100%",
     padding: 10,
@@ -1744,7 +1744,7 @@ const styles = StyleSheet.create({
     borderColor: "#6D4C41",
     color: "#6D4C41",
     borderRadius: 10,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "#EFEADF",
     fontSize: 16,
     borderWidth: 2,
   },

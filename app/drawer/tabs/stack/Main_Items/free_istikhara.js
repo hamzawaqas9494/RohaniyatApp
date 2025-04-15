@@ -11,7 +11,7 @@ import CustomBackground from "../../../../../components/Background/Background";
 
 const DATA = [
   { id: "1", screen: "mareedForm", text: "مرید ہونے کیلئے" },
-  { id: "2", screen: "rohani_ilaj", text: "روحانی علاج کے لیے" },
+  { id: "2", screen: "rohaniIlajForm", text: "روحانی علاج کے لیے" },
   { id: "3", screen: "rohani_taskas", text: "روحانی تسکاس کے لیے" },
   { id: "4", screen: "istakhara", text: "استخارہ کے لیے" },
   { id: "5", screen: "atiyar", text: "عطیات کے لیے" },
@@ -32,7 +32,7 @@ export default function TitleScreen() {
             <TouchableOpacity
               style={styles.card}
               onPress={() =>
-                navigation.navigate(`FromSubmition/${item.screen}`)
+                navigation.navigate(`free_istikhara/${item.screen}`)
               }
             >
               <Text style={styles.text}>{item.text}</Text>
