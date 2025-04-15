@@ -11,7 +11,6 @@ import {
   Modal,
   Animated,
 } from "react-native";
-import DateTimePicker from "@react-native-community/datetimepicker";
 import CustomBackground from "../../../../../components/Background/Background";
 
 export default function RohaniIlaj() {
@@ -29,8 +28,6 @@ export default function RohaniIlaj() {
   const [errors, setErrors] = useState({});
   const [showModal, setShowModal] = useState(false);
   const [modalMsg, setModalMsg] = useState("");
-  const [showDatePicker, setShowDatePicker] = useState(false);
-  const [selectedDate, setSelectedDate] = useState(new Date());
   const slideAnim = useRef(new Animated.Value(-300)).current;
 
   const handleChange = (key, value) => {
@@ -47,7 +44,7 @@ export default function RohaniIlaj() {
         if (key === "email" && !value.endsWith("@gmail.com")) {
           newErrors[key] = "Only Gmail addresses allowed";
         }
-        if (["age", "whatsappNumber"].includes(key) && isNaN(value)) {
+        if (key === "whatsappNumber" && isNaN(value)) {
           newErrors[key] = `${formatKey(key)} must be a number`;
         }
       }
@@ -118,15 +115,6 @@ export default function RohaniIlaj() {
     }
   };
 
-  const onDateChange = (event, date) => {
-    if (date) {
-      const formattedDate = date.toISOString().split("T")[0];
-      handleChange("dateOfBirth", formattedDate);
-      setSelectedDate(date);
-    }
-    setShowDatePicker(false);
-  };
-
   return (
     <CustomBackground>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
@@ -139,53 +127,24 @@ export default function RohaniIlaj() {
             رہے تصوف اور عملیات دونوں علیحدہ علیحدہ شعبے ہیں
           </Text>
 
-          {Object.keys(formData).map((key) => {
-            if (key === "dateOfBirth") {
-              return (
-                <View key={key} style={{ width: "100%", marginBottom: 12 }}>
-                  <TouchableOpacity
-                    onPress={() => setShowDatePicker(true)}
-                    style={styles.input}
-                  >
-                    <Text style={{ color: formData[key] ? "#000" : "#999" }}>
-                      {formData[key] || "Date Of Birth"}
-                    </Text>
-                  </TouchableOpacity>
-                  {errors[key] && (
-                    <Text style={styles.error}>{errors[key]}</Text>
-                  )}
-                  {showDatePicker && (
-                    <DateTimePicker
-                      value={selectedDate}
-                      mode="date"
-                      display="default"
-                      onChange={onDateChange}
-                      maximumDate={new Date()}
-                    />
-                  )}
-                </View>
-              );
-            }
-
-            return (
-              <View key={key} style={{ width: "100%", marginBottom: 12 }}>
-                <TextInput
-                  style={styles.input}
-                  placeholder={formatKey(key)}
-                  value={formData[key]}
-                  onChangeText={(text) => handleChange(key, text)}
-                  keyboardType={
-                    key === "email"
-                      ? "email-address"
-                      : ["age", "whatsappNumber"].includes(key)
-                      ? "numeric"
-                      : "default"
-                  }
-                />
-                {errors[key] && <Text style={styles.error}>{errors[key]}</Text>}
-              </View>
-            );
-          })}
+          {Object.keys(formData).map((key) => (
+            <View key={key} style={{ width: "100%", marginBottom: 12 }}>
+              <TextInput
+                style={styles.input}
+                placeholder={formatKey(key)}
+                value={formData[key]}
+                onChangeText={(text) => handleChange(key, text)}
+                keyboardType={
+                  key === "email"
+                    ? "email-address"
+                    : key === "whatsappNumber"
+                    ? "numeric"
+                    : "default"
+                }
+              />
+              {errors[key] && <Text style={styles.error}>{errors[key]}</Text>}
+            </View>
+          ))}
 
           <TouchableOpacity style={styles.button} onPress={handleSubmit}>
             <Text style={styles.buttonText}>📩 Submit</Text>
@@ -193,12 +152,7 @@ export default function RohaniIlaj() {
 
           <Modal transparent visible={showModal} animationType="none">
             <Animated.View
-              style={[
-                styles.modal,
-                {
-                  transform: [{ translateY: slideAnim }],
-                },
-              ]}
+              style={[styles.modal, { transform: [{ translateY: slideAnim }] }]}
             >
               <Text style={styles.modalText}>{modalMsg}</Text>
             </Animated.View>
@@ -218,7 +172,6 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     writingDirection: "rtl",
   },
-
   description: {
     fontSize: 18,
     color: "#6C472D",
@@ -227,17 +180,15 @@ const styles = StyleSheet.create({
     writingDirection: "rtl",
     marginBottom: 10,
   },
-
   input: {
     width: "100%",
     padding: 10,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: "#6D4C41",
     color: "#6D4C41",
     borderRadius: 10,
     backgroundColor: "#EFEADF",
     fontSize: 16,
-    borderWidth: 2,
   },
   error: {
     color: "red",
