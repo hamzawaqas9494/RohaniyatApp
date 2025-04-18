@@ -18,16 +18,15 @@ const DATA = [
   { id: "6", screen: "amliyat_course", text: "عملیات کورس کے لیے" },
 ];
 
-export default function TitleScreen() {
+export default function FreeIstikhara() {
   const navigation = useNavigation();
 
   return (
     <CustomBackground>
-      <View style={styles.container}>
+      <View>
         <FlatList
           data={DATA}
           keyExtractor={(item) => item.id}
-          contentContainerStyle={styles.list}
           renderItem={({ item }) => (
             <TouchableOpacity
               style={styles.card}
@@ -45,21 +44,13 @@ export default function TitleScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  list: {
-    alignItems: "center",
-    justifyContent: "center",
-    flexGrow: 1,
-  },
   card: {
-    width: 300,
+    width: "100%",
     backgroundColor: "#E4DAC1",
     paddingVertical: 15,
-    marginBottom: 20,
-    borderRadius: 10,
+    marginTop: 10,
+    marginBottom: 10,
+    borderRadius: 5,
     alignItems: "center",
   },
   text: {
@@ -67,6 +58,5 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#6C472D",
     textAlign: "center",
-    writingDirection: "rtl",
   },
 });

@@ -17,7 +17,7 @@ export default function TitleScreen() {
 
   useEffect(() => {
     fetch(
-      "https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=wazaif"
+      "https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=Wazaif"
     )
       .then((res) => res.json())
       .then((result) => {
@@ -26,33 +26,35 @@ export default function TitleScreen() {
       .catch((error) => console.error("Error fetching data:", error))
       .finally(() => setLoading(false));
   }, []);
+
   return (
     <CustomBackground>
       <View>
         {loading ? (
-          <ActivityIndicator size="large" color="#6C472D" />
+          <View style={styles.centerContent}>
+            <ActivityIndicator size="large" color="#6C472D" />
+          </View>
+        ) : data.length === 0 ? (
+          <View style={styles.centerContent}>
+            <Text style={styles.noDataText}>کوئی ریکارڈ موجود نہیں ہے</Text>
+          </View>
         ) : (
           <FlatList
             data={data}
             keyExtractor={(item) => item.id.toString()}
             contentContainerStyle={styles.list}
-            renderItem={({ item }) => {
-              return item ? (
-                <TouchableOpacity
-                  style={styles.card}
-                  onPress={() =>
-                    navigation.navigate(
-                      "rohani_ilaj/jadu_jinnat_ilaaj_detail",
-                      {
-                        id: item.id,
-                      }
-                    )
-                  }
-                >
-                  <Text style={styles.text}>{item && item.title}</Text>
-                </TouchableOpacity>
-              ) : null;
-            }}
+            renderItem={({ item }) => (
+              <TouchableOpacity
+                style={styles.card}
+                onPress={() =>
+                  navigation.navigate("wazaif_items/wazaif_content_detail", {
+                    id: item.id,
+                  })
+                }
+              >
+                <Text style={styles.text}>{item.title}</Text>
+              </TouchableOpacity>
+            )}
           />
         )}
       </View>
@@ -61,20 +63,24 @@ export default function TitleScreen() {
 }
 
 const styles = StyleSheet.create({
-  list: {
-    // alignItems: "center",
-    // justifyContent: "center",
-    // flexGrow: 1,
-    // width: "100%", // full width
+  centerContent: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  noDataText: {
+    fontSize: 18,
+    color: "#6C472D",
+    fontWeight: "600",
+    textAlign: "center",
   },
   card: {
-    flexGrow: 1,
-    width: "100%", // full width
+    width: "100%",
     backgroundColor: "#E4DAC1",
     paddingVertical: 15,
-    paddingHorizontal: 20, // horizontal padding for text inside
-    marginBottom: 20,
-    borderRadius: 10,
+    marginTop: 10,
+    marginBottom: 10,
+    borderRadius: 5,
     alignItems: "center",
   },
   text: {

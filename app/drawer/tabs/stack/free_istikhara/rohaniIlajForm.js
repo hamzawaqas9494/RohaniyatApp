@@ -1,167 +1,337 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import {
   View,
   Text,
   TextInput,
-  StyleSheet,
   TouchableOpacity,
   ScrollView,
-  Keyboard,
+  StyleSheet,
+  KeyboardAvoidingView,
+  Platform,
   TouchableWithoutFeedback,
+  Keyboard,
   Modal,
-  Animated,
 } from "react-native";
+import { Picker } from "@react-native-picker/picker";
 import CustomBackground from "../../../../../components/Background/Background";
 
-export default function RohaniIlaj() {
+export default RohaniIlaj = () => {
   const [formData, setFormData] = useState({
-    patientName: "",
+    name: "",
     fatherName: "",
     motherName: "",
     country: "",
     cityName: "",
+    day: "",
+    month: "",
+    year: "",
+    age: "",
     whatsappNumber: "",
     email: "",
+    gender: "",
+    status: "",
     disease: "",
   });
 
-  const [errors, setErrors] = useState({});
-  const [showModal, setShowModal] = useState(false);
-  const [modalMsg, setModalMsg] = useState("");
-  const slideAnim = useRef(new Animated.Value(-300)).current;
+  const [modalVisible, setModalVisible] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
 
   const handleChange = (key, value) => {
-    setFormData((prev) => ({ ...prev, [key]: value }));
-    setErrors((prev) => ({ ...prev, [key]: null }));
+    setFormData({ ...formData, [key]: value });
   };
 
-  const validateForm = () => {
-    const newErrors = {};
-    Object.entries(formData).forEach(([key, value]) => {
-      if (!value) {
-        newErrors[key] = `Please fill in the ${formatKey(key)}`;
-      } else {
-        if (key === "email" && !value.endsWith("@gmail.com")) {
-          newErrors[key] = "Only Gmail addresses allowed";
-        }
-        if (key === "whatsappNumber" && isNaN(value)) {
-          newErrors[key] = `${formatKey(key)} must be a number`;
-        }
+  useEffect(() => {
+    const { day, month, year } = formData;
+    if (day && month && year) {
+      const birthDate = new Date(`${year}-${month}-${day}`);
+      const today = new Date();
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const m = today.getMonth() - birthDate.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
       }
-    });
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const formatKey = (key) =>
-    key.replace(/([A-Z])/g, " $1").replace(/^./, (s) => s.toUpperCase());
-
-  const showAnimatedModal = (msg) => {
-    setModalMsg(msg);
-    setShowModal(true);
-    Animated.timing(slideAnim, {
-      toValue: 0,
-      duration: 700,
-      useNativeDriver: true,
-    }).start(() => {
-      setTimeout(() => {
-        Animated.timing(slideAnim, {
-          toValue: -700,
-          duration: 700,
-          useNativeDriver: true,
-        }).start(() => {
-          setShowModal(false);
-        });
-      }, 2500);
-    });
-  };
+      if (!isNaN(age)) {
+        setFormData((prevData) => ({ ...prevData, age: String(age) }));
+      }
+    }
+  }, [formData.day, formData.month, formData.year]);
 
   const handleSubmit = async () => {
-    if (!validateForm()) {
-      showAnimatedModal("Please fix the errors above.");
-      return;
+    let formErrors = {};
+
+    if (!formData.name) {
+      formErrors.name = "Name is required";
+    } else if (!formData.fatherName) {
+      formErrors.fatherName = "Father's Name is required";
+    } else if (!formData.motherName) {
+      formErrors.motherName = "Mother's Name is required";
+    } else if (!formData.country) {
+      formErrors.country = "Country is required";
+    } else if (!formData.cityName) {
+      formErrors.cityName = "City is required";
+    } else if (!formData.day || !formData.month || !formData.year) {
+      formErrors.dob = "Date of Birth is required";
+    } else if (!formData.whatsappNumber) {
+      formErrors.whatsappNumber = "WhatsApp number is required";
+    } else if (!/^\d+$/.test(formData.whatsappNumber)) {
+      formErrors.whatsappNumber =
+        "Please enter a valid phone number (only numbers)";
+    } else if (!formData.email) {
+      formErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      formErrors.email = "Please enter a valid email address";
+    } else if (!formData.gender) {
+      formErrors.gender = "Gender is required";
+    } else if (!formData.status) {
+      formErrors.status = "Status is required";
+    } else if (!formData.disease) {
+      formErrors.disease = "Nature Of Disease";
     }
 
-    try {
-      const response = await fetch(
-        "https://rohaniyatweb-production-99fc.up.railway.app/api/rohani_ilaj_form",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
+    if (Object.keys(formErrors).length === 0) {
+      try {
+        const response = await fetch(
+          "https://rohaniyatweb-production-99fc.up.railway.app/api/rohani_ilaj_form",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          }
+        );
+
+        if (response.ok) {
+          setModalMessage("Form submitted successfully!");
+          setModalVisible(true);
+          setFormData({
+            name: "",
+            fatherName: "",
+            motherName: "",
+            country: "",
+            cityName: "",
+            day: "",
+            month: "",
+            year: "",
+            age: "",
+            whatsappNumber: "",
+            email: "",
+            gender: "",
+            status: "",
+            disease: "",
+          });
+        } else {
+          const result = await response.json();
+          setModalMessage(`Error: ${result.message || "Submission failed."}`);
+          setModalVisible(true);
         }
-      );
-
-      const data = await response.json();
-
-      if (response.ok) {
-        showAnimatedModal("Form submitted successfully!");
-        setFormData({
-          patientName: "",
-          fatherName: "",
-          motherName: "",
-          country: "",
-          cityName: "",
-          whatsappNumber: "",
-          email: "",
-          disease: "",
-        });
-      } else {
-        showAnimatedModal(data.error || "Submission failed.");
+      } catch (err) {
+        setModalMessage("Network error: Unable to submit form.");
+        setModalVisible(true);
       }
-    } catch (error) {
-      console.error(error);
-      showAnimatedModal("Something went wrong.");
+    } else {
+      const errorMessages = Object.values(formErrors).join("\n");
+      setModalMessage(errorMessages);
+      setModalVisible(true);
     }
   };
 
   return (
     <CustomBackground>
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <ScrollView>
-          <Text style={styles.heading}>روحانی علاج کے لیے</Text>
-          <Text style={styles.description}>
-            الحمد للہ اس سروس کے ذریعے ہزاروں لوگ ہمارے سلسلے میں داخل ہو رہے
-            ہیں ان کو ای میل یا واٹس اپ کے ذریعے سلسلے کے تمام وظائف و اذکار
-            بھیج دئے جاتے ہیں اور وقتا فوقتا ان کی رہنمائی بھی کی جاتی ہے یاد
-            رہے تصوف اور عملیات دونوں علیحدہ علیحدہ شعبے ہیں
-          </Text>
+      <KeyboardAvoidingView
+        style={{ flex: 1 }}
+        behavior={Platform.OS === "ios" ? "padding" : undefined}
+      >
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+          <ScrollView>
+            <Text style={styles.heading}>روحانی علاج کے لیے</Text>
+            <Text style={styles.description}>
+              الحمد للہ اس سروس کے ذریعے ہزاروں لوگ ہمارے سلسلے میں داخل ہو رہے
+              ہیں ان کو ای میل یا واٹس اپ کے ذریعے سلسلے کے تمام وظائف و اذکار
+              بھیج دئے جاتے ہیں اور وقتا فوقتا ان کی رہنمائی بھی کی جاتی ہے یاد
+              رہے تصوف اور عملیات دونوں علیحدہ علیحدہ شعبے ہیں
+            </Text>
 
-          {Object.keys(formData).map((key) => (
-            <View key={key} style={{ width: "100%", marginBottom: 12 }}>
-              <TextInput
-                style={styles.input}
-                placeholder={formatKey(key)}
-                value={formData[key]}
-                onChangeText={(text) => handleChange(key, text)}
-                keyboardType={
-                  key === "email"
-                    ? "email-address"
-                    : key === "whatsappNumber"
-                    ? "numeric"
-                    : "default"
-                }
-              />
-              {errors[key] && <Text style={styles.error}>{errors[key]}</Text>}
+            {[
+              { label: "Name", key: "name", keyboardType: "default" },
+              {
+                label: "Father's Name",
+                key: "fatherName",
+                keyboardType: "default",
+              },
+              {
+                label: "Mother's Name",
+                key: "motherName",
+                keyboardType: "default",
+              },
+              { label: "Country", key: "country", keyboardType: "default" },
+              { label: "City", key: "cityName", keyboardType: "default" },
+              {
+                label: "WhatsApp Number",
+                key: "whatsappNumber",
+                keyboardType: "phone-pad",
+              },
+              { label: "Email", key: "email", keyboardType: "email-address" },
+            ].map(({ label, key, keyboardType }) => (
+              <View style={styles.inputRow} key={key}>
+                <Text style={styles.label}>{label}:</Text>
+                <TextInput
+                  style={styles.inputBox}
+                  value={formData[key]}
+                  onChangeText={(value) => handleChange(key, value)}
+                  keyboardType={keyboardType}
+                />
+              </View>
+            ))}
+
+            {/* DOB */}
+            <View style={styles.inputRow}>
+              <Text style={styles.label}>DOB:</Text>
+              <View style={styles.datePickers}>
+                <Picker
+                  selectedValue={formData.day}
+                  style={styles.pickerInput}
+                  onValueChange={(value) => handleChange("day", value)}
+                >
+                  <Picker.Item label="Day" value="" />
+                  {Array.from({ length: 31 }, (_, i) => (
+                    <Picker.Item
+                      key={i + 1}
+                      label={`${i + 1}`}
+                      value={`${i + 1}`}
+                    />
+                  ))}
+                </Picker>
+
+                <Picker
+                  selectedValue={formData.month}
+                  style={styles.pickerInput}
+                  onValueChange={(value) => handleChange("month", value)}
+                >
+                  <Picker.Item label="Month" value="" />
+                  {[
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December",
+                  ].map((m, i) => (
+                    <Picker.Item key={i + 1} label={m} value={`${i + 1}`} />
+                  ))}
+                </Picker>
+
+                <Picker
+                  selectedValue={formData.year}
+                  style={styles.pickerInput}
+                  onValueChange={(value) => handleChange("year", value)}
+                >
+                  <Picker.Item label="Year" value="" />
+                  {Array.from({ length: 100 }, (_, i) => {
+                    const year = new Date().getFullYear() - i;
+                    return (
+                      <Picker.Item
+                        key={year}
+                        label={`${year}`}
+                        value={`${year}`}
+                      />
+                    );
+                  })}
+                </Picker>
+              </View>
             </View>
-          ))}
 
-          <TouchableOpacity style={styles.button} onPress={handleSubmit}>
-            <Text style={styles.buttonText}>📩 Submit</Text>
-          </TouchableOpacity>
+            {/* Age */}
+            <View style={styles.inputRow}>
+              <Text style={styles.label}>Age:</Text>
+              <TextInput
+                style={[styles.inputBox, { backgroundColor: "white" }]}
+                value={formData.age}
+                editable={false}
+              />
+            </View>
 
-          <Modal transparent visible={showModal} animationType="none">
-            <Animated.View
-              style={[styles.modal, { transform: [{ translateY: slideAnim }] }]}
+            {/* Gender Picker */}
+            <View style={styles.inputRow}>
+              <Text style={styles.label}>Gender:</Text>
+              <Picker
+                selectedValue={formData.gender}
+                style={styles.pickerInput}
+                onValueChange={(value) => handleChange("gender", value)}
+              >
+                <Picker.Item label="Select Gender" value="" />
+                <Picker.Item label="Male" value="Male" />
+                <Picker.Item label="Female" value="Female" />
+                <Picker.Item label="Other" value="Other" />
+              </Picker>
+            </View>
+
+            {/* Status Picker */}
+            <View style={styles.inputRow}>
+              <Text style={styles.label}>Status:</Text>
+              <Picker
+                selectedValue={formData.status}
+                style={styles.pickerInput}
+                onValueChange={(value) => handleChange("status", value)}
+              >
+                <Picker.Item label="Select Status" value="" />
+                <Picker.Item label="Single" value="Single" />
+                <Picker.Item label="Married" value="Married" />
+              </Picker>
+            </View>
+
+            {/* Additional Info Textarea */}
+            <View style={styles.inputRow}>
+              <Text style={styles.label}>Nature Of Disease:</Text>
+              <TextInput
+                style={[
+                  styles.inputBox,
+                  { height: 60, textAlignVertical: "top" },
+                ]}
+                value={formData.natureOfBait}
+                onChangeText={(value) => handleChange("disease", value)}
+                multiline
+              />
+            </View>
+
+            <TouchableOpacity style={styles.button} onPress={handleSubmit}>
+              <Text style={styles.buttonText}>Submit</Text>
+            </TouchableOpacity>
+
+            {/* Modal for errors or success */}
+            <Modal
+              visible={modalVisible}
+              transparent
+              animationType="slide"
+              onRequestClose={() => setModalVisible(false)}
             >
-              <Text style={styles.modalText}>{modalMsg}</Text>
-            </Animated.View>
-          </Modal>
-        </ScrollView>
-      </TouchableWithoutFeedback>
+              <View style={styles.modalBackground}>
+                <View style={styles.modalContainer}>
+                  <Text style={styles.modalText}>{modalMessage}</Text>
+                  <TouchableOpacity
+                    style={[
+                      styles.button,
+                      { backgroundColor: "#6C472D", marginTop: 10 },
+                    ]}
+                    onPress={() => setModalVisible(false)}
+                  >
+                    <Text style={styles.buttonText}>Close</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </Modal>
+          </ScrollView>
+        </TouchableWithoutFeedback>
+      </KeyboardAvoidingView>
     </CustomBackground>
   );
-}
+};
 
 const styles = StyleSheet.create({
   heading: {
@@ -169,65 +339,74 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#6C472D",
     textAlign: "center",
-    marginBottom: 10,
     writingDirection: "rtl",
   },
   description: {
-    fontSize: 18,
+    marginTop: 10,
+    fontSize: 16,
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",
-    marginBottom: 10,
   },
-  input: {
-    width: "100%",
-    padding: 10,
-    borderWidth: 2,
-    borderColor: "#6D4C41",
-    color: "#6D4C41",
-    borderRadius: 10,
-    backgroundColor: "#EFEADF",
+
+  inputRow: {
+    flex: 1,
+    marginBottom: 8,
+  },
+  label: {
+    color: "#6C472D",
+    fontWeight: "bold",
+    marginBottom: 6,
+    fontSize: 14,
+  },
+  inputBox: {
+    paddingHorizontal: 10,
+    paddingVertical: 14,
+    color: "#6C472D",
     fontSize: 16,
+    backgroundColor: "#fff",
   },
-  error: {
-    color: "red",
-    fontSize: 12,
-    marginTop: 4,
+  datePickers: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  pickerInput: {
+    color: "#6C472D",
+    flex: 1,
+    marginHorizontal: 2,
+    flex: 1,
+    backgroundColor: "#fff",
   },
   button: {
-    backgroundColor: "#6D4C41",
-    padding: 15,
-    borderRadius: 10,
+    backgroundColor: "#6C472D",
+    paddingVertical: 14,
+    borderRadius: 5,
     alignItems: "center",
-    marginTop: 10,
-    width: "100%",
+    marginTop: 6,
   },
   buttonText: {
-    color: "#FFFFFF",
+    color: "#fff",
     fontSize: 18,
     fontWeight: "bold",
   },
-  modal: {
-    position: "absolute",
-    top: "50%",
-    left: 40,
-    right: 40,
-    padding: 20,
-    backgroundColor: "#6D4C41",
-    borderRadius: 12,
-    shadowColor: "#000",
-    shadowOpacity: 0.3,
-    shadowRadius: 10,
-    elevation: 10,
+  modalBackground: {
+    flex: 1,
+    backgroundColor: "rgba(0,0,0,0.5)",
+    justifyContent: "center",
     alignItems: "center",
   },
+  modalContainer: {
+    width: "80%",
+    backgroundColor: "#fff",
+    padding: 10,
+    borderRadius: 5,
+    elevation: 10,
+  },
   modalText: {
-    color: "#FFFFFF",
-    fontSize: 18,
-    fontWeight: "bold",
-    textAlign: "center",
-    padding: 15,
-    borderRadius: 10,
+    fontSize: 16,
+    color: "#333",
   },
 });
+
+// export default FormScreen;

@@ -243,6 +243,7 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 import IdaraRohaniyat from "../../../../components/link/link";
+import ShareApp from "../../../../components/ShareApp/shareApp";
 
 const { width, height } = Dimensions.get("window");
 
@@ -320,8 +321,10 @@ export default function HomeScreen() {
       source={require("../../../../assets/images/background.png")}
       style={styles.background}
     >
+      {/* ShareApp Component */}
+      <ShareApp />
+
       <View style={styles.circleContainer}>
-        {/* Center Logo */}
         <View style={styles.centerCard}>
           <Image
             source={require("../../../../assets/images/ss.png")}
@@ -363,7 +366,7 @@ export default function HomeScreen() {
             >
               <Pressable
                 onPress={() => navigation.navigate(`main_items/${item.screen}`)}
-                style={styles.iconContainer} // Pressable ko sirf iconContainer tak limit karna
+                style={styles.iconContainer}
               >
                 <ImageBackground
                   source={item.image}

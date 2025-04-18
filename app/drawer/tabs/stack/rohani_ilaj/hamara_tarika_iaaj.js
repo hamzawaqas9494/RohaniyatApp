@@ -1,12 +1,12 @@
 import { View, Text, StyleSheet, ScrollView } from "react-native";
-import CustomBackground from "../../../../../../components/Background/Background";
+import CustomBackground from "../../../../../components/Background/Background";
 
-export default function JagaTashkhess() {
+export default function HamaraTarikaIlajScreen() {
   return (
     <CustomBackground>
       <ScrollView>
         <View>
-          <Text style={styles.heading}>جگہ کی تشخیص کرنے کا طریقہ</Text>
+          <Text style={styles.heading}>ہمارا طریقہ علاج</Text>
           <Text style={styles.description}>
             عملیات کورس میں روحانی علوم اور عملیات کے اصول سکھائے جاتے ہیں تاکہ
             لوگ قرآنی اور اسلامی طریقے سے اپنی زندگی بہتر بنا سکیں۔

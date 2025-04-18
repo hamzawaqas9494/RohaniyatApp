@@ -11,7 +11,7 @@ import CustomBackground from "../../../../../components/Background/Background";
 
 const DATA = [
   { id: "1", screen: "sirprast", text: "سرپرست" },
-  { id: "2", screen: "udra_rohaniyat", text: "ادارہ روحانیات" },
+  { id: "2", screen: "idara_rohaniyat", text: "ادارہ روحانیات" },
   { id: "3", screen: "taweezat_usmania", text: "تعویذات عثمانیہ" },
   { id: "4", screen: "rohani_ishaya", text: "روحانی اشیاء" },
   { id: "5", screen: "rohani_ilaj", text: "روحانی علاج" },
@@ -24,11 +24,10 @@ export default function Taaruf() {
 
   return (
     <CustomBackground>
-      <View style={styles.container}>
+      <View>
         <FlatList
           data={DATA}
           keyExtractor={(item) => item.id}
-          contentContainerStyle={styles.list}
           renderItem={({ item }) => (
             <TouchableOpacity
               style={styles.card}
@@ -44,20 +43,12 @@ export default function Taaruf() {
 }
 
 const styles = StyleSheet.create({
-  // // container: {
-  // //   justifyContent: "center",
-  // //   alignItems: "center",
-  // // },
-  // list: {
-  //   // alignItems: "center",
-  //   // justifyContent: "center",
-  //   // flexGrow: 1,
-  // },
   card: {
     width: "100%",
     backgroundColor: "#E4DAC1",
     paddingVertical: 15,
-    marginBottom: 20,
+    marginTop: 10,
+    marginBottom: 10,
     borderRadius: 5,
     alignItems: "center",
   },
@@ -66,6 +57,5 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#6C472D",
     textAlign: "center",
-    // writingDirection: "rtl",
   },
 });

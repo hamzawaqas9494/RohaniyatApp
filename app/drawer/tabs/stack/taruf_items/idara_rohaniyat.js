@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import CustomBackground from "../../../../../components/Background/Background";
 
-export default function AdraRohaniyatScreen() {
+export default function IdaraRohaniyatScreen() {
   return (
     <CustomBackground>
       <ScrollView>
@@ -21,15 +21,15 @@ export default function AdraRohaniyatScreen() {
 
 const styles = StyleSheet.create({
   heading: {
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: "bold",
     color: "#6C472D",
     textAlign: "right",
-    marginBottom: 10,
+    writingDirection: "rtl",
   },
-
   description: {
-    fontSize: 18,
+    marginTop: 10,
+    fontSize: 16,
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",

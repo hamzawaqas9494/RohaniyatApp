@@ -144,8 +144,10 @@ const IdaraRohaniyat = () => {
 
       {/* Center */}
       <View style={styles.centerContainer}>
-        <View style={styles.divider} />
-        <Text style={styles.heading}>IDARA ROHANIYAT</Text>
+        <Image
+          source={require("../../assets/images/Idararohaniyat.png")}
+          style={styles.logo}
+        />
         <View style={styles.iconContainer}>
           <TouchableOpacity
             onPress={() => openLink("https://www.facebook.com/IdaraRohaniayt")}
@@ -156,10 +158,10 @@ const IdaraRohaniyat = () => {
             />
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => openLink("https://www.pinterest.com/idararohaniyat")}
+            onPress={() => openLink("https://taweez.idararohaniyat.com")}
           >
             <Image
-              source={require("../../assets/images/phone.png")}
+              source={require("../../assets/images/Google.png")}
               style={styles.socialMedia}
             />
           </TouchableOpacity>
@@ -171,9 +173,11 @@ const IdaraRohaniyat = () => {
               style={styles.socialMedia}
             />
           </TouchableOpacity>
-          <TouchableOpacity source={require("../../assets/images/phone.png")}>
+          <TouchableOpacity
+            onPress={() => openLink("https://www.tiktok.com/@idararohaniyat")}
+          >
             <Image
-              source={require("../../assets/images/phone.png")}
+              source={require("../../assets/images/Tiktok.png")}
               style={styles.socialMedia}
             />
           </TouchableOpacity>
@@ -186,7 +190,7 @@ const IdaraRohaniyat = () => {
             />
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => openLink("https://taweez.idararohaniyat.com")}
+            onPress={() => openLink("https://www.pinterest.com/idararohaniyat")}
           >
             <Image
               source={require("../../assets/images/phone.png")}
@@ -230,13 +234,12 @@ const styles = StyleSheet.create({
   },
   centerContainer: {
     alignItems: "center",
-    flex: 1,
   },
-  divider: {
-    width: 160,
-    height: 3,
-    backgroundColor: "#6C472D",
-  },
+  // divider: {
+  //   width: 160,
+  //   height: 3,
+  //   backgroundColor: "#6C472D",
+  // },
   heading: {
     color: "#6C472D",
     fontSize: 18,
@@ -248,15 +251,18 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
   },
   socialMedia: {
-    width: 30,
-    height: 30,
-    margin: 5,
-    backgroundColor: "#F4EDE4",
-    borderRadius: 8,
-    padding: 5,
+    width: 28,
+    height: 28,
+    margin: 3,
   },
   iconSpacing: {
     marginTop: 2,
+  },
+  logo: {
+    width: "100%",
+    height: 30,
+    resizeMode: "contain",
+    alignSelf: "center",
   },
 });
 

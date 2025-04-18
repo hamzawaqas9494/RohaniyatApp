@@ -7,7 +7,7 @@ export default function SirparastScreen() {
       <ScrollView>
         <View style={styles.image_section}>
           <Image
-            source={require("../../../../../assets/images/sarprastLogo.jpg")}
+            source={require("../../../../../assets/images/sarparast.png")}
             style={styles.image}
           />
         </View>
@@ -93,7 +93,15 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#6C472D",
     textAlign: "right",
-    marginBottom: 10,
+    marginTop: 10,
+    writingDirection: "rtl",
+  },
+  description: {
+    marginTop: 10,
+    fontSize: 16,
+    color: "#6C472D",
+    lineHeight: 30,
+    textAlign: "right",
     writingDirection: "rtl",
   },
   image_section: {
@@ -101,15 +109,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   image: {
-    width: 210,
-    height: 250,
-    marginBottom: 20,
-  },
-  description: {
-    fontSize: 18,
-    color: "#6C472D",
-    lineHeight: 30,
-    textAlign: "right",
-    writingDirection: "rtl",
+    width: 200,
+    height: 240,
   },
 });
