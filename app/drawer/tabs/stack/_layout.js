@@ -1,26 +1,55 @@
 import React from "react";
 import { Stack } from "expo-router";
+import { DrawerToggleButton } from "@react-navigation/drawer";
+import { useNavigationState, useNavigation } from "@react-navigation/native";
+import { View, Pressable } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+
+function HeaderLeft() {
+  const navigation = useNavigation();
+  const routesLength = useNavigationState((state) => state.routes.length);
+
+  const canGoBack = routesLength > 1;
+
+  return (
+    <View
+      style={{
+        marginLeft: -16,
+      }}
+    >
+      {canGoBack ? (
+        <Pressable onPress={() => navigation.goBack()}>
+          <Ionicons
+            name="arrow-back"
+            size={24}
+            style={{
+              marginLeft: 12,
+            }}
+          />
+        </Pressable>
+      ) : (
+        <DrawerToggleButton />
+      )}
+    </View>
+  );
+}
 
 export default function StackNavigator() {
   return (
     <Stack
       screenOptions={{
+        headerLeft: () => <HeaderLeft />,
         headerShown: false,
-        headerStyle: {
-          height: 56,
-          backgroundColor: "#E4DAC1",
-        },
+
         headerTitleAlign: "center",
-        // headerTintColor: "white",
       }}
     >
       <Stack.Screen
         name="home"
         options={{
           title: "Home",
-
           headerShown: false,
-          gestureEnabled: true, // Ensure gesture support
+          gestureEnabled: true,
         }}
       />
     </Stack>

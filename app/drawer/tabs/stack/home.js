@@ -386,8 +386,8 @@ export default function HomeScreen() {
                   <Image
                     source={item.icon}
                     style={{
-                      width: ICON_SIZE_WIDTH * 0.2,
-                      height: ICON_SIZE_WIDTH * 0.2,
+                      width: ICON_SIZE_WIDTH * 0.25,
+                      height: ICON_SIZE_WIDTH * 0.25,
                     }}
                   />
                   <Text

@@ -1,10 +1,13 @@
 import { View, Text, StyleSheet } from "react-native";
+import CustomBackground from "../../components/Background/Background";
 
 export default function AboutUsScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>ℹ️ About Us</Text>
-    </View>
+    <CustomBackground>
+      <View style={styles.container}>
+        <Text style={styles.text}>ℹ️ About Us</Text>
+      </View>
+    </CustomBackground>
   );
 }
 

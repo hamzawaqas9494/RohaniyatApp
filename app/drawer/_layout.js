@@ -59,7 +59,11 @@ export default function DrawerLayout() {
   return (
     <Drawer
       screenOptions={{
-        headerLeftContainerStyle: { paddingLeft: 16 },
+        headerLeftContainerStyle: { paddingLeft: -16 },
+        headerStyle: {
+          height: 56,
+          backgroundColor: "#E4DAC1",
+        },
 
         headerTitleAlign: "center",
         headerShown: false, // ❌ Drawer ka header hide karke global header show karenge
@@ -67,6 +71,7 @@ export default function DrawerLayout() {
           backgroundColor: "#E4DAC1",
           width: 240,
         },
+
         drawerActiveTintColor: "blue",
         drawerInactiveTintColor: "gray",
       }}
@@ -86,17 +91,7 @@ export default function DrawerLayout() {
           headerShown: true,
           title: "About Us",
           drawerIcon: ({ color, size }) => (
-            <MaterialIcons name="info" size={size} color={color} />
-          ),
-        }}
-      />
-      <Drawer.Screen
-        name="details"
-        options={{
-          headerShown: true,
-          title: "Details",
-          drawerIcon: ({ color, size }) => (
-            <MaterialIcons name="details" size={size} color={color} />
+            <FontAwesome name="info" size={size} color={color} />
           ),
         }}
       />

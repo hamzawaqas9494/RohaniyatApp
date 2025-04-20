@@ -1,10 +1,13 @@
 import { View, Text, StyleSheet } from "react-native";
+import CustomBackground from "../../../components/Background/Background";
 
 export default function SettingsScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>⚙️ Settings Screen</Text>
-    </View>
+    <CustomBackground>
+      <View style={styles.container}>
+        <Text style={styles.text}>⚙️ Settings Screen</Text>
+      </View>
+    </CustomBackground>
   );
 }
 
