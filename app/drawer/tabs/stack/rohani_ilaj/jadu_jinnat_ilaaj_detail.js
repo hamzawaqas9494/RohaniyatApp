@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
 
   heading: {
     fontSize: 25,
-    fontWeight: "bold",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "center",
     writingDirection: "rtl",

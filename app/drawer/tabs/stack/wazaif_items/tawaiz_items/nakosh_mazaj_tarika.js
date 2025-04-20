@@ -20,7 +20,8 @@ export default function NakoshLawazmat() {
 const styles = StyleSheet.create({
   heading: {
     fontSize: 25,
-    fontWeight: "bold",
+    lineHeight:50,
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
@@ -29,6 +30,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 16,
     color: "#6C472D",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",

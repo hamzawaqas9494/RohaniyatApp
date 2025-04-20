@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: "#6C472D",
     fontWeight: "600",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     textAlign: "center",
   },
   card: {
@@ -85,7 +86,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 20,
-    fontWeight: "bold",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "center",
   },

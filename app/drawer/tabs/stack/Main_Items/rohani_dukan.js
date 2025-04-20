@@ -1,15 +1,33 @@
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
+import CustomBackground from "../../../../../components/Background/Background";
 
-export default function FavoritesScreen() {
+export default function AmliyatCourseScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>❤️ Favorites Screen</Text>
-    </View>
+    <CustomBackground>
+      <ScrollView>
+        <View>
+          <Text style={styles.heading}> روحانی دکان </Text>
+        </View>
+      </ScrollView>
+    </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", alignItems: "center" },
-  text: { fontSize: 20, fontWeight: "bold" },
+  heading: {
+    fontSize: 25,
+    lineHeight: 50,
+    fontFamily: "NotoNastaliqUrdu-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+  description: {
+    marginTop: 10,
+    fontSize: 16,
+    color: "#6C472D",
+    lineHeight: 30,
+    fontFamily: "NotoNastaliqUrdu-Regular",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
 });

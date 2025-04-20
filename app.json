@@ -2,6 +2,15 @@
   "expo": {
     "name": "Rohaniyat",
     "slug": "mobileapp",
+    "icon": "./assets/images/main-logo.png",
+    "splash": {
+      "image": "./assets/images/splashScreen.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "adaptiveIcon": {
+      "image": "./assets/images/balls.png"
+    },
     "version": "1.0.0",
     "orientation": "portrait",
     "scheme": "myapp",
@@ -18,11 +27,7 @@
         "READ_EXTERNAL_STORAGE",
         "WRITE_EXTERNAL_STORAGE"
       ],
-      "icon": "./assets/images/adaptive-icon.png",
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
+      
       "package": "com.hamzawaqasch.rohaniyat"
     },
     "web": {

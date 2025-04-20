@@ -8,7 +8,6 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import CustomBackground from "../../../../../components/Background/Background";
-
 const DATA = [
   {
     id: "1",
@@ -20,7 +19,6 @@ const DATA = [
     screen: "jadu_jinnat_taaruf",
     text: "جادو، جنات اور نظر بد کی علامات",
   },
-
   {
     id: "3",
     screen: "rohani_tashkhees",
@@ -36,17 +34,14 @@ const DATA = [
     screen: "hisaar_amaal",
     text: "حصار (حفاظت) کے اعمال",
   },
-
   {
     id: "6",
     screen: "hamara_tarika_iaaj",
     text: "ہمارا طریقہ علاج",
   },
 ];
-
 export default function RohaniIlaj() {
   const navigation = useNavigation();
-
   return (
     <CustomBackground>
       <View style={styles.container}>
@@ -67,7 +62,6 @@ export default function RohaniIlaj() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   card: {
     width: "100%",
@@ -80,7 +74,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 20,
-    fontWeight: "bold",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "center",
   },

@@ -13,26 +13,22 @@ import CustomBackground from "../../../../../components/Background/Background";
 const DATA = [
   {
     id: "1",
-    icon: require("../../../../../assets/images/tawizatusmaniyaIcon.png"),
     screen: "amliyat_taruf",
     text: "عملیات کا تعارف",
   },
   {
     id: "2",
-    icon: require("../../../../../assets/images/wazafIcon.png"),
     screen: "aamil_ki_sharait",
     text: "عامل کے لیے شرائط",
   },
 
   {
     id: "3",
-    icon: require("../../../../../assets/images/tawizatusmaniyaIcon.png"),
     screen: "marizon_ke_ilaj",
     text: "مریضوں کے لیے علاج کورس",
   },
   {
     id: "4",
-    icon: require("../../../../../assets/images/tawizatusmaniyaIcon.png"),
     screen: "amliyat_chilla_kashi",
     text: "عملیات اور چلہ کشی",
   },
@@ -55,7 +51,6 @@ export default function TitleScreen() {
                 navigation.navigate(`amaliyat_course_items/${item.screen}`)
               }
             >
-              <Image source={item.icon} style={{ width: 30, height: 30 }} />
               <Text style={styles.text}>{item.text}</Text>
             </TouchableOpacity>
           )}
@@ -77,7 +72,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 18,
-    fontWeight: "bold",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "center",
     writingDirection: "rtl",

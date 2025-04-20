@@ -335,15 +335,17 @@ export default RohaniIlaj = () => {
 
 const styles = StyleSheet.create({
   heading: {
-    fontSize: 25,
-    fontWeight: "bold",
+    fontSize: 20,
+    fontFamily: "NotoNastaliqUrdu-Regular",
+    lineHeight:50,
     color: "#6C472D",
     textAlign: "center",
     writingDirection: "rtl",
   },
   description: {
     marginTop: 10,
-    fontSize: 16,
+    fontSize: 14,
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",

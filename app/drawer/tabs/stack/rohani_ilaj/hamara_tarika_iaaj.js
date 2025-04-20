@@ -6,21 +6,17 @@ export default function HamaraTarikaIlajScreen() {
     <CustomBackground>
       <ScrollView>
         <View>
-          <Text style={styles.heading}>ہمارا طریقہ علاج</Text>
-          <Text style={styles.description}>
-            عملیات کورس میں روحانی علوم اور عملیات کے اصول سکھائے جاتے ہیں تاکہ
-            لوگ قرآنی اور اسلامی طریقے سے اپنی زندگی بہتر بنا سکیں۔
-          </Text>
+        <Text style={styles.heading}>hmara trika ilaj</Text>
+
         </View>
       </ScrollView>
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   heading: {
     fontSize: 25,
-    fontWeight: "bold",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
@@ -28,6 +24,7 @@ const styles = StyleSheet.create({
   description: {
     marginTop: 10,
     fontSize: 16,
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",

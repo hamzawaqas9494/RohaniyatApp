@@ -20,7 +20,7 @@ export default function JaduJinnatTaarufScreen() {
 const styles = StyleSheet.create({
   heading: {
     fontSize: 25,
-    fontWeight: "bold",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
   description: {
     marginTop: 10,
     fontSize: 16,
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",

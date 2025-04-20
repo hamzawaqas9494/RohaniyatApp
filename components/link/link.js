@@ -131,7 +131,7 @@ const IdaraRohaniyat = () => {
       <View style={styles.userSection}>
         <Text style={styles.userText}>For Ladies</Text>
         <TouchableOpacity
-          onPress={() => openLink("https://wa.me/923001234567")}
+          onPress={() => openLink("https://wa.me/03008430971")}
         >
           <FontAwesome
             name="whatsapp"
@@ -203,7 +203,7 @@ const IdaraRohaniyat = () => {
       {/* For Gents */}
       <View style={styles.userSection}>
         <Text style={styles.userText}>For Gents</Text>
-        <TouchableOpacity onPress={() => openLink("https://wa.me/03331449494")}>
+        <TouchableOpacity onPress={() => openLink("https://wa.me/03008440979")}>
           <FontAwesome
             name="whatsapp"
             size={40}
