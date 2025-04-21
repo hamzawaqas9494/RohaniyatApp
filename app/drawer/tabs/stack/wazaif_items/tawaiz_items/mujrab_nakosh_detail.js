@@ -84,7 +84,7 @@ export default function MujrabNakoshDetails() {
     const fetchDetails = async () => {
       try {
         const response = await fetch(
-          `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=Taweez&id=${id}`
+          `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=Taweez`
         );
         const result = await response.json();
         console.log(result.rows[0], "hamzs");
