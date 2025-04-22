@@ -16,15 +16,17 @@
 //   withSpring,
 //   withTiming,
 // } from "react-native-reanimated";
-
+// import IdaraRohaniyat from "../../../../components/link/link";
+// import ShareApp from "../../../../components/ShareApp/shareApp";
+ 
 // const { width, height } = Dimensions.get("window");
-
+ 
 // // Dynamically adjust sizes
 // const ICON_SIZE_WIDTH = width * 0.3;
-// const ICON_SIZE_HEIGHT = height * 0.3;
+// const ICON_SIZE_HEIGHT = height * 0.13;
 // const CENTER_CARD_SIZE = width * 0.5;
 // const CIRCLE_RADIUS = width * 0.35;
-
+ 
 // // Your DATA array
 // const DATA = [
 //   {
@@ -84,24 +86,26 @@
 //     image: require("../../../../assets/images/item2-bg-path.png"),
 //   },
 // ];
-
+ 
 // export default function HomeScreen() {
 //   const navigation = useNavigation();
-
+ 
 //   return (
 //     <ImageBackground
 //       source={require("../../../../assets/images/background.png")}
 //       style={styles.background}
 //     >
+//       {/* ShareApp Component */}
+//       <ShareApp />
+ 
 //       <View style={styles.circleContainer}>
-//         {/* Center Logo */}
 //         <View style={styles.centerCard}>
 //           <Image
 //             source={require("../../../../assets/images/ss.png")}
 //             style={styles.centerLogo}
 //           />
 //         </View>
-
+ 
 //         {DATA.map((item, index) => {
 //           const angle = index * ((2 * Math.PI) / DATA.length);
 //           const x =
@@ -109,11 +113,11 @@
 //           const y =
 //             CIRCLE_RADIUS * Math.sin(angle) + width / 2 - ICON_SIZE_HEIGHT / 2;
 //           const rotation = (angle * 180) / Math.PI + 90;
-
+ 
 //           // Animation Values
 //           const scale = useSharedValue(0);
 //           const opacity = useSharedValue(0);
-
+ 
 //           useEffect(() => {
 //             scale.value = withDelay(index * 200, withSpring(1));
 //             opacity.value = withDelay(
@@ -121,58 +125,69 @@
 //               withTiming(1, { duration: 500 })
 //             );
 //           }, []);
-
+ 
 //           const animatedStyle = useAnimatedStyle(() => {
 //             return {
 //               transform: [{ scale: scale.value }],
 //               opacity: opacity.value,
 //             };
 //           });
-
+ 
 //           return (
 //             <Animated.View
 //               key={item.id}
 //               style={[{ position: "absolute", left: x, top: y }, animatedStyle]}
 //             >
 //               <Pressable
-//                 onPress={() => navigation.navigate(`Main_Items/${item.screen}`)}
+//                 onPress={() => navigation.navigate(`main_items/${item.screen}`)}
+//                 style={styles.iconContainer}
 //               >
 //                 <ImageBackground
 //                   source={item.image}
 //                   style={[
 //                     styles.iconBackground,
-//                     { width: ICON_SIZE_WIDTH, height: ICON_SIZE_HEIGHT },
+//                     {
+//                       width: ICON_SIZE_WIDTH,
+//                       height: ICON_SIZE_HEIGHT,
+//                       // borderWidth: 1, // Set border width
+//                       // borderColor: "black", // Set border color
+//                       // borderStyle: "solid", // Optional: Default 'solid' hota hai
+//                     },
 //                   ]}
 //                   resizeMode="contain"
 //                   imageStyle={{ transform: [{ rotate: `${rotation}deg` }] }}
 //                 >
-//                   <View style={styles.iconContainer}>
-//                     <Image
-//                       source={item.icon}
-//                       style={{
-//                         width: ICON_SIZE_WIDTH * 0.2,
-//                         height: ICON_SIZE_WIDTH * 0.2,
-//                       }}
-//                     />
-//                     <Text
-//                       style={[
-//                         styles.cardText,
-//                         { fontSize: ICON_SIZE_WIDTH * 0.12 },
-//                       ]}
-//                     >
-//                       {item.text}
-//                     </Text>
-//                   </View>
+//                   <Image
+//                     source={item.icon}
+//                     style={{
+//                       width: ICON_SIZE_WIDTH * 0.2,
+//                       height: ICON_SIZE_WIDTH * 0.2,
+//                     }}
+//                   />
+//                   <Text
+//                     style={{
+//                       fontSize: ICON_SIZE_WIDTH * 0.16,
+//                       fontFamily: "Jameel-Noori-Regular",
+//                       color: "#6C472D",
+//                       // lineHeight: ICON_SIZE_WIDTH * 0.28,
+//                     }}
+//                   >
+//                     {item.text}
+//                   </Text>
 //                 </ImageBackground>
 //               </Pressable>
 //             </Animated.View>
 //           );
 //         })}
 //       </View>
+//       {/* Footer Component */}
+//       <View style={styles.footer}>
+//         <IdaraRohaniyat />
+//       </View>
 //     </ImageBackground>
 //   );
 // }
-
+ 
 // const styles = StyleSheet.create({
 //   background: {
 //     flex: 1,
@@ -183,14 +198,14 @@
 //     alignItems: "center",
 //   },
 //   circleContainer: {
-//     position: "absolute",
-//     top: "50%",
-//     left: "50%",
+//     // position: "absolute",
+//     // top: "45%",
+//     // left: "50%",
 //     width: width,
 //     height: width,
 //     justifyContent: "center",
 //     alignItems: "center",
-//     transform: [{ translateX: -width / 2 }, { translateY: -width / 2 }],
+//     // transform: [{ translateX: -width / 2 }, { translateY: -width / 2 }],
 //   },
 //   centerCard: {
 //     width: CENTER_CARD_SIZE,
@@ -222,9 +237,17 @@
 //     justifyContent: "center",
 //     alignItems: "center",
 //   },
+//   footer: {
+//     width: "100%",
+//     alignItems: "center",
+//     position: "absolute",
+//     bottom: 0,
+//   },
 // });
+ 
 
-import React, { useEffect } from "react";
+//////////////////////////////////////////new animation/////////////////////////////////////////
+import React from "react";
 import {
   View,
   Text,
@@ -235,25 +258,17 @@ import {
   Pressable,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import Animated, {
-  useSharedValue,
-  useAnimatedStyle,
-  withDelay,
-  withSpring,
-  withTiming,
-} from "react-native-reanimated";
 import IdaraRohaniyat from "../../../../components/link/link";
 import ShareApp from "../../../../components/ShareApp/shareApp";
-
+import AnimatedItem from "../../../../components/Animation/animation";
+ 
 const { width, height } = Dimensions.get("window");
-
-// Dynamically adjust sizes
+ 
 const ICON_SIZE_WIDTH = width * 0.3;
 const ICON_SIZE_HEIGHT = height * 0.13;
 const CENTER_CARD_SIZE = width * 0.5;
 const CIRCLE_RADIUS = width * 0.35;
-
-// Your DATA array
+ 
 const DATA = [
   {
     id: "1",
@@ -300,8 +315,8 @@ const DATA = [
   {
     id: "7",
     icon: require("../../../../assets/images/introductionIcons.png"),
-    text: "تعارف",
     screen: "taaruf",
+    text: "تعارف",
     image: require("../../../../assets/images/item1-bg-path.png"),
   },
   {
@@ -312,18 +327,15 @@ const DATA = [
     image: require("../../../../assets/images/item2-bg-path.png"),
   },
 ];
-
+ 
 export default function HomeScreen() {
-  const navigation = useNavigation();
-
   return (
     <ImageBackground
       source={require("../../../../assets/images/background.png")}
       style={styles.background}
     >
-      {/* ShareApp Component */}
       <ShareApp />
-
+ 
       <View style={styles.circleContainer}>
         <View style={styles.centerCard}>
           <Image
@@ -331,87 +343,27 @@ export default function HomeScreen() {
             style={styles.centerLogo}
           />
         </View>
-
-        {DATA.map((item, index) => {
-          const angle = index * ((2 * Math.PI) / DATA.length);
-          const x =
-            CIRCLE_RADIUS * Math.cos(angle) + width / 2 - ICON_SIZE_WIDTH / 2;
-          const y =
-            CIRCLE_RADIUS * Math.sin(angle) + width / 2 - ICON_SIZE_HEIGHT / 2;
-          const rotation = (angle * 180) / Math.PI + 90;
-
-          // Animation Values
-          const scale = useSharedValue(0);
-          const opacity = useSharedValue(0);
-
-          useEffect(() => {
-            scale.value = withDelay(index * 200, withSpring(1));
-            opacity.value = withDelay(
-              index * 200,
-              withTiming(1, { duration: 500 })
-            );
-          }, []);
-
-          const animatedStyle = useAnimatedStyle(() => {
-            return {
-              transform: [{ scale: scale.value }],
-              opacity: opacity.value,
-            };
-          });
-
-          return (
-            <Animated.View
-              key={item.id}
-              style={[{ position: "absolute", left: x, top: y }, animatedStyle]}
-            >
-              <Pressable
-                onPress={() => navigation.navigate(`main_items/${item.screen}`)}
-                style={styles.iconContainer}
-              >
-                <ImageBackground
-                  source={item.image}
-                  style={[
-                    styles.iconBackground,
-                    {
-                      width: ICON_SIZE_WIDTH,
-                      height: ICON_SIZE_HEIGHT,
-                      // borderWidth: 1, // Set border width
-                      // borderColor: "black", // Set border color
-                      // borderStyle: "solid", // Optional: Default 'solid' hota hai
-                    },
-                  ]}
-                  resizeMode="contain"
-                  imageStyle={{ transform: [{ rotate: `${rotation}deg` }] }}
-                >
-                  <Image
-                    source={item.icon}
-                    style={{
-                      width: ICON_SIZE_WIDTH * 0.25,
-                      height: ICON_SIZE_WIDTH * 0.25,
-                    }}
-                  />
-                  <Text
-                    style={[
-                      styles.cardText,
-                      { fontSize: ICON_SIZE_WIDTH * 0.12 },
-                    ]}
-                  >
-                    {item.text}
-                  </Text>
-                </ImageBackground>
-              </Pressable>
-            </Animated.View>
-          );
-        })}
+ 
+        {DATA.map((item, index) => (
+          <AnimatedItem
+            key={item.id}
+            item={item}
+            index={index}
+            total={DATA.length}
+            iconWidth={ICON_SIZE_WIDTH}
+            iconHeight={ICON_SIZE_HEIGHT}
+            circleRadius={CIRCLE_RADIUS}
+          />
+        ))}
       </View>
-      {/* Footer Component */}
+ 
       <View style={styles.footer}>
         <IdaraRohaniyat />
       </View>
     </ImageBackground>
   );
 }
-
+ 
 const styles = StyleSheet.create({
   background: {
     flex: 1,
@@ -422,14 +374,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   circleContainer: {
-    // position: "absolute",
-    // top: "45%",
-    // left: "50%",
     width: width,
     height: width,
     justifyContent: "center",
     alignItems: "center",
-    // transform: [{ translateX: -width / 2 }, { translateY: -width / 2 }],
   },
   centerCard: {
     width: CENTER_CARD_SIZE,
@@ -448,19 +396,6 @@ const styles = StyleSheet.create({
     width: CENTER_CARD_SIZE * 0.56,
     height: CENTER_CARD_SIZE * 0.7,
   },
-  iconBackground: {
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  cardText: {
-    color: "#6C472D",
-    fontWeight: "bold",
-    textAlign: "center",
-  },
-  iconContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-  },
   footer: {
     width: "100%",
     alignItems: "center",
@@ -468,3 +403,5 @@ const styles = StyleSheet.create({
     bottom: 0,
   },
 });
+ 
+ 

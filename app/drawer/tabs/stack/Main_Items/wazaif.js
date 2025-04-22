@@ -8,7 +8,6 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import CustomBackground from "../../../../../components/Background/Background";
-
 const DATA = [
   {
     id: "1",
@@ -18,13 +17,11 @@ const DATA = [
   {
     id: "2",
     screen: "tawaiz_content",
-    text: " تعویذات",
+    text: "تعویذات",
   },
 ];
-
 export default function TitleScreen() {
   const navigation = useNavigation();
-
   return (
     <CustomBackground>
       <View>
@@ -34,7 +31,9 @@ export default function TitleScreen() {
           renderItem={({ item }) => (
             <TouchableOpacity
               style={styles.card}
-              onPress={() => navigation.navigate(`wazaif_items/${item.screen}`)}
+              onPress={() =>
+                navigation.navigate(`wazaif_items/${item.screen}`)
+              }
             >
               <Text style={styles.text}>{item.text}</Text>
             </TouchableOpacity>
@@ -44,7 +43,6 @@ export default function TitleScreen() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   card: {
     width: "100%",
@@ -57,8 +55,8 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 20,
-    fontWeight: "bold",
     color: "#6C472D",
+    fontFamily: "Jameel-Noori-Regular",
     textAlign: "center",
   },
 });

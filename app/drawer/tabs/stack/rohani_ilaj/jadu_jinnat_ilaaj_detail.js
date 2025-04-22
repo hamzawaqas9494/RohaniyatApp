@@ -71,10 +71,10 @@ const styles = StyleSheet.create({
   },
 
   heading: {
-    fontSize: 25,
-    fontWeight: "bold",
+    fontSize: 40,
+    fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
-    textAlign: "center",
+    textAlign: "right",
     writingDirection: "rtl",
   },
   image: {

@@ -8,7 +8,6 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import CustomBackground from "../../../../../components/Background/Background";
-
 const DATA = [
   { id: "1", screen: "sirprast", text: "سرپرست" },
   { id: "2", screen: "idara_rohaniyat", text: "ادارہ روحانیات" },
@@ -18,10 +17,8 @@ const DATA = [
   { id: "6", screen: "amliyat_course", text: "عملیات کورس" },
   { id: "7", screen: "madrassa_taleem_ul_quran", text: "مدرسہ تعلیم القرآن" },
 ];
-
 export default function Taaruf() {
   const navigation = useNavigation();
-
   return (
     <CustomBackground>
       <View>
@@ -41,20 +38,20 @@ export default function Taaruf() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   card: {
     width: "100%",
     backgroundColor: "#E4DAC1",
     paddingVertical: 15,
-    marginTop: 10,
+    marginTop: 8,
     marginBottom: 10,
     borderRadius: 5,
-    alignItems: "center",
+    // alignItems: "center",
   },
   text: {
-    fontSize: 20,
-    fontWeight: "bold",
+    fontSize: 22,
+   fontFamily: "Jameel-Noori-Regular",
+    // lineHeight:30,
     color: "#6C472D",
     textAlign: "center",
   },

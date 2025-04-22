@@ -42,7 +42,6 @@ export default function FreeIstikhara() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   card: {
     width: "100%",
@@ -55,7 +54,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 20,
-    fontWeight: "bold",
+    fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "center",
   },

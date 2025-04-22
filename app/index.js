@@ -1,42 +1,35 @@
 import { useEffect, useState } from "react";
 import { View, Image, StyleSheet } from "react-native";
 import { useRouter } from "expo-router";
-import * as SplashScreen from "expo-splash-screen";
-
-// Expo ki default splash screen ko disable karein
-SplashScreen.preventAutoHideAsync();
-
+import { useFonts } from "expo-font";
 export default function RootLayout() {
-  const [appReady, setAppReady] = useState(false);
+  const [showCustomSplash, setShowCustomSplash] = useState(true);
   const router = useRouter();
-
+  const [fontsLoaded] = useFonts({
+    'Jameel-Noori-Regular': require('../assets/fonts/JameelNooriNastaleeqRegular.ttf')
+  });
   useEffect(() => {
-    setTimeout(() => {
-      setAppReady(true);
-      SplashScreen.hideAsync(); // Default Splash Screen Hide
-    }, 3000);
-  }, []);
-
-  useEffect(() => {
-    if (appReady) {
-      router.replace("/drawer");
+    if (fontsLoaded) {
+      const timer = setTimeout(() => {
+        setShowCustomSplash(false);
+        router.replace("/drawer");
+      }, 3000);
+      return () => clearTimeout(timer);
     }
-  }, [appReady]);
-
-  if (!appReady) {
+  }, [fontsLoaded]);
+  if (showCustomSplash || !fontsLoaded) {
     return (
       <View style={styles.container}>
         <Image
           source={require("../assets/images/splashScreen.png")}
           style={styles.logo}
         />
+
       </View>
     );
   }
-
   return null;
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -50,3 +43,25 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
   },
 });
+ 
+// import { useEffect } from "react";
+// import { useRouter } from "expo-router";
+// import { useFonts } from "expo-font";
+
+// export default function RootLayout() {
+//   const router = useRouter();
+
+//   const [fontsLoaded] = useFonts({
+//     'NotoNastaliqUrdu-Regular': require('../assets/fonts/NotoNastaliqUrdu-Regular.ttf'),
+//     'NotoNastaliqUrdu-Bold': require('../assets/fonts/NotoNastaliqUrdu-Bold.ttf')
+//   });
+
+//   useEffect(() => {
+//     if (fontsLoaded) {
+//       router.replace("/drawer");
+//     }
+//   }, [fontsLoaded]);
+
+//   // Jab tak font load nahi hotay, kuch bhi render nahi karo
+//   return null;
+// }
