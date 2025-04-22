@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 20,
     color: "#6C472D",
-    fontFamily: "NotoNastaliqUrdu-Regular",
+    fontFamily: "Jameel-Noori-Regular",
     textAlign: "center",
   },
 });

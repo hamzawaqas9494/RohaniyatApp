@@ -19,19 +19,16 @@ export default function NakoshLawazmat() {
 
 const styles = StyleSheet.create({
   heading: {
-    fontSize: 25,
-    lineHeight:50,
-    fontFamily: "NotoNastaliqUrdu-Regular",
+    fontSize: 40,
+    fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
   },
   description: {
-    marginTop: 10,
-    fontSize: 16,
+    fontSize: 20,
     color: "#6C472D",
-    fontFamily: "NotoNastaliqUrdu-Regular",
-    lineHeight: 30,
+    fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
     writingDirection: "rtl",
   },

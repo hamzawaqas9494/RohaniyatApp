@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   noDataText: {
     fontSize: 18,
     color: "#6C472D",
-    fontFamily: "NotoNastaliqUrdu-Regular",
+    fontFamily: "Jameel-Noori-Regular",
     fontWeight: "600",
     textAlign: "center",
   },
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 20,
-    fontFamily: "NotoNastaliqUrdu-Regular",
+    fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "center",
   },

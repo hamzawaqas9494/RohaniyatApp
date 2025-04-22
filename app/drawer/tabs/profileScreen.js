@@ -5,7 +5,9 @@ export default function ProfileScreen() {
   return (
     <CustomBackground>
       <View style={styles.container}>
-        <Text style={styles.text}>👤 Profile Screen</Text>
+        <Text style={styles.text}>👤 Profile Screen  اردو ٹیکسٹ ہے</Text>
+        <Text style={styles.text}>👤 Profile Screen  اردو ٹیکسٹ ہے</Text>
+
       </View>
     </CustomBackground>
   );
@@ -13,5 +15,6 @@ export default function ProfileScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, justifyContent: "center", alignItems: "center" },
-  text: { fontSize: 20, fontWeight: "bold", fontFamily: "NotoNastaliqUrdu-Regular", },
+  text: { fontSize: 20, fontFamily: "Jameel-Noori-Regular", },
+
 });

@@ -134,11 +134,17 @@ const styles = StyleSheet.create({
   },
 
   heading: {
-    fontSize: 25,
-    lineHeight:50,
-    fontFamily: "NotoNastaliqUrdu-Regular",
+    fontSize: 40,
+    fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
-    textAlign: "center",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+  description: {
+    fontSize: 20,
+    color: "#6C472D",
+    fontFamily: "Jameel-Noori-Regular",
+    textAlign: "right",
     writingDirection: "rtl",
   },
   image: {
@@ -178,7 +184,7 @@ const htmlStyles = StyleSheet.create({
     marginTop: 10,
     fontSize: 16,
     color: "#6C472D",
-    fontFamily: "NotoNastaliqUrdu-Regular",
+    fontFamily: "Jameel-Noori-Regular",
     lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",

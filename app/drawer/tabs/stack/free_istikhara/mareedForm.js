@@ -335,19 +335,16 @@ const MareedScreen = () => {
 
 const styles = StyleSheet.create({
   heading: {
-    fontSize: 20,
-    fontFamily: "NotoNastaliqUrdu-Regular",
-    lineHeight:50,
+    fontSize: 40,
+    fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
-    textAlign: "center",
+    textAlign: "right",
     writingDirection: "rtl",
   },
   description: {
-    marginTop: 10,
-    fontSize: 14,
-    fontFamily: "NotoNastaliqUrdu-Regular",
+    fontSize: 20,
     color: "#6C472D",
-    lineHeight: 30,
+    fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
     writingDirection: "rtl",
   },

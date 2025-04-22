@@ -17,13 +17,13 @@
 import { View, Text, StyleSheet } from "react-native";
 import { useFonts } from "expo-font";
 export default function SettingsScreen() {
-  const [fontsLoaded] = useFonts({
-    "NotoNastaliqUrdu-Regular": require("../../../assets/fonts/NotoNastaliqUrdu-Regular.ttf"),
-  });
+//  const [fontsLoaded] = useFonts({
+//      'Jameel-Noori-Regular': require('../../../assets/fonts/JameelNooriNastaleeqRegular.ttf')
+//    });
 
-  if (!fontsLoaded) {
-    return null; // or show a loader
-  }
+  // if (!fontsLoaded) {
+  //   return null; // or show a loader
+  // }
 
   return (
     <View style={styles.container}>
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 24,
-    fontFamily: "NotoNastaliqUrdu-Regular",
+    fontFamily: "Jameel-Noori-Regular",
     color: "#000",
   },
 });

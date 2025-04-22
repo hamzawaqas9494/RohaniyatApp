@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 20,
-    fontFamily: "NotoNastaliqUrdu-Regular",
+    fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "center",
   },

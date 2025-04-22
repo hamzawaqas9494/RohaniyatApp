@@ -26,6 +26,19 @@ export default function TabLayout() {
         },
       }}
     >
+    
+      {/* 🏠 Home Tab */}
+      <Tabs.Screen
+        name="stack"
+        options={{
+          title: "Home",
+          headerShown:false,
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome name="home" size={size} color={color} />
+          ),
+          tabBarLabelPosition: "below-icon",
+        }}
+      />
       {/* 👤 Profile Tab */}
       <Tabs.Screen
         name="profileScreen"
@@ -38,17 +51,6 @@ export default function TabLayout() {
         }}
       />
 
-      {/* 🏠 Home Tab */}
-      <Tabs.Screen
-        name="stack"
-        options={{
-          title: "Home",
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome name="home" size={size} color={color} />
-          ),
-          tabBarLabelPosition: "below-icon",
-        }}
-      />
 
       {/* ⚙️ Settings Tab */}
       <Tabs.Screen

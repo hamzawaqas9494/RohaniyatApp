@@ -84,7 +84,7 @@ export default function MujrabNakoshDetails() {
     const fetchDetails = async () => {
       try {
         const response = await fetch(
-          `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=Taweez`
+          `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=Taweez&id=${id}`
         );
         const result = await response.json();
         console.log(result.rows[0], "hamzs");
@@ -133,18 +133,31 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-
   heading: {
-    fontSize: 25,
-    fontWeight: "bold",
+    fontSize: 40,
+    fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
-    textAlign: "center",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+  description: {
+    fontSize: 20,
+    color: "#6C472D",
+    fontFamily: "Jameel-Noori-Regular",
+    textAlign: "right",
     writingDirection: "rtl",
   },
   image: {
     marginTop: 30,
     width: "100%",
     height: 300,
+  },
+  description: {
+    fontSize: 20,
+    color: "#6C472D",
+    fontFamily: "Jameel-Noori-Regular",
+    textAlign: "right",
+    writingDirection: "rtl",
   },
 });
 

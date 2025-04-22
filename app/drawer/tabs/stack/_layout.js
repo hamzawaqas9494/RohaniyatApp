@@ -39,8 +39,11 @@ export default function StackNavigator() {
     <Stack
       screenOptions={{
         headerLeft: () => <HeaderLeft />,
-        headerShown: false,
-
+        headerShown: true,///////////////////////////////////change
+        headerStyle: {
+          height: 56,
+          backgroundColor: "#E4DAC1",
+        },
         headerTitleAlign: "center",
       }}
     >
@@ -48,7 +51,7 @@ export default function StackNavigator() {
         name="home"
         options={{
           title: "Home",
-          headerShown: false,
+          headerShown: true,
           gestureEnabled: true,
         }}
       />

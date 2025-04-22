@@ -13,19 +13,17 @@ export default function RohaniTashkhessScreen() {
   );
 }
 const styles = StyleSheet.create({
-  heading: {
-    fontSize: 25,
-    fontFamily: "NotoNastaliqUrdu-Regular",
+heading: {
+    fontSize: 40,
+    fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
   },
   description: {
-    marginTop: 10,
-    fontSize: 16,
-    fontFamily: "NotoNastaliqUrdu-Regular",
+    fontSize: 20,
     color: "#6C472D",
-    lineHeight: 30,
+    fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
     writingDirection: "rtl",
   },
