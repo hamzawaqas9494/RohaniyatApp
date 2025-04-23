@@ -18,25 +18,25 @@ let ICON_SIZE_WIDTH, ICON_SIZE_HEIGHT, CENTER_CARD_SIZE, CIRCLE_RADIUS;
 
 if (width < 475) {
   ICON_SIZE_WIDTH = width * 0.3;
-  ICON_SIZE_HEIGHT = height * 0.3;
- CENTER_CARD_SIZE = width * 0.42;
- CIRCLE_RADIUS = width * 0.32;
+  ICON_SIZE_HEIGHT = height * 0.13;
+ CENTER_CARD_SIZE = width * 0.5;
+ CIRCLE_RADIUS = width * 0.355;
 
 } else if (width < 675) {
-  ICON_SIZE_WIDTH = width * 0.22;
-  ICON_SIZE_HEIGHT = height * 0.22;
- CENTER_CARD_SIZE = width * 0.34;
+  ICON_SIZE_WIDTH = width * 0.20;
+  ICON_SIZE_HEIGHT = height *0.12;
+ CENTER_CARD_SIZE = width * 0.36;
  CIRCLE_RADIUS = width * 0.25;
 }else if (width < 768) {
   ICON_SIZE_WIDTH = width * 0.18;
-  ICON_SIZE_HEIGHT = height * 0.18;
- CENTER_CARD_SIZE = width * 0.30;
+  ICON_SIZE_HEIGHT = height * 0.13;
+ CENTER_CARD_SIZE = width * 0.295;
  CIRCLE_RADIUS = width * 0.21;
 }else{
-ICON_SIZE_WIDTH = width * 0.14;
-ICON_SIZE_HEIGHT = height * 0.14;
-CENTER_CARD_SIZE = width * 0.26;
-CIRCLE_RADIUS = width * 0.18;
+  ICON_SIZE_WIDTH = width * 0.14;
+  ICON_SIZE_HEIGHT = height * 0.15;
+ CENTER_CARD_SIZE = width * 0.26;
+ CIRCLE_RADIUS = width * 0.18;
 }
  
 const DATA = [
@@ -63,9 +63,9 @@ const DATA = [
   },
   {
     id: "4",
-    icon: require("../../../assets/images/amliyatIcons.png"),
-    screen: "عملیات کورسز تفصیلات",
-    text: "عملیات کورس",
+    icon: require("../../../assets/images/bookicon.png"),
+    screen: "کتب",
+    text: "کتب",
     image: require("../../../assets/images/item2-bg-path.png"),
   },
   {

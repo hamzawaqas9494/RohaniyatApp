@@ -51,7 +51,7 @@ const AnimatedItem = ({ item, index, total, iconWidth, iconHeight, circleRadius 
         transform: [{ translateY: slideAnim }],
       }}
     >
-
+ 
         <ImageBackground
           source={item.image}
           style={{
@@ -59,6 +59,7 @@ const AnimatedItem = ({ item, index, total, iconWidth, iconHeight, circleRadius 
             height: iconHeight,
             justifyContent: "center",
             alignItems: "center",
+            // backgroundColor: "red",
             // overflow:"hidden"
           }}
           resizeMode="contain"
@@ -70,19 +71,19 @@ const AnimatedItem = ({ item, index, total, iconWidth, iconHeight, circleRadius 
     alignItems: "center",
     justifyContent: "center",
     width: iconWidth * 0.85,
-    height: iconWidth * 0.8,
+    height: iconWidth * 0.78,
     // backgroundColor: "rgba(255, 255, 255, 0.6)",
     transform: [{ rotate: `${rotation}deg` }],
   }}
 >
-  
+ 
   <View
     style={{
      
       alignItems: "center",
       transform: [{ rotate: `${-rotation}deg` }],
       justifyContent: "center",
-      
+     
     }}
   >
     <Image
@@ -104,9 +105,9 @@ const AnimatedItem = ({ item, index, total, iconWidth, iconHeight, circleRadius 
     </Text>
   </View>
 </Pressable>
-
+ 
         </ImageBackground>
-    
+   
     </Animated.View>
   );
 };
