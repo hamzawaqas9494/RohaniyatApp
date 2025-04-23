@@ -51,7 +51,7 @@ const AnimatedItem = ({ item, index, total, iconWidth, iconHeight, circleRadius 
         transform: [{ translateY: slideAnim }],
       }}
     >
-      <Pressable onPress={() => navigation.navigate(`main_items/${item.screen}`)}>
+      <Pressable onPress={() => navigation.navigate(item.screen)}>
         <ImageBackground
           source={item.image}
           style={{

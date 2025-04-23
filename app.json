@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "rohaniyatversion2",
-    "slug": "rohaniyatversion2",
+    "name": "Rohaniyat",
+    "slug": "mobileapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "scheme": "myapp",
@@ -10,21 +10,33 @@
     "ios": {
       "supportsTablet": true
     },
+    "android": {
+      "permissions": [
+        "INTERNET",
+        "ACCESS_FINE_LOCATION",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "icon": "./assets/images/main-logo.png",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/main-logo.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.hamzawaqasch.rohaniyat"
+    },
     "web": {
       "bundler": "metro",
-      "output": "static"
+      "output": "static",
+      "favicon": "./assets/images/main-logo.png"
     },
     "experiments": {
       "typedRoutes": true
     },
     "extra": {
       "eas": {
-        "projectId": "42bc65ad-84c8-4542-98d0-7bb90904d628"
+        "projectId": "410aabf1-0a0d-4667-9ef2-39b0bd270ba9"
       }
-    },
-    "owner": "anamgulzar",
-    "android": {
-      "package": "com.anamgulzar.rohaniyatversion2"
     }
   }
 }
