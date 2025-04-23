@@ -29,7 +29,7 @@ const DATA = [
   {
     id: "2",
     icon: require("../../../assets/images/rohanielajIcon.png"),
-    screen: "روحانی علاج",
+    screen: "روحانی علاج فہرست",
     text: "روحانی علاج",
     image: require("../../../assets/images/item2-bg-path.png"),
   },
@@ -43,7 +43,7 @@ const DATA = [
   {
     id: "4",
     icon: require("../../../assets/images/amliyatIcons.png"),
-    screen: "عملیات کورس",
+    screen: "عملیات کورسز تفصیلات",
     text: "عملیات کورس",
     image: require("../../../assets/images/item2-bg-path.png"),
   },

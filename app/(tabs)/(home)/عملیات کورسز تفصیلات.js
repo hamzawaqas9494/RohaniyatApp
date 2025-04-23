@@ -10,42 +10,45 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import CustomBackground from "../../../components/Background/Background";
 
-
 const DATA = [
   {
     id: "1",
-    screen: "rohani_tashkhess_tararuf",
-    text: "روحانی تشخیص کا تعارف",
+    screen: "عملیات تعارف",
+    text: "عملیات کا تعارف",
   },
   {
     id: "2",
-    screen: "fard_ki_tashkhess",
-    text: "فرد کی تشخیص کرنے کا طریقہ",
+    screen: "عامل کی شرائط",
+    text: "عامل کے لیے شرائط",
   },
 
   {
     id: "3",
-    screen: "jaga_ki_tashkhess",
-    text: " جگہ کی تشخیص کرنے کا طریقہ",
+    screen: "علاج کورس",
+    text: "مریضوں کے لیے علاج کورس",
+  },
+  {
+    id: "4",
+    screen: "چلہ کشی",
+    text: "عملیات اور چلہ کشی",
   },
 ];
 
-export default function RohaniTashkhees() {
+export default function TitleScreen() {
   const navigation = useNavigation();
 
   return (
     <CustomBackground>
-      <View>
+      <View style={styles.container}>
         <FlatList
           data={DATA}
           keyExtractor={(item) => item.id}
+          contentContainerStyle={styles.list}
           renderItem={({ item }) => (
             <TouchableOpacity
               style={styles.card}
               onPress={() =>
-                navigation.navigate(
-                  `rohani_ilaj/rohani_tashkhees_items/${item.screen}`
-                )
+                navigation.navigate(item.screen)
               }
             >
               <Text style={styles.text}>{item.text}</Text>
@@ -59,18 +62,19 @@ export default function RohaniTashkhees() {
 
 const styles = StyleSheet.create({
   card: {
+    flexGrow: 1,
     width: "100%",
     backgroundColor: "#E4DAC1",
     paddingVertical: 15,
-    marginTop: 10,
-    marginBottom: 10,
-    borderRadius: 5,
+    marginBottom: 20,
+    borderRadius: 10,
     alignItems: "center",
   },
   text: {
-    fontSize: 20,
+    fontSize: 18,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "center",
+    writingDirection: "rtl",
   },
 });

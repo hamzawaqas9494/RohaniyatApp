@@ -48,7 +48,7 @@ export default function TitleScreen() {
               <TouchableOpacity
                 style={styles.card}
                 onPress={() =>
-                  navigation.navigate("wazaif_content_detail", {
+                  navigation.navigate("وَظَائف کی تفصیل", {
                     id: item.id,
                   })
                 }

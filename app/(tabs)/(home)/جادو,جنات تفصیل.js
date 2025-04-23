@@ -22,7 +22,7 @@ export default function WazaifDetailsScreen() {
     const fetchDetails = async () => {
       try {
         const response = await fetch(
-          `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=Rohani_Ilaaj&id=${id}`
+          `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=Wazaif&id=${id}`
         );
         const result = await response.json();
         setData(result.rows[0]);

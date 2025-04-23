@@ -193,6 +193,7 @@ const htmlStyles = StyleSheet.create({
     fontSize: 16,
     color: "#6C472D",
     lineHeight: 30,
+    fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
     writingDirection: "rtl",
   },

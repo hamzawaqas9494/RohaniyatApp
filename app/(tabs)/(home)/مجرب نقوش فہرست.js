@@ -11,14 +11,14 @@ import { useNavigation } from "@react-navigation/native";
 import CustomBackground from "../../../components/Background/Background";
 
 
-export default function TitleScreen() {
+export default function MujrabNakosh() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
 
   useEffect(() => {
     fetch(
-      "https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=Wazaif"
+      "https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=Taweez"
     )
       .then((res) => res.json())
       .then((result) => {
@@ -30,7 +30,7 @@ export default function TitleScreen() {
 
   return (
     <CustomBackground>
-      <View>
+      <View style={styles.container}>
         {loading ? (
           <View style={styles.centerContent}>
             <ActivityIndicator size="large" color="#6C472D" />
@@ -48,7 +48,7 @@ export default function TitleScreen() {
               <TouchableOpacity
                 style={styles.card}
                 onPress={() =>
-                  navigation.navigate("wazaif_items/wazaif_content_detail", {
+                  navigation.navigate("مجرب نقوش تفصیل", {
                     id: item.id,
                   })
                 }
