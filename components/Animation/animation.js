@@ -5,8 +5,8 @@ import {
   ImageBackground,
   Pressable,
   Text,
-  View,
   Dimensions,
+  View
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
  
@@ -51,41 +51,64 @@ const AnimatedItem = ({ item, index, total, iconWidth, iconHeight, circleRadius 
         transform: [{ translateY: slideAnim }],
       }}
     >
-      <Pressable onPress={() => navigation.navigate(item.screen)}>
+
         <ImageBackground
           source={item.image}
           style={{
-            width: iconWidth,
+            width: iconWidth ,
             height: iconHeight,
             justifyContent: "center",
             alignItems: "center",
+            // overflow:"hidden"
           }}
           resizeMode="contain"
           imageStyle={{ transform: [{ rotate: `${rotation}deg` }] }}
         >
-          <Image
-            source={item.icon}
-            style={{
-              width: iconWidth * 0.2,
-              height: iconWidth * 0.2,
-            }}
-          />
-          <Text
-            style={{
-              color: "#6C472D",
-              fontFamily: "Jameel-Noori-Regular",
-              fontSize: iconWidth * 0.18,
-              textAlign: "center",
-            }}
-          >
-            {item.text}
-          </Text>
+   <Pressable
+  onPress={() => navigation.navigate(item.screen)}
+  style={{
+    alignItems: "center",
+    justifyContent: "center",
+    width: iconWidth * 0.85,
+    height: iconWidth * 0.8,
+    // backgroundColor: "rgba(255, 255, 255, 0.6)",
+    transform: [{ rotate: `${rotation}deg` }],
+  }}
+>
+  
+  <View
+    style={{
+     
+      alignItems: "center",
+      transform: [{ rotate: `${-rotation}deg` }],
+      justifyContent: "center",
+      
+    }}
+  >
+    <Image
+      source={item.icon}
+      style={{
+        width: iconWidth * 0.2,
+        height: iconWidth * 0.2,
+      }}
+    />
+    <Text
+      style={{
+        color: "#6C472D",
+        fontFamily: "Jameel-Noori-Regular",
+        fontSize: iconWidth * 0.16,
+        textAlign: "center",
+      }}
+    >
+      {item.text}
+    </Text>
+  </View>
+</Pressable>
+
         </ImageBackground>
-      </Pressable>
+    
     </Animated.View>
   );
 };
  
 export default AnimatedItem;
- 
- 

@@ -12,11 +12,32 @@ import ShareApp from "../../../components/ShareApp/shareApp";
 import AnimatedItem from "../../../components/Animation/animation";
  
 const { width, height } = Dimensions.get("window");
- 
-const ICON_SIZE_WIDTH = width * 0.3;
-const ICON_SIZE_HEIGHT = height * 0.13;
-const CENTER_CARD_SIZE = width * 0.5;
-const CIRCLE_RADIUS = width * 0.35;
+
+
+let ICON_SIZE_WIDTH, ICON_SIZE_HEIGHT, CENTER_CARD_SIZE, CIRCLE_RADIUS;
+
+if (width < 475) {
+  ICON_SIZE_WIDTH = width * 0.3;
+  ICON_SIZE_HEIGHT = height * 0.3;
+ CENTER_CARD_SIZE = width * 0.42;
+ CIRCLE_RADIUS = width * 0.32;
+
+} else if (width < 675) {
+  ICON_SIZE_WIDTH = width * 0.22;
+  ICON_SIZE_HEIGHT = height * 0.22;
+ CENTER_CARD_SIZE = width * 0.34;
+ CIRCLE_RADIUS = width * 0.25;
+}else if (width < 768) {
+  ICON_SIZE_WIDTH = width * 0.18;
+  ICON_SIZE_HEIGHT = height * 0.18;
+ CENTER_CARD_SIZE = width * 0.30;
+ CIRCLE_RADIUS = width * 0.21;
+}else{
+ICON_SIZE_WIDTH = width * 0.14;
+ICON_SIZE_HEIGHT = height * 0.14;
+CENTER_CARD_SIZE = width * 0.26;
+CIRCLE_RADIUS = width * 0.18;
+}
  
 const DATA = [
   {
@@ -127,6 +148,7 @@ const styles = StyleSheet.create({
     height: width,
     justifyContent: "center",
     alignItems: "center",
+ 
   },
   centerCard: {
     width: CENTER_CARD_SIZE,
@@ -136,8 +158,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     position: "absolute",
-    zIndex: 10,
-    elevation: 6,
+    // zIndex: 10,
+    // overflow:"hidden",
+    // elevation: 6,
     borderWidth: 10,
     borderColor: "#F9F6F2",
   },
