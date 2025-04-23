@@ -12,12 +12,12 @@ import CustomBackground from "../../../components/Background/Background";
 const DATA = [
   {
     id: "1",
-    screen: "wazaif_content",
+    screen: "وظائف فہرست",
     text: "وظائف",
   },
   {
     id: "2",
-    screen: "tawaiz_content",
+    screen: "تعویذات فہرست",
     text: "تعویذات",
   },
 ];

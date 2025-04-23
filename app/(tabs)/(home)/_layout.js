@@ -22,13 +22,14 @@ function HeaderLeft() {
           <Ionicons
             name="arrow-back"
             size={24}
+             color="#6C472D"
             style={{
               marginLeft: 12,
             }}
           />
         </Pressable>
       ) : (
-        <DrawerToggleButton />
+        <DrawerToggleButton  />
       )}
     </View>
   );
@@ -47,6 +48,7 @@ export default function StackNavigator() {
         headerTitleStyle: {
           fontFamily: "Jameel-Noori-Regular",
           fontSize: 22,
+          color: "#6C472D",
         },
         headerTitleAlign: "center",
       }}
@@ -54,7 +56,7 @@ export default function StackNavigator() {
       <Stack.Screen
         name="index"
         options={{
-          title: "Home",
+          title: "ادارہ روحانیت",
           headerShown: true,
           gestureEnabled: true,
         }}

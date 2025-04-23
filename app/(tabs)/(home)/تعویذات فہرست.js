@@ -14,17 +14,17 @@ import CustomBackground from "../../../components/Background/Background";
 const DATA = [
   {
     id: "1",
-    screen: "nakosh_mazaj_tarika",
+    screen: "نقوش کا مزاج",
     text: " نقوش کا مزاج اور طریقہ",
   },
   {
     id: "2",
-    screen: "nakosh_lawazmat",
+    screen: "نقوش کے لوازمات",
     text: "نقوش کے لوازمات",
   },
   {
     id: "3",
-    screen: "mujrab_nakosh",
+    screen: "مجرب نقوش فہرست",
     text: "مجرب نقوش",
   },
 ];

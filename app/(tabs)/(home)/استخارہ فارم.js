@@ -2,19 +2,24 @@ import { View, Text, StyleSheet, ScrollView } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 
 
-export default function RohaniTashkhessScreen() {
+export default function NakoshLawazmat() {
   return (
     <CustomBackground>
       <ScrollView>
         <View>
-        <Text style={styles.heading}>rohani tashkhees </Text>          
+          <Text style={styles.heading}> استخارہ فارم </Text>
+          <Text style={styles.description}>
+            عملیات کورس میں روحانی علوم اور عملیات کے اصول سکھائے جاتے ہیں تاکہ
+            لوگ قرآنی اور اسلامی طریقے سے اپنی زندگی بہتر بنا سکیں۔
+          </Text>
         </View>
       </ScrollView>
     </CustomBackground>
   );
 }
+
 const styles = StyleSheet.create({
-heading: {
+  heading: {
     fontSize: 40,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",

@@ -2,6 +2,7 @@ import React from "react";
 import {
   View,
   Text,
+  Image,
   StyleSheet,
   FlatList,
   TouchableOpacity,
@@ -9,51 +10,41 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import CustomBackground from "../../../components/Background/Background";
 
+
 const DATA = [
   {
     id: "1",
-    screen: "rohani_ilaaj_taaruf",
-    text: "روحانی علاج کا مختصر تعارف",
+    screen: "روحانی تشخیص تعارف",
+    text: "روحانی تشخیص کا تعارف",
   },
   {
     id: "2",
-    screen: "jadu_jinnat_taaruf",
-    text: "جادو، جنات اور نظر بد کی علامات",
+    screen: "فرد کی تشخیص",
+    text: "فرد کی تشخیص کرنے کا طریقہ",
   },
+
   {
     id: "3",
-    screen: "rohani_tashkhees",
-    text: "روحانی تشخیص",
-  },
-  {
-    id: "4",
-    screen: "jadu_jinnat_ilaaj",
-    text: "جادو، جنات اور مسائل کا علاج",
-  },
-  {
-    id: "5",
-    screen: "hisaar_amaal",
-    text: "حصار (حفاظت) کے اعمال",
-  },
-  {
-    id: "6",
-    screen: "hamara_tarika_iaaj",
-    text: "ہمارا طریقہ علاج",
+    screen: "جگہ کی تشخیص",
+    text: " جگہ کی تشخیص کرنے کا طریقہ",
   },
 ];
-export default function RohaniIlaj() {
+
+export default function RohaniTashkhees() {
   const navigation = useNavigation();
+
   return (
     <CustomBackground>
-      <View style={styles.container}>
+      <View>
         <FlatList
           data={DATA}
           keyExtractor={(item) => item.id}
-          contentContainerStyle={styles.list}
           renderItem={({ item }) => (
             <TouchableOpacity
               style={styles.card}
-              onPress={() => navigation.navigate(`rohani_ilaj/${item.screen}`)}
+              onPress={() =>
+                navigation.navigate(item.screen)
+              }
             >
               <Text style={styles.text}>{item.text}</Text>
             </TouchableOpacity>
@@ -63,6 +54,7 @@ export default function RohaniIlaj() {
     </CustomBackground>
   );
 }
+
 const styles = StyleSheet.create({
   card: {
     width: "100%",

@@ -2,15 +2,15 @@ import { View, Text, StyleSheet, ScrollView } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 
 
-export default function TaweezatUsmaniaScreen() {
+export default function NakoshLawazmat() {
   return (
     <CustomBackground>
       <ScrollView>
         <View>
-          <Text style={styles.heading}>تعویذات عثمانیہ</Text>
+          <Text style={styles.heading}> عطیات  فارم </Text>
           <Text style={styles.description}>
-            تعویذات عثمانیہ ایک اسلامی روحانی طریقہ ہے جو زندگی کے مختلف مسائل
-            کے حل کے لیے استعمال ہوتا ہے۔
+            عملیات کورس میں روحانی علوم اور عملیات کے اصول سکھائے جاتے ہیں تاکہ
+            لوگ قرآنی اور اسلامی طریقے سے اپنی زندگی بہتر بنا سکیں۔
           </Text>
         </View>
       </ScrollView>
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     writingDirection: "rtl",
   },
   description: {
-   fontSize: 20,
+    fontSize: 20,
     color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
