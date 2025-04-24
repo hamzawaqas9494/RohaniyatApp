@@ -6,8 +6,7 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        headerLeftContainerStyle: { paddingLeft: -16 },
-        headerLeft: () => <DrawerToggleButton />,
+      
         headerStyle: {
           height: 56,
           backgroundColor: "#E4DAC1",
