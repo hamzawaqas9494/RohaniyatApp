@@ -4,13 +4,20 @@
     "slug": "mobileapp",
     "version": "1.0.0",
     "orientation": "portrait",
+    "icon": "./assets/images/AppIcon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/MainBackground.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFFFF"
+    },
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "package": "com.hamzawaqasch.rohaniyat",
       "permissions": [
         "INTERNET",
         "ACCESS_FINE_LOCATION",
@@ -18,20 +25,13 @@
         "READ_EXTERNAL_STORAGE",
         "WRITE_EXTERNAL_STORAGE"
       ],
-      "icon": "./assets/images/main-logo.png",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/main-logo.png",
-        "backgroundColor": "#ffffff"
-      },
-      "package": "com.hamzawaqasch.rohaniyat"
+        "foregroundImage": "./assets/images/AppIcon.png",
+        "backgroundColor": "#E4DAC1"
+      }
     },
     "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/main-logo.png"
-    },
-    "experiments": {
-      "typedRoutes": true
+      "favicon": "./assets/images/AppIcon.png"
     },
     "extra": {
       "eas": {

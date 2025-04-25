@@ -1,7 +1,5 @@
 import { Tabs } from "expo-router/tabs";
 import { FontAwesome } from "@expo/vector-icons";
-import { DrawerToggleButton } from "@react-navigation/drawer";
-
 export default function TabLayout() {
   return (
     <Tabs
@@ -24,8 +22,6 @@ export default function TabLayout() {
         },
       }}
     >
-    
-  
       <Tabs.Screen
         name="(home)"
         options={{
@@ -37,9 +33,6 @@ export default function TabLayout() {
           tabBarLabelPosition: "below-icon",
         }}
       />
-  
-
-
       <Tabs.Screen
         name="settings"
         options={{

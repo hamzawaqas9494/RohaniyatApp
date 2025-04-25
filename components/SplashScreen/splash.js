@@ -1,67 +1,40 @@
-import { useEffect, useState } from "react";
-import { View, Image, StyleSheet } from "react-native";
-import { useRouter } from "expo-router";
-import { useFonts } from "expo-font";
-export default function RootLayout() {
-  const [showCustomSplash, setShowCustomSplash] = useState(true);
-  const router = useRouter();
-  const [fontsLoaded] = useFonts({
-    'Jameel-Noori-Regular': require('../assets/fonts/JameelNooriNastaleeqRegular.ttf')
-  });
-  useEffect(() => {
-    if (fontsLoaded) {
-      const timer = setTimeout(() => {
-        setShowCustomSplash(false);
-        router.replace("/drawer");
-      }, 3000);
-      return () => clearTimeout(timer);
-    }
-  }, [fontsLoaded]);
-  if (showCustomSplash || !fontsLoaded) {
-    return (
-      <View style={styles.container}>
-        <Image
-          source={require("../assets/images/splashScreen.png")}
-          style={styles.logo}
-        />
+// components/SplashScreenComponent.js
+import React, { useEffect } from 'react';
+import { Image, View, StyleSheet } from 'react-native';
+import * as SplashScreen from 'expo-splash-screen';
 
-      </View>
-    );
-  }
-  return null;
-}
+const SplashScreenComponent = ({ onFinish }) => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      onFinish(); // Callback when splash screen is finished
+      SplashScreen.hideAsync(); // Hide splash screen
+    }, 2000); // Duration of splash screen
+
+    return () => clearTimeout(timer);
+  }, [onFinish]);
+
+  return (
+    <View style={styles.splash}>
+      <Image
+        source={require("../assets/images/SplashScreen.png")}
+        style={styles.logo}
+        resizeMode="contain"
+      />
+    </View>
+  );
+};
+
 const styles = StyleSheet.create({
-  container: {
+  splash: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#ffffff",
+    justifyContent: 'center',
+    alignItems: 'center', // Center the content
+    backgroundColor: '#fff',
   },
   logo: {
-    width: "100%",
-    height: "100%",
-    resizeMode: "cover",
+    width: '80%', // Adjust size as necessary
+    height: '80%', // Adjust size as necessary
   },
 });
- 
-// import { useEffect } from "react";
-// import { useRouter } from "expo-router";
-// import { useFonts } from "expo-font";
 
-// export default function RootLayout() {
-//   const router = useRouter();
-
-//   const [fontsLoaded] = useFonts({
-//     'NotoNastaliqUrdu-Regular': require('../assets/fonts/NotoNastaliqUrdu-Regular.ttf'),
-//     'NotoNastaliqUrdu-Bold': require('../assets/fonts/NotoNastaliqUrdu-Bold.ttf')
-//   });
-
-//   useEffect(() => {
-//     if (fontsLoaded) {
-//       router.replace("/drawer");
-//     }
-//   }, [fontsLoaded]);
-
-//   // Jab tak font load nahi hotay, kuch bhi render nahi karo
-//   return null;
-// }
+export default SplashScreenComponent;

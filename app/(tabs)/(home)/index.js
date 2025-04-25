@@ -101,7 +101,7 @@ const DATA = [
 export default function HomeScreen() {
   return (
     <ImageBackground
-      source={require("../../../assets/images/background.png")}
+      source={require("../../../assets/images/MainBackground.png")}
       style={styles.background}
     >
       <ShareApp />
@@ -109,7 +109,7 @@ export default function HomeScreen() {
       <View style={styles.circleContainer}>
         <View style={styles.centerCard}>
           <Image
-            source={require("../../../assets/images/ss.png")}
+            source={require("../../../assets/images/CircleLogo.png")}
             style={styles.centerLogo}
           />
         </View>

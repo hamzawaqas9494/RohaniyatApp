@@ -1,12 +1,5 @@
 import React from "react";
 import { Stack } from "expo-router";
-import { DrawerToggleButton } from "@react-navigation/drawer";
-import { useNavigationState, useNavigation } from "@react-navigation/native";
-import { View, Pressable } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
-
-
-
 export default function StackNavigator() {
   return (
     <Stack
@@ -18,7 +11,7 @@ export default function StackNavigator() {
         },
         headerTitleStyle: {
           fontFamily: "Jameel-Noori-Regular",
-          fontSize: 22,
+          fontSize: 25,
           color: "#6C472D",
         },
         headerTitleAlign: "center",
