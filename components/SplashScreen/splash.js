@@ -1,40 +1,24 @@
-// components/SplashScreenComponent.js
-import React, { useEffect } from 'react';
-import { Image, View, StyleSheet } from 'react-native';
-import * as SplashScreen from 'expo-splash-screen';
+import React from "react";
+import { View, Image, StyleSheet } from "react-native";
 
-const SplashScreenComponent = ({ onFinish }) => {
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      onFinish(); // Callback when splash screen is finished
-      SplashScreen.hideAsync(); // Hide splash screen
-    }, 2000); // Duration of splash screen
-
-    return () => clearTimeout(timer);
-  }, [onFinish]);
-
+export default function CustomSplash() {
   return (
-    <View style={styles.splash}>
+    <View style={styles.container}>
       <Image
-        source={require("../assets/images/SplashScreen.png")}
-        style={styles.logo}
+        source={require("../../assets/images/CircleLogo.png")}
+        style={styles.image}
         resizeMode="contain"
       />
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
-  splash: {
+  container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center', // Center the content
-    backgroundColor: '#fff',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor:"#E4DAC1"
   },
-  logo: {
-    width: '80%', // Adjust size as necessary
-    height: '80%', // Adjust size as necessary
-  },
-});
 
-export default SplashScreenComponent;
+});

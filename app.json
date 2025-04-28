@@ -4,17 +4,18 @@
     "slug": "mobileapp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/AppIcon.png",
+    "icon": "./assets/images/CircleLogo.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
-    "splash": {
-      "image": "./assets/images/MainBackground.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#FFFFFF"
-    },
     "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/defultsplash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#E4DAC1"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "icon": "./assets/images/adaptive-icon.png"
     },
     "android": {
       "package": "com.hamzawaqasch.rohaniyat",
@@ -25,18 +26,20 @@
         "READ_EXTERNAL_STORAGE",
         "WRITE_EXTERNAL_STORAGE"
       ],
+      "icon": "./assets/images/adaptive-icon.png",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/AppIcon.png",
-        "backgroundColor": "#E4DAC1"
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./assets/images/AppIcon.png"
+      "favicon": "./assets/images/adaptive-icon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "410aabf1-0a0d-4667-9ef2-39b0bd270ba9"
+        "projectId": "fedaf04d-9035-4932-87db-2075d40cc42b"
       }
-    }
+    },
+    "owner": "rohaniyatapp"
   }
 }
