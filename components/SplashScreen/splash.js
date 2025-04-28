@@ -5,7 +5,7 @@ const { height } = Dimensions.get("window");
 
 export default function CustomSplash() {
   const fadeAnim = useRef(new Animated.Value(0)).current; 
-  const scaleAnim = useRef(new Animated.Value(0.4)).current; 
+  const scaleAnim = useRef(new Animated.Value(0.5)).current; 
   const slideAnim = useRef(new Animated.Value(height)).current;
 
   useEffect(() => {
