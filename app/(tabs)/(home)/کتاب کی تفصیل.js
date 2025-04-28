@@ -1,66 +1,3 @@
-// import React, { useEffect, useState } from "react";
-// import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
-// import { useRoute } from "@react-navigation/native";
-// import CustomBackground from "../../../../../components/Background/Background";
-
-// export default function DetailsScreen() {
-//   const route = useRoute();
-//   const { id } = route.params; // Get ID from Navigation
-//   const [data, setData] = useState(null);
-//   const [loading, setLoading] = useState(true);
-
-//   useEffect(() => {
-//     const fetchDetails = async () => {
-//       try {
-//         const response = await fetch(
-//           `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=wazaif&id=${id}`
-//         ); // API with ID
-//         const result = await response.json();
-//         console.log(result.rows, "get from db");
-//         setData(result.rows[0]); // Set Data
-//       } catch (error) {
-//         console.error("Error fetching details:", error);
-//       } finally {
-//         setLoading(false);
-//       }
-//     };
-
-//     fetchDetails();
-//   }, [id]);
-
-//   return (
-//     <CustomBackground>
-//       <View>
-//         {loading ? (
-//           <ActivityIndicator size="large" color="#6C472D" />
-//         ) : (
-//           <View>
-//             <Text style={styles.text}>
-//               {data ? data.title : "No Data Found"}
-//             </Text>
-//             <Text style={styles.text}>
-//               {data ? data.images : "No Data Found"}
-//             </Text>
-//             <Text style={styles.text}>
-//               {data ? data.content : "No Data Found"}
-//             </Text>
-//           </View>
-//         )}
-//       </View>
-//     </CustomBackground>
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   text: {
-//     fontSize: 20,
-//     fontWeight: "bold",
-//     color: "#6C472D",
-//     textAlign: "center",
-//     writingDirection: "rtl",
-//   },
-// });
-
 import React, { useEffect, useState } from "react";
 import {
   View,
@@ -74,7 +11,6 @@ import { useRoute } from "@react-navigation/native";
 import HTMLView from "react-native-htmlview";
 import CustomBackground from "../../../components/Background/Background";
 
-
 export default function WazaifDetailsScreen() {
   const route = useRoute();
   const { id } = route.params;
@@ -85,7 +21,7 @@ export default function WazaifDetailsScreen() {
     const fetchDetails = async () => {
       try {
         const response = await fetch(
-          `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=wazaif&id=${id}`
+          `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=qutb&id=${id}`
         );
         const result = await response.json();
         setData(result.rows[0]);
@@ -116,7 +52,13 @@ export default function WazaifDetailsScreen() {
             style={styles.image}
             resizeMode="contain"
           />
-
+          {/* {data?.image && (
+            <Image
+              source={{ uri: data.image }}
+              style={styles.image}
+              resizeMode="contain"
+            />
+          )} */}
           <HTMLView
             value={data?.content || "No Data Found"}
             stylesheet={htmlStyles}
