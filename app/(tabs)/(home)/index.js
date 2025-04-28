@@ -64,8 +64,8 @@ const DATA = [
   {
     id: "4",
     icon: require("../../../assets/images/bookicon.png"),
-    screen: "کتب",
-    text: "کتب",
+    screen: "عملیات کورسز تفصیلات",
+    text: "عملیات کورس",
     image: require("../../../assets/images/item2-bg-path.png"),
   },
   {
