@@ -32,7 +32,7 @@ export default function Layout() {
     if (fontsLoaded) {
       const timer = setTimeout(() => {
         setSplashVisible(false); // Apni custom splash band karo after 3 seconds
-      }, 3000);
+      }, 2000);
       return () => clearTimeout(timer);
     }
   }, [fontsLoaded]);
