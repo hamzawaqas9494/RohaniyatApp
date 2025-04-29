@@ -31,7 +31,7 @@ const MareedScreen = () => {
     email: "",
     gender: "",
     status: "",
-    natureOfBait: "",
+    amliyatcourse: "",
   });
 
   const [modalVisible, setModalVisible] = useState(false);
@@ -85,8 +85,8 @@ const MareedScreen = () => {
       formErrors.gender = "Gender is required";
     } else if (!formData.status) {
       formErrors.status = "Status is required";
-    } else if (!formData.natureOfBait) {
-      formErrors.natureOfBait = "Nature Of Bait is required";
+    } else if (!formData.amliyatcourse) {
+      formErrors.amliyatcourse = "Nature Of Bait is required";
     }
 
     if (Object.keys(formErrors).length === 0) {
@@ -119,7 +119,7 @@ const MareedScreen = () => {
             email: "",
             gender: "",
             status: "",
-            natureOfBait: "",
+            amliyatcourse: "",
           });
         } else {
           const result = await response.json();
@@ -289,14 +289,14 @@ const MareedScreen = () => {
 
             {/* Additional Info Textarea */}
             <View style={styles.inputRow}>
-              <Text style={styles.label}>Nature Of Bait:</Text>
+              <Text style={styles.label}>Amliyat Course</Text>
               <TextInput
                 style={[
                   styles.inputBox,
                   { height: 60, textAlignVertical: "top" },
                 ]}
-                value={formData.natureOfBait}
-                onChangeText={(value) => handleChange("natureOfBait", value)}
+                value={formData.amliyatcourse}
+                onChangeText={(value) => handleChange("amliyatcourse", value)}
                 multiline
               />
             </View>

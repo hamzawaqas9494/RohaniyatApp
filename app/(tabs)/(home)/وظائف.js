@@ -48,14 +48,13 @@ const styles = StyleSheet.create({
   card: {
     width: "100%",
     backgroundColor: "#E4DAC1",
-    paddingVertical: 15,
-    marginTop: 10,
-    marginBottom: 10,
+    paddingVertical: 2,
+    marginTop: 8,
+    marginBottom: 8,
     borderRadius: 5,
-    alignItems: "center",
   },
   text: {
-    fontSize: 20,
+    fontSize: 24,
     color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
     textAlign: "center",
