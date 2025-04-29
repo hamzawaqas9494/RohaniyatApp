@@ -86,7 +86,7 @@ const MareedScreen = () => {
     } else if (!formData.status) {
       formErrors.status = "Status is required";
     } else if (!formData.spirtualproblems) {
-      formErrors.spirtualproblems = "Nature Of Bait is required";
+      formErrors.spirtualproblems = "Spirtual Problems is required";
     }
 
     if (Object.keys(formErrors).length === 0) {

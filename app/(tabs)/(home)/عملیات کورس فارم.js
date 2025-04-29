@@ -86,7 +86,7 @@ const MareedScreen = () => {
     } else if (!formData.status) {
       formErrors.status = "Status is required";
     } else if (!formData.amliyatcourse) {
-      formErrors.amliyatcourse = "Nature Of Bait is required";
+      formErrors.amliyatcourse = "Amliyat Course is required";
     }
 
     if (Object.keys(formErrors).length === 0) {
