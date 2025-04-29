@@ -86,7 +86,7 @@ export default RohaniIlaj = () => {
     } else if (!formData.status) {
       formErrors.status = "Status is required";
     } else if (!formData.disease) {
-      formErrors.disease = "Nature Of Disease";
+      formErrors.disease = "Nature Of Disease is required";
     }
 
     if (Object.keys(formErrors).length === 0) {

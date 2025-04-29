@@ -86,7 +86,7 @@ const MareedScreen = () => {
     } else if (!formData.status) {
       formErrors.status = "Status is required";
     } else if (!formData.sendingdonations) {
-      formErrors.sendingdonations = "Nature Of Bait is required";
+      formErrors.sendingdonations = "Donations is required";
     }
 
     if (Object.keys(formErrors).length === 0) {

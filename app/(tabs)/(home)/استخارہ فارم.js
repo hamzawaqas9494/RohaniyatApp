@@ -86,7 +86,7 @@ const MareedScreen = () => {
     } else if (!formData.status) {
       formErrors.status = "Status is required";
     } else if (!formData.problemdescription) {
-      formErrors.problemdescription = "Nature Of Bait is required";
+      formErrors.problemdescription = "Problem Description is required";
     }
 
     if (Object.keys(formErrors).length === 0) {
