@@ -18,7 +18,7 @@ export default function MujrabNakosh() {
 
   useEffect(() => {
     fetch(
-      "https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=Taweez"
+      "https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=taweez"
     )
       .then((res) => res.json())
       .then((result) => {
