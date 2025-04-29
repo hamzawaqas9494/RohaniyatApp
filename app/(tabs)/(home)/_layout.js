@@ -9,10 +9,12 @@ export default function StackNavigator() {
           height: 56,
           backgroundColor: "#E4DAC1",
         },
+        headerTintColor: "#6C472D",
         headerTitleStyle: {
           fontFamily: "Jameel-Noori-Regular",
-          fontSize: 25,
+          fontSize: 22,
           color: "#6C472D",
+         
         },
         headerTitleAlign: "center",
       }}

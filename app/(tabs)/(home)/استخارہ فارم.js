@@ -31,7 +31,7 @@ const MareedScreen = () => {
     email: "",
     gender: "",
     status: "",
-    spirtualproblems: "",
+    problemdescription: "",
   });
 
   const [modalVisible, setModalVisible] = useState(false);
@@ -85,8 +85,8 @@ const MareedScreen = () => {
       formErrors.gender = "Gender is required";
     } else if (!formData.status) {
       formErrors.status = "Status is required";
-    } else if (!formData.spirtualproblems) {
-      formErrors.spirtualproblems = "Nature Of Bait is required";
+    } else if (!formData.problemdescription) {
+      formErrors.problemdescription = "Nature Of Bait is required";
     }
 
     if (Object.keys(formErrors).length === 0) {
@@ -119,7 +119,7 @@ const MareedScreen = () => {
             email: "",
             gender: "",
             status: "",
-            spirtualproblems: "",
+            problemdescription: "",
           });
         } else {
           const result = await response.json();
@@ -289,14 +289,14 @@ const MareedScreen = () => {
 
             {/* Additional Info Textarea */}
             <View style={styles.inputRow}>
-              <Text style={styles.label}>Description of the Spirtual problems</Text>
+              <Text style={styles.label}>Problem Description</Text>
               <TextInput
                 style={[
                   styles.inputBox,
                   { height: 60, textAlignVertical: "top" },
                 ]}
-                value={formData.spirtualproblems}
-                onChangeText={(value) => handleChange("spirtualproblems", value)}
+                value={formData.problemdescription}
+                onChangeText={(value) => handleChange("problemdescription", value)}
                 multiline
               />
             </View>
