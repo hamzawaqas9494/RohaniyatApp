@@ -18,7 +18,7 @@ export default function TitleScreen() {
 
   useEffect(() => {
     fetch(
-      "https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=Wazaif"
+      "https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=wazaif"
     )
       .then((res) => res.json())
       .then((result) => {
