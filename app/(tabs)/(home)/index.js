@@ -1,15 +1,15 @@
 
 import React from "react";
 import {
-  View,
-  StyleSheet,
-  ImageBackground,
   Dimensions,
   Image,
+  ImageBackground,
+  StyleSheet,
+  View,
 } from "react-native";
+import AnimatedItem from "../../../components/Animation/animation";
 import IdaraRohaniyat from "../../../components/link/link";
 import ShareApp from "../../../components/ShareApp/shareApp";
-import AnimatedItem from "../../../components/Animation/animation";
  
 const { width, height } = Dimensions.get("window");
 

@@ -2,7 +2,6 @@
 
 # dependencies
 node_modules/
-app.json/
 
 # Expo
 .expo/
@@ -11,6 +10,7 @@ web-build/
 expo-env.d.ts
 
 # Native
+.kotlin/
 *.orig.*
 *.jks
 *.p8

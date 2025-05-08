@@ -22,7 +22,7 @@ export default function WazaifDetailsScreen() {
     const fetchDetails = async () => {
       try {
         const response = await fetch(
-          `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=Wazaif&id=${id}`
+          `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=wazaif&id=${id}`
         );
         const result = await response.json();
         setData(result.rows[0]);
@@ -90,7 +90,7 @@ const htmlStyles = StyleSheet.create({
   h1: {
     fontFamily: "Arial",
     fontSize: 28,
-    fontWeight: "bold",
+    fontFamily: "Jameel-Noori-Regular",
     color: "#222",
     writingDirection: "rtl",
     textAlign: "right",
@@ -98,7 +98,7 @@ const htmlStyles = StyleSheet.create({
   h2: {
     fontFamily: "Arial",
     fontSize: 24,
-    fontWeight: "bold",
+    fontFamily: "Jameel-Noori-Regular",
     color: "#333",
     writingDirection: "rtl",
     textAlign: "right",
@@ -106,7 +106,7 @@ const htmlStyles = StyleSheet.create({
   h3: {
     fontFamily: "Arial",
     fontSize: 20,
-    fontWeight: "bold",
+    fontFamily: "Jameel-Noori-Regular",
     color: "#444",
     writingDirection: "rtl",
     textAlign: "right",
@@ -115,6 +115,7 @@ const htmlStyles = StyleSheet.create({
     marginTop: 10,
     fontSize: 16,
     color: "#6C472D",
+    fontFamily: "Jameel-Noori-Regular",
     lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",

@@ -1,10 +1,28 @@
-import { Tabs } from "expo-router/tabs";
 import { FontAwesome } from "@expo/vector-icons";
+import { DrawerActions, useNavigation } from '@react-navigation/native';
+import { Tabs } from "expo-router/tabs";
+import React from "react";
+import { StyleSheet, TouchableWithoutFeedback, View } from 'react-native';
+
+const DrawerButton = () => {
+  const navigation = useNavigation();
+ 
+  const handleTap = () => {
+    navigation.dispatch(DrawerActions.openDrawer());
+  };
+ 
+  return (
+    <TouchableWithoutFeedback onPress={handleTap}>
+      <View  style={styles.floatingButton}>
+        <FontAwesome name="bars" size={25} color="#6C472D" />
+      </View>
+    </TouchableWithoutFeedback>
+  );
+};
 export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-      
         headerStyle: {
           height: 56,
           backgroundColor: "#E4DAC1",
@@ -37,6 +55,7 @@ export default function TabLayout() {
         name="settings"
         options={{
           title: "Settings",
+          headerRight: () => <DrawerButton />,
           tabBarIcon: ({ color, size }) => (
             <FontAwesome name="cog" size={size} color={color} />
           ),
@@ -46,3 +65,14 @@ export default function TabLayout() {
     </Tabs>
   );
 }
+ 
+ const styles = StyleSheet.create({
+   floatingButton: {
+     position: "absolute",
+     top: 16,     
+     right: 20,    
+     zIndex: 999,
+   },
+ });
+  
+  
