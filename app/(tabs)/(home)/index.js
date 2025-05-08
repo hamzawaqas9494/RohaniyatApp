@@ -43,8 +43,8 @@ const DATA = [
   {
     id: "1",
     icon: require("../../../assets/images/istakhraIcon.png"),
-    screen: "فری استخارہ",
-    text: "فری استخارہ",
+    screen: "خدمات",
+    text: "خدمات",
     image: require("../../../assets/images/item1-bg-path.png"),
   },
   {
