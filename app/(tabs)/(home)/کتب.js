@@ -12,7 +12,7 @@ import {
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 const { width } = Dimensions.get("window");
-export default function TitleScreen() {
+export default function Kutbkifehrist() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();

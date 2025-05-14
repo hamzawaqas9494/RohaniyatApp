@@ -11,7 +11,7 @@ import {
 import CustomBackground from "../../../components/Background/Background";
 
 
-export default function TavizatUsmania() {
+export default function TavizatUsmaniakiFehrist() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();

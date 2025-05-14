@@ -11,7 +11,7 @@ import { useNavigation } from "@react-navigation/native";
 import CustomBackground from "../../../components/Background/Background";
 
 
-export default function TitleScreen() {
+export default function Wazaiffehrist() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();

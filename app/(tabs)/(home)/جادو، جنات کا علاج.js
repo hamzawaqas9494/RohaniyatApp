@@ -18,7 +18,7 @@ export default function Jadujinnatkailaj() {
 
   useEffect(() => {
     fetch(
-      "https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=wazaif"
+      "https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=rohaniilaaj"
     )
       .then((res) => res.json())
       .then((result) => {

@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 
 
@@ -8,10 +8,23 @@ export default function NakoshLawazmat() {
       <ScrollView>
         <View>
           <Text style={styles.heading}>نقوش کے لوازمات</Text>
-          <Text style={styles.description}>
-            عملیات کورس میں روحانی علوم اور عملیات کے اصول سکھائے جاتے ہیں تاکہ
-            لوگ قرآنی اور اسلامی طریقے سے اپنی زندگی بہتر بنا سکیں۔
+          <Text style={styles.description}>نقوش کے لوازمات میں قلم ، سیاہی ، کاغذات ، بخورات اور ساتھ ہی نقوش کی زکوۃ کی ادائیگی سب سے پہلی شرط ہے ۔
           </Text>
+          
+<Text style={styles.subheading}>1. قلم:</Text>
+<Text style={styles.description}>قلم کسی بھی لکڑی کا سب سے عمدہ ہوتا ہے، اس کے علاوہ ہولڈر، فاؤنٹین پین، بال پین یا پوائنٹر وغیرہ استعمال کر سکتے ہیں مگر جو بھی ہو حلال کمائی سے خریدا ہوا ہو۔ اگر حرام مال کی آمیزش ہو گی تو تاثیر ختم ہو جائے گی۔ مثبت اعمال کیلئے انار، چنبیلی یا گلاب کی لکڑی کا قلم استعمال کریں، منفی اور مثبت اعمال کیلئے کیکر، نیم یا بیری وغیرہ کی لکڑی کا قلم استعمال کریں۔</Text>
+
+<Text style={styles.subheading}>2. سیاہی:</Text>
+<Text style={styles.description}>مختلف رنگوں سے نقوش بھرنا ماہرین سے ثابت ہے۔ اعمال خیر مثلاََ رزق، محبت، ترقی یا اقتدار وغیرہ کیلئے زعفران، سبز رنگ سے نقوش لکھے جاتے ہیں۔ تاثیر بڑھانے کیلئے عرق گلاب، کیوڑہ یا خوشبو شامل کی جاتی ہے۔ اعمال شر مثلاََ نفرت، فساد، بندش یا جدائی وغیرہ کیلئے نیلی یا کالی سیاہی سے لکھے جاتے ہیں۔ مزید خرابی پیدا کرنے کیلئے سیاہی میں بدبودار چیز، مرچ، نمک یا سرکہ وغیرہ شامل کیا جاتا ہے۔ اعمال خیر کا نقش لکھتے وقت عامل با وضو ہو، صاف ستھرا لباس پہنا ہو، خوشبو لگائی ہو اور منہ میں کوئی میٹھی چیز رکھی ہو، اعمال شر کیلئے بے وضو ہو، گندا لباس پہنا ہو اور منہ میں کوئی کڑوی چیز رکھی ہو تو تاثیر جلد سامنے آئے گی۔</Text>
+
+<Text style={styles.subheading}>3. کاغذ:</Text>
+<Text style={styles.description}>عامل کو چاہیے کہ اچھے کاموں کیلئے سفید یا سبز کاغذ استعمال کرے۔ منفی کاموں کیلئے زرد، کالا یا سرخ کاغذ استعمال کرے۔</Text>
+
+<Text style={styles.subheading}>4. کپڑا:</Text>
+<Text style={styles.description}>عام امراض، سحر، آسیبی اثرات اور نفرت وغیرہ کیلئے نقوش کالے کپڑے میں پیک کئے جاتے ہیں، جبکہ کاروباری ترقی، اقتدار کے حصول، محبت اور تسخیر کیلئے سبز، نیلے یا فیروزی کپڑے میں پیک کئے جاتے ہیں۔ جنسی امراض، بندش، حمل اور حفاظت وغیرہ کیلئے سرخ کپڑے میں پیک کئے جاتے ہیں۔</Text>
+
+<Text style={styles.subheading}>نوٹ:</Text>
+<Text style={styles.description}>یہ تمام کام اور لوازمات سبب کے درجے میں ہیں اکابرین کے تجربات سے ثابت ہے۔ اس لئے عامل میں ان کا خاص خیال رکھنا چاہیے۔ مگر یاد رہے عامل بعض دفعہ بغیر کسی قواعد و ضوابط کے نقوش لکھ دیتے ہیں اور وہ نقوش بھی بہترین کام کرتے ہیں۔ اس کی بڑی وجہ یہ ہے کہ وہ نقوش جو کسی قسم کی قواعد و ضوابط کے بغیر لکھے جاتے ہیں ان پر عامل اپنے کسی عمل کی ڈیوٹی لگاتا ہے۔ وہ اس مریض یا سائل کیلئے کام کرتا ہے جس کی عامل نے ڈیوٹی لگائی ہوتی ہے۔ آجکل نقش کم ہی کام کرتے ہیں، اصل کام تو عامل کا عمل کرتا ہے اور جو وہ عامل پڑھائی کرتا ہے۔ (واللہ اعلم) چند مجرب نقوش آپ کی خدمت میں پیش کر رہا ہوں، استعمال کریں عوام اور عاملین کیلئے یکساں مفید ہیں۔</Text>
         </View>
       </ScrollView>
     </CustomBackground>
@@ -26,6 +39,13 @@ const styles = StyleSheet.create({
     textAlign: "right",
     writingDirection: "rtl",
   },
+  subheading: {
+    fontSize: 30,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
   description: {
     fontSize: 20,
     color: "#6C472D",
@@ -33,4 +53,22 @@ const styles = StyleSheet.create({
     textAlign: "right",
     writingDirection: "rtl",
   },
+  list: {
+    paddingRight: 10,
+  },
+  listContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  column: {
+    flex: 1,
+    paddingRight: 10,
+  },
+  item: {
+    fontSize: 20,
+    color: "#6C472D",
+    fontFamily: "Jameel-Noori-Regular",
+    textAlign: "right",
+  },
 });
+

@@ -61,21 +61,21 @@
 //   },
 // });
 
-import React, { useEffect, useState } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  ActivityIndicator,
-  ScrollView,
-  Image,
-} from "react-native";
 import { useRoute } from "@react-navigation/native";
+import { useEffect, useState } from "react";
+import {
+  ActivityIndicator,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import HTMLView from "react-native-htmlview";
 import CustomBackground from "../../../components/Background/Background";
 
 
-export default function WazaifDetailsScreen() {
+export default function Wazaifkitafseel() {
   const route = useRoute();
   const { id } = route.params;
   const [data, setData] = useState(null);

@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 
 
@@ -22,6 +22,13 @@ const styles = StyleSheet.create({
     textAlign: "right",
     writingDirection: "rtl",
   },
+  subheading: {
+    fontSize: 30,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
   description: {
     fontSize: 20,
     color: "#6C472D",
@@ -29,4 +36,22 @@ const styles = StyleSheet.create({
     textAlign: "right",
     writingDirection: "rtl",
   },
+  list: {
+    paddingRight: 10,
+  },
+  listContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  column: {
+    flex: 1,
+    paddingRight: 10,
+  },
+  item: {
+    fontSize: 20,
+    color: "#6C472D",
+    fontFamily: "Jameel-Noori-Regular",
+    textAlign: "right",
+  },
 });
+
