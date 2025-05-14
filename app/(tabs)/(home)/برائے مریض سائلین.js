@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 export default function SettingsScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>یہ اردو ٹیکسٹ ہے</Text>
+      <Text style={styles.text}>برائے مریض / سائلین</Text>
     </View>
   );
 

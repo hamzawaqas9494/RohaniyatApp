@@ -4,26 +4,40 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View
+  View,
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 
 const DATA = [
   {
     id: "1",
-    screen:"برائے مریض سائلین",
-    text: "برائے مریض / سائلین",
+    screen: "روحانی علاج کا تعارف",
+    text: "روحانی علاج کا مختصر تعارف",
   },
   {
     id: "2",
-    screen: "برائے عاملین",
-    text: "برائے عاملین",
+    screen: "جادو،جنات کی علامات",
+    text: "جادو، جنات اور نظر بد کی علامات",
   },
+  {
+    id: "3",
+    screen: "روحانی تشخیص طریقہ ",
+    text: "روحانی تشخیص کے طریقے",
+  },
+  {
+    id: "4",
+    screen:"جادو، جنات کا علاج",
+    text:"جادو، جنات، بیماریاں کا روحانی علاج",
+  },
+  {
+    id: "5",
+    screen: "حصاراعمال",
+     text:"روحانی حفاظت (حصار) کا طریقہ",
+  },
+  
 ];
-
-export default function TitleScreen() {
+export default function MarizooKeLiyeRohaniIlaaj() {
   const navigation = useNavigation();
-
   return (
     <CustomBackground>
       <View style={styles.container}>
@@ -34,9 +48,7 @@ export default function TitleScreen() {
           renderItem={({ item }) => (
             <TouchableOpacity
               style={styles.card}
-              onPress={() =>
-                navigation.navigate(item.screen)
-              }
+              onPress={() => navigation.navigate(item.screen)}
             >
               <Text style={styles.text}>{item.text}</Text>
             </TouchableOpacity>
@@ -46,22 +58,21 @@ export default function TitleScreen() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   card: {
-    flexGrow: 1,
     width: "100%",
     backgroundColor: "#E4DAC1",
     paddingVertical: 2,
     marginTop: 8,
     marginBottom: 8,
+    borderRadius: 5,
     alignItems: "center",
   },
   text: {
     fontSize: 22,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
+    lineHeight:60,
     textAlign: "center",
-    writingDirection: "rtl",
   },
 });

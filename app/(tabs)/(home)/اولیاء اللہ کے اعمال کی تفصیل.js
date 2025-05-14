@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  ActivityIndicator,
-  ScrollView,
-  Image,
-} from "react-native";
 import { useRoute } from "@react-navigation/native";
+import { useEffect, useState } from "react";
+import {
+    ActivityIndicator,
+    Image,
+    ScrollView,
+    StyleSheet,
+    Text,
+    View,
+} from "react-native";
 import HTMLView from "react-native-htmlview";
 import CustomBackground from "../../../components/Background/Background";
 
 
-export default function WazaifDetailsScreen() {
+export default function AuliyaAllahKeAamaalKiTafseel() {
   const route = useRoute();
   const { id } = route.params;
   const [data, setData] = useState(null);
@@ -22,7 +22,7 @@ export default function WazaifDetailsScreen() {
     const fetchDetails = async () => {
       try {
         const response = await fetch(
-          `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=wazaif&id=${id}`
+          `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=ooliaallahkaamal&id=${id}`
         );
         const result = await response.json();
         setData(result.rows[0]);

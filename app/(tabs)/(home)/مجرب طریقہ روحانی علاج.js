@@ -2,7 +2,7 @@ import { ScrollView, StyleSheet, Text, View } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 
 
-export default function IdaraRohaniyatScreen() {
+export default function MujarrabTareeqaRohaniIlaaj() {
   return (
     <CustomBackground>
       <ScrollView>

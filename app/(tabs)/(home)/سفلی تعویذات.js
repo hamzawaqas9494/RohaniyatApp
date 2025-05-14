@@ -1,24 +1,24 @@
 import { useNavigation } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import {
-  ActivityIndicator,
-  FlatList,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
+    ActivityIndicator,
+    FlatList,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 
 
-export default function TavizatUsmania() {
+export default function Saflitavezat() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
 
   useEffect(() => {
     fetch(
-      "https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=tawizatusmaniya"
+      "https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=saflitavezat"
     )
       .then((res) => res.json())
       .then((result) => {
@@ -48,7 +48,7 @@ export default function TavizatUsmania() {
               <TouchableOpacity
                 style={styles.card}
                 onPress={() =>
-                  navigation.navigate("تعویذات عثمانیہ کی تفصیل", {
+                  navigation.navigate("سفلی تعویذات کی تفصیل", {
                     id: item.id,
                   })
                 }

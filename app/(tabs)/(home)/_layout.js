@@ -1,7 +1,6 @@
 import { FontAwesome } from '@expo/vector-icons';
 import { DrawerActions, useNavigation } from '@react-navigation/native';
 import { Stack } from "expo-router";
-import React from "react";
 import { StyleSheet, TouchableWithoutFeedback, View } from 'react-native';
  
  

@@ -4,26 +4,25 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View
+  View,
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 
 const DATA = [
   {
     id: "1",
-    screen:"برائے مریض سائلین",
-    text: "برائے مریض / سائلین",
+    screen:"ہمارا طریقہ علاج",
+    text: "ہمارا طریقہ علاج",
   },
   {
     id: "2",
-    screen: "برائے عاملین",
-    text: "برائے عاملین",
+    screen: "مجرب طریقہ روحانی علاج",
+    text: "مجرب طریقہ روحانی علاج",
   },
+ 
 ];
-
-export default function TitleScreen() {
+export default function RohaniIlaj() {
   const navigation = useNavigation();
-
   return (
     <CustomBackground>
       <View style={styles.container}>
@@ -34,9 +33,7 @@ export default function TitleScreen() {
           renderItem={({ item }) => (
             <TouchableOpacity
               style={styles.card}
-              onPress={() =>
-                navigation.navigate(item.screen)
-              }
+              onPress={() => navigation.navigate(item.screen)}
             >
               <Text style={styles.text}>{item.text}</Text>
             </TouchableOpacity>
@@ -46,22 +43,24 @@ export default function TitleScreen() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   card: {
-    flexGrow: 1,
     width: "100%",
     backgroundColor: "#E4DAC1",
     paddingVertical: 2,
     marginTop: 8,
     marginBottom: 8,
+    borderRadius: 5,
     alignItems: "center",
   },
   text: {
     fontSize: 22,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
+    lineHeight:60,
     textAlign: "center",
-    writingDirection: "rtl",
   },
 });
+
+
+

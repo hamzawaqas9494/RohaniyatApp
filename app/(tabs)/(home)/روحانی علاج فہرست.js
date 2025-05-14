@@ -1,45 +1,25 @@
-import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  FlatList,
-  TouchableOpacity,
-} from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 
 const DATA = [
   {
     id: "1",
-    screen: "روحانی علاج کا تعارف",
-    text: "روحانی علاج کا مختصر تعارف",
+    screen:"ہمارا روحانی علاج کا طریقہ",
+    text: "ہمارا روحانی علاج کا طریقہ",
   },
   {
     id: "2",
-    screen: "نظر بد کی علامات",
-    text: "جادو، جنات اور نظر بد کی علامات",
-  },
-  {
-    id: "3",
-    screen: "روحانی تشخیص طریقہ ",
-    text: "روحانی تشخیص",
-  },
-  {
-    id: "4",
-    screen: "جادو،جنات",
-    text: "جادو، جنات اور مسائل کا علاج",
-  },
-  {
-    id: "5",
-    screen: "حصاراعمال",
-    text: "حصار (حفاظت) کے اعمال",
-  },
-  {
-    id: "6",
-    screen: "ہمارا طریقہ علاج",
-    text: "ہمارا طریقہ علاج",
-  },
+    screen:"مریض کے لیے روحانی علاج",
+    text: "سائل/مریض کے لیے روحانی علاج",
+  }
+  
 ];
 export default function RohaniIlaj() {
   const navigation = useNavigation();
