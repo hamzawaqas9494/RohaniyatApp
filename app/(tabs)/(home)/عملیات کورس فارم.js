@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
+import { Picker } from "@react-native-picker/picker";
+import { useEffect, useState } from "react";
 import {
-  View,
+  Keyboard,
+  KeyboardAvoidingView,
+  Modal,
+  Platform,
+  ScrollView,
+  StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
-  ScrollView,
-  StyleSheet,
-  KeyboardAvoidingView,
-  Platform,
   TouchableWithoutFeedback,
-  Keyboard,
-  Modal,
+  View,
 } from "react-native";
-import { Picker } from "@react-native-picker/picker";
 import CustomBackground from "../../../components/Background/Background";
 
 

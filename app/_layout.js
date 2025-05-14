@@ -3,7 +3,7 @@ import { DrawerActions, useNavigation } from '@react-navigation/native';
 import { useFonts } from "expo-font";
 import { Drawer } from "expo-router/drawer";
 import * as SplashScreen from 'expo-splash-screen';
-import { React, useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { StyleSheet, TouchableWithoutFeedback, View } from 'react-native';
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import SplashScreenComponent from "../components/SplashScreen/splash";

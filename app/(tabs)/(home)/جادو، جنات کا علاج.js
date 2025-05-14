@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  FlatList,
-  TouchableOpacity,
-  ActivityIndicator,
-} from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { useEffect, useState } from "react";
+import {
+  ActivityIndicator,
+  FlatList,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 
 
-export default function TitleScreen() {
+export default function Jadujinnatkailaj() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
@@ -48,7 +48,7 @@ export default function TitleScreen() {
               <TouchableOpacity
                 style={styles.card}
                 onPress={() =>
-                  navigation.navigate("جادو,جنات تفصیل", {
+                  navigation.navigate("جادو کے علاج کی تفصیل", {
                     id: item.id,
                   })
                 }

@@ -1,22 +1,21 @@
-import React, { useEffect, useState } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  FlatList,
-  TouchableOpacity,
-  ActivityIndicator,
-  Image,
-  Dimensions,
-} from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { useEffect, useState } from "react";
+import {
+  ActivityIndicator,
+  Dimensions,
+  FlatList,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 const { width } = Dimensions.get("window");
 export default function TitleScreen() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
-  const defaultImage = require("../../../assets/images/content-image.jpg"); // Local fallback image
   useEffect(() => {
     fetch(
       "https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=qutb"

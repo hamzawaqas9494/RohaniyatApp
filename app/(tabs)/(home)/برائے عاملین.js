@@ -4,25 +4,52 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 
 const DATA = [
   {
     id: "1",
-    screen:"ہمارا روحانی علاج کا طریقہ",
-    text: "ہمارا روحانی علاج کا طریقہ",
+    screen: "نوری اعمال",
+    text: "نوری اعمال",
   },
   {
     id: "2",
-    screen:"مریض کے لیے روحانی علاج",
-    text: "سائل/مریض کے لیے روحانی علاج",
-  }
-  
+    screen: "نوری علوی اعمال",
+    text: "نوری علوی اعمال",
+  },
+    {
+    id: "3",
+    screen:"اولیاء اللہ کے اعمال",
+    text: "اولیاء اللہ کے اعمال",
+  },
+  {
+    id: "4",
+    screen:"با موکل اعمال",
+    text: "با موکل اعمال",
+  },
+    {
+    id: "5",
+    screen:"خاص الخاص اعمال",
+    text: "خاص الخاص اعمال",
+  },
+  {
+    id: "6",
+    screen:"علوی اعمال",
+    text: "علوی اعمال",
+  },
+    {
+    id: "7",
+    screen:"سفلی تعویذات",
+    text: "سفلی تعویذات",
+  },
+ 
 ];
-export default function RohaniIlaj() {
+
+export default function TitleScreen() {
   const navigation = useNavigation();
+
   return (
     <CustomBackground>
       <View style={styles.container}>
@@ -33,7 +60,9 @@ export default function RohaniIlaj() {
           renderItem={({ item }) => (
             <TouchableOpacity
               style={styles.card}
-              onPress={() => navigation.navigate(item.screen)}
+              onPress={() =>
+                navigation.navigate(item.screen)
+              }
             >
               <Text style={styles.text}>{item.text}</Text>
             </TouchableOpacity>
@@ -43,21 +72,22 @@ export default function RohaniIlaj() {
     </CustomBackground>
   );
 }
+
 const styles = StyleSheet.create({
   card: {
+    flexGrow: 1,
     width: "100%",
     backgroundColor: "#E4DAC1",
     paddingVertical: 2,
     marginTop: 8,
     marginBottom: 8,
-    borderRadius: 5,
     alignItems: "center",
   },
   text: {
     fontSize: 22,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
-    lineHeight:60,
     textAlign: "center",
+    writingDirection: "rtl",
   },
 });

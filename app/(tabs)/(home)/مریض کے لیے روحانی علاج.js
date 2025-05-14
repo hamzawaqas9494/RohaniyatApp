@@ -11,17 +11,32 @@ import CustomBackground from "../../../components/Background/Background";
 const DATA = [
   {
     id: "1",
-    screen:"ہمارا روحانی علاج کا طریقہ",
-    text: "ہمارا روحانی علاج کا طریقہ",
+    screen: "روحانی علاج کا تعارف",
+    text: "روحانی علاج کا مختصر تعارف",
   },
   {
     id: "2",
-    screen:"مریض کے لیے روحانی علاج",
-    text: "سائل/مریض کے لیے روحانی علاج",
-  }
+    screen: "جادو،جنات کی علامات",
+    text: "جادو، جنات اور نظر بد کی علامات",
+  },
+  {
+    id: "3",
+    screen: "روحانی تشخیص طریقہ ",
+    text: "روحانی تشخیص کے طریقے",
+  },
+  {
+    id: "4",
+    screen:"جادو، جنات کا علاج",
+    text:"جادو، جنات، بیماریاں کا روحانی علاج",
+  },
+  {
+    id: "5",
+    screen: "حصاراعمال",
+     text:"روحانی حفاظت (حصار) کا طریقہ",
+  },
   
 ];
-export default function RohaniIlaj() {
+export default function MarizooKeLiyeRohaniIlaaj() {
   const navigation = useNavigation();
   return (
     <CustomBackground>

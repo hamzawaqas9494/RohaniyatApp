@@ -1,13 +1,11 @@
-import React from "react";
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  FlatList,
-  TouchableOpacity,
-} from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
+} from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 
 const DATA = [
@@ -18,19 +16,8 @@ const DATA = [
   },
   {
     id: "2",
-    screen: "عامل کی شرائط",
-    text: "عامل کے لیے شرائط",
-  },
-
-  {
-    id: "3",
-    screen: "علاج کورس",
-    text: "مریضوں کے لیے علاج کورس",
-  },
-  {
-    id: "4",
-    screen: "چلہ کشی",
-    text: "عملیات اور چلہ کشی",
+    screen: "برائے عاملین",
+    text: "برائے عاملین",
   },
 ];
 

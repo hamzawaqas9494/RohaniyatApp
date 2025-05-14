@@ -1,7 +1,6 @@
 import { FontAwesome } from "@expo/vector-icons";
 import { DrawerActions, useNavigation } from '@react-navigation/native';
 import { Tabs } from "expo-router/tabs";
-import React from "react";
 import { StyleSheet, TouchableWithoutFeedback, View } from 'react-native';
 
 const DrawerButton = () => {

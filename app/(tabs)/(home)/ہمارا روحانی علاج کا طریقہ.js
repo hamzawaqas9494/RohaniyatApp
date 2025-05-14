@@ -11,15 +11,15 @@ import CustomBackground from "../../../components/Background/Background";
 const DATA = [
   {
     id: "1",
-    screen:"ہمارا روحانی علاج کا طریقہ",
-    text: "ہمارا روحانی علاج کا طریقہ",
+    screen:"ہمارا طریقہ علاج",
+    text: "ہمارا طریقہ علاج",
   },
   {
     id: "2",
-    screen:"مریض کے لیے روحانی علاج",
-    text: "سائل/مریض کے لیے روحانی علاج",
-  }
-  
+    screen: "مجرب طریقہ روحانی علاج",
+    text: "مجرب طریقہ روحانی علاج",
+  },
+ 
 ];
 export default function RohaniIlaj() {
   const navigation = useNavigation();
@@ -61,3 +61,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
 });
+
+
+
