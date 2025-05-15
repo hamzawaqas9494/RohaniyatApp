@@ -19,6 +19,7 @@ export default function Wazaiffehrist() {
     )
       .then((res) => res.json())
       .then((result) => {
+        console.log(result,"result")
         setData(result.rows);
       })
       .catch((error) => console.error("Error fetching data:", error))

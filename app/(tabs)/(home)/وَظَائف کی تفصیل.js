@@ -30,10 +30,8 @@ export default function Wazaifkitafseel() {
         setLoading(false);
       }
     };
-
     fetchDetails();
   }, [id]);
-
   return (
     <CustomBackground>
       {loading ? (
@@ -51,7 +49,6 @@ export default function Wazaifkitafseel() {
             style={styles.image}
             resizeMode="contain"
           />
-
           <HTMLView
             value={data?.content || "No Data Found"}
             stylesheet={htmlStyles}

@@ -67,11 +67,11 @@ const styles = StyleSheet.create({
   noDataText: {
     fontSize: 18,
     color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
     fontWeight: "600",
+    fontFamily: "Jameel-Noori-Regular",
     textAlign: "center",
   },
- card: {
+  card: {
     width: "100%",
     backgroundColor: "#E4DAC1",
     paddingVertical: 2,
@@ -84,7 +84,6 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
-    lineHeight:60,
     textAlign: "center",
   },
 });
