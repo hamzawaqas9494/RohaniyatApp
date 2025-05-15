@@ -14,9 +14,7 @@ import {
 } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import CustomBackground from "../../../components/Background/Background";
-
-
-export default RohaniIlaj = () => {
+export default RohaniIlajForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     fatherName: "",
@@ -33,14 +31,11 @@ export default RohaniIlaj = () => {
     status: "",
     disease: "",
   });
-
   const [modalVisible, setModalVisible] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
-
   const handleChange = (key, value) => {
     setFormData({ ...formData, [key]: value });
   };
-
   useEffect(() => {
     const { day, month, year } = formData;
     if (day && month && year) {
@@ -56,10 +51,8 @@ export default RohaniIlaj = () => {
       }
     }
   }, [formData.day, formData.month, formData.year]);
-
   const handleSubmit = async () => {
     let formErrors = {};
-
     if (!formData.name) {
       formErrors.name = "Name is required";
     } else if (!formData.fatherName) {
@@ -88,7 +81,6 @@ export default RohaniIlaj = () => {
     } else if (!formData.disease) {
       formErrors.disease = "Nature Of Disease is required";
     }
-
     if (Object.keys(formErrors).length === 0) {
       try {
         const response = await fetch(
@@ -101,7 +93,6 @@ export default RohaniIlaj = () => {
             body: JSON.stringify(formData),
           }
         );
-
         if (response.ok) {
           setModalMessage("Form submitted successfully!");
           setModalVisible(true);
@@ -136,7 +127,6 @@ export default RohaniIlaj = () => {
       setModalVisible(true);
     }
   };
-
   return (
     <CustomBackground>
       <KeyboardAvoidingView
@@ -148,7 +138,6 @@ export default RohaniIlaj = () => {
             <Text style={styles.heading}>روحانی علاج کے لیے</Text>
             <Text style={styles.description}>لحمدللہ ادارہ روحانیات کی اس سروس کے ذریعے پوری دنیا سے لاکھوں لوگ روحانی علاج اور اپنے گھریلو، کاروباری، معاشرتی ، میڈیکلی مسائل بالخصوص جادو و جنات کے مکمل مستقل روحانی علاج کیلئے ہمارے خاص الخاص موکلاتی اعمال کی اجازت لے کر ادارے کی نگرانی اور رہنمائی اپنا ، اپنی فیملی اور اپنے کا روبار علاج کر رہے ہیں ۔ 
             </Text>
-
             {[
               { label: "Name", key: "name", keyboardType: "default" },
               {
@@ -180,7 +169,6 @@ export default RohaniIlaj = () => {
                 />
               </View>
             ))}
-
             {/* DOB */}
             <View style={styles.inputRow}>
               <Text style={styles.label}>DOB:</Text>
@@ -199,7 +187,6 @@ export default RohaniIlaj = () => {
                     />
                   ))}
                 </Picker>
-
                 <Picker
                   selectedValue={formData.month}
                   style={styles.pickerInput}
@@ -243,7 +230,6 @@ export default RohaniIlaj = () => {
                 </Picker>
               </View>
             </View>
-
             {/* Age */}
             <View style={styles.inputRow}>
               <Text style={styles.label}>Age:</Text>
@@ -253,7 +239,6 @@ export default RohaniIlaj = () => {
                 editable={false}
               />
             </View>
-
             {/* Gender Picker */}
             <View style={styles.inputRow}>
               <Text style={styles.label}>Gender:</Text>
@@ -268,7 +253,6 @@ export default RohaniIlaj = () => {
                 <Picker.Item label="Other" value="Other" />
               </Picker>
             </View>
-
             {/* Status Picker */}
             <View style={styles.inputRow}>
               <Text style={styles.label}>Status:</Text>
@@ -282,7 +266,6 @@ export default RohaniIlaj = () => {
                 <Picker.Item label="Married" value="Married" />
               </Picker>
             </View>
-
             {/* Additional Info Textarea */}
             <View style={styles.inputRow}>
               <Text style={styles.label}>Nature Of Disease:</Text>
@@ -296,11 +279,9 @@ export default RohaniIlaj = () => {
                 multiline
               />
             </View>
-
             <TouchableOpacity style={styles.button} onPress={handleSubmit}>
               <Text style={styles.buttonText}>Submit</Text>
             </TouchableOpacity>
-
             {/* Modal for errors or success */}
             <Modal
               visible={modalVisible}
@@ -329,7 +310,6 @@ export default RohaniIlaj = () => {
     </CustomBackground>
   );
 };
-
 const styles = StyleSheet.create({
   heading: {
     fontSize: 40,

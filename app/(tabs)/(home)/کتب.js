@@ -54,8 +54,6 @@ export default function Kutbkifehrist() {
                   })
                 }
               >
-                  
-                
           {data?.image ? (
             <Image
               source={{ uri: data.image }}

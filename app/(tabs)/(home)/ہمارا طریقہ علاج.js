@@ -1,7 +1,5 @@
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-
-
 export default function HamaraTarikaIlajScreen() {
   return (
     <CustomBackground>
@@ -35,23 +33,6 @@ const styles = StyleSheet.create({
     fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
     writingDirection: "rtl",
-  },
-  list: {
-    paddingRight: 10,
-  },
-  listContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  column: {
-    flex: 1,
-    paddingRight: 10,
-  },
-  item: {
-    fontSize: 20,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
   },
 });
 

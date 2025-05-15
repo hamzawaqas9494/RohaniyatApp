@@ -2,15 +2,11 @@ import { FontAwesome } from '@expo/vector-icons';
 import { DrawerActions, useNavigation } from '@react-navigation/native';
 import { Stack } from "expo-router";
 import { StyleSheet, TouchableWithoutFeedback, View } from 'react-native';
- 
- 
 const DrawerButton = () => {
   const navigation = useNavigation();
- 
   const handleTap = () => {
     navigation.dispatch(DrawerActions.openDrawer());
   };
- 
   return (
     <TouchableWithoutFeedback onPress={handleTap}>
       <View>
@@ -19,19 +15,14 @@ const DrawerButton = () => {
     </TouchableWithoutFeedback>
   );
 };
- 
 export default function StackNavigator() {
   return (
   <>  
-
       <View style={styles.floatingButton}>
         <DrawerButton />
       </View>
- 
- 
       <Stack
         screenOptions={{
-    
           headerShown: true,
           headerStyle: {
             height: 56,
@@ -57,7 +48,6 @@ export default function StackNavigator() {
     </>
   );
 }
- 
 const styles = StyleSheet.create({
   floatingButton: {
     position: "absolute",

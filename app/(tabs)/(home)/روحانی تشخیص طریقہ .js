@@ -1,16 +1,12 @@
-import React from "react";
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  FlatList,
-  TouchableOpacity,
-} from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
+} from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-
-
 const DATA = [
   {
     id: "1",
@@ -22,17 +18,14 @@ const DATA = [
     screen: "فرد کی تشخیص",
     text: "فرد کی تشخیص کرنے کا طریقہ",
   },
-
   {
     id: "3",
     screen: "جگہ کی تشخیص",
     text: " جگہ کی تشخیص کرنے کا طریقہ",
   },
 ];
-
-export default function RohaniTashkhees() {
+export default function RohaniTashkheesTrika() {
   const navigation = useNavigation();
-
   return (
     <CustomBackground>
       <View>
@@ -54,22 +47,31 @@ export default function RohaniTashkhees() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   card: {
     width: "100%",
     backgroundColor: "#E4DAC1",
-   paddingVertical: 2,
+    paddingVertical: 6,
     marginTop: 8,
     marginBottom: 8,
     borderRadius: 5,
-    alignItems: "center",
   },
   text: {
     fontSize: 22,
-    fontFamily: "Jameel-Noori-Regular",
+   fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
-    lineHeight:60,
+    textAlign: "center",
+  },
+    centerContent: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  noDataText: {
+    fontSize: 18,
+    color: "#6C472D",
+    fontFamily: "Jameel-Noori-Regular",
+    fontWeight: "600",
     textAlign: "center",
   },
 });

@@ -10,13 +10,11 @@ import {
 } from "react-native";
 import HTMLView from "react-native-htmlview";
 import CustomBackground from "../../../components/Background/Background";
-
 export default function Kutbkitafseel() {
   const route = useRoute();
   const { id } = route.params;
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     const fetchDetails = async () => {
       try {
@@ -31,7 +29,6 @@ export default function Kutbkitafseel() {
         setLoading(false);
       }
     };
-
     fetchDetails();
   }, [id]);
 
@@ -68,14 +65,12 @@ export default function Kutbkitafseel() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   centerContent: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
   },
-
   heading: {
     fontSize: 40,
     fontFamily: "Jameel-Noori-Regular",

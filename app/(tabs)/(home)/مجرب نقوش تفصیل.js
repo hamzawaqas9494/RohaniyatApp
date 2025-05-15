@@ -10,8 +10,6 @@ import {
 } from "react-native";
 import HTMLView from "react-native-htmlview";
 import CustomBackground from "../../../components/Background/Background";
-
-
 export default function MujrabNakoshTafseel() {
   const route = useRoute();
   const { id } = route.params;

@@ -1,23 +1,18 @@
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-
-
 export default function FardkiTashkhess() {
   return (
     <CustomBackground>
       <ScrollView>
         <View>
-           <Text style={styles.heading}>فرد کی تشخیص کرنے کا طریقہ</Text>
-          
+           <Text style={styles.heading}>فرد کی تشخیص کرنے کا طریقہ</Text> 
           <Text style={styles.description}>
             انسانوں کی روحانی تشخیص کرنے کے مختلف طریقے:
           </Text>
-
           <Text style={styles.subheading}>پہنے ہوئے کپڑے سے تشخیص کرنے کا طریقہ:</Text>
           <Text style={styles.description}>
             روحانی تشخیص کیلئے مریض کا 1 رات پہنا ہوا کپڑا لیں جو جسم کے ساتھ لگا ہوا ہو (بنیان، ٹی شرٹ، شمیز، قمیض وغیرہ) اس کپڑے کو اپنے سامنے سیدھا لٹا لیں ۔ اس کپڑے پر بالشت کی مدد سے 4 نشان لگائیں یعنی 3 خانے بنا لیں پھر 7 مرتبہ آیت الکرسی یا 1 مرتبہ منزل پڑھ کے تینوں خانوں میں پھونک مار دیں ، پھونک مارنے کے بعد دوبارہ پالشت کی مدد سے پیمائش کریں ۔ پیمائش کرنے کے بعد اگر نیا نشان پہلے والے نشان سے اندر آیا تو جنات ہونے کی علامت ہے اور نیا نشان پہلے والے نشان سے باہر آئے تو جادو کی علامت ہے اور اگر نشان برابر رہیں تو جسمانی بیماری کی علامت ہے۔
           </Text>
-
           <Text style={styles.subheading}>کھلا کے تشخیص کرنے کا طریقہ:</Text>
           <Text style={styles.description}>
             آدھا چمچ چینی (شوگر) لیں اس پر 3 مرتبہ یہ عمل پڑھ کے دم کریں ۔  الم ۔ المص ۔ المر ، پھر چینی مریض کو کھلا دیں۔ چینی اگر مریض کو بہت زیادہ میٹھی لگے تو سایہ کی علامت ہے ، اگر چینی کڑوی لگے تو جادو کی علامت ہے ، اگر میٹھا برابر رہے تو جسمانی بیماری ہے ۔ یہ عمل چینی کی جگہ پانی پر بھی کیا جا سکتا ہے۔
@@ -55,22 +50,5 @@ const styles = StyleSheet.create({
     fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
     writingDirection: "rtl",
-  },
-  list: {
-    paddingRight: 10,
-  },
-  listContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  column: {
-    flex: 1,
-    paddingRight: 10,
-  },
-  item: {
-    fontSize: 20,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
   },
 });

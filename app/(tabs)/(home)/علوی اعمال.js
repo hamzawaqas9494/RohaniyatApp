@@ -9,13 +9,10 @@ import {
   View,
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-
-
 export default function Alviamal() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
-
   useEffect(() => {
     fetch(
       "https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=alviamal"
@@ -76,19 +73,20 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     textAlign: "center",
   },
-  card: {
+   card: {
     width: "100%",
     backgroundColor: "#E4DAC1",
-    paddingVertical: 15,
-    marginTop: 10,
-    marginBottom: 10,
+    paddingVertical: 2,
+    marginTop: 8,
+    marginBottom: 8,
     borderRadius: 5,
     alignItems: "center",
   },
   text: {
-    fontSize: 20,
+    fontSize: 22,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
+    lineHeight:60,
     textAlign: "center",
   },
 });

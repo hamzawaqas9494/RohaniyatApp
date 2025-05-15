@@ -1,14 +1,11 @@
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-
 export default function RohaniIlahkaMukhtasirtaruf() {
   return (
     <CustomBackground>
       <ScrollView>
         <View>
-
         <Text style={styles.heading}>روحانی علاج کا مختصر تعارف </Text>
-        
           <Text style={styles.description}>
             دعا، وظائف، حصار، روحانی علاج، دم، جھاڑ یہ سب احادیث سے ثابت ہیں۔
             ہم وظائف کے باب میں بتا چکے ہیں کہ وظائف اور دعا میں کچھ خاص فرق نہیں۔
@@ -16,36 +13,29 @@ export default function RohaniIlahkaMukhtasirtaruf() {
             اب سوال یہ ہے کہ ہم اپنے گھریلو، کاروباری، جناتی، جادوئی، بد اثرات اور نظر بد سے ہونے والے روحانی مسائل سے چھٹکارہ کیسے حاصل کریں؟
             اس کے لیے بہتر تو یہ ہے کہ آپ کسی قابل اعتماد باشرع، دینی ماہر روحانی معالج کی تلاش کریں اور ان سے اپنا علاج کروائیں نہ کہ صرف وظائف پوچھیں۔
           </Text>
-
           <Text style={styles.description}>
             جیسے ہمیں کوئی جسمانی بیماری ہو تو ہم ڈاکٹر کے پاس دوائی لینے جاتے ہیں نہ کہ وظائف پوچھنے۔ 
             اگر مرض پیچیدہ ہو تو ڈاکٹر لیبارٹری ٹیسٹ کرواتا ہے تاکہ مرض کی صحیح تشخیص ہو جائے اور صحیح علاج ہو سکے۔ 
             اسی طرح اگر کسی روحانی معالج کو فون کرکے مسئلہ بتائیں گے تو وہ بغیر مکمل تشخیص کے صرف وظیفہ بتا دے گا، جو کہ علاج نہیں ہوگا۔
           </Text>
-
           <Text style={styles.description}>
             جب مکمل علاج کروائیں گے تو وہ تشخیص کے بعد نقوش، نہانے، وارنے، چراغ کی بتیاں، پڑھائی اور حصار کے اعمال بتائے گا۔
             جب تک قابل اعتماد معالج نہ ملے، آپ ہمارے مجرب علاج سے فائدہ اٹھائیں اور ہمارے لیے دعا کریں۔ 
             ان طریقۂ علاج میں کسی بھی عامل کی روحانی یا جناتی طاقت شامل نہیں ہوتی، لیکن فائدہ ضرور ہوگا، آپ کے اعتقاد اور روحانیت کے مطابق۔
           </Text>
-
           <Text style={styles.subheading}>یاد رکھیں!</Text>
-
           <Text style={styles.description}>
             جب بھی کسی جادو یا جناتی مریض کا علاج شروع کریں تو اس بات کا یقین کر لیں کہ پڑھائی کرنے والے شخص پر اثرات ظاہر ہوں گے۔
             اگر معاملہ سخت ہوا یا جناتی ہو تو نقصان بھی ہو سکتا ہے، لہٰذا احتیاط سے علاج کریں۔
             اگر اثرات ظاہر ہونا شروع ہو جائیں تو علاج ترک کر دیں اور کسی ماہر روحانی معالج سے رجوع کریں۔
           </Text>
-
           <Text style={styles.subheading}>چند احتیاطی تدابیر:</Text>
-
           <Text style={styles.description}>
             - علاج سے پہلے اپنے اور تمام گھر والوں کا حصار کریں، بلکہ صبح، شام، اور رات حصار معمول بنائیں۔ {"\n"}
             - علاج سے پہلے گوشت کا صدقہ کریں۔ بڑا گوشت بغیر ہڈی کے مریض اور گھر والوں کے سر سے 7 مرتبہ الٹا اور 7 مرتبہ سیدھا گھما کر ویرانے یا پانی میں پھینک دیں۔ {"\n"}
             - علاج کے دوران روزانہ صدقہ جاری رکھیں، چاہے ایک بوٹی ہی کیوں نہ ہو۔ {"\n"}
             - مریض کو حصار کے اعمال کی سختی سے تلقین کریں تاکہ مرض واپس نہ آئے۔
           </Text>
-
         </View>
       </ScrollView>
     </CustomBackground>
@@ -72,22 +62,5 @@ const styles = StyleSheet.create({
     fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
     writingDirection: "rtl",
-  },
-  list: {
-    paddingRight: 10,
-  },
-  listContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  column: {
-    flex: 1,
-    paddingRight: 10,
-  },
-  item: {
-    fontSize: 20,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
   },
 });

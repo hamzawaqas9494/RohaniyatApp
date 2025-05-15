@@ -1,22 +1,20 @@
-import React, { useState, useEffect } from "react";
+import { Picker } from "@react-native-picker/picker";
+import { useEffect, useState } from "react";
 import {
-  View,
+  Keyboard,
+  KeyboardAvoidingView,
+  Modal,
+  Platform,
+  ScrollView,
+  StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
-  ScrollView,
-  StyleSheet,
-  KeyboardAvoidingView,
-  Platform,
   TouchableWithoutFeedback,
-  Keyboard,
-  Modal,
+  View,
 } from "react-native";
-import { Picker } from "@react-native-picker/picker";
 import CustomBackground from "../../../components/Background/Background";
-
-
-const MareedScreen = () => {
+const RohaniTashkhesForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     fatherName: "",
@@ -33,14 +31,11 @@ const MareedScreen = () => {
     status: "",
     spirtualproblems: "",
   });
-
   const [modalVisible, setModalVisible] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
-
   const handleChange = (key, value) => {
     setFormData({ ...formData, [key]: value });
   };
-
   useEffect(() => {
     const { day, month, year } = formData;
     if (day && month && year) {
@@ -56,10 +51,8 @@ const MareedScreen = () => {
       }
     }
   }, [formData.day, formData.month, formData.year]);
-
   const handleSubmit = async () => {
     let formErrors = {};
-
     if (!formData.name) {
       formErrors.name = "Name is required";
     } else if (!formData.fatherName) {
@@ -136,7 +129,6 @@ const MareedScreen = () => {
       setModalVisible(true);
     }
   };
-
   return (
     <CustomBackground>
       <KeyboardAvoidingView
@@ -146,13 +138,15 @@ const MareedScreen = () => {
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <ScrollView>
             <Text style={styles.heading}>روحانی تشخیص کیلئے فارم</Text>
-            <Text style={styles.description}> 
-
-الحمدللہ ادارہ روحانیات کی اس سروس کے ذریعے پوری دنیا سے لاکھوں لوگ اپنی روحانی تشخیص کروا نے کے بعدروحانی علاج کیلئے کسی نہ کسی نتیجے پر پہنچ جاتے ہیں ۔ 
-
-ادارے کی طرف سے سوشل میڈیا پر روحانی تشخیص کرنے کے بہترین اور آسان طریقے بتائے گئے ہیں۔ تاکہ آپ اپنی ، اپنی فیملی ، اپنے گھر اور کسی بھی جگہ کو روحانی طور پر خود چیک کر سکیں ۔ اگر میں اپنی تشخیص کرنے کیلئے خود کو قابل نہیں سمجھتے تو اس فارم کو پُر کر کے ادارے کی اس سروس سے فائدہ حاصل کریں ۔
+            <Text style={styles.description}>
+              الحمدللہ ادارہ روحانیات کی اس سروس کے ذریعے پوری دنیا سے لاکھوں
+              لوگ اپنی روحانی تشخیص کروا نے کے بعدروحانی علاج کیلئے کسی نہ کسی
+              نتیجے پر پہنچ جاتے ہیں ۔ ادارے کی طرف سے سوشل میڈیا پر روحانی
+              تشخیص کرنے کے بہترین اور آسان طریقے بتائے گئے ہیں۔ تاکہ آپ اپنی
+              ، اپنی فیملی ، اپنے گھر اور کسی بھی جگہ کو روحانی طور پر خود چیک
+              کر سکیں ۔ اگر میں اپنی تشخیص کرنے کیلئے خود کو قابل نہیں سمجھتے تو
+              اس فارم کو پُر کر کے ادارے کی اس سروس سے فائدہ حاصل کریں ۔
             </Text>
-
             {[
               { label: "Name", key: "name", keyboardType: "default" },
               {
@@ -184,7 +178,6 @@ const MareedScreen = () => {
                 />
               </View>
             ))}
-
             {/* DOB */}
             <View style={styles.inputRow}>
               <Text style={styles.label}>DOB:</Text>
@@ -247,7 +240,6 @@ const MareedScreen = () => {
                 </Picker>
               </View>
             </View>
-
             {/* Age */}
             <View style={styles.inputRow}>
               <Text style={styles.label}>Age:</Text>
@@ -257,7 +249,6 @@ const MareedScreen = () => {
                 editable={false}
               />
             </View>
-
             {/* Gender Picker */}
             <View style={styles.inputRow}>
               <Text style={styles.label}>Gender:</Text>
@@ -272,7 +263,6 @@ const MareedScreen = () => {
                 <Picker.Item label="Other" value="Other" />
               </Picker>
             </View>
-
             {/* Status Picker */}
             <View style={styles.inputRow}>
               <Text style={styles.label}>Status:</Text>
@@ -286,25 +276,26 @@ const MareedScreen = () => {
                 <Picker.Item label="Married" value="Married" />
               </Picker>
             </View>
-
             {/* Additional Info Textarea */}
             <View style={styles.inputRow}>
-              <Text style={styles.label}>Description of the Spirtual problems</Text>
+              <Text style={styles.label}>
+                Description of the Spirtual problems
+              </Text>
               <TextInput
                 style={[
                   styles.inputBox,
                   { height: 60, textAlignVertical: "top" },
                 ]}
                 value={formData.spirtualproblems}
-                onChangeText={(value) => handleChange("spirtualproblems", value)}
+                onChangeText={(value) =>
+                  handleChange("spirtualproblems", value)
+                }
                 multiline
               />
             </View>
-
             <TouchableOpacity style={styles.button} onPress={handleSubmit}>
               <Text style={styles.buttonText}>Submit</Text>
             </TouchableOpacity>
-
             {/* Modal for errors or success */}
             <Modal
               visible={modalVisible}
@@ -333,7 +324,6 @@ const MareedScreen = () => {
     </CustomBackground>
   );
 };
-
 const styles = StyleSheet.create({
   heading: {
     fontSize: 40,
@@ -349,7 +339,6 @@ const styles = StyleSheet.create({
     textAlign: "right",
     writingDirection: "rtl",
   },
-
   inputRow: {
     flex: 1,
     marginBottom: 8,
@@ -408,5 +397,4 @@ const styles = StyleSheet.create({
     color: "#333",
   },
 });
-
-export default MareedScreen;
+export default RohaniTashkhesForm;

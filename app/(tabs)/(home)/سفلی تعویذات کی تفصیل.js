@@ -1,23 +1,20 @@
 import { useRoute } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import {
-    ActivityIndicator,
-    Image,
-    ScrollView,
-    StyleSheet,
-    Text,
-    View,
+  ActivityIndicator,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
 } from "react-native";
 import HTMLView from "react-native-htmlview";
 import CustomBackground from "../../../components/Background/Background";
-
-
 export default function SifliTaweezatKiTafseel() {
   const route = useRoute();
   const { id } = route.params;
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     const fetchDetails = async () => {
       try {
@@ -35,7 +32,6 @@ export default function SifliTaweezatKiTafseel() {
 
     fetchDetails();
   }, [id]);
-
   return (
     <CustomBackground>
       {loading ? (
@@ -47,13 +43,11 @@ export default function SifliTaweezatKiTafseel() {
           <Text style={styles.heading}>
             {data ? data.title : "No Data Found"}
           </Text>
-
           <Image
             source={require("../../../assets/images/content-image.jpg")}
             style={styles.image}
             resizeMode="contain"
           />
-
           <HTMLView
             value={data?.content || "No Data Found"}
             stylesheet={htmlStyles}
@@ -63,14 +57,12 @@ export default function SifliTaweezatKiTafseel() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   centerContent: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
   },
-
   heading: {
     fontSize: 40,
     fontFamily: "Jameel-Noori-Regular",

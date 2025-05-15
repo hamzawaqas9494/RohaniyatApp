@@ -1,8 +1,6 @@
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-
-
-export default function RohaniIshayaScreen() {
+export default function RohaniIshaya() {
   return (
     <CustomBackground>
       <ScrollView>
@@ -29,7 +27,7 @@ export default function RohaniIshayaScreen() {
             یا خاص کلام خاص تعداد میں پانی یا تیل پر دم کروا کر دینے کی بھی
             سہولت موجود ہے۔
           </Text>
-          <Text style={styles.heading}>روحانی دکان میں 2 شعبے ہیں</Text>
+          <Text style={styles.subheading}>روحانی دکان میں 2 شعبے ہیں</Text>
           <View style={styles.list}>
             <Text style={styles.item}>• دم شدہ اشیاء</Text>
             <Text style={styles.item}>• تیار روحانی علاج</Text>
@@ -38,7 +36,7 @@ export default function RohaniIshayaScreen() {
             سب کی تفصیل ذیل میں دی گئی ہے۔گھر بیٹھے تمام اشیاء منگوائیں۔ ڈاک خرچ
             بذمہ خریدار۔ پیشگی رقم کے بغیر اشیاء نہیں بھیجیں جائیں گی۔
           </Text>
-          <Text style={styles.heading}>
+          <Text style={styles.subheading}>
             مریض اور معالجین کیلئے دم شدہ روحانی اشیاء
           </Text>
           <Text style={styles.description}>
@@ -75,7 +73,6 @@ export default function RohaniIshayaScreen() {
                 <Text style={styles.item}>• الشفاء کلونجی</Text>
                 <Text style={styles.item}>• الشفاء چھوہارے</Text>
               </View>
-
               <View style={styles.column}>
                 <Text style={styles.item}>• الشفاء چھلہ</Text>
                 <Text style={styles.item}>• الشفاء کڑا</Text>
@@ -109,10 +106,16 @@ export default function RohaniIshayaScreen() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   heading: {
     fontSize: 40,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+   subheading: {
+    fontSize: 30,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",

@@ -1,7 +1,5 @@
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-
-
 export default function AmliyatCourseScreen() {
   return (
     <CustomBackground>
@@ -33,7 +31,7 @@ export default function AmliyatCourseScreen() {
             انسانیت کی خدمت کیجئے۔ ادارہ روحانیات کے شعبہ روحانی عملیات کورسز
             میں پوری دنیا میں آن لائن مرد و خواتین داخلہ لے سکتے ہیں۔
           </Text>
-          <Text style={styles.heading}> کورسز کی تفصیل</Text>
+          <Text style={styles.subheading}> کورسز کی تفصیل</Text>
           <Text style={styles.description}>
             {" "}
             روحانی عملیات کورس کرنے والے خواتین و حضرات کیلئے اعمال کی اجازت لے
@@ -44,7 +42,7 @@ export default function AmliyatCourseScreen() {
             روحانی حیثیت کو دیکھتے ہوئے اعمال اور دورانیہ میں کمی بیشی بھی کی
             جاتی ہے۔
           </Text>
-          <Text style={styles.heading}> ظاہری سماعت یا نظر کھولنا </Text>
+          <Text style={styles.subheading}> ظاہری سماعت یا نظر کھولنا </Text>
           <Text style={styles.description}>
             {" "}
             بہت سے احباب مسلسل رابطہ کرتے رہتے ہیں اور غیبی مخلوق کو دیکھنے اور
@@ -54,7 +52,7 @@ export default function AmliyatCourseScreen() {
             جائے گا اور میں جو کام اس کو کہوں گا، وہ کرے گا۔اس کیلئے پیشگی
             معذرت۔
           </Text>
-          <Text style={styles.heading}> خاص اوقات کے اعمال </Text>
+          <Text style={styles.subheading}> خاص اوقات کے اعمال </Text>
           <Text style={styles.description}>
             {" "}
             سال میں کئی خاص اوقات آتے ہیں جن میں اسی وقت میں عملیات کی زکوٰۃ کے
@@ -97,13 +95,19 @@ export default function AmliyatCourseScreen() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     alignItems: "right",
   },
   heading: {
     fontSize: 40,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+  subheading: {
+    fontSize: 30,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",

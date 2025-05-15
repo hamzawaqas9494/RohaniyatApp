@@ -10,8 +10,6 @@ import {
 } from "react-native";
 import HTMLView from "react-native-htmlview";
 import CustomBackground from "../../../components/Background/Background";
-
-
 export default function NooriAamaalKiTafseel() {
   const route = useRoute();
   const { id } = route.params;
@@ -63,14 +61,12 @@ export default function NooriAamaalKiTafseel() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   centerContent: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
   },
-
   heading: {
     fontSize: 40,
     fontFamily: "Jameel-Noori-Regular",

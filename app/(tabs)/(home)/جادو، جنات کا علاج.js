@@ -9,13 +9,10 @@ import {
   View,
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-
-
 export default function Jadujinnatkailaj() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
-
   useEffect(() => {
     fetch(
       "https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=rohaniilaaj"
@@ -27,7 +24,6 @@ export default function Jadujinnatkailaj() {
       .catch((error) => console.error("Error fetching data:", error))
       .finally(() => setLoading(false));
   }, []);
-
   return (
     <CustomBackground>
       <View>
@@ -62,7 +58,6 @@ export default function Jadujinnatkailaj() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   centerContent: {
     flex: 1,
@@ -76,17 +71,16 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     textAlign: "center",
   },
-  card: {
+   card: {
     width: "100%",
     backgroundColor: "#E4DAC1",
-    paddingVertical: 15,
-    marginTop: 10,
-    marginBottom: 10,
+   paddingVertical: 2,
+    marginTop: 8,
+    marginBottom: 8,
     borderRadius: 5,
-    alignItems: "center",
   },
   text: {
-    fontSize: 20,
+    fontSize: 24,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "center",

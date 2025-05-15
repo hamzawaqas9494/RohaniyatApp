@@ -8,18 +8,13 @@ import {
 import AnimatedItem from "../../../components/Animation/animation";
 import IdaraRohaniyat from "../../../components/link/link";
 import ShareApp from "../../../components/ShareApp/shareApp";
- 
 const { width, height } = Dimensions.get("window");
-
-
 let ICON_SIZE_WIDTH, ICON_SIZE_HEIGHT, CENTER_CARD_SIZE, CIRCLE_RADIUS;
-
 if (width < 475) {
   ICON_SIZE_WIDTH = width * 0.3;
   ICON_SIZE_HEIGHT = height * 0.13;
  CENTER_CARD_SIZE = width * 0.5;
  CIRCLE_RADIUS = width * 0.355;
-
 } else if (width < 675) {
   ICON_SIZE_WIDTH = width * 0.20;
   ICON_SIZE_HEIGHT = height *0.12;
@@ -36,7 +31,6 @@ if (width < 475) {
  CENTER_CARD_SIZE = width * 0.26;
  CIRCLE_RADIUS = width * 0.18;
 }
- 
 const DATA = [
   {
     id: "1",
@@ -95,7 +89,6 @@ const DATA = [
     image: require("../../../assets/images/item2-bg-path.png"),
   },
 ];
- 
 export default function HomeScreen() {
   return (
     <ImageBackground
@@ -103,7 +96,6 @@ export default function HomeScreen() {
       style={styles.background}
     >
       <ShareApp />
- 
       <View style={styles.circleContainer}>
         <View style={styles.centerCard}>
           <Image
@@ -111,7 +103,6 @@ export default function HomeScreen() {
             style={styles.centerLogo}
           />
         </View>
- 
         {DATA.map((item, index) => (
           <AnimatedItem
             key={item.id}
@@ -124,14 +115,12 @@ export default function HomeScreen() {
           />
         ))}
       </View>
- 
       <View style={styles.footer}>
         <IdaraRohaniyat />
       </View>
     </ImageBackground>
   );
 }
- 
 const styles = StyleSheet.create({
   background: {
     flex: 1,
@@ -146,7 +135,6 @@ const styles = StyleSheet.create({
     height: width,
     justifyContent: "center",
     alignItems: "center",
- 
   },
   centerCard: {
     width: CENTER_CARD_SIZE,
@@ -156,9 +144,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     position: "absolute",
-    // zIndex: 10,
-    // overflow:"hidden",
-    // elevation: 6,
     borderWidth: 10,
     borderColor: "#F9F6F2",
   },

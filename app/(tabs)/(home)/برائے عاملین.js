@@ -7,7 +7,6 @@ import {
   View
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-
 const DATA = [
   {
     id: "1",
@@ -44,12 +43,9 @@ const DATA = [
     screen:"سفلی تعویذات",
     text: "سفلی تعویذات",
   },
- 
 ];
-
-export default function TitleScreen() {
+export default function BarayAmeleen() {
   const navigation = useNavigation();
-
   return (
     <CustomBackground>
       <View style={styles.container}>
@@ -72,22 +68,32 @@ export default function TitleScreen() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
-  card: {
-    flexGrow: 1,
+ centerContent: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  noDataText: {
+    fontSize: 18,
+    color: "#6C472D",
+    fontFamily: "Jameel-Noori-Regular",
+    fontWeight: "600",
+    textAlign: "center",
+  },
+ card: {
     width: "100%",
     backgroundColor: "#E4DAC1",
     paddingVertical: 2,
     marginTop: 8,
     marginBottom: 8,
-    alignItems: "center",
+    borderRadius: 5,
   },
   text: {
     fontSize: 22,
-    fontFamily: "Jameel-Noori-Regular",
+   fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "center",
-    writingDirection: "rtl",
   },
+  
 });

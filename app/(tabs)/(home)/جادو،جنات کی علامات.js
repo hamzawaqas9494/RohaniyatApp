@@ -1,8 +1,8 @@
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 
 
-export default function JaduJinnatTaarufScreen() {
+export default function JaduJinnatKiAlamat() {
   return (
     <CustomBackground>
       <ScrollView>
@@ -17,10 +17,16 @@ export default function JaduJinnatTaarufScreen() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
-  heading: {
+heading: {
     fontSize: 40,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+  subheading: {
+    fontSize: 30,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",

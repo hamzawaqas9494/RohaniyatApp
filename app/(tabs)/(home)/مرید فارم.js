@@ -15,8 +15,7 @@ import {
 import { Picker } from "@react-native-picker/picker";
 import CustomBackground from "../../../components/Background/Background";
 
-
-const MareedScreen = () => {
+const MareedForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     fatherName: "",
@@ -146,11 +145,13 @@ const MareedScreen = () => {
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <ScrollView>
             <Text style={styles.heading}>مرید ہونے کیلئے</Text>
-            <Text style={styles.description}> 
-
-الحمدللہ ادارہ روحانیات کی اس سروس کے ذریعے پوری دنیا سے لاکھوں لوگ ہمارے سلسلے میں داخل ہو کر اپنی روحانی تربیت کر رہے ہیں اور بعد ازاں امت خلافت حاصل کرنے کے بعد امت مسلمہ کی خیر خواہی کیلئے کوشاں ہیں ۔  
-
-آپ اس فارم کو پُر کر کے ہمارے سلسلے کے ساتھ منسلک ہو جائیں تو آپ کی آن لائن بذریعہ واٹس ایپ آپ کی خدمت کیلئے سلسلے کے اذکار اور وظائف بھیجے جاتے ہیں ۔
+            <Text style={styles.description}>
+              الحمدللہ ادارہ روحانیات کی اس سروس کے ذریعے پوری دنیا سے لاکھوں
+              لوگ ہمارے سلسلے میں داخل ہو کر اپنی روحانی تربیت کر رہے ہیں اور
+              بعد ازاں امت خلافت حاصل کرنے کے بعد امت مسلمہ کی خیر خواہی کیلئے
+              کوشاں ہیں ۔ آپ اس فارم کو پُر کر کے ہمارے سلسلے کے ساتھ منسلک ہو
+              جائیں تو آپ کی آن لائن بذریعہ واٹس ایپ آپ کی خدمت کیلئے سلسلے
+              کے اذکار اور وظائف بھیجے جاتے ہیں ۔
             </Text>
 
             {[
@@ -409,4 +410,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MareedScreen;
+export default MareedForm;

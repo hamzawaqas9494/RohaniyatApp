@@ -70,7 +70,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-
   heading: {
     fontSize: 40,
     fontFamily: "Jameel-Noori-Regular",
@@ -84,7 +83,6 @@ const styles = StyleSheet.create({
     height: 300,
   },
 });
-
 // HTML Styles
 const htmlStyles = StyleSheet.create({
   h1: {

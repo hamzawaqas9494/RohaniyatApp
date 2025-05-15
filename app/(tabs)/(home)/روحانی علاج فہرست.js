@@ -7,7 +7,6 @@ import {
   View,
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-
 const DATA = [
   {
     id: "1",
@@ -19,7 +18,6 @@ const DATA = [
     screen:"مریض کے لیے روحانی علاج",
     text: "سائل/مریض کے لیے روحانی علاج",
   }
-  
 ];
 export default function RohaniIlaj() {
   const navigation = useNavigation();

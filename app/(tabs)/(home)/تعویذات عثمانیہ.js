@@ -62,7 +62,6 @@ export default function TavizatUsmaniakiFehrist() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   centerContent: {
     flex: 1,
@@ -76,18 +75,17 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     textAlign: "center",
   },
-  card: {
+ card: {
     width: "100%",
     backgroundColor: "#E4DAC1",
-    paddingVertical: 15,
-    marginTop: 10,
-    marginBottom: 10,
+    paddingVertical: 2,
+    marginTop: 8,
+    marginBottom: 8,
     borderRadius: 5,
-    alignItems: "center",
   },
   text: {
-    fontSize: 20,
-    fontFamily: "Jameel-Noori-Regular",
+    fontSize: 22,
+   fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "center",
   },
