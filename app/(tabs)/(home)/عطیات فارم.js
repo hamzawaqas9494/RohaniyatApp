@@ -1,22 +1,20 @@
-import React, { useState, useEffect } from "react";
+import { Picker } from "@react-native-picker/picker";
+import { useEffect, useState } from "react";
 import {
-  View,
+  Keyboard,
+  KeyboardAvoidingView,
+  Modal,
+  Platform,
+  ScrollView,
+  StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
-  ScrollView,
-  StyleSheet,
-  KeyboardAvoidingView,
-  Platform,
   TouchableWithoutFeedback,
-  Keyboard,
-  Modal,
+  View,
 } from "react-native";
-import { Picker } from "@react-native-picker/picker";
 import CustomBackground from "../../../components/Background/Background";
-
-
-const MareedScreen = () => {
+const AttiyatForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     fatherName: "",
@@ -146,11 +144,14 @@ const MareedScreen = () => {
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <ScrollView>
             <Text style={styles.heading}>عطیات کیلئے فارم</Text>
-            <Text style={styles.description}> 
-
-الحمدللہ ادارہ روحانیات کی اس سروس کے ذریعے پوری دنیا سے لاکھوں لوگ ادارے کی خدمات کو سراہتے ہوئے مالی تعاون فرماتے ہیں ۔  
-
-ادارے کی طرف سے پوری دنیا میں موجود مستحق افراد کا مفت روحانی ، مدرسہ تعلیم القرآن میں بچوں کی مفت تعلیم کیلئے اخرات ، اساتذہ کی تنخواہ، یوٹیلیٹی بل ، ہفتہ وار لنگر اور دیگر اخراجات کیلئے آپ کے تعاون اور مالی معاونت سے ہی ممکن ہے ۔اس فارم کو پُر کر کے جتنا ہو سکے ادارے کے ساتھ مالی تعاون فرمائیں ۔
+            <Text style={styles.description}>
+              الحمدللہ ادارہ روحانیات کی اس سروس کے ذریعے پوری دنیا سے لاکھوں
+              لوگ ادارے کی خدمات کو سراہتے ہوئے مالی تعاون فرماتے ہیں ۔ ادارے کی
+              طرف سے پوری دنیا میں موجود مستحق افراد کا مفت روحانی ، مدرسہ تعلیم
+              القرآن میں بچوں کی مفت تعلیم کیلئے اخرات ، اساتذہ کی تنخواہ،
+              یوٹیلیٹی بل ، ہفتہ وار لنگر اور دیگر اخراجات کیلئے آپ کے تعاون
+              اور مالی معاونت سے ہی ممکن ہے ۔اس فارم کو پُر کر کے جتنا ہو سکے
+              ادارے کے ساتھ مالی تعاون فرمائیں ۔
             </Text>
 
             {[
@@ -296,7 +297,9 @@ const MareedScreen = () => {
                   { height: 60, textAlignVertical: "top" },
                 ]}
                 value={formData.sendingdonations}
-                onChangeText={(value) => handleChange("sendingdonations", value)}
+                onChangeText={(value) =>
+                  handleChange("sendingdonations", value)
+                }
                 multiline
               />
             </View>
@@ -408,5 +411,4 @@ const styles = StyleSheet.create({
     color: "#333",
   },
 });
-
-export default MareedScreen;
+export default AttiyatForm;

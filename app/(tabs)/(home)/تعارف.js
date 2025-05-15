@@ -1,4 +1,3 @@
-import React from "react";
 import {
   View,
   Text,
@@ -8,7 +7,6 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import CustomBackground from "../../../components/Background/Background";
-
 const DATA = [
   { id: "1", screen: "سرپرست تعارف", text: "سرپرست" },
   { id: "2", screen: "ادارہ روحانیت تعارف", text: "ادارہ روحانیات" },
@@ -49,9 +47,21 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   text: {
-    fontSize: 24,
+    fontSize: 22,
    fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
+    textAlign: "center",
+  },
+    centerContent: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  noDataText: {
+    fontSize: 18,
+    color: "#6C472D",
+    fontFamily: "Jameel-Noori-Regular",
+    fontWeight: "600",
     textAlign: "center",
   },
 });

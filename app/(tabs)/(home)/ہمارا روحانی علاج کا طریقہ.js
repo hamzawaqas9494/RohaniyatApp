@@ -21,7 +21,7 @@ const DATA = [
   },
  
 ];
-export default function RohaniIlaj() {
+export default function HmaraRohaniIlajKaTrika() {
   const navigation = useNavigation();
   return (
     <CustomBackground>

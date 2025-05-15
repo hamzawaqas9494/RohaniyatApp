@@ -14,9 +14,7 @@ import {
   View,
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-
-
-const MareedScreen = () => {
+const AmliyatCourse = () => {
   const [formData, setFormData] = useState({
     name: "",
     fatherName: "",
@@ -408,5 +406,4 @@ const styles = StyleSheet.create({
     color: "#333",
   },
 });
-
-export default MareedScreen;
+export default AmliyatCourse;

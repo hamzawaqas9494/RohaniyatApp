@@ -1,22 +1,20 @@
 import { useRoute } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import {
-    ActivityIndicator,
-    Image,
-    ScrollView,
-    StyleSheet,
-    Text,
-    View,
+  ActivityIndicator,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
 } from "react-native";
 import HTMLView from "react-native-htmlview";
 import CustomBackground from "../../../components/Background/Background";
-
 export default function RohaniDukanKiTafseel() {
   const route = useRoute();
   const { id } = route.params;
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     const fetchDetails = async () => {
       try {
@@ -31,10 +29,8 @@ export default function RohaniDukanKiTafseel() {
         setLoading(false);
       }
     };
-
     fetchDetails();
   }, [id]);
-
   return (
     <CustomBackground>
       {loading ? (
@@ -68,14 +64,12 @@ export default function RohaniDukanKiTafseel() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   centerContent: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
   },
-
   heading: {
     fontSize: 40,
     fontFamily: "Jameel-Noori-Regular",
@@ -96,7 +90,6 @@ const styles = StyleSheet.create({
     height: 300,
   },
 });
-
 // HTML Styles
 const htmlStyles = StyleSheet.create({
   h1: {

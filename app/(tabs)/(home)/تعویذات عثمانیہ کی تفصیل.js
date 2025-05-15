@@ -1,12 +1,12 @@
 import { useRoute } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import {
-    ActivityIndicator,
-    Image,
-    ScrollView,
-    StyleSheet,
-    Text,
-    View,
+  ActivityIndicator,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
 } from "react-native";
 import HTMLView from "react-native-htmlview";
 import CustomBackground from "../../../components/Background/Background";
@@ -70,7 +70,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-
   heading: {
     fontSize: 40,
     fontFamily: "Jameel-Noori-Regular",
@@ -84,7 +83,6 @@ const styles = StyleSheet.create({
     height: 300,
   },
 });
-
 // HTML Styles
 const htmlStyles = StyleSheet.create({
   h1: {

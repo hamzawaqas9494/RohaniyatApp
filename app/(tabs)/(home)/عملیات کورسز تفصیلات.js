@@ -7,7 +7,6 @@ import {
   View
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-
 const DATA = [
   {
     id: "1",
@@ -20,8 +19,7 @@ const DATA = [
     text: "برائے عاملین",
   },
 ];
-
-export default function TitleScreen() {
+export default function AmliyatCoursesTafsilat() {
   const navigation = useNavigation();
 
   return (

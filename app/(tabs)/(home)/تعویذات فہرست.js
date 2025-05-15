@@ -1,16 +1,12 @@
-import React from "react";
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  FlatList,
-  TouchableOpacity,
-} from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
+} from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-
-
 const DATA = [
   {
     id: "1",
@@ -29,7 +25,7 @@ const DATA = [
   },
 ];
 
-export default function TitleScreen() {
+export default function TavezatFehrist() {
   const navigation = useNavigation();
 
   return (
@@ -53,7 +49,6 @@ export default function TitleScreen() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   card: {
     width: "100%",

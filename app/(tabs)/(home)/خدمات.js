@@ -1,15 +1,12 @@
-import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  FlatList,
-  TouchableOpacity,
-} from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-
-
 const DATA = [
   { id: "1", screen: "مرید فارم", text: "مرید ہونے کیلئے" },
   { id: "2", screen: "روحانی علاج فارم", text: "روحانی علاج کے لیے" },
@@ -18,10 +15,8 @@ const DATA = [
   { id: "5", screen: "عطیات فارم", text: "عطیات کے لیے" },
   { id: "6", screen: "عملیات کورس فارم", text: "عملیات کورس کے لیے" },
 ];
-
-export default function FreeIstikhara() {
+export default function Khidmat() {
   const navigation = useNavigation();
-
   return (
     <CustomBackground>
       <View>
@@ -44,19 +39,18 @@ export default function FreeIstikhara() {
   );
 }
 const styles = StyleSheet.create({
-  card: {
+ card: {
     width: "100%",
     backgroundColor: "#E4DAC1",
    paddingVertical: 2,
-    marginTop: 6,
-    marginBottom: 6,
+    marginTop: 8,
+    marginBottom: 8,
     borderRadius: 5,
   },
   text: {
-    fontSize: 22,
+    fontSize: 24,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "center",
-    lineHeight:60
   },
 });

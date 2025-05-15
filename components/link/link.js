@@ -18,7 +18,7 @@ const openLink = (url) => {
   );
 };
 
-const IdaraRohaniyat = () => {
+const Links = () => {
   return (
     <View style={styles.mainRow}>
       {/* For Ladies */}
@@ -156,4 +156,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default IdaraRohaniyat;
+export default Links;

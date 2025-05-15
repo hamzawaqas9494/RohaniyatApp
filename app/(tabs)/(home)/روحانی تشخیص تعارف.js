@@ -1,8 +1,6 @@
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-
-
-export default function NakoshLawazmat() {
+export default function RohaniIshayatashkhesTaruf() {
   return (
     <CustomBackground>
       <ScrollView>
@@ -17,10 +15,16 @@ export default function NakoshLawazmat() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   heading: {
     fontSize: 40,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+  subheading: {
+    fontSize: 30,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",

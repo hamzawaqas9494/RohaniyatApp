@@ -6,24 +6,31 @@ import {
   Pressable,
   Text,
   Dimensions,
-  View
+  View,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
- 
+
 const { width } = Dimensions.get("window");
- 
-const AnimatedItem = ({ item, index, total, iconWidth, iconHeight, circleRadius }) => {
+
+const AnimatedItem = ({
+  item,
+  index,
+  total,
+  iconWidth,
+  iconHeight,
+  circleRadius,
+}) => {
   const navigation = useNavigation();
- 
+
   const angle = index * ((2 * Math.PI) / total);
   const x = circleRadius * Math.cos(angle) + width / 2 - iconWidth / 2;
   const y = circleRadius * Math.sin(angle) + width / 2 - iconHeight / 2;
   const rotation = (angle * 180) / Math.PI + 90;
- 
+
   // ✅ React Native Animated values
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const slideAnim = useRef(new Animated.Value(20)).current;
- 
+
   useEffect(() => {
     Animated.parallel([
       Animated.timing(fadeAnim, {
@@ -40,7 +47,7 @@ const AnimatedItem = ({ item, index, total, iconWidth, iconHeight, circleRadius 
       }),
     ]).start();
   }, []);
- 
+
   return (
     <Animated.View
       style={{
@@ -51,65 +58,59 @@ const AnimatedItem = ({ item, index, total, iconWidth, iconHeight, circleRadius 
         transform: [{ translateY: slideAnim }],
       }}
     >
- 
-        <ImageBackground
-          source={item.image}
+      <ImageBackground
+        source={item.image}
+        style={{
+          width: iconWidth,
+          height: iconHeight,
+          justifyContent: "center",
+          alignItems: "center",
+          // backgroundColor: "red",
+          // overflow:"hidden"
+        }}
+        resizeMode="contain"
+        imageStyle={{ transform: [{ rotate: `${rotation}deg` }] }}
+      >
+        <Pressable
+          onPress={() => navigation.navigate(item.screen)}
           style={{
-            width: iconWidth ,
-            height: iconHeight,
-            justifyContent: "center",
             alignItems: "center",
-            // backgroundColor: "red",
-            // overflow:"hidden"
+            justifyContent: "center",
+            width: iconWidth * 0.85,
+            height: iconWidth * 0.78,
+            // backgroundColor: "rgba(255, 255, 255, 0.6)",
+            transform: [{ rotate: `${rotation}deg` }],
           }}
-          resizeMode="contain"
-          imageStyle={{ transform: [{ rotate: `${rotation}deg` }] }}
         >
-   <Pressable
-  onPress={() => navigation.navigate(item.screen)}
-  style={{
-    alignItems: "center",
-    justifyContent: "center",
-    width: iconWidth * 0.85,
-    height: iconWidth * 0.78,
-    // backgroundColor: "rgba(255, 255, 255, 0.6)",
-    transform: [{ rotate: `${rotation}deg` }],
-  }}
->
- 
-  <View
-    style={{
-     
-      alignItems: "center",
-      transform: [{ rotate: `${-rotation}deg` }],
-      justifyContent: "center",
-     
-    }}
-  >
-    <Image
-      source={item.icon}
-      style={{
-        width: iconWidth * 0.2,
-        height: iconWidth * 0.2,
-      }}
-    />
-    <Text
-      style={{
-        color: "#6C472D",
-        fontFamily: "Jameel-Noori-Regular",
-        fontSize: iconWidth * 0.16,
-        textAlign: "center",
-      }}
-    >
-      {item.text}
-    </Text>
-  </View>
-</Pressable>
- 
-        </ImageBackground>
-   
+          <View
+            style={{
+              alignItems: "center",
+              transform: [{ rotate: `${-rotation}deg` }],
+              justifyContent: "center",
+            }}
+          >
+            <Image
+              source={item.icon}
+              style={{
+                width: iconWidth * 0.2,
+                height: iconWidth * 0.2,
+              }}
+            />
+            <Text
+              style={{
+                color: "#6C472D",
+                fontFamily: "Jameel-Noori-Regular",
+                fontSize: iconWidth * 0.16,
+                textAlign: "center",
+              }}
+            >
+              {item.text}
+            </Text>
+          </View>
+        </Pressable>
+      </ImageBackground>
     </Animated.View>
   );
 };
- 
+
 export default AnimatedItem;

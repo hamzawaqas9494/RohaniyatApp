@@ -1,21 +1,18 @@
-import React, { useEffect, useState } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  FlatList,
-  TouchableOpacity,
-  ActivityIndicator,
-} from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { useEffect, useState } from "react";
+import {
+  ActivityIndicator,
+  FlatList,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-
-
-export default function TitleScreen() {
+export default function Wazaiffehrist() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
-
   useEffect(() => {
     fetch(
       "https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=wazaif"
@@ -27,7 +24,6 @@ export default function TitleScreen() {
       .catch((error) => console.error("Error fetching data:", error))
       .finally(() => setLoading(false));
   }, []);
-
   return (
     <CustomBackground>
       <View>
@@ -62,7 +58,6 @@ export default function TitleScreen() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   centerContent: {
     flex: 1,

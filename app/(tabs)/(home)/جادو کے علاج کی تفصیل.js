@@ -10,19 +10,16 @@ import {
 } from "react-native";
 import HTMLView from "react-native-htmlview";
 import CustomBackground from "../../../components/Background/Background";
-
-
 export default function JadujinnatkailajTafseel() {
   const route = useRoute();
   const { id } = route.params;
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     const fetchDetails = async () => {
       try {
         const response = await fetch(
-          `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=wazaif&id=${id}`
+          `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=rohaniilaaj&id=${id}`
         );
         const result = await response.json();
         setData(result.rows[0]);
@@ -32,10 +29,8 @@ export default function JadujinnatkailajTafseel() {
         setLoading(false);
       }
     };
-
     fetchDetails();
   }, [id]);
-
   return (
     <CustomBackground>
       {loading ? (
@@ -47,13 +42,11 @@ export default function JadujinnatkailajTafseel() {
           <Text style={styles.heading}>
             {data ? data.title : "No Data Found"}
           </Text>
-
           <Image
             source={require("../../../assets/images/content-image.jpg")}
             style={styles.image}
             resizeMode="contain"
           />
-
           <HTMLView
             value={data?.content || "No Data Found"}
             stylesheet={htmlStyles}
@@ -63,14 +56,12 @@ export default function JadujinnatkailajTafseel() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   centerContent: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
   },
-
   heading: {
     fontSize: 40,
     fontFamily: "Jameel-Noori-Regular",
@@ -84,7 +75,6 @@ const styles = StyleSheet.create({
     height: 300,
   },
 });
-
 // HTML Styles
 const htmlStyles = StyleSheet.create({
   h1: {

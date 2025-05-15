@@ -34,7 +34,6 @@ const DATA = [
     screen: "حصاراعمال",
      text:"روحانی حفاظت (حصار) کا طریقہ",
   },
-  
 ];
 export default function MarizooKeLiyeRohaniIlaaj() {
   const navigation = useNavigation();

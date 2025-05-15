@@ -1,22 +1,20 @@
-import React, { useState, useEffect } from "react";
+import { Picker } from "@react-native-picker/picker";
+import { useEffect, useState } from "react";
 import {
-  View,
+  Keyboard,
+  KeyboardAvoidingView,
+  Modal,
+  Platform,
+  ScrollView,
+  StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
-  ScrollView,
-  StyleSheet,
-  KeyboardAvoidingView,
-  Platform,
   TouchableWithoutFeedback,
-  Keyboard,
-  Modal,
+  View,
 } from "react-native";
-import { Picker } from "@react-native-picker/picker";
 import CustomBackground from "../../../components/Background/Background";
-
-
-const MareedScreen = () => {
+const IstakharaForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     fatherName: "",
@@ -33,14 +31,11 @@ const MareedScreen = () => {
     status: "",
     problemdescription: "",
   });
-
   const [modalVisible, setModalVisible] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
-
   const handleChange = (key, value) => {
     setFormData({ ...formData, [key]: value });
   };
-
   useEffect(() => {
     const { day, month, year } = formData;
     if (day && month && year) {
@@ -56,10 +51,8 @@ const MareedScreen = () => {
       }
     }
   }, [formData.day, formData.month, formData.year]);
-
   const handleSubmit = async () => {
     let formErrors = {};
-
     if (!formData.name) {
       formErrors.name = "Name is required";
     } else if (!formData.fatherName) {
@@ -88,7 +81,6 @@ const MareedScreen = () => {
     } else if (!formData.problemdescription) {
       formErrors.problemdescription = "Problem Description is required";
     }
-
     if (Object.keys(formErrors).length === 0) {
       try {
         const response = await fetch(
@@ -101,7 +93,6 @@ const MareedScreen = () => {
             body: JSON.stringify(formData),
           }
         );
-
         if (response.ok) {
           setModalMessage("Form submitted successfully!");
           setModalVisible(true);
@@ -136,7 +127,6 @@ const MareedScreen = () => {
       setModalVisible(true);
     }
   };
-
   return (
     <CustomBackground>
       <KeyboardAvoidingView
@@ -146,13 +136,16 @@ const MareedScreen = () => {
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <ScrollView>
             <Text style={styles.heading}>استخارہ کیلئے فارم</Text>
-            <Text style={styles.description}> 
-
-الحمدللہ ادارہ روحانیات کی اس سروس کے ذریعے پوری دنیا سے لاکھوں لوگ فائدہ حاصل کر رہے ہیں ۔  
-
-استخارہ کا مطلب اللہ سے مشورہ کرنا ہے۔ مگر کچھ حضرات استخارہ کا مطلب روحانی مشورہ یا روحانی تشخیص سمجھتے ہیں ۔ روحانی مشورہ کیلئے اس فارم کو پُر کر یں اور وضاحت کے ساتھ اپنے مسائل لکھیں انشاءاللہ آپ کی مکمل رہنمائی کی جائے گی ۔ تاہم استخارہ کیلئے سب سے بہترین مسنون استخارہ ہے ۔ اس لئے اپنے معاملات اور آنے والے وقت کیلئے اللہ سے خود مشورہ کرنے کیلئے استخارہ خود کریں ۔
+            <Text style={styles.description}>
+              الحمدللہ ادارہ روحانیات کی اس سروس کے ذریعے پوری دنیا سے لاکھوں
+              لوگ فائدہ حاصل کر رہے ہیں ۔ استخارہ کا مطلب اللہ سے مشورہ کرنا ہے۔
+              مگر کچھ حضرات استخارہ کا مطلب روحانی مشورہ یا روحانی تشخیص سمجھتے
+              ہیں ۔ روحانی مشورہ کیلئے اس فارم کو پُر کر یں اور وضاحت کے ساتھ
+              اپنے مسائل لکھیں انشاءاللہ آپ کی مکمل رہنمائی کی جائے گی ۔ تاہم
+              استخارہ کیلئے سب سے بہترین مسنون استخارہ ہے ۔ اس لئے اپنے معاملات
+              اور آنے والے وقت کیلئے اللہ سے خود مشورہ کرنے کیلئے استخارہ خود
+              کریں ۔
             </Text>
-
             {[
               { label: "Name", key: "name", keyboardType: "default" },
               {
@@ -184,7 +177,6 @@ const MareedScreen = () => {
                 />
               </View>
             ))}
-
             {/* DOB */}
             <View style={styles.inputRow}>
               <Text style={styles.label}>DOB:</Text>
@@ -203,7 +195,6 @@ const MareedScreen = () => {
                     />
                   ))}
                 </Picker>
-
                 <Picker
                   selectedValue={formData.month}
                   style={styles.pickerInput}
@@ -227,7 +218,6 @@ const MareedScreen = () => {
                     <Picker.Item key={i + 1} label={m} value={`${i + 1}`} />
                   ))}
                 </Picker>
-
                 <Picker
                   selectedValue={formData.year}
                   style={styles.pickerInput}
@@ -247,7 +237,6 @@ const MareedScreen = () => {
                 </Picker>
               </View>
             </View>
-
             {/* Age */}
             <View style={styles.inputRow}>
               <Text style={styles.label}>Age:</Text>
@@ -257,7 +246,6 @@ const MareedScreen = () => {
                 editable={false}
               />
             </View>
-
             {/* Gender Picker */}
             <View style={styles.inputRow}>
               <Text style={styles.label}>Gender:</Text>
@@ -272,7 +260,6 @@ const MareedScreen = () => {
                 <Picker.Item label="Other" value="Other" />
               </Picker>
             </View>
-
             {/* Status Picker */}
             <View style={styles.inputRow}>
               <Text style={styles.label}>Status:</Text>
@@ -286,7 +273,6 @@ const MareedScreen = () => {
                 <Picker.Item label="Married" value="Married" />
               </Picker>
             </View>
-
             {/* Additional Info Textarea */}
             <View style={styles.inputRow}>
               <Text style={styles.label}>Problem Description</Text>
@@ -296,15 +282,15 @@ const MareedScreen = () => {
                   { height: 60, textAlignVertical: "top" },
                 ]}
                 value={formData.problemdescription}
-                onChangeText={(value) => handleChange("problemdescription", value)}
+                onChangeText={(value) =>
+                  handleChange("problemdescription", value)
+                }
                 multiline
               />
             </View>
-
             <TouchableOpacity style={styles.button} onPress={handleSubmit}>
               <Text style={styles.buttonText}>Submit</Text>
             </TouchableOpacity>
-
             {/* Modal for errors or success */}
             <Modal
               visible={modalVisible}
@@ -333,7 +319,6 @@ const MareedScreen = () => {
     </CustomBackground>
   );
 };
-
 const styles = StyleSheet.create({
   heading: {
     fontSize: 40,
@@ -349,7 +334,6 @@ const styles = StyleSheet.create({
     textAlign: "right",
     writingDirection: "rtl",
   },
-
   inputRow: {
     flex: 1,
     marginBottom: 8,
@@ -408,5 +392,4 @@ const styles = StyleSheet.create({
     color: "#333",
   },
 });
-
-export default MareedScreen;
+export default IstakharaForm;

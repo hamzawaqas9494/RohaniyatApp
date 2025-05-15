@@ -12,7 +12,6 @@ import {
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 const { width } = Dimensions.get("window");
-
 export default function RohaniDukan() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -54,9 +53,7 @@ export default function RohaniDukan() {
                     id: item.id,
                   })
                 }
-              >
-                  
-                
+              >     
           {data?.image ? (
             <Image
               source={{ uri: data.image }}

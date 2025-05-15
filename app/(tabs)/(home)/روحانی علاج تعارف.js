@@ -1,8 +1,6 @@
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-
-
-export default function RohaniIlajScreen() {
+export default function RohaniIlajTaruf() {
   return (
     <CustomBackground>
       <ScrollView>
@@ -34,7 +32,7 @@ export default function RohaniIlajScreen() {
             اجازت دی جاتی ہے اور چلہ کشی بھی کروائی جاتی ہے تاکہ وہ اس قابل ہوں
             کہ آئندہ خودسے اپنا اور اپنے اہل و عیال کا روحانی علاج کر سکیں۔
           </Text>
-          <Text style={styles.heading}>
+          <Text style={styles.subheading}>
             تشخیص کی ضرورت اور عاملین اور عوام کی غفلت
           </Text>
           <Text style={styles.description}>
@@ -50,8 +48,7 @@ export default function RohaniIlajScreen() {
             کیس کو اتنا بگاڑ لیتے ہیں کہ کیس کو سنبھالنے کے لیے بہت وقت اور بہت
             محنت درکار ہوتی ہے۔
           </Text>
-
-          <Text style={styles.heading}>روحانی تشخیص کا تعارف</Text>
+          <Text style={styles.subheading}>روحانی تشخیص کا تعارف</Text>
           <Text style={styles.description}>
             روحانی تشخیص کا مقصد یہ ہے کہ ہم کسی انسان یا جگہ پر سحر، جنات، آسیب
             یا نظرِ بد کے اثرات کو معلوم کریں۔ جب کسی فرد کو بیماری، پریشانی، یا
@@ -85,8 +82,7 @@ export default function RohaniIlajScreen() {
             مریض پر کوئی غیبی مخلوق مسلط ہے یا صرف اثرات ہیں؟
           </Text>
         </View>
-
-        <Text style={styles.heading}>روحانی علاج </Text>
+        <Text style={styles.subheading}>روحانی علاج </Text>
         <Text style={styles.description}>
           پریشانیوں، آفتوں، مصیبتوں، تکلیفوں، مشکلات میں گرفتار، خوشیوں سے نا
           امید، زندگی سے مایوس بے بس افراد کے لیے خوشخبری: نظر بد، جادو جنات، ہر
@@ -95,8 +91,7 @@ export default function RohaniIlajScreen() {
           مسائل، تعلیمی مسائل، بیماریوں کا علاج، نفسیاتی مسائل، روحانی مسائل،
           پریشانیوں سے نجات، حاجات کا پورا ہونا۔
         </Text>
-
-        <Text style={styles.heading}> پریشانیوں اور بیماریوں کی وجوہات </Text>
+        <Text style={styles.subheading}> پریشانیوں اور بیماریوں کی وجوہات </Text>
         <Text style={styles.description}>
           مصیبت، مشکل، تکلیف، بیماری، پریشانی… الغرض کچھ بھی ہو، اس کی کوئی وجہ
           ضرور ہوتی ہے۔ اصل وجہ تو ’’گناہوں کی شامتِ اعمال‘‘ ہے جس پر بالکل
@@ -122,8 +117,7 @@ export default function RohaniIlajScreen() {
           عالم یا بزرگ سے رجوع کیا جائے۔ اللہ کو ناراض کرنے والے اعمال چھوڑ کر
           راضی کرنے کے اعمال کیے جائیں۔
         </Text>
-
-        <Text style={styles.heading}>
+        <Text style={styles.subheading}>
           ادارہ روحانیات میں روحانی علاج کرنے کے چار طریقے{" "}
         </Text>
         <Text style={styles.description}>
@@ -133,7 +127,7 @@ export default function RohaniIlajScreen() {
           کے علاوہ کوئی مرتب کر سکتا ہے … یہ ’’شرک‘‘ ہے۔اس عقیدہ کی اصلاح کرنا
           لازم ہے۔ چاروں طریقوں کی تفصیل یہ ہے:۔
         </Text>
-        <Text style={styles.heading}>طریقہ اول</Text>
+        <Text style={styles.subheading}>طریقہ اول</Text>
         <Text style={styles.description}>
           ادارہ روحانیات میں چار طریقوں سے روحانی علاج کیا جاتا ہے۔ علاج کا کوئی
           بھی طریقہ ہو، وہ ایک دنیاوی تدبیر سے زیادہ کچھ نہیں ہوتا۔ نتیجہ صرف
@@ -141,7 +135,7 @@ export default function RohaniIlajScreen() {
           کے علاوہ کوئی مرتب کر سکتا ہے … یہ ’’شرک‘‘ ہے۔ اس عقیدہ کی اصلاح کرنا
           لازم ہے۔ چاروں طریقوں کی تفصیل یہ ہے:۔
         </Text>
-        <Text style={styles.heading}>طریقہ دوم </Text>
+        <Text style={styles.subheading}>طریقہ دوم </Text>
         <Text style={styles.description}>
           {" "}
           اس طریقے میں روحانی معالجین سائل/ مریض کے حالات سننے کے بعد روحانی
@@ -157,7 +151,7 @@ export default function RohaniIlajScreen() {
           دے سکتا ہے۔ البتہ اگر روحانی دکان کا تیار علاج دیا جائے یا اشیاء دی
           جائیں تو ان کی قیمت وصول کی جاتی ہے۔
         </Text>
-        <Text style={styles.heading}> طریقہ سوم </Text>
+        <Text style={styles.subheading}> طریقہ سوم </Text>
         <Text style={styles.description}>
           {" "}
           اس طریقے میں سائل؍مریض کو اس کے مسئلے کے مطابق کسی روحانی عمل کی اجازت
@@ -168,7 +162,7 @@ export default function RohaniIlajScreen() {
           گاہ کے روحانی معالجین کرتے ہیں۔ کسی عمل کا ھدیہ لیا جاتا ہے، کسی کا
           نہیں۔
         </Text>
-        <Text style={styles.heading}> طریقہ چہارم </Text>
+        <Text style={styles.subheading}> طریقہ چہارم </Text>
         <Text style={styles.description}>
           {" "}
           اس طریقے میں روحانی معالجین علاج کے ساتھ ساتھ خود بھی سائل/ مریض کے
@@ -195,6 +189,13 @@ export default function RohaniIlajScreen() {
 const styles = StyleSheet.create({
   heading: {
     fontSize: 40,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+    subheading: {
+    fontSize: 30,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",

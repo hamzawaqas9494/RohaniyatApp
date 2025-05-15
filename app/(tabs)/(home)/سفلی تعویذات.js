@@ -1,16 +1,14 @@
 import { useNavigation } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import {
-    ActivityIndicator,
-    FlatList,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  ActivityIndicator,
+  FlatList,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-
-
 export default function Saflitavezat() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -27,7 +25,6 @@ export default function Saflitavezat() {
       .catch((error) => console.error("Error fetching data:", error))
       .finally(() => setLoading(false));
   }, []);
-
   return (
     <CustomBackground>
       <View>
@@ -62,7 +59,6 @@ export default function Saflitavezat() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   centerContent: {
     flex: 1,
@@ -79,16 +75,17 @@ const styles = StyleSheet.create({
   card: {
     width: "100%",
     backgroundColor: "#E4DAC1",
-    paddingVertical: 15,
-    marginTop: 10,
-    marginBottom: 10,
+    paddingVertical: 2,
+    marginTop: 8,
+    marginBottom: 8,
     borderRadius: 5,
     alignItems: "center",
   },
   text: {
-    fontSize: 20,
+    fontSize: 22,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
+    lineHeight:60,
     textAlign: "center",
   },
 });
