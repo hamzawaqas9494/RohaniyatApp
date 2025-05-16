@@ -1,16 +1,22 @@
-import React, { useEffect, useRef } from "react";
+import { useNavigation } from "@react-navigation/native";
+import { useEffect, useRef } from "react";
 import {
   Animated,
+  Dimensions,
   Image,
   ImageBackground,
+  Platform,
   Pressable,
   Text,
-  Dimensions,
-  View,
+  View
 } from "react-native";
-import { useNavigation } from "@react-navigation/native";
 
-const { width } = Dimensions.get("window");
+// const { width } = Dimensions.get("window");
+const screenWidth = Dimensions.get('window').width;
+
+const width = Platform.OS === 'web'
+  ? Math.min(screenWidth, 1024)
+  : screenWidth;
 
 const AnimatedItem = ({
   item,

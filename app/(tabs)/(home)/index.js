@@ -2,13 +2,21 @@ import {
   Dimensions,
   Image,
   ImageBackground,
+  Platform,
   StyleSheet,
-  View,
+  View
 } from "react-native";
 import AnimatedItem from "../../../components/Animation/animation";
 import IdaraRohaniyat from "../../../components/link/link";
 import ShareApp from "../../../components/ShareApp/shareApp";
-const { width, height } = Dimensions.get("window");
+const { height } = Dimensions.get("window");
+
+const screenWidth = Dimensions.get('window').width;
+
+const width = Platform.OS === 'web'
+  ? Math.min(screenWidth, 1024)  
+  : screenWidth;
+
 let ICON_SIZE_WIDTH, ICON_SIZE_HEIGHT, CENTER_CARD_SIZE, CIRCLE_RADIUS;
 if (width < 475) {
   ICON_SIZE_WIDTH = width * 0.3;

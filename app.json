@@ -40,6 +40,9 @@
         "projectId": "fedaf04d-9035-4932-87db-2075d40cc42b"
       }
     },
-    "owner": "rohaniyatapp"
+    "owner": "rohaniyatapp",
+    "plugins": [
+      "expo-router"
+    ]
   }
 }

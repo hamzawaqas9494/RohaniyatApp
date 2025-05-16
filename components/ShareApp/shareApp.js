@@ -1,19 +1,22 @@
-import React, { useState, useRef } from "react";
-import {
-  View,
-  TouchableOpacity,
-  Animated,
-  StyleSheet,
-  Easing,
-  Share,
-  Platform,
-} from "react-native";
-import { Entypo, FontAwesome, AntDesign } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
 import * as Linking from "expo-linking";
+import { useRef, useState } from "react";
+import {
+  Animated,
+  Easing,
+  Platform,
+  Pressable,
+  Share,
+  StyleSheet,
+  View,
+  useWindowDimensions,
+} from "react-native";
 
 const AppMenuDropdown = () => {
   const [visible, setVisible] = useState(false);
   const scaleAnim = useRef(new Animated.Value(0)).current;
+  const { width } = useWindowDimensions();
+  const isWeb = Platform.OS === "web";
 
   const toggleDropdown = () => {
     if (visible) {
@@ -55,14 +58,14 @@ const AppMenuDropdown = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <TouchableOpacity onPress={toggleDropdown} style={styles.dotButton}>
+    <View style={[styles.container, { maxWidth: isWeb ? 600 : "100%" }]}>
+      <Pressable onPress={toggleDropdown} style={styles.dotButton}>
         {visible ? (
-          <AntDesign name="close" size={24} color="#6C472D" />
+          <FontAwesome name="close" size={24} color="#6C472D" />
         ) : (
-          <Entypo name="dots-three-vertical" size={24} color="#6C472D" />
+          <FontAwesome name="ellipsis-v" size={24} color="#6C472D" />
         )}
-      </TouchableOpacity>
+      </Pressable>
 
       {visible && (
         <Animated.View
@@ -74,13 +77,13 @@ const AppMenuDropdown = () => {
             },
           ]}
         >
-          <TouchableOpacity onPress={handleRate} style={styles.iconButton}>
+          <Pressable onPress={handleRate} style={styles.iconButton}>
             <FontAwesome name="star" size={20} color="#6C472D" />
-          </TouchableOpacity>
+          </Pressable>
 
-          <TouchableOpacity onPress={handleShare} style={styles.iconButton}>
+          <Pressable onPress={handleShare} style={styles.iconButton}>
             <FontAwesome name="share-alt" size={20} color="#6C472D" />
-          </TouchableOpacity>
+          </Pressable>
         </Animated.View>
       )}
     </View>
@@ -91,34 +94,38 @@ export default AppMenuDropdown;
 
 const styles = StyleSheet.create({
   container: {
-    padding: 16,
-    alignItems: "flex-end",
-    position: "relative",
     position: "absolute",
-    top: 0,
-    right: 0,
+    top: 15,
+    right: 15,
+    zIndex: 20,
+    alignItems: "center",
   },
   dotButton: {
-    padding: 6,
     zIndex: 10,
     backgroundColor: "#E4DAC1",
-    borderRadius: 100,
+    borderRadius: 50,
+    width: 50,
+    height: 50,
+    justifyContent: "center",
+    alignItems: "center",
+    cursor: Platform.OS === "web" ? "pointer" : "default",
   },
   dropdown: {
     position: "absolute",
-    top: 60,
-    right: 20,
+    top: 55,
     justifyContent: "center",
     alignItems: "center",
-
     gap: 6,
     transformOrigin: "top",
+    backgroundColor: "transparent",
   },
   iconButton: {
     backgroundColor: "#E4DAC1",
-    borderRadius: 100,
-    padding: 5,
+    borderRadius: 50,
+    width: 40,
+    height: 40,
     alignItems: "center",
     justifyContent: "center",
+    cursor: Platform.OS === "web" ? "pointer" : "default",
   },
 });
