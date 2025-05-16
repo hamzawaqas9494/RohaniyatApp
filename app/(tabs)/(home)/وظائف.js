@@ -44,6 +44,18 @@ export default function TitleScreen() {
   );
 }
 const styles = StyleSheet.create({
+  centerContent: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  noDataText: {
+    fontSize: 18,
+    color: "#6C472D",
+    fontWeight: "600",
+    fontFamily: "Jameel-Noori-Regular",
+    textAlign: "center",
+  },
   card: {
     width: "100%",
     backgroundColor: "#E4DAC1",
@@ -51,11 +63,12 @@ const styles = StyleSheet.create({
     marginTop: 8,
     marginBottom: 8,
     borderRadius: 5,
+    alignItems: "center",
   },
   text: {
-    fontSize: 24,
-    color: "#6C472D",
+    fontSize: 22,
     fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
     textAlign: "center",
   },
 });

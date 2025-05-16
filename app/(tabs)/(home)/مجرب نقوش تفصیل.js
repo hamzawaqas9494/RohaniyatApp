@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   heading: {
-    fontSize: 40,
+    fontSize: 28,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -83,16 +83,9 @@ const styles = StyleSheet.create({
     writingDirection: "rtl",
   },
   image: {
-    marginTop: 30,
+    marginTop: 10,
     width: "100%",
     height: 300,
-  },
-  description: {
-    fontSize: 20,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
   },
 });
 
@@ -124,7 +117,7 @@ const htmlStyles = StyleSheet.create({
   },
   p: {
     marginTop: 10,
-    fontSize: 16,
+    fontSize: 20,
     color: "#6C472D",
     lineHeight: 30,
     fontFamily: "Jameel-Noori-Regular",
@@ -132,28 +125,28 @@ const htmlStyles = StyleSheet.create({
     writingDirection: "rtl",
   },
   span: {
-    fontSize: 16,
+    fontSize: 20,
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",
   },
   ul: {
-    fontSize: 16,
+    fontSize: 20,
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",
   },
   ol: {
-    fontSize: 16,
+    fontSize: 20,
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",
   },
   li: {
-    fontSize: 16,
+    fontSize: 20,
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",

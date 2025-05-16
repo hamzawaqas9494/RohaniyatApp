@@ -99,13 +99,13 @@ const styles = StyleSheet.create({
     borderRadius: 5, 
   },
   title: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: "bold",
     color: "#333",
     margin: 8,
   },
   content: {
-    fontSize: 14,
+    fontSize: 20,
     color: "#666",
     marginHorizontal: 8,
   },

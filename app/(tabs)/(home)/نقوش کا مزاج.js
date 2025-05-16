@@ -87,17 +87,16 @@ export default function NakoshKaMazaj() {
     </CustomBackground>
   );
 }
-
 const styles = StyleSheet.create({
   heading: {
-    fontSize: 40,
+    fontSize: 28,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
   },
   subheading: {
-    fontSize: 30,
+    fontSize: 24,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -109,5 +108,22 @@ const styles = StyleSheet.create({
     fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
     writingDirection: "rtl",
+  },
+    list: {
+    paddingRight: 10,
+  },
+  listContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  column: {
+    flex: 1,
+    paddingRight: 10,
+  },
+  item: {
+    fontSize: 20,
+    color: "#6C472D",
+    fontFamily: "Jameel-Noori-Regular",
+    textAlign: "right",
   },
 });

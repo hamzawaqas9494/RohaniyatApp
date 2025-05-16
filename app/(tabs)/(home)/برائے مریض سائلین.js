@@ -1,36 +1,38 @@
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
+import CustomBackground from "../../../components/Background/Background";
 export default function BaraySaeleen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>برائے مریض / سائلین</Text>
-    </View>
+    <CustomBackground>
+      <ScrollView>
+        <View>
+        <Text style={styles.heading}>bray mrez saeleen</Text>
+
+        </View>
+      </ScrollView>
+    </CustomBackground>
   );
 }
 const styles = StyleSheet.create({
-  centerContent: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+  heading: {
+    fontSize: 28,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
   },
-  noDataText: {
-    fontSize: 18,
+  subheading: {
+    fontSize: 24,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+  description: {
+    fontSize: 20,
     color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
-    fontWeight: "600",
-    textAlign: "center",
-  },
- card: {
-    width: "100%",
-    backgroundColor: "#E4DAC1",
-    paddingVertical: 2,
-    marginTop: 8,
-    marginBottom: 8,
-    borderRadius: 5,
-  },
-  text: {
-    fontSize: 22,
-   fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "center",
+    textAlign: "right",
+    writingDirection: "rtl",
   },
 });
+
