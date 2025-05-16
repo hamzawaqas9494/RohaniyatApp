@@ -1,38 +1,27 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-export default function BaraySaeleen() {
+
+export default function BarayMareez() {
   return (
     <CustomBackground>
-      <ScrollView>
-        <View>
-        <Text style={styles.heading}>bray mrez saeleen</Text>
-
-        </View>
-      </ScrollView>
+      <View style={styles.container}>
+        <Text style={styles.text}>بارے مریض سائلین </Text>
+        <Text style={styles.text}>Coming soon</Text>
+      </View>
     </CustomBackground>
   );
 }
 const styles = StyleSheet.create({
-  heading: {
-    fontSize: 28,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
-  subheading: {
-    fontSize: 24,
-    fontFamily: "Jameel-Noori-Regular",
+  text: {
+    fontSize: 18,
     color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  description: {
-    fontSize: 20,
-    color: "#6C472D",
+    fontWeight: "600",
     fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
+    textAlign: "center",
   },
 });
-
