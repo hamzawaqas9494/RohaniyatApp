@@ -326,9 +326,10 @@ const RohaniTashkhesForm = () => {
 };
 const styles = StyleSheet.create({
   heading: {
-    fontSize: 40,
+    fontSize: 28,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
+    paddingTop:5,
     textAlign: "right",
     writingDirection: "rtl",
   },

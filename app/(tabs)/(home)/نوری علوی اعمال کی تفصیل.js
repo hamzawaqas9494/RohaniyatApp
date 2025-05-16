@@ -69,14 +69,14 @@ const styles = StyleSheet.create({
   },
 
   heading: {
-    fontSize: 40,
+    fontSize: 28,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
   },
   image: {
-    marginTop: 30,
+    marginTop: 10,
     width: "100%",
     height: 300,
   },
@@ -110,7 +110,7 @@ const htmlStyles = StyleSheet.create({
   },
   p: {
     marginTop: 10,
-    fontSize: 16,
+    fontSize: 20,
     color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
     lineHeight: 30,
@@ -118,28 +118,28 @@ const htmlStyles = StyleSheet.create({
     writingDirection: "rtl",
   },
   span: {
-    fontSize: 16,
+    fontSize: 20,
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",
   },
   ul: {
-    fontSize: 16,
+    fontSize: 20,
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",
   },
   ol: {
-    fontSize: 16,
+    fontSize: 20,
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",
   },
   li: {
-    fontSize: 16,
+    fontSize: 20,
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",

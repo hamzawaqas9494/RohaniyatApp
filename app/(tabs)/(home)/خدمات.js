@@ -39,16 +39,29 @@ export default function Khidmat() {
   );
 }
 const styles = StyleSheet.create({
+   centerContent: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  noDataText: {
+    fontSize: 18,
+    color: "#6C472D",
+    fontFamily: "Jameel-Noori-Regular",
+    fontWeight: "600",
+    textAlign: "center",
+  },
  card: {
     width: "100%",
     backgroundColor: "#E4DAC1",
-   paddingVertical: 6,
-    marginTop: 6,
-    marginBottom: 6,
+    marginTop: 8,
+    marginBottom: 8,
+    paddingVertical: 2,
     borderRadius: 5,
   },
   text: {
-    fontSize: 20,
+    fontSize: 22,
+    paddingTop:4,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "center",

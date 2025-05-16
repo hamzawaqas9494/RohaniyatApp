@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 export default function SirparastScreen() {
   return (
@@ -65,7 +65,7 @@ export default function SirparastScreen() {
 }
 const styles = StyleSheet.create({
   heading: {
-    fontSize: 40,
+    fontSize: 28,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",

@@ -44,11 +44,19 @@ export default function Wazaifkitafseel() {
             {data ? data.title : "No Data Found"}
           </Text>
 
-          <Image
-            source={require("../../../assets/images/content-image.jpg")}
-            style={styles.image}
-            resizeMode="contain"
-          />
+          {data?.image ? (
+            <Image
+              source={{ uri: data.image }}
+              style={styles.image}
+              resizeMode="contain"
+            />
+          ) : (
+            <Image
+              source={require("../../../assets/images/content-image.jpg")}
+              style={styles.image}
+              resizeMode="contain"
+            />
+          )}
           <HTMLView
             value={data?.content || "No Data Found"}
             stylesheet={htmlStyles}
@@ -65,26 +73,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   heading: {
-    fontSize: 40,
+    fontSize: 28,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  description: {
-    fontSize: 20,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
     writingDirection: "rtl",
   },
   image: {
-    marginTop: 30,
+    marginTop: 10,
     width: "100%",
     height: 300,
   },
 });
-
 // HTML Styles
 const htmlStyles = StyleSheet.create({
   h1: {
@@ -113,7 +113,7 @@ const htmlStyles = StyleSheet.create({
   },
   p: {
     marginTop: 10,
-    fontSize: 16,
+    fontSize: 20,
     color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
     lineHeight: 30,
@@ -121,28 +121,28 @@ const htmlStyles = StyleSheet.create({
     writingDirection: "rtl",
   },
   span: {
-    fontSize: 16,
+    fontSize: 20,
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",
   },
   ul: {
-    fontSize: 16,
+    fontSize: 20,
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",
   },
   ol: {
-    fontSize: 16,
+    fontSize: 20,
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",
   },
   li: {
-    fontSize: 16,
+    fontSize: 20,
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",
