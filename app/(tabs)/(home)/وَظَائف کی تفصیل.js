@@ -77,21 +77,24 @@ export default function Wazaifkitafseel() {
             />
 
             {/* YouTube Link Row */}
-            <View style={styles.youtubeRow}>
+    
               <TouchableOpacity
                 onPress={() =>
                   openLink("https://www.youtube.com/@IdaraRohaniyat")
                 }
               >
+                        <View style={styles.youtubeRow}>
                 <Image
                   source={require("../../../assets/images/youtube.png")}
                   style={styles.youtubeIcon}
                 />
-              </TouchableOpacity>
+             
               <Text style={styles.youtubeText}>
                 مزید تفصیلات کے لیے یوٹیوب لنک وزٹ کریں۔
               </Text>
-            </View>
+               </View>
+               </TouchableOpacity>
+           
 
             {/* Idara Rohaniyat Image - Bottom */}
             <Image

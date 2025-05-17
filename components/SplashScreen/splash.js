@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import { View, Image, StyleSheet, Animated, Dimensions } from "react-native";
+import { useEffect, useRef } from "react";
+import { Animated, Dimensions, Image, StyleSheet, View } from "react-native";
 
 const { height } = Dimensions.get("window");
 
@@ -40,7 +40,7 @@ export default function CustomSplash() {
         ]}
       >
         <Image
-          source={require("../../assets/images/adaptive-icon.png")} 
+          source={require("../../assets/images/main-logo.png")} 
           style={styles.mainLogo}
           resizeMode="contain"
         />

@@ -98,6 +98,7 @@ const DATA = [
   },
 ];
 export default function HomeScreen() {
+  
   return (
     <ImageBackground
       source={require("../../../assets/images/MainBackground.png")}

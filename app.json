@@ -1,24 +1,24 @@
 {
   "expo": {
-    "name": "Rohaniyat",
+    "name": "Idara Rohaniyat",
     "slug": "mobileapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/adaptive-icon.png",
-    "scheme": "myapp",
+    "scheme": "idararohaniyat",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/images/defultsplash.png",
-      "resizeMode": "contain",
       "backgroundColor": "#E4DAC1"
     },
     "ios": {
+      "bundleIdentifier": "com.creationnext.idararohaniyat",
       "supportsTablet": true,
       "icon": "./assets/images/adaptive-icon.png"
     },
     "android": {
-      "package": "com.hamzawaqasch.rohaniyat",
+      "package": "com.creationnext.idararohaniyat",
       "permissions": [
         "INTERNET",
         "ACCESS_FINE_LOCATION",
@@ -29,16 +29,21 @@
       "icon": "./assets/images/adaptive-icon.png",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+             "backgroundColor": "#E4DAC1"
       }
     },
     "web": {
-      "favicon": "./assets/images/adaptive-icon.png"
+      "favicon": "./assets/images/adaptive-icon.png",
+      "name": "Idara Rohaniyat",
+      "themeColor": "#E4DAC1",
+      "backgroundColor": "#E4DAC1",
+      "display": "standalone"
     },
     "extra": {
       "eas": {
         "projectId": "fedaf04d-9035-4932-87db-2075d40cc42b"
-      }
+      },
+      "router": {}
     },
     "owner": "rohaniyatapp",
     "plugins": [

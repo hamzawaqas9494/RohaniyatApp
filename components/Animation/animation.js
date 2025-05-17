@@ -11,9 +11,7 @@ import {
   View
 } from "react-native";
 
-// const { width } = Dimensions.get("window");
 const screenWidth = Dimensions.get('window').width;
-
 const width = Platform.OS === 'web'
   ? Math.min(screenWidth, 1024)
   : screenWidth;
@@ -71,8 +69,6 @@ const AnimatedItem = ({
           height: iconHeight,
           justifyContent: "center",
           alignItems: "center",
-          // backgroundColor: "red",
-          // overflow:"hidden"
         }}
         resizeMode="contain"
         imageStyle={{ transform: [{ rotate: `${rotation}deg` }] }}
@@ -84,15 +80,19 @@ const AnimatedItem = ({
             justifyContent: "center",
             width: iconWidth * 0.85,
             height: iconWidth * 0.78,
-            // backgroundColor: "rgba(255, 255, 255, 0.6)",
             transform: [{ rotate: `${rotation}deg` }],
+               overflow:"hidden"
           }}
         >
           <View
             style={{
+              width:"100%",
               alignItems: "center",
               transform: [{ rotate: `${-rotation}deg` }],
               justifyContent: "center",
+             
+             
+          
             }}
           >
             <Image
@@ -106,8 +106,9 @@ const AnimatedItem = ({
               style={{
                 color: "#6C472D",
                 fontFamily: "Jameel-Noori-Regular",
-                fontSize: iconWidth * 0.16,
+                fontSize: iconWidth * 0.18,
                 textAlign: "center",
+                   width:"100%",
               }}
             >
               {item.text}
