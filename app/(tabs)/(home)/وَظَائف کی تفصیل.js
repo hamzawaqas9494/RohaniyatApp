@@ -8,9 +8,10 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View
+  useWindowDimensions,
+  View,
 } from "react-native";
-import HTMLView from "react-native-htmlview";
+import RenderHTML from "react-native-render-html";
 import CustomBackground from "../../../components/Background/Background";
 const openLink = (url) => {
   Linking.openURL(url).catch((err) =>
@@ -20,6 +21,7 @@ const openLink = (url) => {
 export default function Wazaifkitafseel() {
   const route = useRoute();
   const { id } = route.params;
+  const { width } = useWindowDimensions();
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -64,10 +66,14 @@ export default function Wazaifkitafseel() {
               resizeMode="contain"
             />
           )}
-          <HTMLView
-            value={data?.content || "No Data Found"}
-            stylesheet={htmlStyles}
-          />
+          <View style={styles.contentWrapper}>
+            <RenderHTML
+              contentWidth={width}
+              source={{ html: data?.content || "<p>No Data Found</p>" }}
+              tagsStyles={htmlStyles}
+              systemFonts={["Jameel-Noori-Regular"]}
+            />
+          </View>
           <View style={styles.youtubeSection}>
             {/* Idara Rohaniyat Image - Top */}
             <Image
@@ -75,28 +81,21 @@ export default function Wazaifkitafseel() {
               style={styles.rohaniyatImage}
               resizeMode="contain"
             />
-
-            {/* YouTube Link Row */}
-    
-              <TouchableOpacity
-                onPress={() =>
-                  openLink("https://www.youtube.com/@IdaraRohaniyat")
-                }
-              >
-                        <View style={styles.youtubeRow}>
+            <TouchableOpacity
+              onPress={() =>
+                openLink("https://www.youtube.com/@IdaraRohaniyat")
+              }
+            >
+              <View style={styles.youtubeRow}>
                 <Image
                   source={require("../../../assets/images/youtube.png")}
                   style={styles.youtubeIcon}
                 />
-             
-              <Text style={styles.youtubeText}>
-                مزید تفصیلات کے لیے یوٹیوب لنک وزٹ کریں۔
-              </Text>
-               </View>
-               </TouchableOpacity>
-           
-
-            {/* Idara Rohaniyat Image - Bottom */}
+                <Text style={styles.youtubeText}>
+                  مزید تفصیلات کے لیے یوٹیوب لنک وزٹ کریں۔
+                </Text>
+              </View>
+            </TouchableOpacity>
             <Image
               source={require("../../../assets/images/Line.png")}
               style={styles.rohaniyatImage}
@@ -108,6 +107,7 @@ export default function Wazaifkitafseel() {
     </CustomBackground>
   );
 }
+
 const styles = StyleSheet.create({
   centerContent: {
     flex: 1,
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   heading: {
-    fontSize: 35,
+    fontSize: 28,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -126,8 +126,11 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 300,
   },
-  youtubeSection: {
+  contentWrapper: {
     marginTop: 10,
+  },
+  youtubeSection: {
+    marginTop: 40,
   },
   rohaniyatImage: {
     width: "100%",
@@ -136,14 +139,12 @@ const styles = StyleSheet.create({
   youtubeRow: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "center", 
-    paddingHorizontal: 40,
-    gap: 12,  
+    justifyContent: "center",
+    gap: 12,
   },
   youtubeIcon: {
     width: 28,
     height: 26,
-    marginLeft: 12,
   },
   youtubeText: {
     fontSize: 20,
@@ -153,13 +154,11 @@ const styles = StyleSheet.create({
     writingDirection: "rtl",
   },
 });
-
-// HTML Styles
-const htmlStyles = StyleSheet.create({
+ const htmlStyles = StyleSheet.create({
   h1: {
     fontFamily: "Arial",
     fontSize: 28,
-    fontWeight: "bold",
+    fontFamily: "Jameel-Noori-Regular",
     color: "#222",
     writingDirection: "rtl",
     textAlign: "right",
@@ -167,7 +166,7 @@ const htmlStyles = StyleSheet.create({
   h2: {
     fontFamily: "Arial",
     fontSize: 24,
-    fontWeight: "bold",
+    fontFamily: "Jameel-Noori-Regular",
     color: "#333",
     writingDirection: "rtl",
     textAlign: "right",
@@ -175,7 +174,7 @@ const htmlStyles = StyleSheet.create({
   h3: {
     fontFamily: "Arial",
     fontSize: 20,
-    fontWeight: "bold",
+    fontFamily: "Jameel-Noori-Regular",
     color: "#444",
     writingDirection: "rtl",
     textAlign: "right",
@@ -193,12 +192,14 @@ const htmlStyles = StyleSheet.create({
     fontSize: 20,
     color: "#6C472D",
     lineHeight: 30,
+    fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
     writingDirection: "rtl",
   },
   ul: {
     fontSize: 20,
     color: "#6C472D",
+    fontFamily: "Jameel-Noori-Regular",
     lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",
@@ -207,6 +208,7 @@ const htmlStyles = StyleSheet.create({
     fontSize: 20,
     color: "#6C472D",
     lineHeight: 30,
+    fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
     writingDirection: "rtl",
   },
@@ -214,6 +216,7 @@ const htmlStyles = StyleSheet.create({
     fontSize: 20,
     color: "#6C472D",
     lineHeight: 30,
+    fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
     writingDirection: "rtl",
   },
@@ -223,5 +226,6 @@ const htmlStyles = StyleSheet.create({
   },
   em: {
     fontStyle: "italic",
+    fontFamily: "Jameel-Noori-Regular",
   },
 });

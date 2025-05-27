@@ -81,6 +81,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 22,
+    paddingTop:4,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "center",
