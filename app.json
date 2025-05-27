@@ -4,7 +4,7 @@
     "slug": "mobileapp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/web-icon.png",
+    "icon": "./assets/images/app-icon.png",
     "scheme": "idararohaniyat",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
