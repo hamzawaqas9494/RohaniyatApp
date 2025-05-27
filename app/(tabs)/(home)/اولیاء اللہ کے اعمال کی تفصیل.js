@@ -3,16 +3,25 @@ import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
   Image,
+  Linking,
   ScrollView,
   StyleSheet,
   Text,
+  TouchableOpacity,
+  useWindowDimensions,
   View,
 } from "react-native";
-import HTMLView from "react-native-htmlview";
+import RenderHTML from "react-native-render-html";
 import CustomBackground from "../../../components/Background/Background";
+const openLink = (url) => {
+  Linking.openURL(url).catch((err) =>
+    console.error("Failed to open URL:", err)
+  );
+};
 export default function AuliyaAllahKeAamaalKiTafseel() {
   const route = useRoute();
   const { id } = route.params;
+  const { width } = useWindowDimensions();
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -48,10 +57,42 @@ export default function AuliyaAllahKeAamaalKiTafseel() {
             style={styles.image}
             resizeMode="contain"
           />
-          <HTMLView
-            value={data?.content || "No Data Found"}
-            stylesheet={htmlStyles}
-          />
+          <View style={styles.contentWrapper}>
+            <RenderHTML
+              contentWidth={width}
+              source={{ html: data?.content || "<p>No Data Found</p>" }}
+              tagsStyles={htmlStyles}
+              systemFonts={["Jameel-Noori-Regular"]}
+            />
+          </View>
+          <View style={styles.youtubeSection}>
+            <Image
+              source={require("../../../assets/images/Line.png")}
+              style={styles.rohaniyatImage}
+              resizeMode="contain"
+            />
+            <TouchableOpacity
+              onPress={() =>
+                openLink("https://www.youtube.com/@IdaraRohaniyat")
+              }
+            >
+              <View style={styles.youtubeRow}>
+                <Image
+                  source={require("../../../assets/images/youtube.png")}
+                  style={styles.youtubeIcon}
+                />
+
+                <Text style={styles.youtubeText}>
+                  مزید تفصیلات کے لیے یوٹیوب لنک وزٹ کریں۔
+                </Text>
+              </View>
+            </TouchableOpacity>
+            <Image
+              source={require("../../../assets/images/Line.png")}
+              style={styles.rohaniyatImage}
+              resizeMode="contain"
+            />
+          </View>
         </ScrollView>
       )}
     </CustomBackground>
@@ -74,6 +115,33 @@ const styles = StyleSheet.create({
     marginTop: 10,
     width: "100%",
     height: 300,
+  },
+  contentWrapper: {
+    marginTop: 10,
+  },
+  youtubeSection: {
+    marginTop: 40,
+  },
+  rohaniyatImage: {
+    width: "100%",
+    height: 20,
+  },
+  youtubeRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 12,
+  },
+  youtubeIcon: {
+    width: 28,
+    height: 26,
+  },
+  youtubeText: {
+    fontSize: 20,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "red",
+    textAlign: "right",
+    writingDirection: "rtl",
   },
 });
 // HTML Styles
