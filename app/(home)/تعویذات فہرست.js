@@ -53,13 +53,13 @@ const styles = StyleSheet.create({
   card: {
     width: "100%",
     backgroundColor: "#E4DAC1",
-   paddingVertical: 2,
+    paddingVertical: 2,
     marginTop: 8,
     marginBottom: 8,
     borderRadius: 5,
   },
   text: {
-    fontSize: 24,
+    fontSize: 22,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "center",

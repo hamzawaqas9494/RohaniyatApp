@@ -31,7 +31,10 @@ export default function StackNavigator() {
           headerTintColor: "#6C472D",
           headerTitleStyle: {
             fontFamily: "Jameel-Noori-Regular",
-            fontSize: 22,
+            // fontSize: 22,
+            lineHeight:10,
+            paddingTop:10,
+            // marginTop: 20,
             color: "#6C472D",
           },
           headerTitleAlign: "center",

@@ -11,7 +11,7 @@ export default function NakoshLawazmat() {
             کی زکوۃ کی ادائیگی سب سے پہلی شرط ہے ۔
           </Text>
 
-          <Text style={styles.subheading}>1. قلم:</Text>
+          <Text style={styles.heading}>1. قلم:</Text>
           <Text style={styles.description}>
             قلم کسی بھی لکڑی کا سب سے عمدہ ہوتا ہے، اس کے علاوہ ہولڈر، فاؤنٹین
             پین، بال پین یا پوائنٹر وغیرہ استعمال کر سکتے ہیں مگر جو بھی ہو حلال
@@ -21,7 +21,7 @@ export default function NakoshLawazmat() {
             لکڑی کا قلم استعمال کریں۔
           </Text>
 
-          <Text style={styles.subheading}>2. سیاہی:</Text>
+          <Text style={styles.heading}>2. سیاہی:</Text>
           <Text style={styles.description}>
             مختلف رنگوں سے نقوش بھرنا ماہرین سے ثابت ہے۔ اعمال خیر مثلاََ رزق،
             محبت، ترقی یا اقتدار وغیرہ کیلئے زعفران، سبز رنگ سے نقوش لکھے جاتے
@@ -34,13 +34,13 @@ export default function NakoshLawazmat() {
             ہو اور منہ میں کوئی کڑوی چیز رکھی ہو تو تاثیر جلد سامنے آئے گی۔
           </Text>
 
-          <Text style={styles.subheading}>3. کاغذ:</Text>
+          <Text style={styles.heading}>3. کاغذ:</Text>
           <Text style={styles.description}>
             عامل کو چاہیے کہ اچھے کاموں کیلئے سفید یا سبز کاغذ استعمال کرے۔ منفی
             کاموں کیلئے زرد، کالا یا سرخ کاغذ استعمال کرے۔
           </Text>
 
-          <Text style={styles.subheading}>4. کپڑا:</Text>
+          <Text style={styles.heading}>4. کپڑا:</Text>
           <Text style={styles.description}>
             عام امراض، سحر، آسیبی اثرات اور نفرت وغیرہ کیلئے نقوش کالے کپڑے میں
             پیک کئے جاتے ہیں، جبکہ کاروباری ترقی، اقتدار کے حصول، محبت اور تسخیر
@@ -48,7 +48,7 @@ export default function NakoshLawazmat() {
             بندش، حمل اور حفاظت وغیرہ کیلئے سرخ کپڑے میں پیک کئے جاتے ہیں۔
           </Text>
 
-          <Text style={styles.subheading}>نوٹ:</Text>
+          <Text style={styles.heading}>نوٹ:</Text>
           <Text style={styles.description}>
             یہ تمام کام اور لوازمات سبب کے درجے میں ہیں اکابرین کے تجربات سے
             ثابت ہے۔ اس لئے عامل میں ان کا خاص خیال رکھنا چاہیے۔ مگر یاد رہے
@@ -70,13 +70,8 @@ export default function NakoshLawazmat() {
 const styles = StyleSheet.create({
   heading: {
     fontSize: 28,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  subheading: {
-    fontSize: 24,
+    paddingTop: 4,
+    paddingRight: 6,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -84,6 +79,8 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 20,
+    paddingRight: 4,
+    lineHeight: 30,
     color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",

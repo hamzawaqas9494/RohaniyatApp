@@ -51,13 +51,14 @@ const styles = StyleSheet.create({
   card: {
     width: "100%",
     backgroundColor: "#E4DAC1",
-    paddingVertical: 6,
+    paddingVertical: 2,
     marginTop: 8,
     marginBottom: 8,
     borderRadius: 5,
   },
   text: {
     fontSize: 22,
+    paddingTop:4,
    fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "center",

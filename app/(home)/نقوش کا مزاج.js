@@ -18,18 +18,18 @@ export default function NakoshKaMazaj() {
             ہر قسم کے مسائل کیلئے لکھے اور استعمال کئے جاتے ہیں۔ جادو کیا بھی
             جاتا ہے۔ مثبت اور منفی، خیر اور شر کیلئے یہ عامل پر منحصر ہوتا ہے۔
             وہ عامل نقوش کے قواعد و ضوابط کا خیال نہیں رکھتے جنہوں نے جناتی چلے
-            کئے ہوتے ہیں اور جنات سے کام لینا جانتے
+            کئے ہوتے ہیں اور جنات سے کام لینا جانتے ہیں۔
           </Text>
-          <Text style={styles.subheading}>
+          <Text style={styles.heading}>
             نقوش طبیت کے اعتبار سے چار طرح کے ہوتے ہیں
           </Text>
-          <View style={styles.list}>
-            <Text style={styles.item}>• آتشی</Text>
-            <Text style={styles.item}>• بادی</Text>
-            <Text style={styles.item}>• آبی</Text>
-            <Text style={styles.item}>• خاکی</Text>
+          <View style={styles.listContainer}>
+            <Text style={styles.listItem}>• آتشی</Text>
+            <Text style={styles.listItem}>• بادی</Text>
+            <Text style={styles.listItem}>• آبی</Text>
+            <Text style={styles.listItem}>• خاکی</Text>
           </View>
-          <Text style={styles.subheading}>
+          <Text style={styles.heading}>
             1. آتشی نقوش (برائے زکات آگ میں جلائے جاتے ہیں۔)
           </Text>
           <Text style={styles.description}>
@@ -42,8 +42,7 @@ export default function NakoshKaMazaj() {
             چاہیے کہ اپنا رخ مشرق کی طرف کرے، اپنے قریب آگ جلا لے اور ایک زانو
             ہو کر لکھے۔
           </Text>
-
-          <Text style={styles.subheading}>
+          <Text style={styles.heading}>
             2. بادی نقوش (برائے زکات درخت پر لٹکائے جاتے ہیں)
           </Text>
           <Text style={styles.description}>
@@ -56,8 +55,7 @@ export default function NakoshKaMazaj() {
             مثلاََ تخت، بیڈ، کرسی وغیرہ، منہ مغرب کی جانب رکھے اور دو زانو ہو کر
             لکھے۔
           </Text>
-
-          <Text style={styles.subheading}>
+          <Text style={styles.heading}>
             3. خاکی نقوش (برائے زکات زمین میں دبائے جاتے ہیں)
           </Text>
           <Text style={styles.description}>
@@ -69,8 +67,7 @@ export default function NakoshKaMazaj() {
             ہیں، خاکی نقش لکھتے وقت عامل مکمل تنہا ہو کچی زمین پر بیٹھ کر لکھے،
             جنوب کی جانب منہ ہو اور آلتی پالتی مار کر بیٹھے۔
           </Text>
-
-          <Text style={styles.subheading}>
+          <Text style={styles.heading}>
             4. آبی نقوش (برائے زکات آٹے کی گولی نقش ڈال کر دریا میں ڈالیں)
           </Text>
           <Text style={styles.description}>
@@ -90,13 +87,8 @@ export default function NakoshKaMazaj() {
 const styles = StyleSheet.create({
   heading: {
     fontSize: 28,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  subheading: {
-    fontSize: 24,
+    paddingTop: 4,
+    paddingRight: 6,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -104,26 +96,25 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 20,
+    paddingRight: 4,
+    lineHeight: 30,
     color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
     writingDirection: "rtl",
   },
-    list: {
-    paddingRight: 10,
-  },
   listContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+    marginTop: 4,
+    marginBottom: 12,
+    paddingRight: 8,
   },
-  column: {
-    flex: 1,
-    paddingRight: 10,
-  },
-  item: {
+  listItem: {
     fontSize: 20,
     color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
+    writingDirection: "rtl",
+    lineHeight: 30,
+    paddingVertical: 6,
   },
 });

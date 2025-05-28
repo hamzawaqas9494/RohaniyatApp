@@ -35,13 +35,8 @@ export default function TavezatUsmaniaTaruf() {
 const styles = StyleSheet.create({
   heading: {
     fontSize: 28,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  subheading: {
-    fontSize: 24,
+    paddingTop:4,
+    paddingRight:6,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -49,6 +44,8 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 20,
+    paddingRight:4,
+    lineHeight:30,
     color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",

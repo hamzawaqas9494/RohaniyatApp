@@ -4,7 +4,7 @@
     "slug": "mobileapp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/app-icon.png",
+    "icon": "./assets/images/IdaraRohaniyatLogo.png",
     "scheme": "idararohaniyat",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -28,12 +28,12 @@
       ],
       "icon": "./assets/images/app-icon.png",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/app-icon.png",
+        "foregroundImage": "./assets/images/IdaraRohaniyatLogo.png",
              "backgroundColor": "#E4DAC1"
       }
     },
     "web": {
-      "favicon": "./assets/images/web-icon.png",
+      "favicon": "./assets/images/IdaraRohaniyatLogo.png",
       "name": "Idara Rohaniyat",
       "themeColor": "#E4DAC1",
       "backgroundColor": "#E4DAC1",

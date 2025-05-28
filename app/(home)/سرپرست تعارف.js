@@ -13,7 +13,6 @@ export default function SirparastScreen() {
         <View>
           <Text style={styles.heading}>مختصر تعارف</Text>
           <Text style={styles.description}>
-            {" "}
             بانی و سرپرست اعلیٰ ادارہ روحانیات و مدرسہ تعلیم القرآن لاہور، پیر
             طریقت حضرت مولانا حافظ و قاری محمد عثمان چشتی، قادری، نقشبندی،
             سہروردی، شاذلی، رفاعی کی پیدائش جولائی 1981 میں لاہور میں ہوئی اور
@@ -64,8 +63,10 @@ export default function SirparastScreen() {
   );
 }
 const styles = StyleSheet.create({
-  heading: {
+   heading: {
     fontSize: 28,
+    paddingTop:4,
+    paddingRight:6,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -73,6 +74,8 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 20,
+    paddingRight:4,
+    lineHeight:30,
     color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",

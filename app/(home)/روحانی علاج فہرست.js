@@ -10,8 +10,8 @@ import CustomBackground from "../../components/Background/Background";
 const DATA = [
   {
     id: "1",
-    screen:"ہمارا روحانی علاج کا طریقہ",
-    text: "ہمارا روحانی علاج کا طریقہ",
+    screen:"ہمارا طریقہ علاج",
+    text: "ہمارا طریقہ علاج",
   },
   {
     id: "2",

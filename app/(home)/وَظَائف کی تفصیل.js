@@ -32,6 +32,7 @@ export default function Wazaifkitafseel() {
           `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=wazaif&id=${id}`
         );
         const result = await response.json();
+        console.log(result,'ressss')
         setData(result.rows[0]);
       } catch (error) {
         console.error("Error fetching details:", error);
@@ -116,6 +117,8 @@ const styles = StyleSheet.create({
   },
   heading: {
     fontSize: 28,
+    paddingTop: 4,
+    paddingRight: 6,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -155,6 +158,13 @@ const styles = StyleSheet.create({
   },
 });
  const htmlStyles = StyleSheet.create({
+  // body:{
+  //   writingDirection: 'rtl',
+  //   textAlign: 'right',
+  //   color: '#6C472D',
+  //   fontSize: 18,
+  //   fontFamily: 'Jameel-Noori-Regular',
+  // },
   h1: {
     fontFamily: "Arial",
     fontSize: 28,
@@ -221,11 +231,15 @@ const styles = StyleSheet.create({
     writingDirection: "rtl",
   },
   strong: {
-    fontWeight: "bold",
+    // fontWeight: "bold",
     color: "red",
+    textAlign: "right",
+    writingDirection: "rtl",
   },
   em: {
-    fontStyle: "italic",
+    // fontStyle: "italic",
+    textAlign: "right",
+    writingDirection: "rtl",
     fontFamily: "Jameel-Noori-Regular",
   },
 });
