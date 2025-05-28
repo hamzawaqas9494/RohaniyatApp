@@ -3,7 +3,7 @@ import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
 
 export default function YouTubeButton() {
   const handlePress = () => {
-    Linking.openURL('https://www.youtube.com/channel/yourchannelid').catch(err =>
+    Linking.openURL('https://www.youtube.com/@IdaraRohaniyat').catch(err =>
       console.error('Failed to open URL:', err)
     );
   };
