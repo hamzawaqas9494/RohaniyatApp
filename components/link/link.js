@@ -1,11 +1,11 @@
 import {
-  View,
-  Text,
-  StyleSheet,
   Dimensions,
   Image,
-  TouchableOpacity,
   Linking,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 
@@ -111,8 +111,9 @@ const Links = () => {
 
 const styles = StyleSheet.create({
   mainRow: {
-    paddingLeft: 10,
-    paddingRight: 10,
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 10,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",

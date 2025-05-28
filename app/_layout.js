@@ -72,7 +72,7 @@ export default function Layout() {
         }}
       >
         <Drawer.Screen
-          name="(tabs)"
+          name="(home)"
           options={{
             title: "ادارہ روحانیت",
             drawerIcon: ({ color, size }) => (
