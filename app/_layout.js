@@ -13,6 +13,7 @@ SplashScreen.preventAutoHideAsync();
 export default function Layout() {
   const [fontsLoaded] = useFonts({
     "Jameel-Noori-Regular": require("../assets/fonts/JameelNooriNastaleeqRegular.ttf"),
+     "Noori-Regular": require("../assets/fonts/NotoNastaliqUrdu-Regular.ttf"),
   });
 
   const [isSplashVisible, setSplashVisible] = useState(true);

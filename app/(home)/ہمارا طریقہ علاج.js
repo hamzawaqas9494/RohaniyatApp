@@ -1,11 +1,6 @@
 import { ScrollView, StyleSheet, Text, View } from "react-native";
-<<<<<<< Updated upstream:app/(home)/ہمارا طریقہ علاج.js
 import CustomBackground from "../../components/Background/Background";
 export default function HamaraTarikaIlajScreen() {
-=======
-import CustomBackground from "../../../components/Background/Background";
-export default function HamaraTrikaIlaj() {
->>>>>>> Stashed changes:app/(tabs)/(home)/ہمارا طریقہ علاج.js
   return (
     <CustomBackground>
       <ScrollView>

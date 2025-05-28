@@ -30,11 +30,8 @@ export default function StackNavigator() {
           },
           headerTintColor: "#6C472D",
           headerTitleStyle: {
-            fontFamily: "Jameel-Noori-Regular",
-            // fontSize: 22,
-            lineHeight:10,
-            paddingTop:10,
-            // marginTop: 20,
+            fontFamily: "Noori-Regular",
+            fontSize: 15,
             color: "#6C472D",
           },
           headerTitleAlign: "center",
@@ -44,7 +41,7 @@ export default function StackNavigator() {
         <Stack.Screen
           name="index"
           options={{
-            title: "ادارہ روحانیت",
+            title: "ادارہ روحانیات",
             gestureEnabled: true,
           }}
         />
