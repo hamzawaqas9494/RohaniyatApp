@@ -27,7 +27,7 @@ export default function RohaniIshaya() {
             یا خاص کلام خاص تعداد میں پانی یا تیل پر دم کروا کر دینے کی بھی
             سہولت موجود ہے۔
           </Text>
-          <Text style={styles.subheading}>روحانی دکان میں 2 شعبے ہیں</Text>
+          <Text style={styles.heading}>روحانی دکان میں 2 شعبے ہیں</Text>
           <View style={styles.list}>
             <Text style={styles.item}>• دم شدہ اشیاء</Text>
             <Text style={styles.item}>• تیار روحانی علاج</Text>
@@ -36,7 +36,7 @@ export default function RohaniIshaya() {
             سب کی تفصیل ذیل میں دی گئی ہے۔گھر بیٹھے تمام اشیاء منگوائیں۔ ڈاک خرچ
             بذمہ خریدار۔ پیشگی رقم کے بغیر اشیاء نہیں بھیجیں جائیں گی۔
           </Text>
-          <Text style={styles.subheading}>
+          <Text style={styles.heading}>
             مریض اور معالجین کیلئے دم شدہ روحانی اشیاء
           </Text>
           <Text style={styles.description}>
@@ -109,13 +109,8 @@ export default function RohaniIshaya() {
 const styles = StyleSheet.create({
   heading: {
     fontSize: 28,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-   subheading: {
-    fontSize: 24,
+    paddingTop:4,
+    paddingRight:6,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -123,6 +118,8 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 20,
+    paddingRight:4,
+    lineHeight:30,
     color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",

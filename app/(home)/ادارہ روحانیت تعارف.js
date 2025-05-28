@@ -31,12 +31,12 @@ export default function IdaraRohaniyatScreen() {
             ہمارے اعمال کرنے سے کسی قسم کا کوئی خوف و خطرہ نہیں ہوتا اور نہ کسی
             قسم کی رجعت کا سامنا کرنا پڑتا ہے۔
           </Text>
-          <Text style={styles.subheading}>مزید شعبہ جات </Text>
+          <Text style={styles.heading}>مزید شعبہ جات </Text>
           <Text style={styles.description}>
             روحانی دکان , تعویذات عثمانیہ , روحانی علاج گا ہ , روحانی تعویذات
             روحانی عملیات کورسز , مدرسہ تعلیم القرآن
           </Text>
-          <Text style={styles.subheading}>
+          <Text style={styles.heading}>
             (ہم دعویٰ نہیں علاج کرتے ہیں) ہمارا طریقہ علاج
           </Text>
           <Text style={styles.description}>
@@ -79,8 +79,8 @@ export default function IdaraRohaniyatScreen() {
             دعاؤں میں رہتے ہیں۔ یہ اعمال ہر کوئی کر سکتا ہے۔ اس میں کسی قسم کا
             کوئی پرہیز، ڈر یا خوف کا خطرہ نہیں ہوتا۔
           </Text>
-          <Text style={styles.subheading}>
-            اعمال کے ذریعے مریض کا روحانی علاج{" "}
+          <Text style={styles.heading}>
+            اعمال کے ذریعے مریض کا روحانی علاج
           </Text>
           <Text style={styles.description}>
             ادارہ روحانیات کے زیرِ تحت ہمارا طریقۂ علاج بالکل منفرد ہے۔ پوری
@@ -116,13 +116,8 @@ export default function IdaraRohaniyatScreen() {
 const styles = StyleSheet.create({
   heading: {
     fontSize: 28,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  subheading: {
-    fontSize: 24,
+    paddingTop:4,
+    paddingRight:6,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -130,6 +125,8 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 20,
+    paddingRight:4,
+    lineHeight:30,
     color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",

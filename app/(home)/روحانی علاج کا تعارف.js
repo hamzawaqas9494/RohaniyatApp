@@ -23,13 +23,13 @@ export default function RohaniIlahkaMukhtasirtaruf() {
             جب تک قابل اعتماد معالج نہ ملے، آپ ہمارے مجرب علاج سے فائدہ اٹھائیں اور ہمارے لیے دعا کریں۔ 
             ان طریقۂ علاج میں کسی بھی عامل کی روحانی یا جناتی طاقت شامل نہیں ہوتی، لیکن فائدہ ضرور ہوگا، آپ کے اعتقاد اور روحانیت کے مطابق۔
           </Text>
-          <Text style={styles.subheading}>یاد رکھیں!</Text>
+          <Text style={styles.heading}>یاد رکھیں!</Text>
           <Text style={styles.description}>
             جب بھی کسی جادو یا جناتی مریض کا علاج شروع کریں تو اس بات کا یقین کر لیں کہ پڑھائی کرنے والے شخص پر اثرات ظاہر ہوں گے۔
             اگر معاملہ سخت ہوا یا جناتی ہو تو نقصان بھی ہو سکتا ہے، لہٰذا احتیاط سے علاج کریں۔
             اگر اثرات ظاہر ہونا شروع ہو جائیں تو علاج ترک کر دیں اور کسی ماہر روحانی معالج سے رجوع کریں۔
           </Text>
-          <Text style={styles.subheading}>چند احتیاطی تدابیر:</Text>
+          <Text style={styles.heading}>چند احتیاطی تدابیر:</Text>
           <Text style={styles.description}>
             - علاج سے پہلے اپنے اور تمام گھر والوں کا حصار کریں، بلکہ صبح، شام، اور رات حصار معمول بنائیں۔ {"\n"}
             - علاج سے پہلے گوشت کا صدقہ کریں۔ بڑا گوشت بغیر ہڈی کے مریض اور گھر والوں کے سر سے 7 مرتبہ الٹا اور 7 مرتبہ سیدھا گھما کر ویرانے یا پانی میں پھینک دیں۔ {"\n"}
@@ -44,13 +44,8 @@ export default function RohaniIlahkaMukhtasirtaruf() {
 const styles = StyleSheet.create({
   heading: {
     fontSize: 28,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  subheading: {
-    fontSize: 24,
+    paddingTop:4,
+    paddingRight:6,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -58,6 +53,8 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 20,
+    paddingRight:4,
+    lineHeight:30,
     color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",

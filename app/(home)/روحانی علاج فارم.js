@@ -136,7 +136,7 @@ export default RohaniIlajForm = () => {
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <ScrollView>
             <Text style={styles.heading}>روحانی علاج کے لیے</Text>
-            <Text style={styles.description}>لحمدللہ ادارہ روحانیات کی اس سروس کے ذریعے پوری دنیا سے لاکھوں لوگ روحانی علاج اور اپنے گھریلو، کاروباری، معاشرتی ، میڈیکلی مسائل بالخصوص جادو و جنات کے مکمل مستقل روحانی علاج کیلئے ہمارے خاص الخاص موکلاتی اعمال کی اجازت لے کر ادارے کی نگرانی اور رہنمائی اپنا ، اپنی فیملی اور اپنے کا روبار علاج کر رہے ہیں ۔ 
+            <Text style={styles.description}>الحمدللہ ادارہ روحانیات کی اس سروس کے ذریعے پوری دنیا سے لاکھوں لوگ روحانی علاج اور اپنے گھریلو، کاروباری، معاشرتی ، میڈیکلی مسائل بالخصوص جادو و جنات کے مکمل مستقل روحانی علاج کیلئے ہمارے خاص الخاص موکلاتی اعمال کی اجازت لے کر ادارے کی نگرانی اور رہنمائی اپنا ، اپنی فیملی اور اپنے کا روبار علاج کر رہے ہیں ۔ 
             </Text>
             {[
               { label: "Name", key: "name", keyboardType: "default" },
@@ -313,6 +313,8 @@ export default RohaniIlajForm = () => {
 const styles = StyleSheet.create({
   heading: {
     fontSize: 28,
+    paddingTop: 4,
+    paddingRight: 6,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -320,12 +322,13 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 20,
+    paddingRight: 4,
+    lineHeight: 30,
     color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
     writingDirection: "rtl",
   },
-
   inputRow: {
     flex: 1,
     marginBottom: 8,
