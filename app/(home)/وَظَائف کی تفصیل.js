@@ -13,7 +13,11 @@ import {
 import RenderHTML from "react-native-render-html";
 import CustomBackground from "../../components/Background/Background";
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+import YoutubeButton from "../../components/youtubeButton/youtubeVideo";
+>>>>>>> Stashed changes
 =======
 import YoutubeButton from "../../components/youtubeButton/youtubeVideo";
 >>>>>>> Stashed changes
@@ -32,7 +36,11 @@ export default function Wazaifkitafseel() {
         );
         const result = await response.json();
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         console.log(result)
+=======
+        console.log(result, "ressss");
+>>>>>>> Stashed changes
 =======
         console.log(result, "ressss");
 >>>>>>> Stashed changes
@@ -90,6 +98,10 @@ export default function Wazaifkitafseel() {
             />
           </View>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+          <YoutubeButton />
+>>>>>>> Stashed changes
 =======
           <YoutubeButton />
 >>>>>>> Stashed changes
@@ -122,7 +134,10 @@ const styles = StyleSheet.create({
   },
   contentWrapper: {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     marginTop: 10,
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     textAlign: "right",
@@ -134,6 +149,7 @@ const styles = StyleSheet.create({
   },
 });
 const htmlStyles = StyleSheet.create({
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   body: {
     // fontSize: 30,
@@ -153,6 +169,8 @@ const htmlStyles = StyleSheet.create({
     lineHeight:30,
     whiteSpace: 'pre-wrap',
 =======
+=======
+>>>>>>> Stashed changes
   h1: {
     fontSize: 28,
     color: "#222",
@@ -196,11 +214,15 @@ const htmlStyles = StyleSheet.create({
         fontFamily: "Jameel-Noori-Regular",
       },
     }),
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   },
  
   span: {
     fontSize: 20,
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
@@ -225,9 +247,16 @@ const htmlStyles = StyleSheet.create({
     fontSize: 24,
   fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
+=======
+    // marginTop: 10,
+    color: "#6C472D",
+    lineHeight: 30,
+>>>>>>> Stashed changes
     textAlign: "right",
     writingDirection: "rtl",
+    fontFamily: "Jameel-Noori-Regular",
   },
+<<<<<<< Updated upstream
     h4: {
     fontSize: 24,
   fontFamily: "Jameel-Noori-Regular",
@@ -251,6 +280,8 @@ const htmlStyles = StyleSheet.create({
     direction: "rtl",
     fontFamily: "Jameel-Noori-Regular",
 =======
+=======
+>>>>>>> Stashed changes
  ul: {
   listStylePosition: 'inside', // ✅ add this
   ...Platform.select({
@@ -319,6 +350,7 @@ const htmlStyles = StyleSheet.create({
   },
   strong: {
     fontWeight: "bold",
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
     color: "red",
     marginTop: 10,
@@ -372,9 +404,22 @@ const htmlStyles = StyleSheet.create({
   strong: {
     fontSize: 20,
     fontWeight:"bold",
+=======
+>>>>>>> Stashed changes
     color: "red",
+    marginTop: 10,
+    lineHeight: 40,
     textAlign: "right",
     writingDirection: "rtl",
+<<<<<<< Updated upstream
     
+=======
+  },
+  em: {
+    fontStyle: "italic",
+    textAlign: "right",
+    writingDirection: "rtl",
+    fontFamily: "Jameel-Noori-Regular",
+>>>>>>> Stashed changes
   },
 });
