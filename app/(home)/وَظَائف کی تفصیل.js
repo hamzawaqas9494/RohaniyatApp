@@ -43,13 +43,15 @@ export default function Wazaifkitafseel() {
         <View style={styles.centerContent}>
           <ActivityIndicator size="large" color="#6C472D" />
         </View>
+      ) : !data ? (
+        <View style={styles.centerContent}>
+          <Text style={styles.noRecordText}>کوئی ریکارڈ موجود نہیں ہے</Text>
+        </View>
       ) : (
         <ScrollView>
-          <Text style={styles.heading}>
-            {data ? data.title : "No Data Found"}
-          </Text>
+          <Text style={styles.heading}>{data.title}</Text>
 
-          {data?.image ? (
+          {data.image ? (
             <Image
               source={{ uri: data.image }}
               style={styles.image}
@@ -66,9 +68,17 @@ export default function Wazaifkitafseel() {
             <RenderHTML
               style={styles.contentWrapper}
               contentWidth={width}
-              source={{ html: data?.content || "<p>No Data Found</p>" }}
+              source={{ html: data.content || "<p>No Data Found</p>" }}
               tagsStyles={htmlStyles}
               systemFonts={["Jameel-Noori-Regular"]}
+              defaultTextProps={{ selectable: true }}
+              baseStyle={{
+                whiteSpace: "pre-wrap",
+                writingDirection: "rtl",
+                textAlign: "right",
+                fontFamily: "Jameel-Noori-Regular",
+                color: "#6C472D",
+              }}
             />
           </View>
           <YoutubeButton />
@@ -96,6 +106,13 @@ const styles = StyleSheet.create({
     textAlign: "right",
     writingDirection: "rtl",
   },
+  noRecordText: {
+    fontSize: 22,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "center",
+    writingDirection: "rtl",
+  },
   image: {
     marginTop: 10,
     width: "100%",
@@ -110,138 +127,117 @@ const styles = StyleSheet.create({
     writingDirection: "rtl",
   },
 });
+
 const htmlStyles = StyleSheet.create({
+  body: {
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+  p: {
+    margin: 0,
+    fontSize: 20,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+    lineHeight: 30,
+    whiteSpace: "pre-wrap",
+  },
+  span: {
+    fontSize: 20,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
   h1: {
     fontSize: 28,
-    color: "#222",
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
     writingDirection: "rtl",
     textAlign: "right",
     fontFamily: "Jameel-Noori-Regular",
   },
   h2: {
     fontSize: 24,
-    color: "#333",
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
     writingDirection: "rtl",
     textAlign: "right",
     fontFamily: "Jameel-Noori-Regular",
   },
-  h3: {
-    fontSize: 20,
-    color: "#444",
-    writingDirection: "rtl",
-    textAlign: "right",
+  h4: {
+    fontSize: 24,
     fontFamily: "Jameel-Noori-Regular",
-  },
-  p: {
-    ...Platform.select({
-      web: {
-        fontFamily: "Jameel-Noori-Regular",
-        // color: "red",
-        fontSize: 20,
-        color: "#6C472D",
-        marginTop: 10,
-        lineHeight: 40,
-        textAlign: "right",
-        writingDirection: "rtl",
-      },
-      default: {
-        fontSize: 20,
-        color: "#6C472D",
-        marginTop: 10,
-        lineHeight: 30,
-        textAlign: "right",
-        writingDirection: "rtl",
-        fontFamily: "Jameel-Noori-Regular",
-      },
-    }),
-  },
-  span: {
-    fontSize: 20,
-    // marginTop: 10,
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",
     fontFamily: "Jameel-Noori-Regular",
   },
- ul: {
-  listStylePosition: 'inside', // ✅ add this
-  ...Platform.select({
-    web: {
-      // color: "#6C472D",
-      textAlign: "right",
-      direction: "rtl",
-      flex: 1,
-      flexDirection: "column",
-      justifyContent: "center",
-      writingDirection: "rtl",
-      fontFamily: "Jameel-Noori-Regular",
-    },
-    default: {
-      // color: "#6C472D",
-      direction: "rtl",
-      textAlign: "right",
-      writingDirection: "rtl",
-      paddingRight: 10,
-      marginRight: 10,
-      fontFamily: "Jameel-Noori-Regular",
-    },
-  }),
-},
-
-
-  li: {
-    listStylePosition: 'inside',
-  ...Platform.select({
-    web: {
-      display: "flex", // important to apply flex styles
-      flexDirection: "column", // RTL bullet on right side
-      alignItems: "center",
-      justifyContent: "center",
-      fontSize: 20,
-      color: "#6C472D",
-      writingDirection: "rtl",
-      direction: "rtl",
-      textAlign: "right",
-      listStylePosition: "outside",
-      fontFamily: "Jameel-Noori-Regular",
-      lineHeight: 36,
-      // paddingRight: 20,
-      // marginBottom: 10,
-    },
-    default: {
-      fontSize: 20,
-      color: "#6C472D",
-      textAlign: "right",
-      writingDirection: "rtl",
-      direction: "rtl",
-      fontFamily: "Jameel-Noori-Regular",
-      lineHeight: 36,
-      paddingRight: 20,
-      marginBottom: 10,
-    },
-  })
-},
+  ul: {
+    margin: 0,
+    direction: "rtl",
+    fontFamily: "Jameel-Noori-Regular",
+    color: "red",
+    textAlign: "right",
+    writingDirection: "rtl",
+    lineHeight: 32,
+  },
   ol: {
+    margin: 0,
+    direction: "rtl",
+    fontFamily: "Jameel-Noori-Regular",
+    color: "red",
+    textAlign: "right",
+    writingDirection: "rtl",
+    lineHeight: 31,
+  },
+  li: {
+    paddingRight: 10,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    direction: "ltr",
+    textAlign: "start",
+    writingDirection: "rtl",
+  },
+  u: {
+    textDecorationLine: "underline",
+    color: "#6C472D",
+    fontSize: 18,
+    fontFamily: "Jameel-Noori-Regular",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+  s: {
+    textDecorationLine: "line-through",
+    color: "#6C472D",
     fontSize: 20,
     color: "#6C472D",
     lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",
-    fontFamily: "Jameel-Noori-Regular",
+  },
+  hr: {
+    borderBottomColor: "#6C472D",
+    borderBottomWidth: 1,
+    marginVertical: 10,
+  },
+  br: {
+    marginBottom: 10,
+    padding: 40,
   },
   strong: {
+    fontSize: 20,
     fontWeight: "bold",
     color: "red",
     marginTop: 10,
     lineHeight: 40,
     textAlign: "right",
     writingDirection: "rtl",
-  },
-  em: {
-    fontStyle: "italic",
-    textAlign: "right",
-    writingDirection: "rtl",
-    fontFamily: "Jameel-Noori-Regular",
   },
 });
