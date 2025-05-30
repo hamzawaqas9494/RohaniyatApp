@@ -7,11 +7,10 @@ import {
   StyleSheet,
   Text,
   useWindowDimensions,
-  View
+  View,
 } from "react-native";
 import RenderHTML from "react-native-render-html";
 import CustomBackground from "../../components/Background/Background";
-import YoutubeButton from "../../components/youtubeButton/youtubeVideo";
 
 export default function Wazaifkitafseel() {
   const route = useRoute();
@@ -27,7 +26,7 @@ export default function Wazaifkitafseel() {
           `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=wazaif&id=${id}`
         );
         const result = await response.json();
-        console.log(result,'ressss')
+        console.log(result)
         setData(result.rows[0]);
       } catch (error) {
         console.error("Error fetching details:", error);
@@ -37,6 +36,7 @@ export default function Wazaifkitafseel() {
     };
     fetchDetails();
   }, [id]);
+
   return (
     <CustomBackground>
       {loading ? (
@@ -62,15 +62,23 @@ export default function Wazaifkitafseel() {
               resizeMode="contain"
             />
           )}
+
           <View style={styles.contentWrapper}>
             <RenderHTML
               contentWidth={width}
               source={{ html: data?.content || "<p>No Data Found</p>" }}
               tagsStyles={htmlStyles}
               systemFonts={["Jameel-Noori-Regular"]}
+              defaultTextProps={{ selectable: true }}
+              baseStyle={{
+                    whiteSpace: 'pre-wrap',
+                writingDirection: "rtl",
+                textAlign: "right",
+                fontFamily: "Jameel-Noori-Regular",
+                color: "#6C472D",
+              }}
             />
           </View>
-          <YoutubeButton/>
         </ScrollView>
       )}
     </CustomBackground>
@@ -85,8 +93,6 @@ const styles = StyleSheet.create({
   },
   heading: {
     fontSize: 28,
-    paddingTop: 4,
-    paddingRight: 6,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -99,115 +105,121 @@ const styles = StyleSheet.create({
   },
   contentWrapper: {
     marginTop: 10,
-  },
-  youtubeSection: {
-    marginTop: 40,
-  },
-  rohaniyatImage: {
-    width: "100%",
-    height: 20,
-  },
-  youtubeRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 12,
-  },
-  youtubeIcon: {
-    width: 28,
-    height: 26,
-  },
-  youtubeText: {
-    fontSize: 20,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "red",
     textAlign: "right",
     writingDirection: "rtl",
   },
 });
- const htmlStyles = StyleSheet.create({
-  // body:{
-  //   writingDirection: 'rtl',
-  //   textAlign: 'right',
-  //   color: '#6C472D',
-  //   fontSize: 18,
-  //   fontFamily: 'Jameel-Noori-Regular',
-  // },
-  h1: {
-    fontFamily: "Arial",
-    fontSize: 28,
+const htmlStyles = StyleSheet.create({
+  body: {
+    // fontSize: 30,
     fontFamily: "Jameel-Noori-Regular",
-    color: "#222",
-    writingDirection: "rtl",
+    color: "#6C472D",
     textAlign: "right",
-  },
-  h2: {
-    fontFamily: "Arial",
-    fontSize: 24,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#333",
     writingDirection: "rtl",
-    textAlign: "right",
-  },
-  h3: {
-    fontFamily: "Arial",
-    fontSize: 20,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#444",
-    writingDirection: "rtl",
-    textAlign: "right",
   },
   p: {
-    marginTop: 10,
+    margin:0,
+ 
     fontSize: 20,
-    color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
-    lineHeight: 30,
+    color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
+    lineHeight:30,
+    whiteSpace: 'pre-wrap',
   },
+ 
   span: {
     fontSize: 20,
-    color: "#6C472D",
-    lineHeight: 30,
     fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
   },
-  ul: {
-    fontSize: 20,
+  h1: {
+    fontSize: 28,
+  fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",
   },
+  h2: {
+    fontSize: 24,
+  fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+    h4: {
+    fontSize: 24,
+  fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+ ul: {
+     margin:0,
+    direction: "rtl", 
+   fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+    color: "red",
+    lineHeight:32,
+  },
+
   ol: {
-    fontSize: 20,
-    color: "#6C472D",
-    lineHeight: 30,
+     margin:0,
+    direction: "rtl",
     fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  li: {
-    fontSize: 20,
-    color: "#6C472D",
-    lineHeight: 30,
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  strong: {
-    // fontWeight: "bold",
     color: "red",
     textAlign: "right",
     writingDirection: "rtl",
+    lineHeight:31,
   },
-  em: {
-    // fontStyle: "italic",
+  li: {
+    paddingRight:10,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    direction: "ltr", 
+    fontFamily: "Jameel-Noori-Regular",
+    textAlign: "start",
+    writingDirection: "rtl", 
+  },
+ u: {
+  textDecorationLine: "underline",
+  color: "#6C472D",
+  fontSize: 18,
+  fontFamily: "Jameel-Noori-Regular",
+  textAlign: "right",
+  writingDirection: "rtl",
+  
+},
+
+ s: {
+    textDecorationLine: "line-through",
+    color: "#6C472D",
+    fontSize: 20,
+    fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
     writingDirection: "rtl",
-    fontFamily: "Jameel-Noori-Regular",
+  },
+
+  hr: {
+    borderBottomColor: "#6C472D",
+    borderBottomWidth: 1,
+    marginVertical: 10,
+  },
+    br: {
+    marginBottom: 10, 
+    padding:40,
+  },
+  strong: {
+    fontSize: 20,
+    fontWeight:"bold",
+    color: "red",
+    textAlign: "right",
+    writingDirection: "rtl",
+    
   },
 });
