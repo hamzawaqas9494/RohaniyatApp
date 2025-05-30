@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
   Image,
+  Platform,
   ScrollView,
   StyleSheet,
   Text,
@@ -11,7 +12,11 @@ import {
 } from "react-native";
 import RenderHTML from "react-native-render-html";
 import CustomBackground from "../../components/Background/Background";
+<<<<<<< Updated upstream
 
+=======
+import YoutubeButton from "../../components/youtubeButton/youtubeVideo";
+>>>>>>> Stashed changes
 export default function Wazaifkitafseel() {
   const route = useRoute();
   const { id } = route.params;
@@ -26,7 +31,11 @@ export default function Wazaifkitafseel() {
           `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=wazaif&id=${id}`
         );
         const result = await response.json();
+<<<<<<< Updated upstream
         console.log(result)
+=======
+        console.log(result, "ressss");
+>>>>>>> Stashed changes
         setData(result.rows[0]);
       } catch (error) {
         console.error("Error fetching details:", error);
@@ -65,6 +74,7 @@ export default function Wazaifkitafseel() {
 
           <View style={styles.contentWrapper}>
             <RenderHTML
+              style={styles.contentWrapper}
               contentWidth={width}
               source={{ html: data?.content || "<p>No Data Found</p>" }}
               tagsStyles={htmlStyles}
@@ -79,6 +89,10 @@ export default function Wazaifkitafseel() {
               }}
             />
           </View>
+<<<<<<< Updated upstream
+=======
+          <YoutubeButton />
+>>>>>>> Stashed changes
         </ScrollView>
       )}
     </CustomBackground>
@@ -89,6 +103,9 @@ const styles = StyleSheet.create({
   centerContent: {
     flex: 1,
     justifyContent: "center",
+    writingDirection: "rtl",
+
+    textAlign: "right",
     alignItems: "center",
   },
   heading: {
@@ -104,12 +121,20 @@ const styles = StyleSheet.create({
     height: 300,
   },
   contentWrapper: {
+<<<<<<< Updated upstream
     marginTop: 10,
+=======
+>>>>>>> Stashed changes
     textAlign: "right",
+    // display:flex,
+    direction: "right",
+    // alignItems:center,
+    // justifyContent:center,
     writingDirection: "rtl",
   },
 });
 const htmlStyles = StyleSheet.create({
+<<<<<<< Updated upstream
   body: {
     // fontSize: 30,
     fontFamily: "Jameel-Noori-Regular",
@@ -127,10 +152,56 @@ const htmlStyles = StyleSheet.create({
     writingDirection: "rtl",
     lineHeight:30,
     whiteSpace: 'pre-wrap',
+=======
+  h1: {
+    fontSize: 28,
+    color: "#222",
+    writingDirection: "rtl",
+    textAlign: "right",
+    fontFamily: "Jameel-Noori-Regular",
+  },
+  h2: {
+    fontSize: 24,
+    color: "#333",
+    writingDirection: "rtl",
+    textAlign: "right",
+    fontFamily: "Jameel-Noori-Regular",
+  },
+  h3: {
+    fontSize: 20,
+    color: "#444",
+    writingDirection: "rtl",
+    textAlign: "right",
+    fontFamily: "Jameel-Noori-Regular",
+  },
+  p: {
+    ...Platform.select({
+      web: {
+        fontFamily: "Jameel-Noori-Regular",
+        // color: "red",
+        fontSize: 20,
+        color: "#6C472D",
+        marginTop: 10,
+        lineHeight: 40,
+        textAlign: "right",
+        writingDirection: "rtl",
+      },
+      default: {
+        fontSize: 20,
+        color: "#6C472D",
+        marginTop: 10,
+        lineHeight: 30,
+        textAlign: "right",
+        writingDirection: "rtl",
+        fontFamily: "Jameel-Noori-Regular",
+      },
+    }),
+>>>>>>> Stashed changes
   },
  
   span: {
     fontSize: 20,
+<<<<<<< Updated upstream
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -140,9 +211,16 @@ const htmlStyles = StyleSheet.create({
     fontSize: 28,
   fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
+=======
+    // marginTop: 10,
+    color: "#6C472D",
+    lineHeight: 30,
+>>>>>>> Stashed changes
     textAlign: "right",
     writingDirection: "rtl",
+    fontFamily: "Jameel-Noori-Regular",
   },
+<<<<<<< Updated upstream
   h2: {
     fontSize: 24,
   fontFamily: "Jameel-Noori-Regular",
@@ -172,11 +250,84 @@ const htmlStyles = StyleSheet.create({
      margin:0,
     direction: "rtl",
     fontFamily: "Jameel-Noori-Regular",
+=======
+ ul: {
+  listStylePosition: 'inside', // ✅ add this
+  ...Platform.select({
+    web: {
+      // color: "#6C472D",
+      textAlign: "right",
+      direction: "rtl",
+      flex: 1,
+      flexDirection: "column",
+      justifyContent: "center",
+      writingDirection: "rtl",
+      fontFamily: "Jameel-Noori-Regular",
+    },
+    default: {
+      // color: "#6C472D",
+      direction: "rtl",
+      textAlign: "right",
+      writingDirection: "rtl",
+      paddingRight: 10,
+      marginRight: 10,
+      fontFamily: "Jameel-Noori-Regular",
+    },
+  }),
+},
+
+
+  li: {
+    listStylePosition: 'inside',
+  ...Platform.select({
+    web: {
+      display: "flex", // important to apply flex styles
+      flexDirection: "column", // RTL bullet on right side
+      alignItems: "center",
+      justifyContent: "center",
+      fontSize: 20,
+      color: "#6C472D",
+      writingDirection: "rtl",
+      direction: "rtl",
+      textAlign: "right",
+      listStylePosition: "outside",
+      fontFamily: "Jameel-Noori-Regular",
+      lineHeight: 36,
+      // paddingRight: 20,
+      // marginBottom: 10,
+    },
+    default: {
+      fontSize: 20,
+      color: "#6C472D",
+      textAlign: "right",
+      writingDirection: "rtl",
+      direction: "rtl",
+      fontFamily: "Jameel-Noori-Regular",
+      lineHeight: 36,
+      paddingRight: 20,
+      marginBottom: 10,
+    },
+  })
+},
+  ol: {
+    fontSize: 20,
+    color: "#6C472D",
+    lineHeight: 30,
+    textAlign: "right",
+    writingDirection: "rtl",
+    fontFamily: "Jameel-Noori-Regular",
+  },
+  strong: {
+    fontWeight: "bold",
+>>>>>>> Stashed changes
     color: "red",
+    marginTop: 10,
+    lineHeight: 40,
     textAlign: "right",
     writingDirection: "rtl",
     lineHeight:31,
   },
+<<<<<<< Updated upstream
   li: {
     paddingRight:10,
     fontFamily: "Jameel-Noori-Regular",
@@ -201,6 +352,10 @@ const htmlStyles = StyleSheet.create({
     color: "#6C472D",
     fontSize: 20,
     fontFamily: "Jameel-Noori-Regular",
+=======
+  em: {
+    fontStyle: "italic",
+>>>>>>> Stashed changes
     textAlign: "right",
     writingDirection: "rtl",
   },

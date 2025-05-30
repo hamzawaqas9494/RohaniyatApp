@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   text: {
-    fontSize: 24,
+    fontSize: 22,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "center",

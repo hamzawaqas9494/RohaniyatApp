@@ -1,6 +1,6 @@
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import CustomBackground from "../../components/Background/Background";
-export default function HamaraTarikaIlajScreen() {
+export default function HamaraTrikaIlaj() {
   return (
     <CustomBackground>
       <ScrollView>
