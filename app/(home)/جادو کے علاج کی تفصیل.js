@@ -3,21 +3,15 @@ import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
   Image,
-  Linking,
   ScrollView,
   StyleSheet,
   Text,
-  TouchableOpacity,
   useWindowDimensions,
   View,
 } from "react-native";
 import RenderHTML from "react-native-render-html";
 import CustomBackground from "../../components/Background/Background";
-const openLink = (url) => {
-  Linking.openURL(url).catch((err) =>
-    console.error("Failed to open URL:", err)
-  );
-};
+import YoutubeButton from "../../components/youtubeButton/youtubeVideo";
 export default function JadujinnatkailajTafseel() {
   const route = useRoute();
   const { id } = route.params;
@@ -64,34 +58,7 @@ export default function JadujinnatkailajTafseel() {
               systemFonts={["Jameel-Noori-Regular"]}
             />
           </View>
-          <View style={styles.youtubeSection}>
-            {/* Idara Rohaniyat Image - Top */}
-            <Image
-              source={require("../../assets/images/Line.png")}
-              style={styles.rohaniyatImage}
-              resizeMode="contain"
-            />
-            <TouchableOpacity
-              onPress={() =>
-                openLink("https://www.youtube.com/@IdaraRohaniyat")
-              }
-            >
-              <View style={styles.youtubeRow}>
-                <Image
-                  source={require("../../assets/images/youtube.png")}
-                  style={styles.youtubeIcon}
-                />
-                <Text style={styles.youtubeText}>
-                  مزید تفصیلات کے لیے یوٹیوب لنک وزٹ کریں۔
-                </Text>
-              </View>
-            </TouchableOpacity>
-            <Image
-              source={require("../../assets/images/Line.png")}
-              style={styles.rohaniyatImage}
-              resizeMode="contain"
-            />
-          </View>
+          <YoutubeButton/>
         </ScrollView>
       )}
     </CustomBackground>
@@ -105,6 +72,8 @@ const styles = StyleSheet.create({
   },
   heading: {
     fontSize: 28,
+    paddingTop: 6,
+    paddingRight: 6,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -114,33 +83,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
     width: "100%",
     height: 300,
-  },
-  contentWrapper: {
-    marginTop: 10,
-  },
-  youtubeSection: {
-    marginTop: 40,
-  },
-  rohaniyatImage: {
-    width: "100%",
-    height: 20,
-  },
-  youtubeRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 12,
-  },
-  youtubeIcon: {
-    width: 28,
-    height: 26,
-  },
-  youtubeText: {
-    fontSize: 20,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "red",
-    textAlign: "right",
-    writingDirection: "rtl",
   },
 });
 const htmlStyles = StyleSheet.create({

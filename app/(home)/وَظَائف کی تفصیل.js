@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
   Image,
+  Platform,
   ScrollView,
   StyleSheet,
   Text,
@@ -11,7 +12,7 @@ import {
 } from "react-native";
 import RenderHTML from "react-native-render-html";
 import CustomBackground from "../../components/Background/Background";
-
+import YoutubeButton from "../../components/youtubeButton/youtubeVideo";
 export default function Wazaifkitafseel() {
   const route = useRoute();
   const { id } = route.params;
@@ -26,7 +27,7 @@ export default function Wazaifkitafseel() {
           `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=wazaif&id=${id}`
         );
         const result = await response.json();
-        console.log(result,"result nii ha ");
+        console.log(result, "ressss");
         setData(result.rows[0]);
       } catch (error) {
         console.error("Error fetching details:", error);
@@ -36,7 +37,6 @@ export default function Wazaifkitafseel() {
     };
     fetchDetails();
   }, [id]);
-
   return (
     <CustomBackground>
       {loading ? (
@@ -64,9 +64,9 @@ export default function Wazaifkitafseel() {
               resizeMode="contain"
             />
           )}
-
           <View style={styles.contentWrapper}>
             <RenderHTML
+              style={styles.contentWrapper}
               contentWidth={width}
               source={{ html: data.content || "<p>No Data Found</p>" }}
               tagsStyles={htmlStyles}
@@ -81,6 +81,7 @@ export default function Wazaifkitafseel() {
               }}
             />
           </View>
+          <YoutubeButton />
         </ScrollView>
       )}
     </CustomBackground>
@@ -91,10 +92,15 @@ const styles = StyleSheet.create({
   centerContent: {
     flex: 1,
     justifyContent: "center",
+    writingDirection: "rtl",
+
+    textAlign: "right",
     alignItems: "center",
   },
   heading: {
     fontSize: 28,
+    paddingTop: 4,
+    paddingRight: 6,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -113,8 +119,11 @@ const styles = StyleSheet.create({
     height: 300,
   },
   contentWrapper: {
-    marginTop: 10,
     textAlign: "right",
+    // display:flex,
+    direction: "right",
+    // alignItems:center,
+    // justifyContent:center,
     writingDirection: "rtl",
   },
 });
@@ -149,6 +158,8 @@ const htmlStyles = StyleSheet.create({
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
+    textAlign: "right",
+    fontFamily: "Jameel-Noori-Regular",
   },
   h2: {
     fontSize: 24,
@@ -156,13 +167,17 @@ const htmlStyles = StyleSheet.create({
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
+    textAlign: "right",
+    fontFamily: "Jameel-Noori-Regular",
   },
   h4: {
     fontSize: 24,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
+    lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",
+    fontFamily: "Jameel-Noori-Regular",
   },
   ul: {
     margin: 0,
@@ -202,7 +217,8 @@ const htmlStyles = StyleSheet.create({
     textDecorationLine: "line-through",
     color: "#6C472D",
     fontSize: 20,
-    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",
   },
@@ -219,6 +235,8 @@ const htmlStyles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     color: "red",
+    marginTop: 10,
+    lineHeight: 40,
     textAlign: "right",
     writingDirection: "rtl",
   },
