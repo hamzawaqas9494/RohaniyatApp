@@ -171,7 +171,7 @@ export default function Wazaiffehrist() {
   const navigation = useNavigation();
   useEffect(() => {
     fetch(
-      "https://rohaniyatweb-production-bf29.up.railway.app/api/card-data/get-table-data?tableName=wazaif"
+      "https://rohaniyatweb-production-bf29.up.railway.app/api/blog-data/get-table-data?tableName=wazaif"
     )
       .then((res) => res.json())
       .then((result) => {

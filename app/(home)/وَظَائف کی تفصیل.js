@@ -359,9 +359,9 @@ export default function Wazaifkitafseel() {
     const fetchDetails = async () => {
       try {
         const response = await fetch(
-          `https://rohaniyatweb-production-bf29.up.railway.app/api/card-data/get-table-data?tableName=wazaif&id=${id}`
+          `https://rohaniyatweb-production-bf29.up.railway.app/api/blog-data/get-table-data?tableName=wazaif&id=${id}`
         );
-        const result = await response.json();
+        const result = await response.json(); 
         console.log(result,'result')
         setData(result.rows[0]);
       } catch (error) {
