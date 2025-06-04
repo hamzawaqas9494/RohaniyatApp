@@ -27,7 +27,11 @@ export default function Wazaifkitafseel() {
           `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=wazaif&id=${id}`
         );
         const result = await response.json();
+<<<<<<< Updated upstream
         console.log(result, "ressss");
+=======
+        console.log(result);
+>>>>>>> Stashed changes
         setData(result.rows[0]);
       } catch (error) {
         console.error("Error fetching details:", error);
@@ -105,6 +109,7 @@ const styles = StyleSheet.create({
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
+       lineHeight: 30,
   },
   noRecordText: {
     fontSize: 22,
@@ -119,6 +124,11 @@ const styles = StyleSheet.create({
     height: 300,
   },
   contentWrapper: {
+<<<<<<< Updated upstream
+=======
+    marginTop: 20,
+    paddingRight:10,
+>>>>>>> Stashed changes
     textAlign: "right",
     // display:flex,
     direction: "right",
@@ -151,7 +161,9 @@ const htmlStyles = StyleSheet.create({
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
+    
   },
+<<<<<<< Updated upstream
   h1: {
     fontSize: 28,
     fontFamily: "Jameel-Noori-Regular",
@@ -179,6 +191,71 @@ const htmlStyles = StyleSheet.create({
     writingDirection: "rtl",
     fontFamily: "Jameel-Noori-Regular",
   },
+=======
+ h1: {
+  fontSize: 28,
+  fontFamily: "Jameel-Noori-Regular",
+  color: "red",
+  textAlign: "right",
+  writingDirection: "rtl",
+   lineHeight: 30,
+  //  padding:0,
+  //  margin:0,
+            justifyContent:"center",
+},
+h2: {
+  fontSize: 26,
+  fontFamily: "Jameel-Noori-Regular",
+  color: "#6C472D",
+  textAlign: "right",
+  writingDirection: "rtl",
+    padding:0,
+   margin:0,
+        lineHeight: 30,
+},
+h3: {
+  fontSize: 24,
+  fontFamily: "Jameel-Noori-Regular",
+  color: "#6C472D",
+  textAlign: "right",
+  writingDirection: "rtl",
+    padding:0,
+   margin:0,
+         lineHeight: 30,
+        //  alignItems:"center",
+        //  justifyContent:"center",
+},
+h4: {
+  fontSize: 20,
+  fontFamily: "Jameel-Noori-Regular",
+  color: "#6C472D",
+  textAlign: "right",
+  writingDirection: "rtl",
+    padding:0,
+   margin:0,
+         lineHeight: 30,
+},
+h5: {
+  fontSize: 18,
+  fontFamily: "Jameel-Noori-Regular",
+  color: "#6C472D",
+  textAlign: "right",
+  writingDirection: "rtl",
+    padding:0,
+   margin:0,
+         lineHeight: 30,
+},
+h6: {
+  fontSize: 16,
+  fontFamily: "Jameel-Noori-Regular",
+  color: "#6C472D",
+  textAlign: "right",
+  writingDirection: "rtl",
+    padding:0,
+   margin:0,
+         lineHeight: 30,
+},
+>>>>>>> Stashed changes
   ul: {
     margin: 0,
     direction: "rtl",
@@ -187,6 +264,7 @@ const htmlStyles = StyleSheet.create({
     textAlign: "right",
     writingDirection: "rtl",
     lineHeight: 32,
+    
   },
   ol: {
     margin: 0,
@@ -204,15 +282,13 @@ const htmlStyles = StyleSheet.create({
     direction: "ltr",
     textAlign: "start",
     writingDirection: "rtl",
+
   },
-  u: {
+
+  u:{
     textDecorationLine: "underline",
-    color: "#6C472D",
-    fontSize: 18,
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
   },
+<<<<<<< Updated upstream
   s: {
     textDecorationLine: "line-through",
     color: "#6C472D",
@@ -221,15 +297,22 @@ const htmlStyles = StyleSheet.create({
     lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",
+=======
+ s: {
+  textDecorationLine: 'line-through',
+},
+
+em: {
+    fontStyle: "italic",
+>>>>>>> Stashed changes
   },
-  hr: {
-    borderBottomColor: "#6C472D",
-    borderBottomWidth: 1,
-    marginVertical: 10,
-  },
-  br: {
-    marginBottom: 10,
-    padding: 40,
+  
+  blockquote: {
+  margin:0,
+   lineHeight: 30,
+},
+  mark: {
+    backgroundColor: '#fff3b0',
   },
   strong: {
     fontSize: 20,
@@ -239,5 +322,15 @@ const htmlStyles = StyleSheet.create({
     lineHeight: 40,
     textAlign: "right",
     writingDirection: "rtl",
+  },
+
+    hr: {
+    borderBottomColor: "#6C472D",
+    borderBottomWidth: 1,
+    marginVertical: 10,
+  },
+  br: {
+    marginBottom: 10,
+    padding: 40,
   },
 });
