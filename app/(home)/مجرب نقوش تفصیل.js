@@ -23,7 +23,7 @@ export default function MujrabNakoshTafseel() {
     const fetchDetails = async () => {
       try {
         const response = await fetch(
-          `https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=taweez&id=${id}`
+          `https://rohaniyatweb-production-bf29.up.railway.app/api/card-data/get-table-data?tableName=taweez&id=${id}`
         );
         const result = await response.json();
         setData(result.rows[0]);

@@ -15,7 +15,7 @@ export default function MujrabNakoshkiFehrist() {
   const navigation = useNavigation();
   useEffect(() => {
     fetch(
-      "https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=taweez"
+      "https://rohaniyatweb-production-bf29.up.railway.app/api/card-data/get-table-data?tableName=taweez"
     )
       .then((res) => res.json())
       .then((result) => {

@@ -1,18 +1,19 @@
-import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
 import CustomBackground from "../../components/Background/Background";
+import { sarparastStyles } from "../../style/styleDetails";
 export default function SirparastScreen() {
   return (
     <CustomBackground>
       <ScrollView>
-        <View style={styles.image_section}>
+        <View style={sarparastStyles.image_section}>
           <Image
             source={require("../../assets/images/sarparast.png")}
-            style={styles.image}
+            style={sarparastStyles.image}
           />
         </View>
         <View>
-          <Text style={styles.heading}>مختصر تعارف</Text>
-          <Text style={styles.description}>
+          <Text style={sarparastStyles.heading}>مختصر تعارف</Text>
+          <Text style={sarparastStyles.description}>
             بانی و سرپرست اعلیٰ ادارہ روحانیات و مدرسہ تعلیم القرآن لاہور، پیر
             طریقت حضرت مولانا حافظ و قاری محمد عثمان چشتی، قادری، نقشبندی،
             سہروردی، شاذلی، رفاعی کی پیدائش جولائی 1981 میں لاہور میں ہوئی اور
@@ -62,31 +63,3 @@ export default function SirparastScreen() {
     </CustomBackground>
   );
 }
-const styles = StyleSheet.create({
-   heading: {
-    fontSize: 28,
-    paddingTop:4,
-    paddingRight:6,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  description: {
-    fontSize: 20,
-    paddingRight:4,
-    lineHeight:30,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  image_section: {
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  image: {
-    width: 200,
-    height: 240,
-  },
-});
