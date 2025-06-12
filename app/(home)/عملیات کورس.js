@@ -1,12 +1,13 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import CustomBackground from "../../components/Background/Background";
+import { mainStyles } from "../../style/globalcss";
 export default function AmliyatCourseScreen() {
   return (
     <CustomBackground>
       <ScrollView>
         <View>
-          <Text style={styles.heading}> روحانی عملیات کورسز</Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.heading}> روحانی عملیات کورسز</Text>
+          <Text style={mainStyles.description}>
             ادارہ روحانیات کے زیر تحت یہ شعبہ روحانی عملیات کورسز 2001 میں قائم
             کیا گیا۔ یہ شعبہ روحانی و مخفی علوم سکھانے کا شعبہ ہے۔ الحمدللہ کثیر
             تعداد میں طالبین علومِ روحانیات ، روحانی علوم سیکھ چکے ہیں اور سیکھ
@@ -30,8 +31,8 @@ export default function AmliyatCourseScreen() {
             انسانیت کی خدمت کیجئے۔ ادارہ روحانیات کے شعبہ روحانی عملیات کورسز
             میں پوری دنیا میں آن لائن مرد و خواتین داخلہ لے سکتے ہیں۔
           </Text>
-          <Text style={styles.heading}> کورسز کی تفصیل</Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.heading}> کورسز کی تفصیل</Text>
+          <Text style={mainStyles.description}>
             روحانی عملیات کورس کرنے والے خواتین و حضرات کیلئے اعمال کی اجازت لے
             کر روحانی مخلوق کے ہاں نام درج کروانا شرط ہے تاکہ آپ کی دوران چلہ
             روحانی نگرانی ہو سکے اور دوران علاج مخلوق کی غائبانہ روحانی مدد حاصل
@@ -40,8 +41,8 @@ export default function AmliyatCourseScreen() {
             روحانی حیثیت کو دیکھتے ہوئے اعمال اور دورانیہ میں کمی بیشی بھی کی
             جاتی ہے۔
           </Text>
-          <Text style={styles.heading}> ظاہری سماعت یا نظر کھولنا </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.heading}> ظاہری سماعت یا نظر کھولنا </Text>
+          <Text style={mainStyles.description}>
             بہت سے احباب مسلسل رابطہ کرتے رہتے ہیں اور غیبی مخلوق کو دیکھنے اور
             بات چیت کرنے کی خواہش کا اظہار کرتے رہتے ہیں۔کچھ خواتین و حضرات
             نےہمارے ادارے سے عمل کیے ہوئے ہوتے ہیں تو کچھ نے کہیں اور سے۔ کچھ یہ
@@ -49,82 +50,45 @@ export default function AmliyatCourseScreen() {
             جائے گا اور میں جو کام اس کو کہوں گا، وہ کرے گا۔اس کیلئے پیشگی
             معذرت۔
           </Text>
-          <Text style={styles.heading}> خاص اوقات کے اعمال </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.heading}> خاص اوقات کے اعمال </Text>
+          <Text style={mainStyles.description}>
             سال میں کئی خاص اوقات آتے ہیں جن میں اسی وقت میں عملیات کی زکوٰۃ کے
             لئے بہت مفید ہوتے ہیں۔ الحمدللہ کافی عرصہ سے ان خاص اوقات میں عملیات
             کروانے کا سلسلہ چل رہا ہے۔ چند اہم اور خاص اوقات یہ ہیں:۔
           </Text>
-          <View style={styles.listContainer}>
-            <Text style={styles.listItem}>• چاند گرہن</Text>
-            <Text style={styles.listItem}>• سورج گرہن</Text>
-            <Text style={styles.listItem}>• نوروز</Text>
+          <View >
+            <Text style={mainStyles.item}>• چاند گرہن</Text>
+            <Text style={mainStyles.item}>• سورج گرہن</Text>
+            <Text style={mainStyles.item}>• نوروز</Text>
           </View>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             سال میں کئی خاص مہینے آتے ہیں جو عملیات کی زکوٰۃ کے لئے بہت مفید
             ہوتے ہیں۔ان خاص مہینوں میں چند دن اعمال کی ریاضت کروانے بہت زیادہ
             طاقت حاص ہو جاتی ہے۔الحمدللہ کافی عرصہ سے ان خاص مہینوں میں عملیات
             کروانے کا سلسلہ چل رہا ہے۔ چند اہم اور خاص مہینے یہ ہیں:۔
           </Text>
-          <View style={styles.listContainer}>
-            <Text style={styles.listItem}>• محرم الحرام</Text>
-            <Text style={styles.listItem}>• صفر المظفر</Text>
-            <Text style={styles.listItem}>• ربیع الاول</Text>
-            <Text style={styles.listItem}>• رمضان المبارک</Text>
+          <View >
+            <Text style={mainStyles.item}>• محرم الحرام</Text>
+            <Text style={mainStyles.item}>• صفر المظفر</Text>
+            <Text style={mainStyles.item}>• ربیع الاول</Text>
+            <Text style={mainStyles.item}>• رمضان المبارک</Text>
           </View>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             پورا سال کروائے جانے والے اعمال جن کے پیچھے باقاعدہ غائبانہ روحانی
             مخلوق کام کرتی ہے اور عامل طاقت میں اضافہ ہوتا رہتا ہے ۔ان اعمال کی
             مدد سے عامل صحیح معنوں میں امت مسلمہ کی خدمت کر سکتے ہیں اور اپنا
             نام روشن کر سکتے ہیں ۔
           </Text>
-          <View style={styles.listContainer}>
-            <Text style={styles.listItem}>• نورانی اعمال</Text>
-            <Text style={styles.listItem}>• نورانی علوی اعمال</Text>
-            <Text style={styles.listItem}>• علوی اعمال </Text>
-            <Text style={styles.listItem}>• باموکل اعمال </Text>
-            <Text style={styles.listItem}>• اولیاءاللہ کے اعمال </Text>
-            <Text style={styles.listItem}>• خاص الخاص اعمال </Text>
+          <View >
+            <Text style={mainStyles.item}>• نورانی اعمال</Text>
+            <Text style={mainStyles.item}>• نورانی علوی اعمال</Text>
+            <Text style={mainStyles.item}>• علوی اعمال </Text>
+            <Text style={mainStyles.item}>• باموکل اعمال </Text>
+            <Text style={mainStyles.item}>• اولیاءاللہ کے اعمال </Text>
+            <Text style={mainStyles.item}>• خاص الخاص اعمال </Text>
           </View>
         </View>
       </ScrollView>
     </CustomBackground>
   );
 }
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "right",
-  },
-  heading: {
-    fontSize: 28,
-    paddingTop: 4,
-    paddingRight: 6,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  description: {
-    fontSize: 20,
-    paddingRight: 4,
-    lineHeight: 30,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  listContainer: {
-    marginTop: 4,
-    marginBottom: 12,
-    paddingRight: 8,
-  },
-  listItem: {
-    fontSize: 20,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-    lineHeight: 30,
-    paddingVertical: 6,
-  },
-});

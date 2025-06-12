@@ -1,13 +1,13 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import CustomBackground from "../../components/Background/Background";
-
+import { mainStyles } from "../../style/globalcss";
 export default function NakoshKaMazaj() {
   return (
     <CustomBackground>
       <ScrollView>
         <View>
-          <Text style={styles.heading}>نقوش کا مزاج اور طریقہ زکات</Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.heading}>نقوش کا مزاج اور طریقہ زکات</Text>
+          <Text style={mainStyles.description}>
             نقوش کئی طرح سے لکھے جاتے ہیں اور کئی اشیاء مثلاً مختلف دھاتوں،
             جانوروں کی کھالوں اور ہڈیوں پر، کئی طرح کے کاغذوں پر اور کئی طرح کے
             کپڑوں پر لکھے جاتے ہیں۔ ہر مقصد کیلئے نقش لکھنے اور استعمال کا طریقہ
@@ -20,19 +20,19 @@ export default function NakoshKaMazaj() {
             وہ عامل نقوش کے قواعد و ضوابط کا خیال نہیں رکھتے جنہوں نے جناتی چلے
             کئے ہوتے ہیں اور جنات سے کام لینا جانتے ہیں۔
           </Text>
-          <Text style={styles.heading}>
+          <Text style={mainStyles.heading}>
             نقوش طبیت کے اعتبار سے چار طرح کے ہوتے ہیں
           </Text>
-          <View style={styles.listContainer}>
-            <Text style={styles.listItem}>• آتشی</Text>
-            <Text style={styles.listItem}>• بادی</Text>
-            <Text style={styles.listItem}>• آبی</Text>
-            <Text style={styles.listItem}>• خاکی</Text>
+          <View>
+            <Text style={mainStyles.item}>• آتشی</Text>
+            <Text style={mainStyles.item}>• بادی</Text>
+            <Text style={mainStyles.item}>• آبی</Text>
+            <Text style={mainStyles.item}>• خاکی</Text>
           </View>
-          <Text style={styles.heading}>
+          <Text style={mainStyles.heading}>
             1. آتشی نقوش (برائے زکات آگ میں جلائے جاتے ہیں۔)
           </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             استعمال کیلئے گلے میں ڈالے جاتے ہیں، بازو پر باندھے جاتے ہیں، آگ میں
             ڈالے جاتے ہیں یا آگے کے نیچے دفن کئے جاتے ہیں اس طرح کی ان کو مسلسل
             حرارت پہنچتی رہے۔ یہ نقش سعد اور مثبت اعمال میں اچھی چیزوں پر لکھے
@@ -42,10 +42,10 @@ export default function NakoshKaMazaj() {
             چاہیے کہ اپنا رخ مشرق کی طرف کرے، اپنے قریب آگ جلا لے اور ایک زانو
             ہو کر لکھے۔
           </Text>
-          <Text style={styles.heading}>
+          <Text style={mainStyles.heading}>
             2. بادی نقوش (برائے زکات درخت پر لٹکائے جاتے ہیں)
           </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             استعمال گلے میں ڈالے جاتے ہیں، بازو پر باندھے جاتے ہیں اور درختوں پر
             لٹکائے جاتے ہیں۔ اچھے کاموں کیلئے مثلاََ محبت، ترقی، ملازمت وغیرہ
             کیلئے سبز کپڑے میں پیک کر کے کسی بھی میٹھے پھل دار درخت پر لٹکائے
@@ -55,10 +55,10 @@ export default function NakoshKaMazaj() {
             مثلاََ تخت، بیڈ، کرسی وغیرہ، منہ مغرب کی جانب رکھے اور دو زانو ہو کر
             لکھے۔
           </Text>
-          <Text style={styles.heading}>
+          <Text style={mainStyles.heading}>
             3. خاکی نقوش (برائے زکات زمین میں دبائے جاتے ہیں)
           </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             استعمال گلے میں ڈالے جاتے ہیں، بازو پر باندھے جاتے ہیں اور درختوں پر
             لٹکائے جاتے ہیں، زمین میں دبائے جاتے ہیں یا بھاری پتھر کے نیچے رکھے
             جاتے ہیں۔ اچھے اور مثبت کاموں کیلئے نقوش خاکی کپڑے میں پیک کر کے صاف
@@ -67,10 +67,10 @@ export default function NakoshKaMazaj() {
             ہیں، خاکی نقش لکھتے وقت عامل مکمل تنہا ہو کچی زمین پر بیٹھ کر لکھے،
             جنوب کی جانب منہ ہو اور آلتی پالتی مار کر بیٹھے۔
           </Text>
-          <Text style={styles.heading}>
+          <Text style={mainStyles.heading}>
             4. آبی نقوش (برائے زکات آٹے کی گولی نقش ڈال کر دریا میں ڈالیں)
           </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             استعمال گلے میں ڈالے جاتے ہیں، بازو پر باندھے جاتے ہیں، مریض یا
             مطلوب کو پانی میں گھول کر پلائے جاتے ہیں یا آٹے کی گولیاں بنا کر
             دریا میں ڈالتے ہیں۔ دریا یا سمندر کے کنارے دفن کئے جاتے ہیں تاکہ نقش
@@ -84,37 +84,3 @@ export default function NakoshKaMazaj() {
     </CustomBackground>
   );
 }
-const styles = StyleSheet.create({
-  heading: {
-    fontSize: 28,
-    paddingTop: 4,
-    paddingRight: 6,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  description: {
-    fontSize: 20,
-    paddingRight: 4,
-    lineHeight: 30,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  listContainer: {
-    marginTop: 4,
-    marginBottom: 12,
-    paddingRight: 8,
-  },
-  listItem: {
-    fontSize: 20,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-    lineHeight: 30,
-    paddingVertical: 6,
-  },
-});

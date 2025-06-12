@@ -7,6 +7,7 @@ import {
   View
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
+import { fehristStyles } from "../../style/globalcss";
 const DATA = [
   {
     id: "1",
@@ -36,12 +37,12 @@ export default function TavezatFehrist() {
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
             <TouchableOpacity
-              style={styles.card}
+              style={fehristStyles.card}
               onPress={() =>
                 navigation.navigate(item.screen)
               }
             >
-              <Text style={styles.text}>{item.text}</Text>
+              <Text style={fehristStyles.text}>{item.text}</Text>
             </TouchableOpacity>
           )}
         />
@@ -49,19 +50,4 @@ export default function TavezatFehrist() {
     </CustomBackground>
   );
 }
-const styles = StyleSheet.create({
-  card: {
-    width: "100%",
-    backgroundColor: "#E4DAC1",
-    paddingVertical: 2,
-    marginTop: 8,
-    marginBottom: 8,
-    borderRadius: 5,
-  },
-  text: {
-    fontSize: 22,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "center",
-  },
-});
+

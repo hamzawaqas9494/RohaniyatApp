@@ -1,18 +1,19 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import CustomBackground from "../../components/Background/Background";
+import {mainStyles } from "../../style/globalcss";
 export default function NakoshLawazmat() {
   return (
     <CustomBackground>
       <ScrollView>
         <View>
-          <Text style={styles.heading}>نقوش کے لوازمات</Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.heading}>نقوش کے لوازمات</Text>
+          <Text style={mainStyles.description}>
             نقوش کے لوازمات میں قلم ، سیاہی ، کاغذات ، بخورات اور ساتھ ہی نقوش
             کی زکوۃ کی ادائیگی سب سے پہلی شرط ہے ۔
           </Text>
 
-          <Text style={styles.heading}>1. قلم:</Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.heading}>1. قلم:</Text>
+          <Text style={mainStyles.description}>
             قلم کسی بھی لکڑی کا سب سے عمدہ ہوتا ہے، اس کے علاوہ ہولڈر، فاؤنٹین
             پین، بال پین یا پوائنٹر وغیرہ استعمال کر سکتے ہیں مگر جو بھی ہو حلال
             کمائی سے خریدا ہوا ہو۔ اگر حرام مال کی آمیزش ہو گی تو تاثیر ختم ہو
@@ -21,8 +22,8 @@ export default function NakoshLawazmat() {
             لکڑی کا قلم استعمال کریں۔
           </Text>
 
-          <Text style={styles.heading}>2. سیاہی:</Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.heading}>2. سیاہی:</Text>
+          <Text style={mainStyles.description}>
             مختلف رنگوں سے نقوش بھرنا ماہرین سے ثابت ہے۔ اعمال خیر مثلاََ رزق،
             محبت، ترقی یا اقتدار وغیرہ کیلئے زعفران، سبز رنگ سے نقوش لکھے جاتے
             ہیں۔ تاثیر بڑھانے کیلئے عرق گلاب، کیوڑہ یا خوشبو شامل کی جاتی ہے۔
@@ -34,22 +35,22 @@ export default function NakoshLawazmat() {
             ہو اور منہ میں کوئی کڑوی چیز رکھی ہو تو تاثیر جلد سامنے آئے گی۔
           </Text>
 
-          <Text style={styles.heading}>3. کاغذ:</Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.heading}>3. کاغذ:</Text>
+          <Text style={mainStyles.description}>
             عامل کو چاہیے کہ اچھے کاموں کیلئے سفید یا سبز کاغذ استعمال کرے۔ منفی
             کاموں کیلئے زرد، کالا یا سرخ کاغذ استعمال کرے۔
           </Text>
 
-          <Text style={styles.heading}>4. کپڑا:</Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.heading}>4. کپڑا:</Text>
+          <Text style={mainStyles.description}>
             عام امراض، سحر، آسیبی اثرات اور نفرت وغیرہ کیلئے نقوش کالے کپڑے میں
             پیک کئے جاتے ہیں، جبکہ کاروباری ترقی، اقتدار کے حصول، محبت اور تسخیر
             کیلئے سبز، نیلے یا فیروزی کپڑے میں پیک کئے جاتے ہیں۔ جنسی امراض،
             بندش، حمل اور حفاظت وغیرہ کیلئے سرخ کپڑے میں پیک کئے جاتے ہیں۔
           </Text>
 
-          <Text style={styles.heading}>نوٹ:</Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.heading}>نوٹ:</Text>
+          <Text style={mainStyles.description}>
             یہ تمام کام اور لوازمات سبب کے درجے میں ہیں اکابرین کے تجربات سے
             ثابت ہے۔ اس لئے عامل میں ان کا خاص خیال رکھنا چاہیے۔ مگر یاد رہے
             عامل بعض دفعہ بغیر کسی قواعد و ضوابط کے نقوش لکھ دیتے ہیں اور وہ
@@ -66,24 +67,3 @@ export default function NakoshLawazmat() {
     </CustomBackground>
   );
 }
-
-const styles = StyleSheet.create({
-  heading: {
-    fontSize: 28,
-    paddingTop: 4,
-    paddingRight: 6,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  description: {
-    fontSize: 20,
-    paddingRight: 4,
-    lineHeight: 30,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-});

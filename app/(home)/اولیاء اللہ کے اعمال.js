@@ -3,19 +3,19 @@ import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
   FlatList,
-  StyleSheet,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
+import { fehristStyles } from "../../style/globalcss";
 export default function AuliyaAllahKeAamaal() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
   useEffect(() => {
     fetch(
-      "https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=ooliaallahkaamal"
+      "https://rohaniyatweb-production-bf29.up.railway.app/api/blog-data/get-table-data?tableName=ooliaallahkaamal"
     )
       .then((res) => res.json())
       .then((result) => {
@@ -25,64 +25,36 @@ export default function AuliyaAllahKeAamaal() {
       .finally(() => setLoading(false));
   }, []);
   return (
-    <CustomBackground>
-      <View>
-        {loading ? (
-          <View style={styles.centerContent}>
-            <ActivityIndicator size="large" color="#6C472D" />
-          </View>
-        ) : data.length === 0 ? (
-          <View style={styles.centerContent}>
-            <Text style={styles.noDataText}>کوئی ریکارڈ موجود نہیں ہے</Text>
-          </View>
-        ) : (
-          <FlatList
-            data={data}
-            keyExtractor={(item) => item.id.toString()}
-            contentContainerStyle={styles.list}
-            renderItem={({ item }) => (
-              <TouchableOpacity
-                style={styles.card}
-                onPress={() =>
-                  navigation.navigate("اولیاء اللہ کے اعمال کی تفصیل", {
-                    id: item.id,
-                  })
-                }
-              >
-                <Text style={styles.text}>{item.title}</Text>
-              </TouchableOpacity>
+     <CustomBackground>
+          <View style={fehristStyles.container}>
+            {loading ? (
+              <View style={fehristStyles.centerContent}>
+                <ActivityIndicator size="large" color="#6C472D" />
+              </View>
+            ) : data.length === 0 ? (
+              <View style={fehristStyles.centerContent}>
+                <Text style={fehristStyles.noRecordText}>کوئی ریکارڈ موجود نہیں ہے</Text>
+              </View>
+            ) : (
+              <FlatList
+                contentContainerStyle={fehristStyles.fehristcenter}
+                data={data}
+                keyExtractor={(item) => item.id.toString()}
+                renderItem={({ item }) => (
+                  <TouchableOpacity
+                    style={fehristStyles.card}
+                    onPress={() =>
+                      navigation.navigate("اولیاء اللہ کے اعمال کی تفصیل", {
+                        id: item.id,
+                      })
+                    }
+                  >
+                    <Text style={fehristStyles.fehristText}>{item.title}</Text>
+                  </TouchableOpacity>
+                )}
+              />
             )}
-          />
-        )}
-      </View>
-    </CustomBackground>
+          </View>
+        </CustomBackground>
   );
 }
-const styles = StyleSheet.create({
-  centerContent: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  noDataText: {
-    fontSize: 18,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    fontWeight: "600",
-    textAlign: "center",
-  },
- card: {
-    width: "100%",
-    backgroundColor: "#E4DAC1",
-    paddingVertical: 2,
-    marginTop: 8,
-    marginBottom: 8,
-    borderRadius: 5,
-  },
-  text: {
-    fontSize: 22,
-   fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "center",
-  },
-});

@@ -3,22 +3,23 @@ import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
   FlatList,
-  StyleSheet,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
+import { fehristStyles } from "../../style/globalcss";
 export default function MujrabNakoshkiFehrist() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
   useEffect(() => {
     fetch(
-      "https://rohaniyatweb-production-bf29.up.railway.app/api/card-data/get-table-data?tableName=taweez"
+      "https://rohaniyatweb-production-bf29.up.railway.app/api/blog-data/get-table-data?tableName=taweez"
     )
       .then((res) => res.json())
       .then((result) => {
+        console.log("Fetched result:", result);
         setData(result.rows);
       })
       .catch((error) => console.error("Error fetching data:", error))
@@ -26,30 +27,30 @@ export default function MujrabNakoshkiFehrist() {
   }, []);
   return (
     <CustomBackground>
-      <View style={styles.container}>
+      <View style={fehristStyles.container}>
         {loading ? (
-          <View style={styles.centerContent}>
+          <View style={fehristStyles.centerContent}>
             <ActivityIndicator size="large" color="#6C472D" />
           </View>
         ) : data.length === 0 ? (
-          <View style={styles.centerContent}>
-            <Text style={styles.noDataText}>کوئی ریکارڈ موجود نہیں ہے</Text>
+          <View style={fehristStyles.centerContent}>
+            <Text style={fehristStyles.noRecordText}>کوئی ریکارڈ موجود نہیں ہے</Text>
           </View>
         ) : (
           <FlatList
             data={data}
             keyExtractor={(item) => item.id.toString()}
-            contentContainerStyle={styles.list}
+            contentContainerStyle={fehristStyles.fehristcenter}
             renderItem={({ item }) => (
               <TouchableOpacity
-                style={styles.card}
+                style={fehristStyles.card}
                 onPress={() =>
                   navigation.navigate("مجرب نقوش تفصیل", {
                     id: item.id,
                   })
                 }
               >
-                <Text style={styles.text}>{item.title}</Text>
+                <Text style={fehristStyles.text}>{item.title}</Text>
               </TouchableOpacity>
             )}
           />
@@ -58,32 +59,3 @@ export default function MujrabNakoshkiFehrist() {
     </CustomBackground>
   );
 }
-const styles = StyleSheet.create({
-  centerContent: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  noDataText: {
-    fontSize: 18,
-    color: "#6C472D",
-    fontWeight: "600",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "center",
-  },
-  card: {
-    width: "100%",
-    backgroundColor: "#E4DAC1",
-    paddingVertical: 2,
-    marginTop: 8,
-    marginBottom: 8,
-    borderRadius: 5,
-    alignItems: "center",
-  },
-  text: {
-    fontSize: 22,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "center",
-  },
-});

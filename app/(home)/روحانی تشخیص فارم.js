@@ -6,7 +6,6 @@ import {
   Modal,
   Platform,
   ScrollView,
-  StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
@@ -14,6 +13,7 @@ import {
   View,
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
+import { fehristStyles, formStyles, mainStyles } from "../../style/globalcss";
 const RohaniTashkhesForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -132,13 +132,13 @@ const RohaniTashkhesForm = () => {
   return (
     <CustomBackground>
       <KeyboardAvoidingView
-        style={{ flex: 1 }}
+        style={fehristStyles.container}
         behavior={Platform.OS === "ios" ? "padding" : undefined}
       >
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <ScrollView>
-            <Text style={styles.heading}>روحانی تشخیص کیلئے فارم</Text>
-            <Text style={styles.description}>
+            <Text style={mainStyles.tashkhesHeading}>روحانی تشخیص کیلئے فارم</Text>
+            <Text style={mainStyles.description}>
               الحمدللہ ادارہ روحانیات کی اس سروس کے ذریعے پوری دنیا سے لاکھوں
               لوگ اپنی روحانی تشخیص کروا نے کے بعدروحانی علاج کیلئے کسی نہ کسی
               نتیجے پر پہنچ جاتے ہیں ۔ ادارے کی طرف سے سوشل میڈیا پر روحانی
@@ -168,10 +168,10 @@ const RohaniTashkhesForm = () => {
               },
               { label: "Email", key: "email", keyboardType: "email-address" },
             ].map(({ label, key, keyboardType }) => (
-              <View style={styles.inputRow} key={key}>
-                <Text style={styles.label}>{label}:</Text>
+              <View style={formStyles.inputRow} key={key}>
+                <Text style={formStyles.label}>{label}:</Text>
                 <TextInput
-                  style={styles.inputBox}
+                  style={formStyles.inputBox}
                   value={formData[key]}
                   onChangeText={(value) => handleChange(key, value)}
                   keyboardType={keyboardType}
@@ -179,12 +179,12 @@ const RohaniTashkhesForm = () => {
               </View>
             ))}
             {/* DOB */}
-            <View style={styles.inputRow}>
-              <Text style={styles.label}>DOB:</Text>
-              <View style={styles.datePickers}>
+            <View style={formStyles.inputRow}>
+              <Text style={formStyles.label}>DOB:</Text>
+              <View style={formStyles.datePickers}>
                 <Picker
                   selectedValue={formData.day}
-                  style={styles.pickerInput}
+                  style={formStyles.pickerInput}
                   onValueChange={(value) => handleChange("day", value)}
                 >
                   <Picker.Item label="Day" value="" />
@@ -199,7 +199,7 @@ const RohaniTashkhesForm = () => {
 
                 <Picker
                   selectedValue={formData.month}
-                  style={styles.pickerInput}
+                  style={formStyles.pickerInput}
                   onValueChange={(value) => handleChange("month", value)}
                 >
                   <Picker.Item label="Month" value="" />
@@ -223,7 +223,7 @@ const RohaniTashkhesForm = () => {
 
                 <Picker
                   selectedValue={formData.year}
-                  style={styles.pickerInput}
+                  style={formStyles.pickerInput}
                   onValueChange={(value) => handleChange("year", value)}
                 >
                   <Picker.Item label="Year" value="" />
@@ -241,20 +241,20 @@ const RohaniTashkhesForm = () => {
               </View>
             </View>
             {/* Age */}
-            <View style={styles.inputRow}>
-              <Text style={styles.label}>Age:</Text>
+            <View style={formStyles.inputRow}>
+              <Text style={formStyles.label}>Age:</Text>
               <TextInput
-                style={[styles.inputBox, { backgroundColor: "white" }]}
+                style={[formStyles.inputBox, { backgroundColor: "white" }]}
                 value={formData.age}
                 editable={false}
               />
             </View>
             {/* Gender Picker */}
-            <View style={styles.inputRow}>
-              <Text style={styles.label}>Gender:</Text>
+            <View style={formStyles.inputRow}>
+              <Text style={formStyles.label}>Gender:</Text>
               <Picker
                 selectedValue={formData.gender}
-                style={styles.pickerInput}
+                style={formStyles.pickerInput}
                 onValueChange={(value) => handleChange("gender", value)}
               >
                 <Picker.Item label="Select Gender" value="" />
@@ -264,11 +264,11 @@ const RohaniTashkhesForm = () => {
               </Picker>
             </View>
             {/* Status Picker */}
-            <View style={styles.inputRow}>
-              <Text style={styles.label}>Status:</Text>
+            <View style={formStyles.inputRow}>
+              <Text style={formStyles.label}>Status:</Text>
               <Picker
                 selectedValue={formData.status}
-                style={styles.pickerInput}
+                style={formStyles.pickerInput}
                 onValueChange={(value) => handleChange("status", value)}
               >
                 <Picker.Item label="Select Status" value="" />
@@ -277,13 +277,13 @@ const RohaniTashkhesForm = () => {
               </Picker>
             </View>
             {/* Additional Info Textarea */}
-            <View style={styles.inputRow}>
-              <Text style={styles.label}>
+            <View style={formStyles.inputRow}>
+              <Text style={formStyles.label}>
                 Description of the Spirtual problems
               </Text>
               <TextInput
                 style={[
-                  styles.inputBox,
+                  formStyles.inputBox,
                   { height: 60, textAlignVertical: "top" },
                 ]}
                 value={formData.spirtualproblems}
@@ -293,8 +293,8 @@ const RohaniTashkhesForm = () => {
                 multiline
               />
             </View>
-            <TouchableOpacity style={styles.button} onPress={handleSubmit}>
-              <Text style={styles.buttonText}>Submit</Text>
+            <TouchableOpacity style={formStyles.button} onPress={handleSubmit}>
+              <Text style={formStyles.buttonText}>Submit</Text>
             </TouchableOpacity>
             {/* Modal for errors or success */}
             <Modal
@@ -303,17 +303,17 @@ const RohaniTashkhesForm = () => {
               animationType="slide"
               onRequestClose={() => setModalVisible(false)}
             >
-              <View style={styles.modalBackground}>
-                <View style={styles.modalContainer}>
-                  <Text style={styles.modalText}>{modalMessage}</Text>
+              <View style={formStyles.modalBackground}>
+                <View style={formStyles.modalContainer}>
+                  <Text style={formStyles.modalText}>{modalMessage}</Text>
                   <TouchableOpacity
                     style={[
-                      styles.button,
+                      formStyles.button,
                       { backgroundColor: "#6C472D", marginTop: 10 },
                     ]}
                     onPress={() => setModalVisible(false)}
                   >
-                    <Text style={styles.buttonText}>Close</Text>
+                    <Text style={formStyles.buttonText}>Close</Text>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -324,81 +324,4 @@ const RohaniTashkhesForm = () => {
     </CustomBackground>
   );
 };
-const styles = StyleSheet.create({
- heading: {
-    fontSize: 28,
-    paddingTop: 4,
-    paddingRight: 6,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  description: {
-    fontSize: 20,
-    paddingRight: 4,
-    lineHeight: 30,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  inputRow: {
-    flex: 1,
-    marginBottom: 8,
-  },
-  label: {
-    color: "#6C472D",
-    fontWeight: "bold",
-    marginBottom: 6,
-    fontSize: 14,
-  },
-  inputBox: {
-    paddingHorizontal: 10,
-    paddingVertical: 14,
-    color: "#6C472D",
-    fontSize: 16,
-    backgroundColor: "#fff",
-  },
-  datePickers: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  pickerInput: {
-    color: "#6C472D",
-    flex: 1,
-    marginHorizontal: 2,
-    flex: 1,
-    backgroundColor: "#fff",
-  },
-  button: {
-    backgroundColor: "#6C472D",
-    paddingVertical: 14,
-    borderRadius: 5,
-    alignItems: "center",
-    marginTop: 6,
-  },
-  buttonText: {
-    color: "#fff",
-    fontSize: 18,
-    fontWeight: "bold",
-  },
-  modalBackground: {
-    flex: 1,
-    backgroundColor: "rgba(0,0,0,0.5)",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  modalContainer: {
-    width: "80%",
-    backgroundColor: "#fff",
-    padding: 10,
-    borderRadius: 5,
-    elevation: 10,
-  },
-  modalText: {
-    fontSize: 16,
-    color: "#333",
-  },
-});
 export default RohaniTashkhesForm;

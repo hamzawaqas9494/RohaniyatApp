@@ -1,12 +1,13 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import CustomBackground from "../../components/Background/Background";
-export default function RohaniIlajTaruf() {
+import { mainStyles } from "../../style/globalcss";
+export default function Taruf() {
   return (
     <CustomBackground>
       <ScrollView>
         <View>
-          <Text style={styles.heading}>روحانی علاج کا مختصر تعارف </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.heading}>روحانی علاج کا مختصر تعارف </Text>
+          <Text style={mainStyles.description}>
             ادارہ روحانیات کے شعبہ روحانی کی بنیاد 2001 میں اپنے اساتذہ کی دعاؤں
             اور سرپرستی میں رکھی گئی۔ الحمدللہ 2001 سے یہ شعبہ تاحال بلا تفریق
             مذھب و مسلک، عوام کی خدمت میں مصروف ہے۔ کئی عاملین اور روحانی
@@ -14,7 +15,7 @@ export default function RohaniIlajTaruf() {
             الحمدللہ! ایک کثیر تعداد میں اندرون اور بیرون ملک سائلین اور روحانی
             مریض فیض یاب ہو چکے ہیں۔
           </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             نظرِبد، جادو اور جنات کے متاثرہ مریضوں کا روحانی علاج، ہر قسم کی
             مصیبتوں و پریشانیوں سے نجات، روحانی و جسمانی بیماریوں سے شفاء، جائز
             مقاصد کے حصول اور حاجتوں کے پورا ہونے کے لیے زود اثر اور تیر بہدف
@@ -23,7 +24,7 @@ export default function RohaniIlajTaruf() {
             تعویذات کو بروئے کار لاتے ہوئے روحانی رہنمائی اور روحانی علاج کیا
             جاتا ہے۔
           </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             نظرِبد، جادو اور جنات کے متاثرہ مریضوں کی روحانی علاج کے ساتھ ساتھ
             مکمل رہنمائی بھی کی جاتی ہے تاکہ آئندہ مبتلا نہ ہوں۔ ان کو حفاظت کے
             خاص طریقے بتائے اور سکھائے جاتے ہیں ۔ جہاں ضرورت محسوس ہو، مریضوں کو
@@ -32,10 +33,10 @@ export default function RohaniIlajTaruf() {
             اجازت دی جاتی ہے اور چلہ کشی بھی کروائی جاتی ہے تاکہ وہ اس قابل ہوں
             کہ آئندہ خودسے اپنا اور اپنے اہل و عیال کا روحانی علاج کر سکیں۔
           </Text>
-          <Text style={styles.heading}>
+          <Text style={mainStyles.tashkhesHeading}>
             تشخیص کی ضرورت اور عاملین اور عوام کی غفلت
           </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             روحانی معالجین کی بھی بہت بڑی غلطی ہے کہ وہ روحانی علاج تو شروع کر
             دیتے ہیں مگر تشخیص پر توجہ نہیں دیتے۔ اسی طرح عوام کا حال ہے کہ وہ
             وظائف؍علاج تو شروع کر دیتے ہیں مگر تشخیص نہیں کرواتے۔ یاد رکھیں!
@@ -48,8 +49,8 @@ export default function RohaniIlajTaruf() {
             کیس کو اتنا بگاڑ لیتے ہیں کہ کیس کو سنبھالنے کے لیے بہت وقت اور بہت
             محنت درکار ہوتی ہے۔
           </Text>
-          <Text style={styles.heading}>روحانی تشخیص کا تعارف</Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.tashkhesHeading}>روحانی تشخیص کا تعارف</Text>
+          <Text style={mainStyles.description}>
             روحانی تشخیص کا مقصد یہ ہے کہ ہم کسی انسان یا جگہ پر سحر، جنات، آسیب
             یا نظرِ بد کے اثرات کو معلوم کریں۔ جب کسی فرد کو بیماری، پریشانی، یا
             مشکلات کا سامنا ہو، اور وہ مسلسل تدابیر آزمانے کے باوجود ان مسائل سے
@@ -62,28 +63,28 @@ export default function RohaniIlajTaruf() {
             روحانی تشخیص کے بعد درست علاج کیا جانا چاہیے تاکہ فرد کی حالت بہتر
             ہو اور وہ خود سے اپنے مسائل کو سمجھ سکے۔
           </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             ادارہ روحانیات میں جس طریقے سے تشخیص کی جاتی ہے، اس کے چند فوائد درج
             ذیل ہیں:۔
           </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             گھر یا جگہ میں کس کس حصے میں جادو ، جنات یا دونوں کا اثر ہے؟
           </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             گھر یا جگہ میں کس کس حصے میں غیبی مخلوق کی رہائش ہے؟
           </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             مریض پر جادو ، جنات یا دونوں کا اثر ہے؟
           </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             مریض کے جسم کے کس حصے میں جادو، جنات یا دونوں کا اثر ہے؟
           </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             مریض پر کوئی غیبی مخلوق مسلط ہے یا صرف اثرات ہیں؟
           </Text>
         </View>
-        <Text style={styles.heading}>روحانی علاج </Text>
-        <Text style={styles.description}>
+        <Text style={mainStyles.heading}>روحانی علاج </Text>
+        <Text style={mainStyles.description}>
           پریشانیوں، آفتوں، مصیبتوں، تکلیفوں، مشکلات میں گرفتار، خوشیوں سے نا
           امید، زندگی سے مایوس بے بس افراد کے لیے خوشخبری: نظر بد، جادو جنات، ہر
           طرح کی بندشیں، معاشی مسائل، شادی کے مسائل، زوجین کے مسائل،
@@ -91,8 +92,8 @@ export default function RohaniIlajTaruf() {
           مسائل، تعلیمی مسائل، بیماریوں کا علاج، نفسیاتی مسائل، روحانی مسائل،
           پریشانیوں سے نجات، حاجات کا پورا ہونا۔
         </Text>
-        <Text style={styles.heading}> پریشانیوں اور بیماریوں کی وجوہات </Text>
-        <Text style={styles.description}>
+        <Text style={mainStyles.heading}> پریشانیوں اور بیماریوں کی وجوہات </Text>
+        <Text style={mainStyles.description}>
           مصیبت، مشکل، تکلیف، بیماری، پریشانی… الغرض کچھ بھی ہو، اس کی کوئی وجہ
           ضرور ہوتی ہے۔ اصل وجہ تو ’’گناہوں کی شامتِ اعمال‘‘ ہے جس پر بالکل
           دھیان نہیں دیا جاتا۔ دنیا بھر کا علاج کروانے کو ہم تیار ہیں، مگر اللہ
@@ -117,26 +118,26 @@ export default function RohaniIlajTaruf() {
           عالم یا بزرگ سے رجوع کیا جائے۔ اللہ کو ناراض کرنے والے اعمال چھوڑ کر
           راضی کرنے کے اعمال کیے جائیں۔
         </Text>
-        <Text style={styles.heading}>
+        <Text style={mainStyles.heading}>
           ادارہ روحانیات میں روحانی علاج کرنے کے چار طریقے{" "}
         </Text>
-        <Text style={styles.description}>
+        <Text style={mainStyles.description}>
           ادارہ روحانیات میں چار طریقوں سے روحانی علاج کیا جاتا ہے۔ علاج کا کوئی
           بھی طریقہ ہو، وہ ایک دنیاوی تدبیر سے زیادہ کچھ نہیں ہوتا۔ نتیجہ صرف
           اور صرف اللہ تعالیٰ ہی مرتب فرماتے ہیں۔ یہ عقیدہ رکھنا کہ نتیجہ اللہ
           کے علاوہ کوئی مرتب کر سکتا ہے … یہ ’’شرک‘‘ ہے۔اس عقیدہ کی اصلاح کرنا
           لازم ہے۔ چاروں طریقوں کی تفصیل یہ ہے:۔
         </Text>
-        <Text style={styles.heading}>طریقہ اول</Text>
-        <Text style={styles.description}>
+        <Text style={mainStyles.heading}>طریقہ اول</Text>
+        <Text style={mainStyles.description}>
           ادارہ روحانیات میں چار طریقوں سے روحانی علاج کیا جاتا ہے۔ علاج کا کوئی
           بھی طریقہ ہو، وہ ایک دنیاوی تدبیر سے زیادہ کچھ نہیں ہوتا۔ نتیجہ صرف
           اور صرف اللہ تعالیٰ ہی مرتب فرماتے ہیں۔ یہ عقیدہ رکھنا کہ نتیجہ اللہ
           کے علاوہ کوئی مرتب کر سکتا ہے … یہ ’’شرک‘‘ ہے۔ اس عقیدہ کی اصلاح کرنا
           لازم ہے۔ چاروں طریقوں کی تفصیل یہ ہے:۔
         </Text>
-        <Text style={styles.heading}>طریقہ دوم </Text>
-        <Text style={styles.description}>
+        <Text style={mainStyles.heading}>طریقہ دوم </Text>
+        <Text style={mainStyles.description}>
           {" "}
           اس طریقے میں روحانی معالجین سائل/ مریض کے حالات سننے کے بعد روحانی
           علاج دیتے ہیں جو وظائف اور تعویذات پر مشتمل ہو سکتا ہے۔ اس طریقے میں
@@ -151,8 +152,8 @@ export default function RohaniIlajTaruf() {
           دے سکتا ہے۔ البتہ اگر روحانی دکان کا تیار علاج دیا جائے یا اشیاء دی
           جائیں تو ان کی قیمت وصول کی جاتی ہے۔
         </Text>
-        <Text style={styles.heading}> طریقہ سوم </Text>
-        <Text style={styles.description}>
+        <Text style={mainStyles.heading}> طریقہ سوم </Text>
+        <Text style={mainStyles.description}>
           {" "}
           اس طریقے میں سائل؍مریض کو اس کے مسئلے کے مطابق کسی روحانی عمل کی اجازت
           دی جاتی ہے۔ اس عمل کے پیچھے غیبی مخلوق کو تاکید کی جاتی ہے کہ وہ مریض
@@ -162,8 +163,8 @@ export default function RohaniIlajTaruf() {
           گاہ کے روحانی معالجین کرتے ہیں۔ کسی عمل کا ھدیہ لیا جاتا ہے، کسی کا
           نہیں۔
         </Text>
-        <Text style={styles.heading}> طریقہ چہارم </Text>
-        <Text style={styles.description}>
+        <Text style={mainStyles.heading}> طریقہ چہارم </Text>
+        <Text style={mainStyles.description}>
           {" "}
           اس طریقے میں روحانی معالجین علاج کے ساتھ ساتھ خود بھی سائل/ مریض کے
           لیے عمل کرتے ہیں۔ اس کی مثال ایسی ہے کہ روحانی معالج اپنے ہتھیاروں کے
@@ -186,37 +187,4 @@ export default function RohaniIlajTaruf() {
   );
 }
 
-const styles = StyleSheet.create({
-  heading: {
-    fontSize: 28,
-    paddingTop:4,
-    paddingRight:6,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  description: {
-    fontSize: 20,
-    paddingRight:4,
-    lineHeight:30,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-   listContainer: {
-    marginTop: 4,
-    marginBottom: 12,
-    paddingRight: 8,
-  },
-  listItem: {
-    fontSize: 20,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-    lineHeight: 30,
-    paddingVertical: 6,
-  },
-});
+

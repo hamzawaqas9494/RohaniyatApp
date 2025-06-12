@@ -1,12 +1,13 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import CustomBackground from "../../components/Background/Background";
+import { mainStyles } from "../../style/globalcss";
 export default function RohaniIshaya() {
   return (
     <CustomBackground>
       <ScrollView>
         <View>
-          <Text style={styles.heading}>روحانی اشیاء</Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.heading}>روحانی اشیاء</Text>
+          <Text style={mainStyles.description}>
             ادارہ روحانیات کے زیرِ تحت "روحانی دکان" روحانی علاج کرنے والے
             عاملین کے ساتھ ساتھ روحانی مریضوں اور روحانی علوم سیکھنے والے طالب
             علموں کے لیے قائم کی گئی ہے، تاکہ روحانی علاج معالجہ، روحانی تجربات
@@ -27,19 +28,19 @@ export default function RohaniIshaya() {
             یا خاص کلام خاص تعداد میں پانی یا تیل پر دم کروا کر دینے کی بھی
             سہولت موجود ہے۔
           </Text>
-          <Text style={styles.heading}>روحانی دکان میں 2 شعبے ہیں</Text>
-          <View style={styles.list}>
-            <Text style={styles.item}>• دم شدہ اشیاء</Text>
-            <Text style={styles.item}>• تیار روحانی علاج</Text>
+          <Text style={mainStyles.heading}>روحانی دکان میں 2 شعبے ہیں</Text>
+          <View style={mainStyles.list}>
+            <Text style={mainStyles.item}>• دم شدہ اشیاء</Text>
+            <Text style={mainStyles.item}>• تیار روحانی علاج</Text>
           </View>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             سب کی تفصیل ذیل میں دی گئی ہے۔گھر بیٹھے تمام اشیاء منگوائیں۔ ڈاک خرچ
             بذمہ خریدار۔ پیشگی رقم کے بغیر اشیاء نہیں بھیجیں جائیں گی۔
           </Text>
-          <Text style={styles.heading}>
+          <Text style={mainStyles.heading}>
             مریض اور معالجین کیلئے دم شدہ روحانی اشیاء
           </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             ادارہ روحانیات کے زیرِ تحت "روحانی دکان" کی خصوصیت ایسی اشیاء ہیں جن
             پر مختلف مقاصد کے لیے مختلف دم کیے گئے ہیں۔ اور تجربے میں بہت مفید
             ثابت ہوئی ہیں۔ ان تمام روحانی اشیاء پر پہلے عاملین دم کرتے ہیں، پھر
@@ -54,46 +55,46 @@ export default function RohaniIshaya() {
             اشیاء گھر بیٹھے منگوا سکتے ہیں۔
           </Text>
           <View>
-            <ScrollView contentContainerStyle={styles.listContainer}>
-              <View style={styles.column}>
-                <Text style={styles.item}>• الشفاء اگر بتی</Text>
-                <Text style={styles.item}>• الشفاء پانی</Text>
-                <Text style={styles.item}>• الشفاء تیل</Text>
-                <Text style={styles.item}>• الشفاء شہد</Text>
-                <Text style={styles.item}>• الشفاء عطر</Text>
-                <Text style={styles.item}>• الشفاء باخور</Text>
-                <Text style={styles.item}>• الشفاء پرفیوم سپرے</Text>
-                <Text style={styles.item}>• الشفاء دھونی</Text>
-                <Text style={styles.item}>• الشفاء گوگل</Text>
-                <Text style={styles.item}>• الشفاء ہرمل</Text>
-                <Text style={styles.item}>• الشفاء لوبان</Text>
-                <Text style={styles.item}>• الشفاء صابن</Text>
-                <Text style={styles.item}>• الشفاء مہندی</Text>
-                <Text style={styles.item}>• الشفاء ابٹن</Text>
-                <Text style={styles.item}>• الشفاء کلونجی</Text>
-                <Text style={styles.item}>• الشفاء چھوہارے</Text>
+            <ScrollView contentContainerStyle={mainStyles.listContainer}>
+              <View style={mainStyles.column}>
+                <Text style={mainStyles.item}>• الشفاء اگر بتی</Text>
+                <Text style={mainStyles.item}>• الشفاء پانی</Text>
+                <Text style={mainStyles.item}>• الشفاء تیل</Text>
+                <Text style={mainStyles.item}>• الشفاء شہد</Text>
+                <Text style={mainStyles.item}>• الشفاء عطر</Text>
+                <Text style={mainStyles.item}>• الشفاء باخور</Text>
+                <Text style={mainStyles.item}>• الشفاء پرفیوم سپرے</Text>
+                <Text style={mainStyles.item}>• الشفاء دھونی</Text>
+                <Text style={mainStyles.item}>• الشفاء گوگل</Text>
+                <Text style={mainStyles.item}>• الشفاء ہرمل</Text>
+                <Text style={mainStyles.item}>• الشفاء لوبان</Text>
+                <Text style={mainStyles.item}>• الشفاء صابن</Text>
+                <Text style={mainStyles.item}>• الشفاء مہندی</Text>
+                <Text style={mainStyles.item}>• الشفاء ابٹن</Text>
+                <Text style={mainStyles.item}>• الشفاء کلونجی</Text>
+                <Text style={mainStyles.item}>• الشفاء چھوہارے</Text>
               </View>
-              <View style={styles.column}>
-                <Text style={styles.item}>• الشفاء چھلہ</Text>
-                <Text style={styles.item}>• الشفاء کڑا</Text>
-                <Text style={styles.item}>• الشفاء دھاگہ</Text>
-                <Text style={styles.item}>• الشفاء ڈوری</Text>
-                <Text style={styles.item}>• الشفاء گنڈا</Text>
-                <Text style={styles.item}>• الشفاء چراغ</Text>
-                <Text style={styles.item}>• الشفاء موم بتی</Text>
-                <Text style={styles.item}>• الشفاء مٹی</Text>
-                <Text style={styles.item}>• الشفاء راکھ</Text>
-                <Text style={styles.item}>• الشفاء کیل</Text>
-                <Text style={styles.item}>• الشفاء مرچیں</Text>
-                <Text style={styles.item}>• الشفاء چینی</Text>
-                <Text style={styles.item}>• الشفاء نمک</Text>
-                <Text style={styles.item}>• الشفاء پھکی</Text>
-                <Text style={styles.item}>• الشفاء شکر</Text>
-                <Text style={styles.item}>• الشفاء عرق گلاب</Text>
+              <View style={mainStyles.column}>
+                <Text style={mainStyles.item}>• الشفاء چھلہ</Text>
+                <Text style={mainStyles.item}>• الشفاء کڑا</Text>
+                <Text style={mainStyles.item}>• الشفاء دھاگہ</Text>
+                <Text style={mainStyles.item}>• الشفاء ڈوری</Text>
+                <Text style={mainStyles.item}>• الشفاء گنڈا</Text>
+                <Text style={mainStyles.item}>• الشفاء چراغ</Text>
+                <Text style={mainStyles.item}>• الشفاء موم بتی</Text>
+                <Text style={mainStyles.item}>• الشفاء مٹی</Text>
+                <Text style={mainStyles.item}>• الشفاء راکھ</Text>
+                <Text style={mainStyles.item}>• الشفاء کیل</Text>
+                <Text style={mainStyles.item}>• الشفاء مرچیں</Text>
+                <Text style={mainStyles.item}>• الشفاء چینی</Text>
+                <Text style={mainStyles.item}>• الشفاء نمک</Text>
+                <Text style={mainStyles.item}>• الشفاء پھکی</Text>
+                <Text style={mainStyles.item}>• الشفاء شکر</Text>
+                <Text style={mainStyles.item}>• الشفاء عرق گلاب</Text>
               </View>
             </ScrollView>
           </View>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             جس طرح ایک میڈیکل سٹور میں تیار دوائی ملتی ہیں، اسی طرح ہمارے ادارے
             نے تیار روحانی علاج بنائے جاتے ہیں۔ یہ علاج مریضوں پر کامیاب تجربات
             کے بعد منظرِ عام پر لائے گئے ہیں۔ مریضوں کے ساتھ ساتھ روحانی معالجین
@@ -106,40 +107,3 @@ export default function RohaniIshaya() {
     </CustomBackground>
   );
 }
-const styles = StyleSheet.create({
-  heading: {
-    fontSize: 28,
-    paddingTop:4,
-    paddingRight:6,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  description: {
-    fontSize: 20,
-    paddingRight:4,
-    lineHeight:30,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  list: {
-    paddingRight: 10,
-  },
-  listContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  column: {
-    flex: 1,
-    paddingRight: 10,
-  },
-  item: {
-    fontSize: 20,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-  },
-});

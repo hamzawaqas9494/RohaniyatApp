@@ -1,27 +1,13 @@
-import { StyleSheet, Text, View } from "react-native";
+import {  Text, View } from "react-native";
 import CustomBackground from "../../components/Background/Background";
-
+import { fehristStyles } from "../../style/globalcss";
 export default function BarayMareez() {
   return (
     <CustomBackground>
-      <View style={styles.container}>
-        <Text style={styles.text}>بارے مریض سائلین </Text>
-        <Text style={styles.text}>Coming soon</Text>
+      <View style={fehristStyles.centerContent}>
+        <Text style={fehristStyles.text}>برائے مریض سائلین </Text>
+        <Text style={fehristStyles.text}>Coming soon</Text>
       </View>
     </CustomBackground>
   );
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  text: {
-    fontSize: 18,
-    color: "#6C472D",
-    fontWeight: "600",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "center",
-  },
-});
