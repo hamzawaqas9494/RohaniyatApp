@@ -6,7 +6,7 @@ export default function IdaraRohaniyatScreen() {
     <CustomBackground>
       <ScrollView>
         <View>
-          <Text style={mainStyles.heading}>ادرا روحانیت</Text>
+          <Text style={mainStyles.heading}>ادارہ روحانیات </Text>
           <Text style={mainStyles.description}>
             ادارہ روحانیات 2001 میں قائم کیا گیا۔ ادارہ روحانیات کے تحت بہت سارے
             شعبہ جات میں کام کیا جارہا ہے۔ ادارے میں شعبہ روحانی و مخفی علوم کے

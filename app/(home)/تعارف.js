@@ -9,7 +9,7 @@ import {
 import CustomBackground from "../../components/Background/Background";
 const DATA = [
   { id: "1", screen: "سرپرست تعارف", text: "سرپرست" },
-  { id: "2", screen: "ادارہ روحانیت تعارف", text: "ادارہ روحانیات" },
+  { id: "2", screen: "ادارہ روحانیات تعارف", text: "ادارہ روحانیات" },
   { id: "3", screen: "تعویذات عثمانیہ تعارف", text: "تعویذات عثمانیہ" },
   { id: "4", screen: "روحانی اشیاء تعارف", text: "روحانی اشیاء" },
   { id: "5", screen: "روحانی علاج تعارف", text: "روحانی علاج" },
