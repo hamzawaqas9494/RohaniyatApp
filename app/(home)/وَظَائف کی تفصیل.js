@@ -31,7 +31,6 @@ export default function Wazaifkitafseel() {
           `https://rohaniyatweb-production-bf29.up.railway.app/api/blog-data/get-table-data?tableName=wazaif&id=${id}`
         );
         const result = await response.json();
-        console.log(result, "result");
         setData(result.rows[0]);
       } catch (error) {
         console.error("Error fetching details:", error);

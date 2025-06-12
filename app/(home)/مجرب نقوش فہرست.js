@@ -19,7 +19,6 @@ export default function MujrabNakoshkiFehrist() {
     )
       .then((res) => res.json())
       .then((result) => {
-        console.log("Fetched result:", result);
         setData(result.rows);
       })
       .catch((error) => console.error("Error fetching data:", error))

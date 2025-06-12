@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Idara Rohaniyat",
-    "slug": "mobileapp",
+   "name": "rohaniyatversion2",
+    "slug": "rohaniyatversion2",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/IdaraRohaniyatLogo.png",
@@ -41,13 +41,10 @@
     },
     "extra": {
       "eas": {
-        "projectId": "fedaf04d-9035-4932-87db-2075d40cc42b"
+        "projectId": "42bc65ad-84c8-4542-98d0-7bb90904d628"
       },
       "router": {}
     },
-    "owner": "rohaniyatapp",
-    "plugins": [
-      "expo-router"
-    ]
+    "owner": "anamgulzar"
   }
 }
