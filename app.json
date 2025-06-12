@@ -4,7 +4,7 @@
     "slug": "rohaniyatversion2",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/IdaraRohaniyatLogo.png",
+    "icon": "./assets/images/Idara.png",
     "scheme": "idararohaniyat",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -28,7 +28,7 @@
       ],
       "icon": "./assets/images/app-icon.png",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/IdaraRohaniyatLogo.png",
+        "foregroundImage": "./assets/images/Idara.png",
              "backgroundColor": "#E4DAC1"
       }
     },
