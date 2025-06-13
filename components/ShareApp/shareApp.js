@@ -7,15 +7,13 @@ import {
   Platform,
   Pressable,
   Share,
-  StyleSheet,
   View,
   useWindowDimensions,
 } from "react-native";
-
+import { shareApp } from "../../style/globalcss";
 const AppMenuDropdown = () => {
   const [visible, setVisible] = useState(false);
   const scaleAnim = useRef(new Animated.Value(0)).current;
-  const { width } = useWindowDimensions();
   const isWeb = Platform.OS === "web";
 
   const toggleDropdown = () => {
@@ -58,8 +56,8 @@ const AppMenuDropdown = () => {
   };
 
   return (
-    <View style={[styles.container, { maxWidth: isWeb ? 600 : "100%" }]}>
-      <Pressable onPress={toggleDropdown} style={styles.dotButton}>
+    <View style={[shareApp.container, { maxWidth: isWeb ? 600 : "100%" }]}>
+      <Pressable onPress={toggleDropdown} style={shareApp.dotButton}>
         {visible ? (
           <FontAwesome name="close" size={24} color="#6C472D" />
         ) : (
@@ -70,18 +68,18 @@ const AppMenuDropdown = () => {
       {visible && (
         <Animated.View
           style={[
-            styles.dropdown,
+            shareApp.dropdown,
             {
               transform: [{ scaleY: scaleAnim }],
               opacity: scaleAnim,
             },
           ]}
         >
-          <Pressable onPress={handleRate} style={styles.iconButton}>
+          <Pressable onPress={handleRate} style={shareApp.iconButton}>
             <FontAwesome name="star" size={20} color="#6C472D" />
           </Pressable>
 
-          <Pressable onPress={handleShare} style={styles.iconButton}>
+          <Pressable onPress={handleShare} style={shareApp.iconButton}>
             <FontAwesome name="share-alt" size={20} color="#6C472D" />
           </Pressable>
         </Animated.View>
@@ -92,40 +90,4 @@ const AppMenuDropdown = () => {
 
 export default AppMenuDropdown;
 
-const styles = StyleSheet.create({
-  container: {
-    position: "absolute",
-    top: 15,
-    right: 15,
-    zIndex: 20,
-    alignItems: "center",
-  },
-  dotButton: {
-    zIndex: 10,
-    backgroundColor: "#E4DAC1",
-    borderRadius: 50,
-    width: 50,
-    height: 50,
-    justifyContent: "center",
-    alignItems: "center",
-    cursor: Platform.OS === "web" ? "pointer" : "default",
-  },
-  dropdown: {
-    position: "absolute",
-    top: 55,
-    justifyContent: "center",
-    alignItems: "center",
-    gap: 6,
-    transformOrigin: "top",
-    backgroundColor: "transparent",
-  },
-  iconButton: {
-    backgroundColor: "#E4DAC1",
-    borderRadius: 50,
-    width: 40,
-    height: 40,
-    alignItems: "center",
-    justifyContent: "center",
-    cursor: Platform.OS === "web" ? "pointer" : "default",
-  },
-});
+

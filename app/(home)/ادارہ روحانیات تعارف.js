@@ -1,12 +1,13 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import CustomBackground from "../../components/Background/Background";
-export default function MujarrabTareeqaRohaniIlaaj() {
+import { mainStyles } from "../../style/globalcss";
+export default function IdaraRohaniyatScreen() {
   return (
     <CustomBackground>
       <ScrollView>
         <View>
-          <Text style={styles.heading}>ادرا روحانیت</Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.heading}>ادارہ روحانیات </Text>
+          <Text style={mainStyles.description}>
             ادارہ روحانیات 2001 میں قائم کیا گیا۔ ادارہ روحانیات کے تحت بہت سارے
             شعبہ جات میں کام کیا جارہا ہے۔ ادارے میں شعبہ روحانی و مخفی علوم کے
             زیر اہتمام پوری دنیا کے مختلف ممالک میں ہماری روحانی نگرانی اور
@@ -31,15 +32,15 @@ export default function MujarrabTareeqaRohaniIlaaj() {
             ہمارے اعمال کرنے سے کسی قسم کا کوئی خوف و خطرہ نہیں ہوتا اور نہ کسی
             قسم کی رجعت کا سامنا کرنا پڑتا ہے۔
           </Text>
-          <Text style={styles.heading}>مزید شعبہ جات </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.heading}>مزید شعبہ جات </Text>
+          <Text style={mainStyles.description}>
             روحانی دکان , تعویذات عثمانیہ , روحانی علاج گا ہ , روحانی تعویذات
             روحانی عملیات کورسز , مدرسہ تعلیم القرآن
           </Text>
-          <Text style={styles.heading}>
+          <Text style={mainStyles.heading}>
             (ہم دعویٰ نہیں علاج کرتے ہیں) ہمارا طریقہ علاج
           </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             معالج روحانی امراض کا ہو یا جسمانی امراض کا، اس کے دل میں مریض کی
             خیر خواہی لازماً ہوتی ہے۔ چونکہ یہ علاج معالجہ ایک طرح سے کاروبار
             بھی ہے، تو عموماً ذہن کاروبار کی طرف ہی جاتا ہے، جس کی وجہ سے علاج
@@ -54,7 +55,7 @@ export default function MujarrabTareeqaRohaniIlaaj() {
             چھٹکارا کیسے ممکن ہے؟ اور آئندہ کے لیے اس مرض سے مستقل حفاظت کیسے
             ممکن ہے؟
           </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             یہ بنیادی معلومات ہیں جن کا جاننا مریض اور اس کے اہل خانہ کے لیے
             نہایت ضروری ہے۔ یاد رہے کہ ہمارا طریقۂ علاج اکابرین کے مجرب اعمال
             اور عین اسلامی تعلیمات کے مطابق ہے۔ اس کے بعد علاج کی طرف متوجہ ہوتے
@@ -79,10 +80,10 @@ export default function MujarrabTareeqaRohaniIlaaj() {
             دعاؤں میں رہتے ہیں۔ یہ اعمال ہر کوئی کر سکتا ہے۔ اس میں کسی قسم کا
             کوئی پرہیز، ڈر یا خوف کا خطرہ نہیں ہوتا۔
           </Text>
-          <Text style={styles.heading}>
-            اعمال کے ذریعے مریض کا روحانی علاج{" "}
+          <Text style={mainStyles.heading}>
+            اعمال کے ذریعے مریض کا روحانی علاج
           </Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             ادارہ روحانیات کے زیرِ تحت ہمارا طریقۂ علاج بالکل منفرد ہے۔ پوری
             دنیا میں جن مریضوں کا ہم علاج کرتے ہیں، ان کو حفاظت اور آئندہ اپنا
             علاج خود کرنے کے لیے جن اعمال کی اجازت دی جاتی ہے، ان کے ساتھ
@@ -113,28 +114,5 @@ export default function MujarrabTareeqaRohaniIlaaj() {
     </CustomBackground>
   );
 }
-const styles = StyleSheet.create({
- heading: {
-    fontSize: 28,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-    lineHeight:100,
-  },
-  subheading: {
-    fontSize: 24,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-    lineHeight:80,
-  },
-  description: {
-    fontSize: 20,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-});
+
+

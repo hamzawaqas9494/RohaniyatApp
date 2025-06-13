@@ -2,23 +2,21 @@ import { useNavigation } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
-  Dimensions,
   FlatList,
   Image,
-  StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
-const { width } = Dimensions.get("window");
+import { fehristStyles, rohaniDokan } from "../../style/globalcss";
 export default function RohaniDukan() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
   useEffect(() => {
     fetch(
-      "https://rohaniyatweb-production-99fc.up.railway.app/api/card-data/get-table-data?tableName=rohanidokan"
+      "https://rohaniyatweb-production-bf29.up.railway.app/api/blog-data/get-table-data?tableName=rohanidokan"
     )
       .then((res) => res.json())
       .then((result) => {
@@ -29,42 +27,47 @@ export default function RohaniDukan() {
   }, []);
   return (
     <CustomBackground>
-      <View style={styles.container}>
+      <View style={fehristStyles.container}>
         {loading ? (
-          <View style={styles.centerContent}>
+          <View style={fehristStyles.centerContent}>
             <ActivityIndicator size="large" color="#6C472D" />
           </View>
         ) : data.length === 0 ? (
-          <View style={styles.centerContent}>
-            <Text style={styles.noDataText}>کوئی ریکارڈ موجود نہیں ہے</Text>
+          <View style={fehristStyles.centerContent}>
+            <Text style={fehristStyles.noRecordText}>کوئی ریکارڈ موجود نہیں ہے</Text>
           </View>
         ) : (
           <FlatList
             data={data}
             keyExtractor={(item) => item.id.toString()}
             numColumns={2} // 2 کالم
-            columnWrapperStyle={{ justifyContent: "space-between" }} // کالمز کے بیچ میں gap
-            contentContainerStyle={styles.list}
+            columnWrapperStyle={rohaniDokan.spaceHorizontally}
             renderItem={({ item }) => (
               <TouchableOpacity
-                style={styles.card}
+                style={rohaniDokan.card}
                 onPress={() =>
                   navigation.navigate("روحانی دکان کی تفصیل", {
                     id: item.id,
                   })
                 }
               >     
-          {data?.image ? (
+          {data.image ? (
             <Image
-              source={{ uri: data.image }}
-              style={styles.image}
+              source={{
+                uri: `https://rohaniyatweb-production-bf29.up.railway.app${encodeURI(
+                  data.image
+                )}`,
+              }}
+              style={rohaniDokan.image}
               resizeMode="contain"
             />
-          ):  <Image
-                  source={require("../../assets/images/book.webp")}
-                  style={styles.image}
-                  resizeMode="cover"
-                />}
+          ) : (
+            <Image
+              source={require("../../assets/images/book.webp")}
+              style={rohaniDokan.image}
+              resizeMode="cover"
+            />
+          )}
               </TouchableOpacity>
             )}
           />
@@ -73,39 +76,3 @@ export default function RohaniDukan() {
     </CustomBackground>
   );
 }
-const CARD_MARGIN = 15;
-const CARD_WIDTH = (width - CARD_MARGIN * 3) / 2; // Dynamic 2 card width with margin
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    },
-  centerContent: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  card: {
-    width: CARD_WIDTH,
-    height: CARD_WIDTH * 1.1,
-    borderRadius: 5,
-    overflow: "none",
-    gap:20,
-    marginBottom:'14',
-  },
-  image: {
-    width: "100%",
-    height: "100%", 
-    borderRadius: 5, 
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-    color: "#333",
-    margin: 8,
-  },
-  content: {
-    fontSize: 20,
-    color: "#666",
-    marginHorizontal: 8,
-  },
-});

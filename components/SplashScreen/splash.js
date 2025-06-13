@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Animated, Dimensions, Image, StyleSheet, View } from "react-native";
-
+import { splash } from "../../style/globalcss";
 const { height } = Dimensions.get("window");
 
 export default function CustomSplash() {
@@ -29,10 +29,10 @@ export default function CustomSplash() {
   }, []);
 
   return (
-    <View style={styles.container}>
+    <View style={splash.container}>
       <Animated.View
         style={[
-          styles.centerContent,
+          splash.centerContent,
           {
             opacity: fadeAnim, 
             transform: [{ scale: scaleAnim }], 
@@ -41,20 +41,20 @@ export default function CustomSplash() {
       >
         <Image
           source={require("../../assets/images/main-logo.png")} 
-          style={styles.mainLogo}
+          style={splash.mainLogo}
           resizeMode="contain"
         />
       </Animated.View>
 
       <Animated.View
         style={[
-          styles.bottomContent,
+          splash.bottomContent,
           { transform: [{ translateY: slideAnim }] },
         ]}
       >
         <Image
           source={require("../../assets/images/CN_Logo.png")}
-          style={styles.brandLogo}
+          style={splash.brandLogo}
           resizeMode="contain"
         />
       </Animated.View>
@@ -62,27 +62,4 @@ export default function CustomSplash() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#E4DAC1",
-    alignItems: "center",
-  },
-  centerContent: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  mainLogo: {
-    width: 200,
-    height: 200,
-  },
-  bottomContent: {
-    position: "absolute",
-    bottom: 0,
-  },
-  brandLogo: {
-    width: 150,
-    height: 80,
-  },
-});
+

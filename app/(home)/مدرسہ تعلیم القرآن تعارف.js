@@ -1,13 +1,13 @@
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import CustomBackground from "../../components/Background/Background";
-
+import { mainStyles } from "../../style/globalcss";
 export default function RohaniIlajScreen() {
   return (
     <CustomBackground>
       <ScrollView>
         <View>
-          <Text style={styles.heading}>مدرسہ تعلیم القرآن کا مختصر تعارف</Text>
-          <Text style={styles.description}>
+          <Text style={mainStyles.tashkhesHeading}>مدرسہ تعلیم القرآن کا مختصر تعارف</Text>
+          <Text style={mainStyles.description}>
             مدرسہ تعلیم القرآن علاقہ کا ایک مثالی مدرسہ ہے ۔علاقے میں بچوں کی
             صحیح قرآنی تعلیم و تربیت موجودہ دور کی ایک اہم ضرورت ہے۔ اسکولوں
             میں بچوں کو صرف سیکولر تعلیم دی جاتی ہے ، جس کی بنا پر ان کی دینی
@@ -19,7 +19,7 @@ export default function RohaniIlajScreen() {
             سایہ چلنے والامدرسہ تعلیم القرآن کے نام سے ہورہا ہے ۔
           </Text>
 
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             یہ مدرسہ الحمدللہ گزشتہ کئی برسوں سے جاری ہے ، اب تک 100 سے زائد
             طلبہ و طالبات ناظرہ قرآن پاک پڑھنے کے بعدیہاں سے فارغ ہوچکے ہیں ،
             مزید الحمدللہ تقریبا 100 طلبہ و طالبات ناظرہ قرآن پاک کی تعلیم حاصل
@@ -29,28 +29,28 @@ export default function RohaniIlajScreen() {
             سمیت بچوں میں تخلیقی صلاحیتوں کو نکھارنے کا کام کیا جاتا ہے۔
           </Text>
 
-          <View style={styles.listContainer}>
-            <Text style={styles.listItem}>
+          <View>
+            <Text style={mainStyles.item}>
               • طلبہ و طالبات کیلئے حفظ القرآن کی پُر سکون کلاسز کا اہتمام کرنا
               ہے۔
             </Text>
-            <Text style={styles.listItem}>
+            <Text style={mainStyles.item}>
               • طلبہ و طالبات کیلئے درس نظامی کی کلاسز کا اہتمام کرنا ہے۔
             </Text>
-            <Text style={styles.listItem}>
+            <Text style={mainStyles.item}>
               • محلے، علاقے کے بچوں، بچیوں اور خواتین کیلئے تربیتی کورسز کا
               اہتمام کرنا ہے۔
             </Text>
-            <Text style={styles.listItem}>
+            <Text style={mainStyles.item}>
               • بچوں، بچیوں اور علاقے کی خواتین کے لیے دستکاری سکول۔
             </Text>
-            <Text style={styles.listItem}>
+            <Text style={mainStyles.item}>
               • جدید علوم سے آراستہ کرنا اور معاشرے میں بے روزگاری کو ختم کرنے
               کے لیے توسیع کا منصوبہ ہے۔
             </Text>
           </View>
 
-          <Text style={styles.description}>
+          <Text style={mainStyles.description}>
             احباب سے دعا اور تعاون کی گذارش ہے ،ادارے کا اس وقت ماہانہ کل خرچ
             تقریبا 1 لاکھ روپے ہے۔ ادارے میں بچوں سے کوئی فیس نہیں لی جاتی ۔
             ضرورت ہے کہ پورے ملک میں اس طرح کے مکاتب کا جال بچھادیا جائے _ ہر
@@ -62,37 +62,3 @@ export default function RohaniIlajScreen() {
     </CustomBackground>
   );
 }
-const styles = StyleSheet.create({
-  heading: {
-    fontSize: 28,
-    paddingTop: 4,
-    paddingRight: 6,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  description: {
-    fontSize: 20,
-    paddingRight: 4,
-    lineHeight: 30,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  listContainer: {
-    marginTop: 4,
-    marginBottom: 12,
-    paddingRight: 8,
-  },
-  listItem: {
-    fontSize: 20,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-    lineHeight: 30,
-    paddingVertical: 6,
-  },
-});

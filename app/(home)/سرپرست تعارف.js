@@ -1,19 +1,19 @@
 import { Image, ScrollView, Text, View } from "react-native";
 import CustomBackground from "../../components/Background/Background";
-import { sarparastStyles } from "../../style/styleDetails";
+import { mainStyles } from "../../style/globalcss";
 export default function SirparastScreen() {
   return (
     <CustomBackground>
       <ScrollView>
-        <View style={sarparastStyles.image_section}>
+        <View style={mainStyles.image_section}>
           <Image
             source={require("../../assets/images/sarparast.png")}
-            style={sarparastStyles.image}
+            style={mainStyles.image}
           />
         </View>
         <View>
-          <Text style={sarparastStyles.heading}>مختصر تعارف</Text>
-          <Text style={sarparastStyles.description}>
+          <Text style={mainStyles.heading}>مختصر تعارف</Text>
+          <Text style={mainStyles.description}>
             بانی و سرپرست اعلیٰ ادارہ روحانیات و مدرسہ تعلیم القرآن لاہور، پیر
             طریقت حضرت مولانا حافظ و قاری محمد عثمان چشتی، قادری، نقشبندی،
             سہروردی، شاذلی، رفاعی کی پیدائش جولائی 1981 میں لاہور میں ہوئی اور
