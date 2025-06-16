@@ -4,14 +4,19 @@ import {
   ActivityIndicator,
   Image,
   ScrollView,
-  StyleSheet,
   Text,
   useWindowDimensions,
-  View,
+  View
 } from "react-native";
 import RenderHTML from "react-native-render-html";
 import CustomBackground from "../../components/Background/Background";
 import YoutubeButton from "../../components/youtubeButton/youtubeVideo";
+import {
+  fehristStyles,
+  htmlBaseStyle,
+  htmlStyles,
+  mainStyles,
+} from "../../style/globalcss";
 export default function MujrabNakoshTafseel() {
   const route = useRoute();
   const { id } = route.params;
@@ -36,130 +41,50 @@ export default function MujrabNakoshTafseel() {
     fetchDetails();
   }, [id]);
   return (
-    <CustomBackground>
-      {loading ? (
-        <View style={styles.centerContent}>
-          <ActivityIndicator size="large" color="#6C472D" />
-        </View>
-      ) : (
-        <ScrollView>
-          <Text style={styles.heading}>
-            {data ? data.title : "No Data Found"}
-          </Text>
-
-          <Image
-            source={require("../../assets/images/content-image.jpg")}
-            style={styles.image}
-            resizeMode="contain"
-          />
-          <View style={styles.contentWrapper}>
-            <RenderHTML
-              contentWidth={width}
-              source={{ html: data?.content || "<p>No Data Found</p>" }}
-              tagsStyles={htmlStyles}
-              systemFonts={["Jameel-Noori-Regular"]}
-            />
-          </View>
-          <YoutubeButton />
-        </ScrollView>
-      )}
-    </CustomBackground>
+     <CustomBackground>
+          {loading ? (
+            <View style={fehristStyles.centerContent}>
+              <ActivityIndicator size="large" color="#6C472D" />
+            </View>
+          ) : !data ? (
+            <View style={fehristStyles.centerContent}>
+              <Text style={fehristStyles.noRecordText}>کوئی ریکارڈ موجود نہیں ہے</Text>
+            </View>
+          ) : (
+            <ScrollView>
+              <Text style={mainStyles.heading}>{data.title}</Text>
+    
+              {data.image ? (
+                <Image
+                  source={{
+                    uri: `https://rohaniyatweb-production-bf29.up.railway.app${encodeURI(
+                      data.image
+                    )}`,
+                  }}
+                  style={fehristStyles.image}
+                  resizeMode="contain"
+                />
+              ) : (
+                <Image
+                  source={require("../../assets/images/content-image.jpg")}
+                  style={fehristStyles.image}
+                  resizeMode="contain"
+                />
+              )}
+    
+              <View style={fehristStyles.deatilContentWrapper}>
+                <RenderHTML
+                  contentWidth={width}
+                  source={{ html: data?.content || "<p>No Data Found</p>" }}
+                  tagsStyles={htmlStyles}
+                  systemFonts={["Jameel-Noori-Regular"]}
+                  defaultTextProps={{ selectable: true }}
+                  baseStyle={htmlBaseStyle}
+                />
+              </View>
+              <YoutubeButton />
+            </ScrollView>
+          )}
+        </CustomBackground>
   );
 }
-
-const styles = StyleSheet.create({
-  centerContent: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  heading: {
-    fontSize: 28,
-    paddingTop: 4,
-    paddingRight: 6,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  image: {
-    marginTop: 10,
-    width: "100%",
-    height: 300,
-  },
-});
-const htmlStyles = StyleSheet.create({
-  h1: {
-    fontFamily: "Arial",
-    fontSize: 28,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#222",
-    writingDirection: "rtl",
-    textAlign: "right",
-  },
-  h2: {
-    fontFamily: "Arial",
-    fontSize: 24,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#333",
-    writingDirection: "rtl",
-    textAlign: "right",
-  },
-  h3: {
-    fontFamily: "Arial",
-    fontSize: 20,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#444",
-    writingDirection: "rtl",
-    textAlign: "right",
-  },
-  p: {
-    marginTop: 10,
-    fontSize: 20,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    lineHeight: 30,
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  span: {
-    fontSize: 20,
-    color: "#6C472D",
-    lineHeight: 30,
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  ul: {
-    fontSize: 20,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    lineHeight: 30,
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  ol: {
-    fontSize: 20,
-    color: "#6C472D",
-    lineHeight: 30,
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  li: {
-    fontSize: 20,
-    color: "#6C472D",
-    lineHeight: 30,
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  strong: {
-    fontWeight: "bold",
-    color: "red",
-  },
-  em: {
-    fontStyle: "italic",
-    fontFamily: "Jameel-Noori-Regular",
-  },
-});
