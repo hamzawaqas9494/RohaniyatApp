@@ -273,6 +273,7 @@ export const rohaniDokan = StyleSheet.create({
     overflow: "hidden",
     marginBottom: 14,
     marginRight: CARD_MARGIN,
+     cursor: "pointer",
   },
   image: {
     width: "100%",

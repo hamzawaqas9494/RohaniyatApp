@@ -20,6 +20,7 @@ export default function RohaniDukan() {
     )
       .then((res) => res.json())
       .then((result) => {
+        console.log(result, "dddddd");
         setData(result.rows);
       })
       .catch((error) => console.error("Error fetching data:", error))
@@ -34,7 +35,9 @@ export default function RohaniDukan() {
           </View>
         ) : data.length === 0 ? (
           <View style={fehristStyles.centerContent}>
-            <Text style={fehristStyles.noRecordText}>کوئی ریکارڈ موجود نہیں ہے</Text>
+            <Text style={fehristStyles.noRecordText}>
+              کوئی ریکارڈ موجود نہیں ہے
+            </Text>
           </View>
         ) : (
           <FlatList
@@ -50,24 +53,22 @@ export default function RohaniDukan() {
                     id: item.id,
                   })
                 }
-              >     
-          {data.image ? (
-            <Image
-              source={{
-                uri: `https://rohaniyatweb-production-bf29.up.railway.app${encodeURI(
-                  data.image
-                )}`,
-              }}
-              style={rohaniDokan.image}
-              resizeMode="contain"
-            />
-          ) : (
-            <Image
-              source={require("../../assets/images/book.webp")}
-              style={rohaniDokan.image}
-              resizeMode="cover"
-            />
-          )}
+              >
+                {item.image ? (
+                  <Image
+                    source={{
+                      uri: `https://rohaniyatweb-production-bf29.up.railway.app${item.image}`,
+                    }}
+                    style={rohaniDokan.image}
+                    resizeMode="contain"
+                  />
+                ) : (
+                  <Image
+                    source={require("../../assets/images/content-image.jpg")}
+                    style={rohaniDokan.image}
+                    resizeMode="contain"
+                  />
+                )}
               </TouchableOpacity>
             )}
           />
