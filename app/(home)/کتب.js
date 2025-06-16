@@ -5,10 +5,9 @@ import {
   Dimensions,
   FlatList,
   Image,
-  StyleSheet,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
 import { fehristStyles, rohaniDokan } from "../../style/globalcss";
@@ -56,21 +55,19 @@ export default function Kutbkifehrist() {
                   })
                 }
               >
-                {data.image ? (
+                {item.image ? (
                   <Image
                     source={{
-                      uri: `https://rohaniyatweb-production-bf29.up.railway.app${encodeURI(
-                        data.image
-                      )}`,
+                      uri: `https://rohaniyatweb-production-bf29.up.railway.app${item.image}`,
                     }}
                     style={rohaniDokan.image}
                     resizeMode="contain"
                   />
                 ) : (
                   <Image
-                    source={require("../../assets/images/book.webp")}
+                    source={require("../../assets/images/content-image.jpg")}
                     style={rohaniDokan.image}
-                    resizeMode="cover"
+                    resizeMode="contain"
                   />
                 )}
               </TouchableOpacity>
