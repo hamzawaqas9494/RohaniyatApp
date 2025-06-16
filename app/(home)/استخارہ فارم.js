@@ -14,6 +14,16 @@ import {
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
 import { fehristStyles, formStyles, mainStyles } from "../../style/globalcss";
+const isMobile = Platform.OS === "ios" || Platform.OS === "android";
+const KeyboardWrapper = ({ children }) => {
+  return isMobile ? (
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      {children}
+    </TouchableWithoutFeedback>
+  ) : (
+    <View>{children}</View>
+  );
+};
 const IstakharaForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -133,7 +143,7 @@ const IstakharaForm = () => {
         style={fehristStyles.container}
         behavior={Platform.OS === "ios" ? "padding" : undefined}
       >
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <KeyboardWrapper>
           <ScrollView>
             <Text style={mainStyles.heading}>استخارہ کیلئے فارم</Text>
             <Text style={mainStyles.description}>
@@ -314,7 +324,7 @@ const IstakharaForm = () => {
               </View>
             </Modal>
           </ScrollView>
-        </TouchableWithoutFeedback>
+        </KeyboardWrapper>
       </KeyboardAvoidingView>
     </CustomBackground>
   );

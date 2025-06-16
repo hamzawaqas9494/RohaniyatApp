@@ -20,7 +20,6 @@ export default function RohaniDukan() {
     )
       .then((res) => res.json())
       .then((result) => {
-        console.log(result, "dddddd");
         setData(result.rows);
       })
       .catch((error) => console.error("Error fetching data:", error))

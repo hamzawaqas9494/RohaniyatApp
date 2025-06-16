@@ -14,6 +14,16 @@ import {
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
 import { fehristStyles, formStyles, mainStyles } from "../../style/globalcss";
+const isMobile = Platform.OS === "ios" || Platform.OS === "android";
+const KeyboardWrapper = ({ children }) => {
+  return isMobile ? (
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      {children}
+    </TouchableWithoutFeedback>
+  ) : (
+    <View>{children}</View>
+  );
+};
 const RohaniTashkhesForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -135,7 +145,7 @@ const RohaniTashkhesForm = () => {
         style={fehristStyles.container}
         behavior={Platform.OS === "ios" ? "padding" : undefined}
       >
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+       <KeyboardWrapper>
           <ScrollView>
             <Text style={mainStyles.tashkhesHeading}>روحانی تشخیص کیلئے فارم</Text>
             <Text style={mainStyles.description}>
@@ -319,7 +329,7 @@ const RohaniTashkhesForm = () => {
               </View>
             </Modal>
           </ScrollView>
-        </TouchableWithoutFeedback>
+       </KeyboardWrapper>
       </KeyboardAvoidingView>
     </CustomBackground>
   );
