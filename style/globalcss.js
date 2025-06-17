@@ -266,6 +266,11 @@ export const htmlStyles = StyleSheet.create({
 const CARD_MARGIN = 15;
 const CARD_WIDTH = (width - CARD_MARGIN * 3) / 2;
 export const rohaniDokan = StyleSheet.create({
+   container: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+  },
   card: {
     width: CARD_WIDTH,
     height: CARD_WIDTH * 1.1,
@@ -279,15 +284,21 @@ export const rohaniDokan = StyleSheet.create({
     height: "100%",
     borderRadius: 5,
   },
-  container: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
-  },
 });
+
 //////////////////////rohani dokan or kutb style end////////////////////////////////
 ///////////////////////////////////form style start/////////////////////////////////
+const isWeb = Platform.OS === "web";
 export const formStyles = StyleSheet.create({
+  container: {
+ width: isWeb ? "100%" : "100%", 
+ minWidth: isWeb ? 290 : "100%",
+  maxWidth: isWeb ? 480 : "100%",
+  alignSelf: "center",
+  },
+  scrollview: {
+    alignItems: "center",
+  },
   inputRow: {
     flex: 1,
     marginBottom: 8,
@@ -311,6 +322,7 @@ export const formStyles = StyleSheet.create({
   },
   pickerInput: {
     color: "#6C472D",
+    padding:1,
     flex: 1,
     marginHorizontal: 2,
     flex: 1,
@@ -335,7 +347,8 @@ export const formStyles = StyleSheet.create({
     alignItems: "center",
   },
   modalContainer: {
-    width: "80%",
+     width: isWeb ? "32%" : "80%",
+     minWidth: isWeb ? 290 : "90%",  // upper limit
     backgroundColor: "#fff",
     padding: 10,
     borderRadius: 5,
@@ -353,7 +366,7 @@ export const backGround = StyleSheet.create({
     flex: 1,
     resizeMode: "cover",
     height: "100%",
-    width:"100%"
+    width: "100%",
   },
   container: {
     padding: 15,
@@ -470,27 +483,27 @@ export const splash = StyleSheet.create({
 });
 export const youtube = StyleSheet.create({
   container: {
-    width: '100%',
-    alignItems: 'center',
+    width: "100%",
+    alignItems: "center",
     marginTop: 40,
   },
   button: {
-    width: '80%',
-    flexDirection: 'row',
-    backgroundColor: 'rgb(108, 71, 45)',
+    width: "80%",
+    flexDirection: "row",
+    backgroundColor: "rgb(108, 71, 45)",
     paddingVertical: 10,
     paddingHorizontal: 16,
     borderRadius: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   icon: {
     marginRight: 5,
   },
   text: {
-    color: 'rgb(228, 218, 193)',
+    color: "rgb(228, 218, 193)",
     fontSize: 18,
-      fontFamily: "Jameel-Noori-Regular",
+    fontFamily: "Jameel-Noori-Regular",
   },
 });
 /////////////////////////////////component style end /////////////////////////////////
