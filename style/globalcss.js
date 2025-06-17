@@ -13,6 +13,15 @@ export const mainStyles = StyleSheet.create({
     textAlign: "right",
     writingDirection: "rtl",
   },
+  subheading:{
+  fontSize: 24,
+    paddingRight: 6,
+    lineHeight: 32,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
   description: {
     fontSize: 20,
     paddingRight: 4,
