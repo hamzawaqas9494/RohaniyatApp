@@ -299,15 +299,6 @@ export const rohaniDokan = StyleSheet.create({
 ///////////////////////////////////form style start/////////////////////////////////
 const isWeb = Platform.OS === "web";
 export const formStyles = StyleSheet.create({
-  container: {
- width: isWeb ? "100%" : "100%", 
- minWidth: isWeb ? 290 : "100%",
-  maxWidth: isWeb ? 480 : "100%",
-  alignSelf: "center",
-  },
-  scrollview: {
-    alignItems: "center",
-  },
   inputRow: {
     flex: 1,
     marginBottom: 8,
@@ -355,9 +346,8 @@ export const formStyles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  modalContainer: {
-     width: isWeb ? "32%" : "80%",
-     minWidth: isWeb ? 290 : "90%",  // upper limit
+    modalContainer: {
+    width: "80%",
     backgroundColor: "#fff",
     padding: 10,
     borderRadius: 5,

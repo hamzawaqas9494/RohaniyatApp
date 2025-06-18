@@ -147,15 +147,11 @@ const MareedForm = () => {
 
   return (
     <CustomBackground>
-      <ScrollView
-        contentContainerStyle={formStyles.scrollview}
-      >
         <KeyboardAvoidingView
           style={fehristStyles.container}
           behavior={Platform.OS === "ios" ? "padding" : undefined}
         >
           <KeyboardWrapper>
-            <View style={formStyles.container}>
               <Text style={mainStyles.heading}>مرید ہونے کیلئے</Text>
               <Text style={mainStyles.description}>
                 الحمدللہ ادارہ روحانیات کی اس سروس کے ذریعے پوری دنیا سے لاکھوں
@@ -344,10 +340,9 @@ const MareedForm = () => {
                 </View>
                 </View>
               </Modal>
-            </View>
+            
           </KeyboardWrapper>
         </KeyboardAvoidingView>
-      </ScrollView>
     </CustomBackground>
   );
 };
