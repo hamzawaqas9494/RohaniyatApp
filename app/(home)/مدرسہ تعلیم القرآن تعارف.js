@@ -6,7 +6,9 @@ export default function RohaniIlajScreen() {
     <CustomBackground>
       <ScrollView>
         <View>
-          <Text style={mainStyles.tashkhesHeading}>مدرسہ تعلیم القرآن کا مختصر تعارف</Text>
+          <Text style={mainStyles.tashkhesHeading}>
+            مدرسہ تعلیم القرآن کا مختصر تعارف
+          </Text>
           <Text style={mainStyles.description}>
             مدرسہ تعلیم القرآن علاقہ کا ایک مثالی مدرسہ ہے ۔علاقے میں بچوں کی
             صحیح قرآنی تعلیم و تربیت موجودہ دور کی ایک اہم ضرورت ہے۔ اسکولوں
@@ -28,7 +30,9 @@ export default function RohaniIlajScreen() {
             ،ناظرہ قرآن کریم ، بنیادی دینی مسائل ،روزمرہ کے آداب ،نعت شریف
             سمیت بچوں میں تخلیقی صلاحیتوں کو نکھارنے کا کام کیا جاتا ہے۔
           </Text>
-
+          <Text style={mainStyles.description}>
+            مستقبل قریب میں پانچ درجات میں کام کرنے کیلئے کوشاں ہیں :
+          </Text>
           <View>
             <Text style={mainStyles.item}>
               • طلبہ و طالبات کیلئے حفظ القرآن کی پُر سکون کلاسز کا اہتمام کرنا
