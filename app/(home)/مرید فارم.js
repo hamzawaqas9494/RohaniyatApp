@@ -152,6 +152,7 @@ const MareedForm = () => {
           behavior={Platform.OS === "ios" ? "padding" : undefined}
         >
           <KeyboardWrapper>
+          <ScrollView>
               <Text style={mainStyles.heading}>مرید ہونے کیلئے</Text>
               <Text style={mainStyles.description}>
                 الحمدللہ ادارہ روحانیات کی اس سروس کے ذریعے پوری دنیا سے لاکھوں
@@ -340,7 +341,7 @@ const MareedForm = () => {
                 </View>
                 </View>
               </Modal>
-            
+            </ScrollView>
           </KeyboardWrapper>
         </KeyboardAvoidingView>
     </CustomBackground>
