@@ -20,7 +20,6 @@ export default function RohaniDukan() {
     )
       .then((res) => res.json())
       .then((result) => {
-        console.log(result, "dddddd");
         setData(result.rows);
       })
       .catch((error) => console.error("Error fetching data:", error))
@@ -57,7 +56,7 @@ export default function RohaniDukan() {
                 {item.image ? (
                   <Image
                     source={{
-                      uri: `https://rohaniyatweb-production-bf29.up.railway.app${item.image}`,
+                      uri: `https://rohaniyatweb-production-bf29.up.railway.app${encodeURI(item.image)}`,
                     }}
                     style={rohaniDokan.image}
                     resizeMode="contain"
@@ -77,3 +76,4 @@ export default function RohaniDukan() {
     </CustomBackground>
   );
 }
+

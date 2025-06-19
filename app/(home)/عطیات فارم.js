@@ -6,15 +6,24 @@ import {
   Modal,
   Platform,
   ScrollView,
-  StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
   TouchableWithoutFeedback,
-  View,
+  View
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
 import { fehristStyles, formStyles, mainStyles } from "../../style/globalcss";
+const isMobile = Platform.OS === "ios" || Platform.OS === "android";
+const KeyboardWrapper = ({ children }) => {
+  return isMobile ? (
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      {children}
+    </TouchableWithoutFeedback>
+  ) : (
+    <View>{children}</View>
+  );
+};
 const AttiyatForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -142,7 +151,7 @@ const AttiyatForm = () => {
         style={fehristStyles.container}
         behavior={Platform.OS === "ios" ? "padding" : undefined}
       >
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <KeyboardWrapper>
           <ScrollView>
             <Text style={mainStyles.heading}>عطیات کیلئے فارم</Text>
             <Text style={mainStyles.description}>
@@ -332,7 +341,7 @@ const AttiyatForm = () => {
               </View>
             </Modal>
           </ScrollView>
-        </TouchableWithoutFeedback>
+     </KeyboardWrapper>
       </KeyboardAvoidingView>
     </CustomBackground>
   );

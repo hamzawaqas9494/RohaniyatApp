@@ -14,6 +14,16 @@ import {
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
 import { fehristStyles, formStyles, mainStyles } from "../../style/globalcss";
+const isMobile = Platform.OS === "ios" || Platform.OS === "android";
+const KeyboardWrapper = ({ children }) => {
+  return isMobile ? (
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      {children}
+    </TouchableWithoutFeedback>
+  ) : (
+    <View>{children}</View>
+  );
+};
 export default RohaniIlajForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -133,7 +143,7 @@ export default RohaniIlajForm = () => {
         style={fehristStyles.container}
         behavior={Platform.OS === "ios" ? "padding" : undefined}
       >
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <KeyboardWrapper>
           <ScrollView>
             <Text style={mainStyles.heading}>روحانی علاج کے لیے</Text>
             <Text style={mainStyles.description}>الحمدللہ ادارہ روحانیات کی اس سروس کے ذریعے پوری دنیا سے لاکھوں لوگ روحانی علاج اور اپنے گھریلو، کاروباری، معاشرتی ، میڈیکلی مسائل بالخصوص جادو و جنات کے مکمل مستقل روحانی علاج کیلئے ہمارے خاص الخاص موکلاتی اعمال کی اجازت لے کر ادارے کی نگرانی اور رہنمائی اپنا ، اپنی فیملی اور اپنے کا روبار علاج کر رہے ہیں ۔ 
@@ -305,7 +315,7 @@ export default RohaniIlajForm = () => {
               </View>
             </Modal>
           </ScrollView>
-        </TouchableWithoutFeedback>
+        </KeyboardWrapper>
       </KeyboardAvoidingView>
     </CustomBackground>
   );

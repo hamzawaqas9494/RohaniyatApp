@@ -40,49 +40,49 @@ export default function RohaniDukanKiTafseel() {
     fetchDetails();
   }, [id]);
   return (
-       <CustomBackground>
-          {loading ? (
-            <View style={fehristStyles.centerContent}>
-              <ActivityIndicator size="large" color="#6C472D" />
-            </View>
-          ) : !data ? (
-            <View style={fehristStyles.centerContent}>
-              <Text style={fehristStyles.noRecordText}>کوئی ریکارڈ موجود نہیں ہے</Text>
-            </View>
+    <CustomBackground>
+      {loading ? (
+        <View style={fehristStyles.centerContent}>
+          <ActivityIndicator size="large" color="#6C472D" />
+        </View>
+      ) : !data ? (
+        <View style={fehristStyles.centerContent}>
+          <Text style={fehristStyles.noRecordText}>
+            کوئی ریکارڈ موجود نہیں ہے
+          </Text>
+        </View>
+      ) : (
+        <ScrollView>
+          <Text style={mainStyles.heading}>{data.title}</Text>
+
+          {data.image ? (
+            <Image
+              source={{
+                uri: `https://rohaniyatweb-production-bf29.up.railway.app${encodeURI(data.image)}`,
+              }}
+              style={fehristStyles.image}
+              resizeMode="contain"
+            />
           ) : (
-            <ScrollView>
-              <Text style={mainStyles.heading}>{data.title}</Text>
-    
-              {data.image ? (
-                <Image
-                  source={{
-                    uri: `https://rohaniyatweb-production-bf29.up.railway.app${encodeURI(
-                      data.image
-                    )}`,
-                  }}
-                  style={fehristStyles.image}
-                  resizeMode="contain"
-                />
-              ) : (
-                <Image
-                  source={require("../../assets/images/content-image.jpg")}
-                  style={fehristStyles.image}
-                  resizeMode="contain"
-                />
-              )}
-              <View style={fehristStyles.deatilContentWrapper}>
-                <RenderHTML
-                  contentWidth={width}
-                  source={{ html: data?.content || "<p>No Data Found</p>" }}
-                  tagsStyles={htmlStyles}
-                  systemFonts={["Jameel-Noori-Regular"]}
-                  defaultTextProps={{ selectable: true }}
-                  baseStyle={htmlBaseStyle}
-                />
-              </View>
-              <YoutubeButton />
-            </ScrollView>
+            <Image
+              source={require("../../assets/images/content-image.jpg")}
+              style={fehristStyles.image}
+              resizeMode="contain"
+            />
           )}
-        </CustomBackground>
+          <View style={fehristStyles.deatilContentWrapper}>
+            <RenderHTML
+              contentWidth={width}
+              source={{ html: data?.content || "<p>No Data Found</p>" }}
+              tagsStyles={htmlStyles}
+              systemFonts={["Jameel-Noori-Regular"]}
+              defaultTextProps={{ selectable: true }}
+              baseStyle={htmlBaseStyle}
+            />
+          </View>
+          <YoutubeButton />
+        </ScrollView>
+      )}
+    </CustomBackground>
   );
 }

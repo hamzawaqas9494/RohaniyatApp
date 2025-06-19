@@ -13,6 +13,15 @@ export const mainStyles = StyleSheet.create({
     textAlign: "right",
     writingDirection: "rtl",
   },
+  subheading:{
+  fontSize: 24,
+    paddingRight: 6,
+    lineHeight: 32,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
   description: {
     fontSize: 20,
     paddingRight: 4,
@@ -266,6 +275,11 @@ export const htmlStyles = StyleSheet.create({
 const CARD_MARGIN = 15;
 const CARD_WIDTH = (width - CARD_MARGIN * 3) / 2;
 export const rohaniDokan = StyleSheet.create({
+   container: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+  },
   card: {
     width: CARD_WIDTH,
     height: CARD_WIDTH * 1.1,
@@ -273,19 +287,14 @@ export const rohaniDokan = StyleSheet.create({
     overflow: "hidden",
     marginBottom: 14,
     marginRight: CARD_MARGIN,
-     cursor: "pointer",
   },
   image: {
     width: "100%",
     height: "100%",
     borderRadius: 5,
   },
-  container: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
-  },
 });
+
 //////////////////////rohani dokan or kutb style end////////////////////////////////
 ///////////////////////////////////form style start/////////////////////////////////
 export const formStyles = StyleSheet.create({
@@ -312,6 +321,7 @@ export const formStyles = StyleSheet.create({
   },
   pickerInput: {
     color: "#6C472D",
+    padding:1,
     flex: 1,
     marginHorizontal: 2,
     flex: 1,
@@ -335,7 +345,7 @@ export const formStyles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  modalContainer: {
+    modalContainer: {
     width: "80%",
     backgroundColor: "#fff",
     padding: 10,
@@ -354,7 +364,7 @@ export const backGround = StyleSheet.create({
     flex: 1,
     resizeMode: "cover",
     height: "100%",
-    width:"100%"
+    width: "100%",
   },
   container: {
     padding: 15,
@@ -471,27 +481,27 @@ export const splash = StyleSheet.create({
 });
 export const youtube = StyleSheet.create({
   container: {
-    width: '100%',
-    alignItems: 'center',
+    width: "100%",
+    alignItems: "center",
     marginTop: 40,
   },
   button: {
-    width: '80%',
-    flexDirection: 'row',
-    backgroundColor: 'rgb(108, 71, 45)',
+    width: "80%",
+    flexDirection: "row",
+    backgroundColor: "rgb(108, 71, 45)",
     paddingVertical: 10,
     paddingHorizontal: 16,
     borderRadius: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   icon: {
     marginRight: 5,
   },
   text: {
-    color: 'rgb(228, 218, 193)',
+    color: "rgb(228, 218, 193)",
     fontSize: 18,
-      fontFamily: "Jameel-Noori-Regular",
+    fontFamily: "Jameel-Noori-Regular",
   },
 });
 /////////////////////////////////component style end /////////////////////////////////
