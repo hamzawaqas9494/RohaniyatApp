@@ -297,7 +297,6 @@ export const rohaniDokan = StyleSheet.create({
 
 //////////////////////rohani dokan or kutb style end////////////////////////////////
 ///////////////////////////////////form style start/////////////////////////////////
-const isWeb = Platform.OS === "web";
 export const formStyles = StyleSheet.create({
   inputRow: {
     flex: 1,

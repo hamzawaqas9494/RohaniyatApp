@@ -58,7 +58,7 @@ export default function Kutbkifehrist() {
                 {item.image ? (
                   <Image
                     source={{
-                      uri: `https://rohaniyatweb-production-bf29.up.railway.app${item.image}`,
+                      uri: `https://rohaniyatweb-production-bf29.up.railway.app${encodeURI(item.image)}`,
                     }}
                     style={rohaniDokan.image}
                     resizeMode="contain"
