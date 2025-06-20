@@ -325,6 +325,11 @@ export const formStyles = StyleSheet.create({
     color: "#6C472D",
     fontSize: 16,
     backgroundColor: "#fff",
+    ...(Platform.OS === "web" && {
+      borderWidth: 1,
+      borderColor: "transparent",
+      outlineStyle: "none",
+    }),
   },
   datePickers: {
     flexDirection: "row",
@@ -339,6 +344,9 @@ export const formStyles = StyleSheet.create({
     backgroundColor: "#fff",
     ...(Platform.OS === "web" && {
       paddingVertical: 14,
+      borderWidth: 1,
+      borderColor: "transparent",
+      outlineStyle: "none",
     }),
   },
   button: {
