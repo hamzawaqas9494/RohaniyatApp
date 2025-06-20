@@ -144,8 +144,8 @@ const MareedForm = () => {
       setModalVisible(true);
     }
   };
-
   return (
+    <View style={formStyles.formContainer}>
     <CustomBackground>
         <KeyboardAvoidingView
           style={fehristStyles.container}
@@ -345,7 +345,7 @@ const MareedForm = () => {
           </KeyboardWrapper>
         </KeyboardAvoidingView>
     </CustomBackground>
+    </View>
   );
 };
-
 export default MareedForm;
