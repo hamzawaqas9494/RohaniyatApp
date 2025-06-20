@@ -13,8 +13,8 @@ export const mainStyles = StyleSheet.create({
     textAlign: "right",
     writingDirection: "rtl",
   },
-  subheading:{
-  fontSize: 24,
+  subheading: {
+    fontSize: 24,
     paddingRight: 6,
     lineHeight: 32,
     fontFamily: "Jameel-Noori-Regular",
@@ -32,7 +32,7 @@ export const mainStyles = StyleSheet.create({
   },
   tashkhesHeading: {
     fontSize: 28,
-    paddingTop: 4,
+    paddingTop: 5,
     paddingRight: 6,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
@@ -195,7 +195,6 @@ export const htmlStyles = StyleSheet.create({
     fontSize: 22,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
-    // lineHeight: 40,
     marginTop: 6,
     textAlign: "right",
     writingDirection: "rtl",
@@ -263,11 +262,19 @@ export const htmlStyles = StyleSheet.create({
   strong: {
     fontSize: 20,
     fontWeight: "bold",
-    // fontFamily: "Jameel-Noori-Regular",
     color: "red",
     lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",
+  },
+  mark: {
+    backgroundColor: "yellow",
+    color: "#6C472D",
+    borderRadius: 2,
+    paddingHorizontal: 2,
+    fontSize: 20,
+    fontFamily: "Jameel-Noori-Regular",
+    lineHeight: 30,
   },
 });
 //// ///////////////////////////////////blog-detail-pages style end ////////////////////
@@ -275,7 +282,7 @@ export const htmlStyles = StyleSheet.create({
 const CARD_MARGIN = 15;
 const CARD_WIDTH = (width - CARD_MARGIN * 3) / 2;
 export const rohaniDokan = StyleSheet.create({
-   container: {
+  container: {
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
@@ -298,6 +305,10 @@ export const rohaniDokan = StyleSheet.create({
 //////////////////////rohani dokan or kutb style end////////////////////////////////
 ///////////////////////////////////form style start/////////////////////////////////
 export const formStyles = StyleSheet.create({
+  formContainer: {
+    flex: 1,
+    overflow: "scroll",
+  },
   inputRow: {
     flex: 1,
     marginBottom: 8,
@@ -321,11 +332,14 @@ export const formStyles = StyleSheet.create({
   },
   pickerInput: {
     color: "#6C472D",
-    padding:1,
+    padding: 1,
     flex: 1,
     marginHorizontal: 2,
     flex: 1,
     backgroundColor: "#fff",
+    ...(Platform.OS === "web" && {
+      paddingVertical: 14,
+    }),
   },
   button: {
     backgroundColor: "#6C472D",
@@ -345,7 +359,7 @@ export const formStyles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-    modalContainer: {
+  modalContainer: {
     width: "80%",
     backgroundColor: "#fff",
     padding: 10,

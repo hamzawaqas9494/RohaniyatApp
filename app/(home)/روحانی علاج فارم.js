@@ -138,6 +138,7 @@ export default RohaniIlajForm = () => {
     }
   };
   return (
+    <View style={formStyles.formContainer}>
     <CustomBackground>
       <KeyboardAvoidingView
         style={fehristStyles.container}
@@ -318,6 +319,7 @@ export default RohaniIlajForm = () => {
         </KeyboardWrapper>
       </KeyboardAvoidingView>
     </CustomBackground>
+    </View>
   );
 };
 

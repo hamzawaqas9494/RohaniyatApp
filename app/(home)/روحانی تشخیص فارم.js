@@ -140,6 +140,7 @@ const RohaniTashkhesForm = () => {
     }
   };
   return (
+     <View style={formStyles.formContainer}>
     <CustomBackground>
       <KeyboardAvoidingView
         style={fehristStyles.container}
@@ -332,6 +333,7 @@ const RohaniTashkhesForm = () => {
        </KeyboardWrapper>
       </KeyboardAvoidingView>
     </CustomBackground>
+    </View>
   );
 };
 export default RohaniTashkhesForm;
