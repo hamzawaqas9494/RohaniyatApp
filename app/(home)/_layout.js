@@ -1,7 +1,8 @@
 import { FontAwesome } from '@expo/vector-icons';
 import { DrawerActions, useNavigation } from '@react-navigation/native';
 import { Stack } from "expo-router";
-import { StyleSheet, TouchableWithoutFeedback, View } from 'react-native';
+import { StyleSheet, TouchableWithoutFeedback, View,Platform } from 'react-native';
+
 const DrawerButton = () => {
   const navigation = useNavigation();
   const handleTap = () => {
@@ -9,7 +10,9 @@ const DrawerButton = () => {
   };
   return (
     <TouchableWithoutFeedback onPress={handleTap}>
-      <View>
+      <View style={{
+          cursor: Platform.OS === "web" ? "pointer" : "default",
+        }}>
         <FontAwesome name="bars" size={25} color="#6C472D" />
       </View>
     </TouchableWithoutFeedback>
@@ -35,7 +38,6 @@ export default function StackNavigator() {
             color: "#6C472D",
           },
           headerTitleAlign: "center",
-          
         }}
       >
         <Stack.Screen
