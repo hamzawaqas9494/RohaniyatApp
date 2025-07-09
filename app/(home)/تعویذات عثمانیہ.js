@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
 import { fehristStyles } from "../../style/globalcss";
+import { BASE_URL } from "../../config/api";
 export default function TavizatUsmaniakiFehrist() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -16,7 +17,7 @@ export default function TavizatUsmaniakiFehrist() {
 
   useEffect(() => {
     fetch(
-      "https://rohaniyatweb-production-bf29.up.railway.app/api/blog-data/get-table-data?tableName=tawizatusmaniya"
+      `${BASE_URL}/api/blog-data/get-table-data?tableName=tawizatusmaniya`
     )
       .then((res) => res.json())
       .then((result) => {

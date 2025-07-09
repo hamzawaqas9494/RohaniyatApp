@@ -10,6 +10,7 @@ import {
   View
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
+import { BASE_URL } from "../../config/api";
 import { fehristStyles, rohaniDokan } from "../../style/globalcss";
 const { width } = Dimensions.get("window");
 export default function Kutbkifehrist() {
@@ -18,7 +19,7 @@ export default function Kutbkifehrist() {
   const navigation = useNavigation();
   useEffect(() => {
     fetch(
-      "https://rohaniyatweb-production-bf29.up.railway.app/api/blog-data/get-table-data?tableName=qutb"
+      `${BASE_URL}/api/blog-data/get-table-data?tableName=qutb`
     )
       .then((res) => res.json())
       .then((result) => {

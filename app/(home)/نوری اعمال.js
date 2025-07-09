@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
   FlatList,
-  StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
 import { fehristStyles } from "../../style/globalcss";
+import { BASE_URL } from "../../config/api";
 export default function Nooriaamal() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -17,7 +17,7 @@ export default function Nooriaamal() {
 
   useEffect(() => {
     fetch(
-      "https://rohaniyatweb-production-bf29.up.railway.app/api/blog-data/get-table-data?tableName=nooriaamal"
+      `${BASE_URL}/api/blog-data/get-table-data?tableName=nooriaamal`
     )
       .then((res) => res.json())
       .then((result) => {

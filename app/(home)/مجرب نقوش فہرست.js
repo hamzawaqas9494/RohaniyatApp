@@ -5,18 +5,17 @@ import {
   FlatList,
   Text,
   TouchableOpacity,
-  View
+  View,
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
+import { BASE_URL } from "../../config/api";
 import { fehristStyles } from "../../style/globalcss";
 export default function MujrabNakoshkiFehrist() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
   useEffect(() => {
-    fetch(
-      "https://rohaniyatweb-production-bf29.up.railway.app/api/blog-data/get-table-data?tableName=taweez"
-    )
+    fetch(`${BASE_URL}/api/blog-data/get-table-data?tableName=taweez`)
       .then((res) => res.json())
       .then((result) => {
         setData(result.rows);
@@ -33,7 +32,9 @@ export default function MujrabNakoshkiFehrist() {
           </View>
         ) : data.length === 0 ? (
           <View style={fehristStyles.centerContent}>
-            <Text style={fehristStyles.noRecordText}>کوئی ریکارڈ موجود نہیں ہے</Text>
+            <Text style={fehristStyles.noRecordText}>
+              کوئی ریکارڈ موجود نہیں ہے
+            </Text>
           </View>
         ) : (
           <FlatList

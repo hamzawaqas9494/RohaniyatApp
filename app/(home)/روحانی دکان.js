@@ -10,13 +10,14 @@ import {
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
 import { fehristStyles, rohaniDokan } from "../../style/globalcss";
+import { BASE_URL } from "../../config/api";
 export default function RohaniDukan() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
   useEffect(() => {
     fetch(
-      "https://rohaniyatweb-production-bf29.up.railway.app/api/blog-data/get-table-data?tableName=rohanidokan"
+      `${BASE_URL}/api/blog-data/get-table-data?tableName=rohanidokan`
     )
       .then((res) => res.json())
       .then((result) => {

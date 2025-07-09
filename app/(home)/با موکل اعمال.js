@@ -9,13 +9,14 @@ import {
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
 import { fehristStyles } from "../../style/globalcss";
+import { BASE_URL } from "../../config/api";
 export default function Bamokalamal() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
   useEffect(() => {
     fetch(
-      "https://rohaniyatweb-production-bf29.up.railway.app/api/blog-data/get-table-data?tableName=bamokalamal"
+     `${BASE_URL}/api/blog-data/get-table-data?tableName=bamokalamal`
     )
       .then((res) => res.json())
       .then((result) => {

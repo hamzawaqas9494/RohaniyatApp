@@ -3,20 +3,20 @@ import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
   FlatList,
-  StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
 import { fehristStyles } from "../../style/globalcss";
+import { BASE_URL } from "../../config/api";
 export default function KhaasUlKhaasAamaal() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
   useEffect(() => {
     fetch(
-      "https://rohaniyatweb-production-bf29.up.railway.app/api/blog-data/get-table-data?tableName=khasulkhasammal"
+     `${BASE_URL}/api/blog-data/get-table-data?tableName=khasulkhasammal`
     )
       .then((res) => res.json())
       .then((result) => {

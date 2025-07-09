@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
   FlatList,
-  StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
+import { BASE_URL } from "../../config/api";
 import { fehristStyles } from "../../style/globalcss";
 export default function Alviamal() {
   const [data, setData] = useState([]);
@@ -16,7 +16,7 @@ export default function Alviamal() {
   const navigation = useNavigation();
   useEffect(() => {
     fetch(
-      "https://rohaniyatweb-production-bf29.up.railway.app/api/blog-data/get-table-data?tableName=alviamal"
+      `${BASE_URL}/api/blog-data/get-table-data?tableName=alviamal`
     )
       .then((res) => res.json())
       .then((result) => {
