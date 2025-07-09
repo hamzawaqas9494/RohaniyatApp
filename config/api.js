@@ -1,1 +1,1 @@
-export const BASE_URL = "https://idrarohaniyat.up.railway.app";
+export const BASE_URL = "https://idararohaniyat.up.railway.app";
