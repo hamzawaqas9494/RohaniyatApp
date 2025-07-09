@@ -4,20 +4,20 @@ import {
   ActivityIndicator,
   Image,
   ScrollView,
-  StyleSheet,
   Text,
   useWindowDimensions,
-  View,
+  View
 } from "react-native";
+import RenderHTML from "react-native-render-html";
+import CustomBackground from "../../components/Background/Background";
+import YoutubeButton from "../../components/youtubeButton/youtubeVideo";
+import { BASE_URL } from "../../config/api";
 import {
   fehristStyles,
   htmlBaseStyle,
   htmlStyles,
   mainStyles,
 } from "../../style/globalcss";
-import RenderHTML from "react-native-render-html";
-import CustomBackground from "../../components/Background/Background";
-import YoutubeButton from "../../components/youtubeButton/youtubeVideo";
 export default function SifliTaweezatKiTafseel() {
   const route = useRoute();
   const { id } = route.params;
@@ -28,7 +28,7 @@ export default function SifliTaweezatKiTafseel() {
     const fetchDetails = async () => {
       try {
         const response = await fetch(
-          `https://rohaniyatweb-production-bf29.up.railway.app/api/blog-data/get-table-data?tableName=saflitavezat&id=${id}`
+          `${BASE_URL}/api/blog-data/get-table-data?tableName=saflitavezat&id=${id}`
         );
         const result = await response.json();
         setData(result.rows[0]);
@@ -58,7 +58,7 @@ export default function SifliTaweezatKiTafseel() {
               {data.image ? (
                 <Image
                   source={{
-                    uri: `https://rohaniyatweb-production-bf29.up.railway.app${encodeURI(
+                    uri: `${BASE_URL}${encodeURI(
                       data.image
                     )}`,
                   }}

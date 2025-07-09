@@ -8,15 +8,16 @@ import {
   useWindowDimensions,
   View,
 } from "react-native";
+import RenderHTML from "react-native-render-html";
+import CustomBackground from "../../components/Background/Background";
+import YoutubeButton from "../../components/youtubeButton/youtubeVideo";
+import { BASE_URL } from "../../config/api";
 import {
   fehristStyles,
   htmlBaseStyle,
   htmlStyles,
   mainStyles,
 } from "../../style/globalcss";
-import RenderHTML from "react-native-render-html";
-import CustomBackground from "../../components/Background/Background";
-import YoutubeButton from "../../components/youtubeButton/youtubeVideo";
 export default function RohaniDukanKiTafseel() {
   const route = useRoute();
   const { id } = route.params;
@@ -27,7 +28,7 @@ export default function RohaniDukanKiTafseel() {
     const fetchDetails = async () => {
       try {
         const response = await fetch(
-          `https://rohaniyatweb-production-bf29.up.railway.app/api/blog-data/get-table-data?tableName=rohanidokan&id=${id}`
+          `${BASE_URL}/api/blog-data/get-table-data?tableName=rohanidokan&id=${id}`
         );
         const result = await response.json();
         setData(result.rows[0]);
@@ -58,7 +59,7 @@ export default function RohaniDukanKiTafseel() {
           {data.image ? (
             <Image
               source={{
-                uri: `https://rohaniyatweb-production-bf29.up.railway.app${encodeURI(data.image)}`,
+                uri: `${BASE_URL}${encodeURI(data.image)}`,
               }}
               style={fehristStyles.image}
               resizeMode="contain"

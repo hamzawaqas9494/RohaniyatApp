@@ -11,6 +11,7 @@ import {
 import RenderHTML from "react-native-render-html";
 import CustomBackground from "../../components/Background/Background";
 import YoutubeButton from "../../components/youtubeButton/youtubeVideo";
+import { BASE_URL } from "../../config/api";
 import {
   fehristStyles,
   htmlBaseStyle,
@@ -27,7 +28,7 @@ export default function NooriAamaalKiTafseel() {
     const fetchDetails = async () => {
       try {
         const response = await fetch(
-          `https://rohaniyatweb-production-bf29.up.railway.app/api/blog-data/get-table-data?tableName=nooriaamal&id=${id}`
+          `${BASE_URL}/api/blog-data/get-table-data?tableName=nooriaamal&id=${id}`
         );
         const result = await response.json();
         setData(result.rows[0]);
@@ -56,7 +57,7 @@ export default function NooriAamaalKiTafseel() {
                   {data.image ? (
                     <Image
                       source={{
-                        uri: `https://rohaniyatweb-production-bf29.up.railway.app${encodeURI(
+                        uri: `${BASE_URL}${encodeURI(
                           data.image
                         )}`,
                       }}

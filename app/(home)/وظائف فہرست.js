@@ -8,6 +8,7 @@ import {
   View
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
+import { BASE_URL } from "../../config/api";
 import { fehristStyles } from "../../style/globalcss";
 export default function Wazaiffehrist() {
   const [data, setData] = useState([]);
@@ -15,7 +16,7 @@ export default function Wazaiffehrist() {
   const navigation = useNavigation();
   useEffect(() => {
     fetch(
-      "https://rohaniyatweb-production-bf29.up.railway.app/api/blog-data/get-table-data?tableName=wazaif"
+      `${BASE_URL}/api/blog-data/get-table-data?tableName=wazaif`
     )
       .then((res) => res.json())
       .then((result) => {
