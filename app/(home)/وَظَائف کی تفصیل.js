@@ -57,15 +57,13 @@ export default function Wazaifkitafseel() {
           <Text style={mainStyles.heading}>{data.title}</Text>
 
           {data.image ? (
+          
+           
             <Image
-              source={{
-                uri: `${BASE_URL}${encodeURI(
-                  data.image
-                )}`,
-              }}
-              style={fehristStyles.image}
-              resizeMode="contain"
-            />
+  source={{ uri: data.image}}
+  style={fehristStyles.image}
+  resizeMode="contain"
+/>
           ) : (
             <Image
               source={require("../../assets/images/content-image.jpg")}
