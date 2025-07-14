@@ -1,13 +1,12 @@
 {
   "expo": {
-   "name": "rohaniyatversion2",
+    "name": "IdaraRohaniyat",
     "slug": "rohaniyatversion2",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/logo.png",
     "scheme": "idararohaniyat",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
     "splash": {
       "image": "./assets/images/defultsplash.png",
       "backgroundColor": "#E4DAC1"
@@ -19,21 +18,20 @@
     },
     "android": {
       "package": "com.creationnext.idararohaniyat",
+      "versionCode": 1,
       "permissions": [
         "INTERNET",
         "ACCESS_FINE_LOCATION",
-        "CAMERA",
-        "READ_EXTERNAL_STORAGE",
-        "WRITE_EXTERNAL_STORAGE"
+        "CAMERA"
       ],
       "icon": "./assets/images/app-icon.png",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/logo.png",
-             "backgroundColor": "#E4DAC1"
+        "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./assets/images/IdaraRohaniyatLogo.png",
+      "favicon": "./assets/images/main-logo.png",
       "name": "Idara Rohaniyat",
       "themeColor": "#E4DAC1",
       "backgroundColor": "#E4DAC1",

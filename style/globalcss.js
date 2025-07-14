@@ -508,7 +508,6 @@ export const youtube = StyleSheet.create({
     marginTop: 40,
   },
   button: {
-    width: "80%",
     flexDirection: "row",
     backgroundColor: "rgb(108, 71, 45)",
     paddingVertical: 10,
