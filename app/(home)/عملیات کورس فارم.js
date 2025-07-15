@@ -147,8 +147,8 @@ const AmliyatCourse = () => {
   };
 
   return (
+    <CustomBackground>
     <View style={formStyles.formContainer}>
-      <CustomBackground>
         <KeyboardAvoidingView
           style={fehristStyles.container}
           behavior={Platform.OS === "ios" ? "padding" : undefined}
@@ -349,8 +349,8 @@ const AmliyatCourse = () => {
             </ScrollView>
           </KeyboardWrapper>
         </KeyboardAvoidingView>
-      </CustomBackground>
     </View>
+    </CustomBackground>
   );
 };
 export default AmliyatCourse;
