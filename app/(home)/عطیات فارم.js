@@ -147,8 +147,8 @@ const AttiyatForm = () => {
   };
 
   return (
-     <View style={formStyles.formContainer}>
     <CustomBackground>
+     <View style={formStyles.formContainer}>
       <KeyboardAvoidingView
         style={fehristStyles.container}
         behavior={Platform.OS === "ios" ? "padding" : undefined}
@@ -345,8 +345,8 @@ const AttiyatForm = () => {
           </ScrollView>
      </KeyboardWrapper>
       </KeyboardAvoidingView>
-    </CustomBackground>
     </View>
+    </CustomBackground>
   );
 };
 export default AttiyatForm;

@@ -139,8 +139,8 @@ export default RohaniIlajForm = () => {
     }
   };
   return (
-    <View style={formStyles.formContainer}>
     <CustomBackground>
+    <View style={formStyles.formContainer}>
       <KeyboardAvoidingView
         style={fehristStyles.container}
         behavior={Platform.OS === "ios" ? "padding" : undefined}
@@ -319,8 +319,8 @@ export default RohaniIlajForm = () => {
           </ScrollView>
         </KeyboardWrapper>
       </KeyboardAvoidingView>
-    </CustomBackground>
     </View>
+    </CustomBackground>
   );
 };
 
