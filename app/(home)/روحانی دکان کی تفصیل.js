@@ -56,11 +56,9 @@ export default function RohaniDukanKiTafseel() {
         <ScrollView>
           <Text style={mainStyles.heading}>{data.title}</Text>
 
-          {data.image ? (
+           {data.image ? (
             <Image
-              source={{
-                uri: `${BASE_URL}${encodeURI(data.image)}`,
-              }}
+              source={{ uri: data.image }}
               style={fehristStyles.image}
               resizeMode="contain"
             />

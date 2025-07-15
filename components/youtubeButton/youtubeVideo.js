@@ -10,7 +10,7 @@ export default function YouTubeButton() {
   return (
     <View style={youtube.container}>
       <Pressable style={youtube.button} onPress={handlePress}>
-        <FontAwesome name="youtube-play" size={22} color="rgb(228, 218, 193)" style={youtube.icon} />
+        <FontAwesome name="youtube-play" size={22} color="rgba(255, 255, 255, 1)" style={youtube.icon} />
         <Text style={youtube.text}>مزید تفصیلات کے لیے یوٹیوب لنک وزٹ کریں۔</Text>
       </Pressable>
     </View>

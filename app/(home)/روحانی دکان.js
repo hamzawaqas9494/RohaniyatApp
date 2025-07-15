@@ -9,8 +9,8 @@ import {
   View,
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
-import { fehristStyles, rohaniDokan } from "../../style/globalcss";
 import { BASE_URL } from "../../config/api";
+import { fehristStyles, rohaniDokan } from "../../style/globalcss";
 export default function RohaniDukan() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -56,9 +56,7 @@ export default function RohaniDukan() {
               >
                 {item.image ? (
                   <Image
-                    source={{
-                      uri: `https://rohaniyatweb-production-bf29.up.railway.app${encodeURI(item.image)}`,
-                    }}
+                    source={{ uri: item.image }}
                     style={rohaniDokan.image}
                     resizeMode="contain"
                   />

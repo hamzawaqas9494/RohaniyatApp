@@ -7,7 +7,7 @@ import {
   Image,
   Text,
   TouchableOpacity,
-  View
+  View,
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
 import { BASE_URL } from "../../config/api";
@@ -18,9 +18,7 @@ export default function Kutbkifehrist() {
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
   useEffect(() => {
-    fetch(
-      `${BASE_URL}/api/blog-data/get-table-data?tableName=qutb`
-    )
+    fetch(`${BASE_URL}/api/blog-data/get-table-data?tableName=qutb`)
       .then((res) => res.json())
       .then((result) => {
         setData(result.rows);
@@ -58,9 +56,7 @@ export default function Kutbkifehrist() {
               >
                 {item.image ? (
                   <Image
-                    source={{
-                      uri: `https://rohaniyatweb-production-bf29.up.railway.app${encodeURI(item.image)}`,
-                    }}
+                    source={{ uri: item.image }}
                     style={rohaniDokan.image}
                     resizeMode="contain"
                   />

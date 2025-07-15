@@ -50,20 +50,20 @@ export default function Wazaifkitafseel() {
         </View>
       ) : !data ? (
         <View style={fehristStyles.centerContent}>
-          <Text style={fehristStyles.noRecordText}>کوئی ریکارڈ موجود نہیں ہے</Text>
+          <Text style={fehristStyles.noRecordText}>
+            کوئی ریکارڈ موجود نہیں ہے
+          </Text>
         </View>
       ) : (
         <ScrollView>
           <Text style={mainStyles.heading}>{data.title}</Text>
 
           {data.image ? (
-          
-           
             <Image
-  source={{ uri: data.image}}
-  style={fehristStyles.image}
-  resizeMode="contain"
-/>
+              source={{ uri: data.image }}
+              style={fehristStyles.image}
+              resizeMode="contain"
+            />
           ) : (
             <Image
               source={require("../../assets/images/content-image.jpg")}
@@ -88,4 +88,3 @@ export default function Wazaifkitafseel() {
     </CustomBackground>
   );
 }
-// push with new code

@@ -13,6 +13,7 @@ import {
   View,
 } from "react-native";
 import CustomBackground from "../../components/Background/Background";
+import { BASE_URL } from "../../config/api";
 import { fehristStyles, formStyles, mainStyles } from "../../style/globalcss";
 const isMobile = Platform.OS === "ios" || Platform.OS === "android";
 const KeyboardWrapper = ({ children }) => {
@@ -95,7 +96,7 @@ const RohaniTashkhesForm = () => {
     if (Object.keys(formErrors).length === 0) {
       try {
         const response = await fetch(
-          "https://rohaniyatweb-production-99fc.up.railway.app/api/rohani_tashkhees_form",
+          `${BASE_URL}/api/app-form-routes/rohani_tashkhees_form`,
           {
             method: "POST",
             headers: {

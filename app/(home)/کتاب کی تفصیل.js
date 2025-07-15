@@ -52,11 +52,7 @@ export default function Kutbkitafseel() {
 
           {data.image ? (
             <Image
-              source={{
-                uri: `${BASE_URL}${encodeURI(
-                  data.image
-                )}`,
-              }}
+              source={{ uri: data.image }}
               style={fehristStyles.image}
               resizeMode="contain"
             />

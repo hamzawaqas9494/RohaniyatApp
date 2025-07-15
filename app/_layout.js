@@ -7,24 +7,20 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import { StyleSheet, TouchableWithoutFeedback, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import SplashScreenComponent from "../components/SplashScreen/splash";
-
 SplashScreen.preventAutoHideAsync();
-
 export default function Layout() {
   const [fontsLoaded] = useFonts({
     "Jameel-Noori-Regular": require("../assets/fonts/JameelNooriNastaleeqRegular.ttf"),
      "Noori-Regular": require("../assets/fonts/NotoNastaliqUrdu-Regular.ttf"),
+     "Jameel-Noori-Italic": require("../assets/fonts/JameelNooriNastaleeqItalic.ttf"),
   });
-
   const [isSplashVisible, setSplashVisible] = useState(true);
-
   useLayoutEffect(() => {
     const hide = async () => {
       await SplashScreen.hideAsync();
     };
     hide();
   }, []);
-
   useEffect(() => {
     if (fontsLoaded) {
       const timer = setTimeout(() => {
@@ -33,17 +29,14 @@ export default function Layout() {
       return () => clearTimeout(timer);
     }
   }, [fontsLoaded]);
-
   if (!fontsLoaded || isSplashVisible) {
     return <SplashScreenComponent />;
   }
   const DrawerButton = () => {
     const navigation = useNavigation();
-
     const handleTap = () => {
       navigation.dispatch(DrawerActions.openDrawer());
     };
-
     return (
       <TouchableWithoutFeedback onPress={handleTap}>
         <View style={styles.floatingButton}>
@@ -88,7 +81,7 @@ export default function Layout() {
             headerShown: true,
             headerRight: () => <DrawerButton />,
             drawerIcon: ({ color, size }) => (
-              <FontAwesome name="address-card" size={size} color={color} />
+              <FontAwesome name="address-card" size={size} color={color}/>
             ),
           }}
         />
