@@ -187,7 +187,6 @@ export const htmlStyles = StyleSheet.create({
     fontSize: 24,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
-    lineHeight: 40,
     textAlign: "right",
     writingDirection: "rtl",
   },
@@ -195,17 +194,45 @@ export const htmlStyles = StyleSheet.create({
     fontSize: 22,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
-    marginTop: 6,
     textAlign: "right",
     writingDirection: "rtl",
   },
   h4: {
-    fontSize: 24,
+    fontSize: 20,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
-    lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",
+  },
+  h5: {
+    fontSize: 18,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl", 
+    ...(Platform.OS === "web" && {
+     fontSize: 18,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    lineHeight:0,
+    textAlign: "right",
+    writingDirection: "rtl",
+    }),
+  },
+  h6: {
+    fontSize: 16,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+    ...(Platform.OS === "web" && {
+     fontSize: 16,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    lineHeight:0,
+    textAlign: "right",
+    writingDirection: "rtl",
+    }),
   },
   ul: {
     margin: 0,
@@ -276,6 +303,12 @@ export const htmlStyles = StyleSheet.create({
     fontFamily: "Jameel-Noori-Regular",
     lineHeight: 30,
   },
+   em: {
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+    fontFamily: 'Jameel-Noori-Italic',
+  },
 });
 //// ///////////////////////////////////blog-detail-pages style end ////////////////////
 ///////////////////////////////rohani dokan or kutb style start/////////////////////////////////
@@ -299,6 +332,7 @@ export const rohaniDokan = StyleSheet.create({
     width: "100%",
     height: "100%",
     borderRadius: 5,
+    objectFit: "cover",
   },
 });
 
@@ -520,7 +554,7 @@ export const youtube = StyleSheet.create({
     marginRight: 5,
   },
   text: {
-    color: "rgb(228, 218, 193)",
+    color: "rgba(255, 255, 255, 1)",
     fontSize: 18,
     fontFamily: "Jameel-Noori-Regular",
   },

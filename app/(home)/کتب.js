@@ -57,13 +57,13 @@ export default function Kutbkifehrist() {
                 {item.image ? (
                   <Image
                     source={{ uri: item.image }}
-                    style={fehristStyles.image}
+                    style={rohaniDokan.image}
                     resizeMode="contain"
                   />
                 ) : (
                   <Image
                     source={require("../../assets/images/content-image.jpg")}
-                    style={fehristStyles.image}
+                    style={rohaniDokan.image}
                     resizeMode="contain"
                   />
                 )}
