@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Animated, Dimensions, Image, StyleSheet, View } from "react-native";
+import { Animated, Dimensions, Image, View } from "react-native";
 import { splash } from "../../style/globalcss";
 const { height } = Dimensions.get("window");
 

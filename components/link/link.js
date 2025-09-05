@@ -1,10 +1,9 @@
 import {
-  Dimensions,
   Image,
   Linking,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from "react-native";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import { links } from "../../style/globalcss";
