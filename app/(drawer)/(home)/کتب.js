@@ -54,19 +54,15 @@ export default function Kutbkifehrist() {
                   })
                 }
               >
-                {item.image ? (
-                  <Image
-                    source={{ uri: item.image }}
-                    style={rohaniDokan.image}
-                    resizeMode="contain"
-                  />
-                ) : (
-                  <Image
-                    source={require("../../../assets/images/content-image.jpg")}
-                    style={rohaniDokan.image}
-                    resizeMode="contain"
-                  />
-                )}
+{data.image && (
+  <Image
+    source={{ uri: data.image }}
+    style={fehristStyles.image}
+    resizeMode="contain"
+  />
+)}
+
+
               </TouchableOpacity>
             )}
           />

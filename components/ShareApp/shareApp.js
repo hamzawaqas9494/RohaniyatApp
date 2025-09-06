@@ -7,8 +7,7 @@ import {
   Platform,
   Pressable,
   Share,
-  View,
-  useWindowDimensions,
+  View
 } from "react-native";
 import { shareApp } from "../../style/globalcss";
 const AppMenuDropdown = () => {
