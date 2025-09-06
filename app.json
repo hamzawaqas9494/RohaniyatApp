@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "IdaraRohaniyat",
-    "slug": "rohaniyatversion2",
+    "slug": "rohaniyatversion",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/logo.png",
@@ -39,10 +39,9 @@
     },
     "extra": {
       "eas": {
-        "projectId": "42bc65ad-84c8-4542-98d0-7bb90904d628"
-      },
-      "router": {}
+        "projectId": "0cb97dfe-79a2-4acb-8736-bd10f15a3c55"
+      }
     },
-    "owner": "anamgulzar"
+    "owner": "rohaniyat"
   }
 }
