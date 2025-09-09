@@ -12,6 +12,9 @@ export const mainStyles = StyleSheet.create({
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
+          overflow: "visible", 
+    
+    
   },
   subheading: {
     fontSize: 24,
@@ -168,6 +171,7 @@ export const htmlStyles = StyleSheet.create({
     writingDirection: "rtl",
     lineHeight: 30,
     whiteSpace: "pre-wrap",
+     
   },
   span: {
     fontSize: 20,
@@ -182,6 +186,7 @@ export const htmlStyles = StyleSheet.create({
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
+      overflow: "visible", 
   },
   h2: {
     fontSize: 24,
@@ -288,11 +293,11 @@ export const htmlStyles = StyleSheet.create({
   },
   strong: {
     fontSize: 20,
-    fontWeight: "bold",
     color: "red",
-    lineHeight: 30,
+    lineHeight: undefined,
     textAlign: "right",
     writingDirection: "rtl",
+    fontFamily: "Amiri-Bold",
   },
   mark: {
     backgroundColor: "yellow",

@@ -1,9 +1,9 @@
 import { useNavigation } from "@react-navigation/native";
 import {
-    FlatList,
-    Text,
-    TouchableOpacity,
-    View
+  FlatList,
+  Text,
+  TouchableOpacity,
+  View
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 import { fehristStyles } from "../../../style/globalcss";

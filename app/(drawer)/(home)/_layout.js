@@ -33,11 +33,13 @@ export default function StackNavigator() {
           },
           headerTintColor: "#6C472D",
           headerTitleStyle: {
-            fontFamily: "Noori-Regular",
-            fontSize: 15,
+            fontFamily: "Jameel-Noori-Regular",
+             overflow: "visible", 
+            fontSize: 22,
             color: "#6C472D",
           },
           headerTitleAlign: "center",
+            flexWrap: "wrap",
         }}
       >
         <Stack.Screen
