@@ -5,9 +5,10 @@ import {
   Dimensions,
   FlatList,
   Image,
+  Platform,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 import { BASE_URL } from "../../../config/api";
@@ -26,6 +27,12 @@ export default function Kutbkifehrist() {
       .catch((error) => console.error("Error fetching data:", error))
       .finally(() => setLoading(false));
   }, []);
+
+  
+const numCols =
+  Platform.OS === "web" && width > 768 // web ya large tab screens
+    ? 3
+    : 2; // default mobile par 2
   return (
     <CustomBackground>
       <View style={fehristStyles.container}>
@@ -43,7 +50,7 @@ export default function Kutbkifehrist() {
           <FlatList
             data={data}
             keyExtractor={(item) => item.id.toString()}
-            numColumns={2} // 2 کالم
+            numColumns={numCols} // 2 کالم
             columnWrapperStyle={rohaniDokan.spaceHorizontally}
             renderItem={({ item }) => (
               <TouchableOpacity

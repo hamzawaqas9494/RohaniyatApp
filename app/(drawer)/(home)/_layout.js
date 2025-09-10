@@ -39,7 +39,7 @@ export default function StackNavigator() {
             color: "#6C472D",
           },
           headerTitleAlign: "center",
-            flexWrap: "wrap",
+          
         }}
       >
         <Stack.Screen

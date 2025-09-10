@@ -12,6 +12,7 @@ export default function Layout() {
   const [fontsLoaded] = useFonts({
     "Jameel-Noori-Regular": require("../../assets/fonts/JameelNooriNastaleeqRegular.ttf"),
     "Amiri-Bold": require("../../assets/fonts/Amiri-Bold.ttf"),
+     "ScheherazadeNew-Bold": require("../../assets/fonts/ScheherazadeNew-Bold.ttf"),
   });
   const [isSplashVisible, setSplashVisible] = useState(true);
   useLayoutEffect(() => {

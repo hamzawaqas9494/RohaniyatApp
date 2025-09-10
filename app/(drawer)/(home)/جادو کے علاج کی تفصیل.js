@@ -1,22 +1,22 @@
 import { useRoute } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import {
-    ActivityIndicator,
-    Image,
-    ScrollView,
-    Text,
-    useWindowDimensions,
-    View,
+  ActivityIndicator,
+  Image,
+  ScrollView,
+  Text,
+  useWindowDimensions,
+  View,
 } from "react-native";
 import RenderHTML from "react-native-render-html";
 import CustomBackground from "../../../components/Background/Background";
 import YoutubeButton from "../../../components/youtubeButton/youtubeVideo";
 import { BASE_URL } from "../../../config/api";
 import {
-    fehristStyles,
-    htmlBaseStyle,
-    htmlStyles,
-    mainStyles,
+  fehristStyles,
+  htmlBaseStyle,
+  htmlStyles,
+  mainStyles,
 } from "../../../style/globalcss";
 export default function JadujinnatkailajTafseel() {
   const route = useRoute();
@@ -66,7 +66,7 @@ export default function JadujinnatkailajTafseel() {
                  contentWidth={width}
                  source={{ html: data?.content || "<p>No Data Found</p>" }}
                  tagsStyles={htmlStyles}
-                   systemFonts={["Jameel-Noori-Regular", "Amiri-Bold"]}
+                systemFonts={["Jameel-Noori-Regular", "Amiri-Bold","ScheherazadeNew-Bold"]}
                  defaultTextProps={{ selectable: true }}
                  baseStyle={htmlBaseStyle}
                />

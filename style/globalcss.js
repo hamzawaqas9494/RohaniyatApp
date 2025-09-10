@@ -297,7 +297,7 @@ export const htmlStyles = StyleSheet.create({
     lineHeight: undefined,
     textAlign: "right",
     writingDirection: "rtl",
-    fontFamily: "Amiri-Bold",
+    fontFamily: "ScheherazadeNew-Bold",
   },
   mark: {
     backgroundColor: "yellow",

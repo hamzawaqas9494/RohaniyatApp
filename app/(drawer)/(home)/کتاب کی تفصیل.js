@@ -63,7 +63,7 @@ export default function Kutbkitafseel() {
               contentWidth={width}
               source={{ html: data?.content || "<p>No Data Found</p>" }}
               tagsStyles={htmlStyles}
-                systemFonts={["Jameel-Noori-Regular", "Amiri-Bold"]}
+             systemFonts={["Jameel-Noori-Regular", "Amiri-Bold","ScheherazadeNew-Bold"]}
               defaultTextProps={{ selectable: true }}
               baseStyle={htmlBaseStyle}
             />
