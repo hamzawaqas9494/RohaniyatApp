@@ -12,7 +12,7 @@ export const mainStyles = StyleSheet.create({
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
-          overflow: "visible", 
+    overflow: "visible", 
     
     
   },
@@ -125,6 +125,7 @@ export const fehristStyles = StyleSheet.create({
     marginTop: 10,
     width: "100%",
     height: 300,
+    // backgroundColor:"red"
   },
   deatilContentWrapper: {
     textAlign: "right",

@@ -11,7 +11,7 @@ import {
 import RenderHTML from "react-native-render-html";
 import CustomBackground from "../../../components/Background/Background";
 import YoutubeButton from "../../../components/youtubeButton/youtubeVideo";
-import { BASE_URL } from "../../../config/api";
+import { BASE_URL, BASE_URL_IMG } from "../../../config/api";
 import {
   fehristStyles,
   htmlBaseStyle,
@@ -58,10 +58,10 @@ export default function RohaniDukanKiTafseel() {
 
           {data.image && (
   <Image
-    source={{ uri: data.image }}
-    style={fehristStyles.image}
-    resizeMode="contain"
-  />
+     source={{ uri: `${BASE_URL_IMG}${item.image}` }}
+     style={fehristStyles.image}
+     resizeMode="contain"
+   />
 )}
 
           <View style={fehristStyles.deatilContentWrapper}>

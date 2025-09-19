@@ -7,8 +7,14 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import { StyleSheet, TouchableWithoutFeedback, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import SplashScreenComponent from "../../components/SplashScreen/splash";
+
+
 SplashScreen.preventAutoHideAsync();
+
+
 export default function Layout() {
+
+  
   const [fontsLoaded] = useFonts({
     "Jameel-Noori-Regular": require("../../assets/fonts/JameelNooriNastaleeqRegular.ttf"),
     "Amiri-Bold": require("../../assets/fonts/Amiri-Bold.ttf"),

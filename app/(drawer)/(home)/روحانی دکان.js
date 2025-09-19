@@ -1,15 +1,15 @@
 import { useNavigation } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import {
-    ActivityIndicator,
-    FlatList,
-    Image,
-    Text,
-    TouchableOpacity,
-    View,
+  ActivityIndicator,
+  FlatList,
+  Image,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-import { BASE_URL } from "../../../config/api";
+import { BASE_URL, BASE_URL_IMG } from "../../../config/api";
 import { fehristStyles, rohaniDokan } from "../../../style/globalcss";
 export default function RohaniDukan() {
   const [data, setData] = useState([]);
@@ -55,12 +55,12 @@ export default function RohaniDukan() {
                 }
               >
               
-      {data.image && (
-  <Image
-    source={{ uri: data.image }}
-    style={fehristStyles.image}
-    resizeMode="contain"
-  />
+      {item.image && (
+ <Image
+     source={{ uri: `${BASE_URL_IMG}${item.image}` }}
+     style={fehristStyles.image}
+     resizeMode="contain"
+   />
 )}
 
 

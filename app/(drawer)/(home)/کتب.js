@@ -11,7 +11,7 @@ import {
   View
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-import { BASE_URL } from "../../../config/api";
+import { BASE_URL, BASE_URL_IMG } from "../../../config/api";
 import { fehristStyles, rohaniDokan } from "../../../style/globalcss";
 const { width } = Dimensions.get("window");
 export default function Kutbkifehrist() {
@@ -61,9 +61,9 @@ const numCols =
                   })
                 }
               >
-{data.image && (
+{item.image && (
   <Image
-    source={{ uri: data.image }}
+    source={{ uri: `${BASE_URL_IMG}${item.image}` }}
     style={fehristStyles.image}
     resizeMode="contain"
   />

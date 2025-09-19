@@ -1,19 +1,19 @@
 import { Picker } from "@react-native-picker/picker";
 import { useEffect, useState } from "react";
 import {
-    Keyboard,
-    KeyboardAvoidingView,
-    Modal,
-    Platform,
-    ScrollView,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    TouchableWithoutFeedback,
-    View,
+  Keyboard,
+  KeyboardAvoidingView,
+  Modal,
+  Platform,
+  ScrollView,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  View,
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-import { BASE_URL } from "../../../config/api";
+import { BASE_URL_KHIDMAAT } from "../../../config/api";
 import { fehristStyles, formStyles, mainStyles } from "../../../style/globalcss";
 const isMobile = Platform.OS === "ios" || Platform.OS === "android";
 const KeyboardWrapper = ({ children }) => {
@@ -101,7 +101,7 @@ const MareedForm = () => {
     if (Object.keys(formErrors).length === 0) {
       try {
         const response = await fetch(
-            `${BASE_URL}/api/app-form-routes/mureed_form`,
+            `${BASE_URL_KHIDMAAT}/mureed_form`,
           {
             method: "POST",
             headers: {
