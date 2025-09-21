@@ -5,19 +5,21 @@ import {
   Dimensions,
   FlatList,
   Image,
-  Platform,
   Text,
   TouchableOpacity,
-  View
+  View,
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 import { BASE_URL, BASE_URL_IMG } from "../../../config/api";
 import { fehristStyles, rohaniDokan } from "../../../style/globalcss";
+
 const { width } = Dimensions.get("window");
+
 export default function Kutbkifehrist() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
+
   useEffect(() => {
     fetch(`${BASE_URL}/get?tableName=qutb`)
       .then((res) => res.json())
@@ -28,11 +30,15 @@ export default function Kutbkifehrist() {
       .finally(() => setLoading(false));
   }, []);
 
-  
-const numCols =
-  Platform.OS === "web" && width > 768 // web ya large tab screens
-    ? 3
-    : 2; // default mobile par 2
+  // Responsive columns
+  const getNumCols = () => {
+    if (width < 400) return 1;
+    if (width < 640) return 2;
+    if (width < 768) return 3;
+    if (width < 1024) return 4;
+    return 5;
+  };
+
   return (
     <CustomBackground>
       <View style={fehristStyles.container}>
@@ -50,8 +56,7 @@ const numCols =
           <FlatList
             data={data}
             keyExtractor={(item) => item.id.toString()}
-            numColumns={numCols} // 2 کالم
-            columnWrapperStyle={rohaniDokan.spaceHorizontally}
+            numColumns={getNumCols()} // dynamically set columns
             renderItem={({ item }) => (
               <TouchableOpacity
                 style={rohaniDokan.card}
@@ -61,15 +66,13 @@ const numCols =
                   })
                 }
               >
-{item.image && (
-  <Image
-    source={{ uri: `${BASE_URL_IMG}${item.image}` }}
-    style={fehristStyles.image}
-    resizeMode="contain"
-  />
-)}
-
-
+                {item.image && (
+                  <Image
+                    source={{ uri: `${BASE_URL_IMG}${item.image}` }}
+                    style={fehristStyles.image}
+                   
+                  />
+                )}
               </TouchableOpacity>
             )}
           />

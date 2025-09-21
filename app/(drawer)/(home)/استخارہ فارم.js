@@ -95,7 +95,7 @@ const IstakharaForm = () => {
     if (Object.keys(formErrors).length === 0) {
       try {
         const response = await fetch(
-          `${BASE_URL_KHIDMAAT}/istakhara_form`,
+         `${BASE_URL_KHIDMAAT}/istakhara_form`,
           {
             method: "POST",
             headers: {

@@ -101,7 +101,7 @@ const MareedForm = () => {
     if (Object.keys(formErrors).length === 0) {
       try {
         const response = await fetch(
-            `${BASE_URL_KHIDMAAT}/mureed_form`,
+         `${BASE_URL_KHIDMAAT}/mureed_form`,
           {
             method: "POST",
             headers: {

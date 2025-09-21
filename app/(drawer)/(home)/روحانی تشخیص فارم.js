@@ -96,7 +96,7 @@ const RohaniTashkhesForm = () => {
     if (Object.keys(formErrors).length === 0) {
       try {
         const response = await fetch(
-          `${BASE_URL_KHIDMAAT}/rohani_tashkhees_form`,
+         `${BASE_URL_KHIDMAAT}/rohani_tashkhees_form`,
           {
             method: "POST",
             headers: {

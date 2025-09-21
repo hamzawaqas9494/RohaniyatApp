@@ -122,10 +122,11 @@ export const fehristStyles = StyleSheet.create({
     writingDirection: "rtl",
   },
   image: {
-    marginTop: 10,
-    width: "100%",
-    height: 300,
-    // backgroundColor:"red"
+   width: "100%",
+  height: "100%",
+  borderRadius: 5,
+  height:280,
+  // resizeMode: "contain",
   },
   deatilContentWrapper: {
     textAlign: "right",
@@ -318,22 +319,32 @@ export const htmlStyles = StyleSheet.create({
 });
 //// ///////////////////////////////////blog-detail-pages style end ////////////////////
 ///////////////////////////////rohani dokan or kutb style start/////////////////////////////////
-const CARD_MARGIN = 15;
-const CARD_WIDTH = (width - CARD_MARGIN * 3) / 2;
+const CARD_MARGIN = 5;
 export const rohaniDokan = StyleSheet.create({
   container: {
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
   },
+  
   card: {
-    width: CARD_WIDTH,
-    height: CARD_WIDTH * 1.1,
-    borderRadius: 5,
-    overflow: "hidden",
-    marginBottom: 14,
-    marginRight: CARD_MARGIN,
+  flex: 1,
+  margin: CARD_MARGIN,
+  borderRadius: 5,
+  backgroundColor: "#fff",
+  padding: 10,
+  alignItems: "center",
+  justifyContent: "center",
+  shadowColor: "#000",
+  shadowOffset: { width: 0, height: 2 },
+  shadowOpacity: 0.2,
+  shadowRadius: 4,
+  elevation: 5,
+  overflow: "hidden",
+  width: "100%" - CARD_MARGIN,
+  height: 300 - CARD_MARGIN,
   },
+  
   image: {
     width: "100%",
     height: "100%",

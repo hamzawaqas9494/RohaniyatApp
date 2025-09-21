@@ -58,7 +58,7 @@ export default function RohaniDukanKiTafseel() {
 
           {data.image && (
   <Image
-     source={{ uri: `${BASE_URL_IMG}${item.image}` }}
+     source={{ uri: `${BASE_URL_IMG}${data.image}` }}
      style={fehristStyles.image}
      resizeMode="contain"
    />

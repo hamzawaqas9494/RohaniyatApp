@@ -286,7 +286,7 @@ export default RohaniIlajForm = () => {
                   formStyles.inputBox,
                   { height: 60, textAlignVertical: "top" },
                 ]}
-                value={formData.natureOfBait}
+                value={formData.disease}
                 onChangeText={(value) => handleChange("disease", value)}
                 multiline
               />
