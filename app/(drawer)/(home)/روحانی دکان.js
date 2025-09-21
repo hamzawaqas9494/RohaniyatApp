@@ -2,6 +2,7 @@ import { useNavigation } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
+  Dimensions,
   FlatList,
   Image,
   Text,
@@ -11,6 +12,9 @@ import {
 import CustomBackground from "../../../components/Background/Background";
 import { BASE_URL, BASE_URL_IMG } from "../../../config/api";
 import { fehristStyles, rohaniDokan } from "../../../style/globalcss";
+
+const { width } = Dimensions.get("window");
+
 export default function RohaniDukan() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -26,6 +30,15 @@ export default function RohaniDukan() {
       .catch((error) => console.error("Error fetching data:", error))
       .finally(() => setLoading(false));
   }, []);
+  // Responsive columns
+  const getNumCols = () => {
+    if (width < 400) return 1;
+    if (width < 640) return 2;
+    if (width < 768) return 3;
+    if (width < 1024) return 4;
+    return 5;
+  };
+
   return (
     <CustomBackground>
       <View style={fehristStyles.container}>
@@ -43,7 +56,7 @@ export default function RohaniDukan() {
           <FlatList
             data={data}
             keyExtractor={(item) => item.id.toString()}
-            numColumns={2} // 2 کالم
+              numColumns={getNumCols()} // dynamically set columns
             columnWrapperStyle={rohaniDokan.spaceHorizontally}
             renderItem={({ item }) => (
               <TouchableOpacity

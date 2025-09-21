@@ -1,4 +1,4 @@
-// src/style/styleDetails.js
+
 import { Dimensions, Platform, StyleSheet } from "react-native";
 const { width } = Dimensions.get("window");
 
@@ -121,13 +121,13 @@ export const fehristStyles = StyleSheet.create({
     textAlign: "center",
     writingDirection: "rtl",
   },
-  image: {
-   width: "100%",
-  height: "100%",
-  borderRadius: 5,
-  height:280,
-  // resizeMode: "contain",
-  },
+image: {
+  width: "100%",  
+  height: 250,
+  resizeMode: "contain",
+},
+
+
   deatilContentWrapper: {
     textAlign: "right",
     direction: "right",
@@ -327,24 +327,18 @@ export const rohaniDokan = StyleSheet.create({
     justifyContent: "center",
   },
   
-  card: {
+card: {
   flex: 1,
   margin: CARD_MARGIN,
   borderRadius: 5,
   backgroundColor: "#fff",
-  padding: 10,
+  padding: 5,
   alignItems: "center",
-  justifyContent: "center",
-  shadowColor: "#000",
-  shadowOffset: { width: 0, height: 2 },
-  shadowOpacity: 0.2,
-  shadowRadius: 4,
-  elevation: 5,
+  justifyContent: "flex-start",
   overflow: "hidden",
-  width: "100%" - CARD_MARGIN,
-  height: 300 - CARD_MARGIN,
-  },
-  
+  width: "100%"- CARD_MARGIN,
+},
+
   image: {
     width: "100%",
     height: "100%",

@@ -54,7 +54,7 @@ export default function Kutbkitafseel() {
  <Image
     source={{ uri: `${BASE_URL_IMG}${data.image}` }}
     style={fehristStyles.image}
-    resizeMode="contain"
+         resizeMode="contain"
   />
 )}
 
