@@ -175,13 +175,44 @@ export const htmlStyles = StyleSheet.create({
     whiteSpace: "pre-wrap",
      
   },
-  span: {
-    fontSize: 20,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
+
+dfn: {
+  // margin: 0,
+  // fontSize: 20,
+  // fontFamily: "Jameel-Noori-Regular",
+  // color: "#6C472D",
+  // writingDirection: "rtl",
+  // lineHeight: 30,
+  whiteSpace: "pre-wrap",
+  display: "flex",
+  justifyContent: "center", // ✅ vertical center (if block)
+  alignItems: "center", // ✅ horizontal center
+},
+
+kbd: {
+  // margin: 0,
+  // fontSize: 20,
+  // fontFamily: "Jameel-Noori-Regular",
+  // color: "#6C472D",
+  // writingDirection: "rtl",
+  // lineHeight: 30,
+  whiteSpace: "pre-wrap",
+  display: "flex",
+  justifyContent: "center", // ✅ vertically center
+  alignItems: "flex-end", // ✅ right side (RTL style)
+},
+
+samp: {
+  // fontSize: 20,
+  // fontFamily: "Jameel-Noori-Regular",
+  // color: "#6C472D",
+  // writingDirection: "rtl",
+    whiteSpace: "pre-wrap",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "flex-start", // ✅ left align element position
+},
+
   h1: {
     fontSize: 28,
     fontFamily: "Jameel-Noori-Regular",
@@ -244,7 +275,7 @@ export const htmlStyles = StyleSheet.create({
   ul: {
     margin: 0,
     direction: "rtl",
-    marginTop: 6,
+    // marginTop: 6,
     fontFamily: "Jameel-Noori-Regular",
     color: "red",
     textAlign: "right",
@@ -271,16 +302,7 @@ export const htmlStyles = StyleSheet.create({
   u: {
     textDecorationLine: "underline",
     color: "#6C472D",
-    fontSize: 18,
     fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  s: {
-    textDecorationLine: "line-through",
-    color: "#6C472D",
-    fontSize: 20,
-    lineHeight: 30,
     textAlign: "right",
     writingDirection: "rtl",
   },
@@ -294,7 +316,7 @@ export const htmlStyles = StyleSheet.create({
     padding: 40,
   },
   strong: {
-    fontSize: 20,
+    // fontSize: 20,
     color: "red",
     lineHeight: undefined,
     textAlign: "right",
@@ -306,7 +328,7 @@ export const htmlStyles = StyleSheet.create({
     color: "#6C472D",
     borderRadius: 2,
     paddingHorizontal: 2,
-    fontSize: 20,
+    // fontSize: 20,
     fontFamily: "Jameel-Noori-Regular",
     lineHeight: 30,
   },
