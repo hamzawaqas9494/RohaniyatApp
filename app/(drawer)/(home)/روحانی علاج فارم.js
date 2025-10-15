@@ -25,7 +25,7 @@ const KeyboardWrapper = ({ children }) => {
     <View>{children}</View>
   );
 };
-export default RohaniIlajForm = () => {
+const RohaniIlajForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     fatherName: "",
@@ -324,4 +324,4 @@ export default RohaniIlajForm = () => {
   );
 };
 
-// export default FormScreen;
+export default RohaniIlajForm;

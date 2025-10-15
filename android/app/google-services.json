@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "886103293297",
+    "project_id": "idararohaniyat-1cbcd",
+    "storage_bucket": "idararohaniyat-1cbcd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886103293297:android:4d6763a21e03dde15f8ad0",
+        "android_client_info": {
+          "package_name": "com.creationnext.idararohaniyat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnFyYpgZpssxA2nNT1_LpkS8xzjBZP0M0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
