@@ -1,18 +1,32 @@
+import * as SecureStore from 'expo-secure-store';
 import { useEffect, useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-export default function NotificationBell({ deviceId, onPress }) {
+export default function NotificationBell({ deviceId: deviceIdProp, onPress }) {
 
 
-console.log( deviceId, onPress," deviceId, onPress notification bell")
+console.log( deviceIdProp, onPress," deviceId, onPress notification bell")
 
 
   const [count, setCount] = useState(0);
+  const [deviceId, setDeviceId] = useState(deviceIdProp || null);
+
+  useEffect(() => {
+    // Resolve deviceId from prop or SecureStore
+    if (!deviceIdProp) {
+      SecureStore.getItemAsync('deviceId').then((val) => {
+        if (val) setDeviceId(val);
+      });
+    } else {
+      setDeviceId(deviceIdProp);
+    }
+  }, [deviceIdProp]);
 
   useEffect(() => {
     // Dashboard load hone par fetch karo
     const fetchNotifications = async () => {
       try {
+        if (!deviceId) return;
         const res = await fetch(`https://rohanishop.net/api/get-notifications?deviceId=${deviceId}`);
         const data = await res.json();
         setCount(data.length);
