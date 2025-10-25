@@ -49,8 +49,8 @@ const DATA = [
   {
     id: "1",
     icon: require("../../../assets/images/istakhraIcon.png"),
-    screen: "خدمات",
-    text: "خدمات",
+    screen:  "ہمزاد کا عمل",
+    text:  "ہمزاد کا عمل",
     image: require("../../../assets/images/item1-bg-path.png"),
   },
   {
@@ -84,8 +84,8 @@ const DATA = [
   {
     id: "6",
     icon: require("../../../assets/images/bookicon.png"),
-    screen: "کتب",
-    text: "کتب",
+    screen: "چہل کاف",
+    text: "چہل کاف",
     image: require("../../../assets/images/item2-bg-path.png"),
   },
   {

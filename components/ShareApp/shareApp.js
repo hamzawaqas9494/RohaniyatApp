@@ -7,9 +7,10 @@ import {
   Platform,
   Pressable,
   Share,
-  View
+  View,
 } from "react-native";
 import { shareApp } from "../../style/globalcss";
+
 const AppMenuDropdown = () => {
   const [visible, setVisible] = useState(false);
   const scaleAnim = useRef(new Animated.Value(0)).current;
@@ -34,10 +35,14 @@ const AppMenuDropdown = () => {
     }
   };
 
+ 
+  const playStoreLink =
+    "https://play.google.com/store/apps/details?id=com.creationnext.idararohaniyat";
+
   const handleShare = async () => {
     try {
       await Share.share({
-        message: "Check out this app: https://yourapp.link",
+        message: `Check out this app on Play Store: ${playStoreLink}`,
       });
     } catch (err) {
       console.error(err);
@@ -49,7 +54,7 @@ const AppMenuDropdown = () => {
     const url =
       Platform.OS === "ios"
         ? "itms-apps://itunes.apple.com/app/idXXXXXXXXX"
-        : "https://play.google.com/store/apps/details?id=com.yourapp";
+        : playStoreLink; // 👈 same link used here
     Linking.openURL(url);
     toggleDropdown();
   };
@@ -88,5 +93,3 @@ const AppMenuDropdown = () => {
 };
 
 export default AppMenuDropdown;
-
-

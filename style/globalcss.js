@@ -83,6 +83,28 @@ export const mainStyles = StyleSheet.create({
 ////////////////////////////////////// static pages Styles  end ////////////////////////////////////
 ////////////////////////////////////// fehrist pages style start ////////////////////////////////////
 export const fehristStyles = StyleSheet.create({
+
+
+
+  ////////////////////////////////////////////
+
+imageContainer: {
+  flex: 1,
+},
+
+imageListCenter: {
+  flexGrow: 1,
+    // justifyContent: "center",
+    // paddingVertical: 16,
+},
+
+imageCard: {
+  width: "100%",  
+  height: 200,
+  resizeMode: "contain",
+},
+
+  ///////////////////////////////
   container: {
     flex: 1,
   },
@@ -97,6 +119,7 @@ export const fehristStyles = StyleSheet.create({
     flexGrow: 1,
     justifyContent: "center",
     paddingVertical: 16,
+
   },
   card: {
     width: "100%",
@@ -108,6 +131,7 @@ export const fehristStyles = StyleSheet.create({
     alignItems: "center",
   },
   fehristText: {
+    paddingTop:2,
     fontSize: 20,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
@@ -120,10 +144,12 @@ export const fehristStyles = StyleSheet.create({
     color: "#6C472D",
     textAlign: "center",
     writingDirection: "rtl",
+    width:"100%"
   },
 image: {
+   marginTop: 10,
   width: "100%",  
-  height: 250,
+  height: 200,
   resizeMode: "contain",
 },
 
@@ -568,13 +594,14 @@ export const splash = StyleSheet.create({
     height: 80,
   },
 });
-export const youtube = StyleSheet.create({
+export const customButton = StyleSheet.create({
   container: {
     width: "100%",
     alignItems: "center",
-    marginTop: 40,
+    marginTop: 20,
   },
   button: {
+        marginTop: 10,
     flexDirection: "row",
     backgroundColor: "rgb(108, 71, 45)",
     paddingVertical: 10,
