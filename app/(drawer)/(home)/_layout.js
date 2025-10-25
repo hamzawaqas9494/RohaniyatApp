@@ -33,9 +33,9 @@ export default function StackNavigator() {
           },
           headerTintColor: "#6C472D",
           headerTitleStyle: {
-            fontFamily: "Jameel-Noori-Regular",
+            fontFamily: "NotoNastaliqUrdu-Regular",
              overflow: "visible", 
-            fontSize: 22,
+            fontSize: 14,
             color: "#6C472D",
           },
           headerTitleAlign: "center",

@@ -1,12 +1,13 @@
 import { useNavigation } from "@react-navigation/native";
 import {
-    FlatList,
-    Text,
-    TouchableOpacity,
-    View
+  FlatList,
+  Text,
+  TouchableOpacity,
+  View
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 import { fehristStyles } from "../../../style/globalcss";
+
 const DATA = [
   {
     id: "1",
@@ -25,17 +26,31 @@ const DATA = [
   },
   {
     id: "4",
-    screen:"جادو، جنات کا علاج",
-    text:"جادو، جنات، بیماریاں کا روحانی علاج",
+    tableName: "rohaniilaaj",
+    label: "جادو، جنات، بیماریاں کا روحانی علاج",
+    text: "جادو، جنات، بیماریاں کا روحانی علاج",
   },
   {
     id: "5",
     screen: "حصاراعمال",
-     text:"روحانی حفاظت (حصار) کا طریقہ",
+    text: "روحانی حفاظت (حصار) کا طریقہ",
   },
 ];
+
 export default function MarizooKeLiyeRohaniIlaaj() {
   const navigation = useNavigation();
+
+  const handlePress = (item) => {
+    if (item.id === "4") {
+      navigation.navigate("CategoryList", {
+        tableName: item.tableName,
+        label: item.label,
+      });
+    } else {
+      navigation.navigate(item.screen);
+    }
+  };
+
   return (
     <CustomBackground>
       <View style={fehristStyles.container}>
@@ -46,7 +61,7 @@ export default function MarizooKeLiyeRohaniIlaaj() {
           renderItem={({ item }) => (
             <TouchableOpacity
               style={fehristStyles.card}
-              onPress={() => navigation.navigate(item.screen)}
+              onPress={() => handlePress(item)}
             >
               <Text style={fehristStyles.tashkhesText}>{item.text}</Text>
             </TouchableOpacity>
@@ -56,4 +71,3 @@ export default function MarizooKeLiyeRohaniIlaaj() {
     </CustomBackground>
   );
 }
-

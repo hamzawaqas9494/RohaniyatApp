@@ -6,19 +6,21 @@ import * as SplashScreen from "expo-splash-screen";
 import { useEffect, useLayoutEffect, useState } from "react";
 import { StyleSheet, TouchableWithoutFeedback, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { SafeAreaView } from "react-native-safe-area-context";
 import SplashScreenComponent from "../../components/SplashScreen/splash";
+import { DataProvider } from "../../components/context/DataContext";
+
+
 
 
 SplashScreen.preventAutoHideAsync();
-
-
 export default function Layout() {
 
-  
   const [fontsLoaded] = useFonts({
     "Jameel-Noori-Regular": require("../../assets/fonts/JameelNooriNastaleeqRegular.ttf"),
     "Amiri-Bold": require("../../assets/fonts/Amiri-Bold.ttf"),
      "ScheherazadeNew-Bold": require("../../assets/fonts/ScheherazadeNew-Bold.ttf"),
+       "NotoNastaliqUrdu-Regular": require("../../assets/fonts/NotoNastaliqUrdu-Regular.ttf"),
   });
   const [isSplashVisible, setSplashVisible] = useState(true);
   useLayoutEffect(() => {
@@ -52,14 +54,16 @@ export default function Layout() {
     );
   };
   return (
+    <SafeAreaView style={{ flex: 1 }}>
     <GestureHandlerRootView style={{ flex: 1 }}>
+          <DataProvider>
       <Drawer
         screenOptions={{
           headerShown: false,
           headerLeft: () => null,
           headerTitleStyle: {
-            fontFamily: "Jameel-Noori-Regular",
-            fontSize: 25,
+            fontFamily: "NotoNastaliqUrdu-Regular",
+            fontSize: 16,
             color: "#6C472D",
           },
           headerTitleAlign: "center",
@@ -92,7 +96,9 @@ export default function Layout() {
           }}
         />
       </Drawer>
+      </DataProvider>
     </GestureHandlerRootView>
+    </SafeAreaView>
   );
 }
 const styles = StyleSheet.create({

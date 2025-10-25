@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Animated, Dimensions, Image, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { splash } from "../../style/globalcss";
 const { height } = Dimensions.get("window");
 
@@ -29,6 +30,7 @@ export default function CustomSplash() {
   }, []);
 
   return (
+     <SafeAreaView style={{ flex: 1 }}>
     <View style={splash.container}>
       <Animated.View
         style={[
@@ -59,6 +61,7 @@ export default function CustomSplash() {
         />
       </Animated.View>
     </View>
+    </SafeAreaView>
   );
 }
 

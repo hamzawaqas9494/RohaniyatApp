@@ -4,22 +4,24 @@ import CustomBackground from "../../../components/Background/Background";
 import { fehristStyles } from "../../../style/globalcss";
 
 const DATA = [
-  { id: "1", tableName: "wazaif", label: "وظائف" },
-  { id: "2", tableName: "taweez", label: "تعویذات" },
+  { id: "1", screen: "نقوش کا مزاج" , label: "نقوش کا مزاج اور طریقہ" },
+  { id: "2", screen:  "نقوش کے لوازمات", label: "نقوش کے لوازمات" },
+  { id: "3", tableName: "taweez", label: "مجرب نقوش" },
 ];
 
-export default function TitleScreen() {
+export default function TavezatFehrist() {
   const navigation = useNavigation();
 
   const handlePress = (item) => {
-    if (item.id === "1") {
+    if (item.id === "3") {
+      
       navigation.navigate("CategoryList", {
         tableName: item.tableName,
         label: item.label,
       });
     } else {
-      navigation.navigate("تعویذات", {
-        tableName: item.tableName,
+   
+      navigation.navigate(item.screen, {
         label: item.label,
       });
     }

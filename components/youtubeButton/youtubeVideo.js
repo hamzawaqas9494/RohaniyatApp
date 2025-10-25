@@ -1,20 +1,28 @@
 import { FontAwesome } from '@expo/vector-icons';
-import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
-import { youtube } from "../../style/globalcss";
-export default function YouTubeButton() {
+import { Linking, Pressable, Text } from 'react-native';
+import { customButton } from "../../style/globalcss";
+
+export default function YouTubeButton({ link }) {
   const handlePress = () => {
-    Linking.openURL('https://www.youtube.com/@IdaraRohaniyat').catch(err =>
-      console.error('Failed to open URL:', err)
+    const finalLink = link && link.trim() !== "" 
+      ? link 
+      : "https://www.youtube.com/@IdaraRohaniyat";
+    Linking.openURL(finalLink).catch(err =>
+      console.error("Failed to open URL:", err)
     );
   };
+
   return (
-    <View style={youtube.container}>
-      <Pressable style={youtube.button} onPress={handlePress}>
-        <FontAwesome name="youtube-play" size={22} color="rgba(255, 255, 255, 1)" style={youtube.icon} />
-        <Text style={youtube.text}>مزید تفصیلات کے لیے یوٹیوب لنک وزٹ کریں۔</Text>
+
+      <Pressable style={customButton.button} onPress={handlePress}>
+        <FontAwesome
+          name="youtube-play"
+          size={22}
+          color="#fff"
+          style={customButton.icon}
+        />
+        <Text style={customButton.text}> مزید تفصیلات کے لیے یوٹیوب لنک وزٹ کریں۔</Text>
       </Pressable>
-    </View>
+   
   );
 }
-
-

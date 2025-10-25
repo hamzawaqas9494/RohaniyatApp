@@ -73,17 +73,56 @@ const AnimatedItem = ({
         resizeMode="contain"
         imageStyle={{ transform: [{ rotate: `${rotation}deg` }] }}
       >
-        <Pressable
-          onPress={() => navigation.navigate(item.screen)}
-          style={{
-            alignItems: "center",
-            justifyContent: "center",
-            width: iconWidth * 0.85,
-            height: iconWidth * 0.78,
-            transform: [{ rotate: `${rotation}deg` }],
-               overflow:"hidden"
-          }}
-        >
+       
+
+<Pressable
+onPress={() => {
+  if (item.id === "1") {
+    navigation.navigate("CategoryList", {
+      tableName: "hamzad_ka_amal",
+      label:  "ہمزاد کا عمل"
+    });
+  }
+  else if (item.id === "3") {
+    navigation.navigate("CategoryList", {
+      tableName: "tawizatusmaniya",
+      label: "تعویذات عثمانیہ"
+    });
+  } 
+  else if (item.id === "4") {
+    navigation.navigate("CategoryList", {
+      tableName: "amliyatCourse",
+      label: "عملیات کورس"
+    });
+  } 
+  else if (item.id === "5") {
+    navigation.navigate("CategoryList", {
+      tableName: "rohanidokan",
+      label: "روحانی دکان"
+    });
+  } 
+  else if (item.id === "6") {
+    navigation.navigate("CategoryList", {
+      tableName: "qutb",
+      label: "چہل کاف"
+    });
+  } 
+  else {
+    navigation.navigate(item.screen);
+  }
+}}
+style={{
+  alignItems: "center",
+  justifyContent: "center",
+  width: iconWidth * 0.85,
+  height: iconWidth * 0.78,
+  transform: [{ rotate: `${rotation}deg` }],
+  overflow: "hidden"
+}}
+
+>
+
+
           <View
             style={{
               width:"100%",
