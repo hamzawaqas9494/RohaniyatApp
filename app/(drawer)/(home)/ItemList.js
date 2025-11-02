@@ -18,6 +18,7 @@ import { fehristStyles } from "../../../style/globalcss";
 const PAGE_SIZE = 10;
 
 export default function ItemList() {
+  console.log("items")
   const { tableName, category, subcategory ,label} = useRoute().params || {};
   const navigation = useNavigation();
   const isFocused = useIsFocused();
