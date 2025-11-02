@@ -1,75 +1,3 @@
-// // screens/CategoryList.js
-// import { useIsFocused, useNavigation, useRoute } from "@react-navigation/native";
-// import { useEffect, useState } from "react";
-// import { ActivityIndicator, FlatList, Text, TouchableOpacity, View } from "react-native";
-// import CustomBackground from "../../../components/Background/Background";
-// import { useData } from "../../../components/context/DataContext";
-// import { sortUrduData } from "../../../components/SortUrduData/SortUrduData";
-// import { fehristStyles } from "../../../style/globalcss";
-
-// export default function CategoryList() {
-//   const { tableName, label } = useRoute().params || {};
-//   const navigation = useNavigation();
-//   const isFocused = useIsFocused();
-//   const { fetchTableData } = useData();
-
-//   const [categories, setCategories] = useState([]);
-//   const [loading, setLoading] = useState(true);
-
-//   useEffect(() => {
-//     if (!tableName || !isFocused) return;
-
-//     const load = async () => {
-//       setLoading(true);
-//       const rows = await fetchTableData(tableName);
-//       const cats = [...new Set(rows.map(r => r.category).filter(Boolean))];
-//       const sorted = sortUrduData(cats.map(c => ({ label: c })));
-
-//       if (cats.length === 0) {
-//         navigation.replace("SubCategoryList", { tableName });
-//       } else {
-//         setCategories(sorted);
-//       }
-//       setLoading(false);
-//     };
-
-//     load();
-//   }, [tableName, isFocused, navigation, fetchTableData]);
-
-//   useEffect(() => {
-//     navigation.setOptions({ title: label || tableName || "..." });
-//   }, [navigation, label, tableName]);
-
-//   if (loading) {
-//     return (
-//       <CustomBackground>
-//         <View style={fehristStyles.centerContent}>
-//           <ActivityIndicator size="large" color="#6C472D" />
-//         </View>
-//       </CustomBackground>
-//     );
-//   }
-
-//   return (
-//     <CustomBackground>
-//       <FlatList
-//         data={categories}
-//         keyExtractor={item => item.label}
-//         contentContainerStyle={fehristStyles.fehristcenter}
-//         renderItem={({ item }) => (
-//           <TouchableOpacity
-//             style={fehristStyles.card}
-//             onPress={() => navigation.navigate("SubCategoryList", { tableName, category: item.label })}
-//           >
-//             <Text style={fehristStyles.fehristText}>{item.label}</Text>
-//           </TouchableOpacity>
-//         )}
-//       />
-//     </CustomBackground>
-//   );
-// }
-
-// screens/CategoryList.js
 import { useIsFocused, useNavigation, useRoute } from "@react-navigation/native";
 import { useCallback, useEffect, useState } from "react";
 import {
@@ -84,11 +12,9 @@ import { useData } from "../../../components/context/DataContext";
 import { sortUrduData } from "../../../components/SortUrduData/SortUrduData";
 import { fehristStyles } from "../../../style/globalcss";
 
-const PAGE_SIZE = 10; // پہلی دفعہ 10، باقی 10-10
+const PAGE_SIZE = 10; 
 
 export default function CategoryList() {
-  console.log("CategoryList Rendered");
-
   const { tableName, label } = useRoute().params || {};
   const navigation = useNavigation();
   const isFocused = useIsFocused();
