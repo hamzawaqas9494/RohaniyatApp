@@ -91,7 +91,7 @@ onPress={() => {
   } 
   else if (item.id === "4") {
     navigation.navigate("CategoryList", {
-      tableName: "amliyatCourse",
+      tableName: "amliyatcourse",
       label: "عملیات کورس"
     });
   } 
