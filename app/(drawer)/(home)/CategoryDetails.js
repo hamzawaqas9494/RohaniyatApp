@@ -1,4 +1,4 @@
-// CategoryDetails.js
+
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import { ActivityIndicator, Dimensions, Image, ScrollView, Text, View } from "react-native";
@@ -12,9 +12,11 @@ import { customButton, fehristStyles, htmlBaseStyle, htmlStyles, mainStyles } fr
 
 export default function CategoryDetails() {
   const { id, tableName } = useRoute().params || {};
+
+  console.log(id,tableName)
   const navigation = useNavigation();
   const { width } = Dimensions.get("window");
-  const { fetchItems } = useData(); // اب fetchItems استعمال کرو
+  const { fetchItemById } = useData(); // فکس: fetchItemById استعمال کرو
 
   const [item, setItem] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -24,11 +26,11 @@ export default function CategoryDetails() {
       if (!tableName || !id) return;
       setLoading(true);
       try {
-        // fetchItems کو id پاس کرو
-        const data = await fetchItems(tableName, null, null, id);
-        const found = data?.[0] || null; // fetchItems اب ایری لوٹاتا ہے
+      const found = await fetchItemById(tableName, id); // اب found = { title: '...', ... }
+setItem(found);
+
+console.log(found,"found")
         if (found) {
-          setItem(found);
           navigation.setOptions({ title: found.title });
         }
       } catch (err) {
@@ -38,10 +40,10 @@ export default function CategoryDetails() {
       }
     };
     load();
-  }, [id, tableName, navigation, fetchItems]);
+  }, [id, tableName, navigation, fetchItemById]);
 
   const allowedTables = ["qutb", "rohaniilaaj", "tawizatusmaniya", "rohanidokan", "amliyatcourse", "hamzad_ka_amal"];
-
+console.log(item,"item")
   if (loading) {
     return (
       <CustomBackground>
