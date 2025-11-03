@@ -1,6 +1,7 @@
+// CategoryDetails.js
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { useEffect, useState } from "react";
-import { ActivityIndicator, Image, ScrollView, Text, useWindowDimensions, View } from "react-native";
+import { ActivityIndicator, Dimensions, Image, ScrollView, Text, View } from "react-native";
 import RenderHTML from "react-native-render-html";
 import CustomBackground from "../../../components/Background/Background";
 import BuyButton from "../../../components/BuyButton/BuyButton";
@@ -9,52 +10,37 @@ import YoutubeButton from "../../../components/youtubeButton/youtubeVideo";
 import { BASE_URL_IMG } from "../../../config/api";
 import { customButton, fehristStyles, htmlBaseStyle, htmlStyles, mainStyles } from "../../../style/globalcss";
 
-function CategoryDetails() {
-  const route = useRoute();
+export default function CategoryDetails() {
+  const { id, tableName } = useRoute().params || {};
   const navigation = useNavigation();
-  const { id, tableName } = route.params || {};
-  const { width } = useWindowDimensions();
-  const { fetchTableData } = useData();
+  const { width } = Dimensions.get("window");
+  const { fetchItems } = useData(); // اب fetchItems استعمال کرو
+
   const [item, setItem] = useState(null);
   const [loading, setLoading] = useState(true);
 
-useEffect(() => {
-  const load = async () => {
-    try {
+  useEffect(() => {
+    const load = async () => {
+      if (!tableName || !id) return;
       setLoading(true);
-      const rows = await fetchTableData(tableName);
-
-      if (!rows || rows.length === 0) {
-        setItem(null);
-        return;
+      try {
+        // fetchItems کو id پاس کرو
+        const data = await fetchItems(tableName, null, null, id);
+        const found = data?.[0] || null; // fetchItems اب ایری لوٹاتا ہے
+        if (found) {
+          setItem(found);
+          navigation.setOptions({ title: found.title });
+        }
+      } catch (err) {
+        console.error("آئٹم لوڈنگ فیل:", err);
+      } finally {
+        setLoading(false);
       }
+    };
+    load();
+  }, [id, tableName, navigation, fetchItems]);
 
-      const found = rows.find((row) => String(row.id) === String(id));
-      if (found) {
-        setItem(found);
-        navigation.setOptions({ title: found.title });
-      } else {
-        setItem(null);
-      }
-    } catch (error) {
-      console.error("Error loading data:", error);
-      setItem(null);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  if (tableName && id) load();
-}, [id, tableName]);
-
-const allowedTables = [
-  "qutb",
-  "rohaniilaaj",
-  "tawizatusmaniya",
-  "rohanidokan",
-  "amliyatCourse",
-  "hamzad_ka_amal"
-];
+  const allowedTables = ["qutb", "rohaniilaaj", "tawizatusmaniya", "rohanidokan", "amliyatcourse", "hamzad_ka_amal"];
 
   if (loading) {
     return (
@@ -83,7 +69,7 @@ const allowedTables = [
         <View style={fehristStyles.deatilContentWrapper}>
           <RenderHTML
             contentWidth={width}
-            source={{ html: item.content || "<p>No Data Found</p>" }}
+            source={{ html: item.content || "<p>کوئی مواد نہیں</p>" }}
             tagsStyles={htmlStyles}
             systemFonts={["Jameel-Noori-Regular", "Amiri-Bold", "ScheherazadeNew-Bold"]}
             defaultTextProps={{ selectable: true }}
@@ -91,22 +77,13 @@ const allowedTables = [
           />
         </View>
         {item.image && (
-          <Image
-            source={{ uri: `${BASE_URL_IMG}${item.image}` }}
-            style={fehristStyles.image}
-            resizeMode="contain"
-          />
-        )}   
-            <View style={customButton.container}>
-    {allowedTables.includes(tableName) && (
-      <BuyButton link="https://wa.me/923008440979" />
-    )}
-    <YoutubeButton link={item.youtube_link} />
-  </View>
+          <Image source={{ uri: `${BASE_URL_IMG}${item.image}` }} style={fehristStyles.image} resizeMode="contain" />
+        )}
+        <View style={customButton.container}>
+          {allowedTables.includes(tableName) && <BuyButton link="https://wa.me/923008440979" />}
+          <YoutubeButton link={item.youtube_link} />
+        </View>
       </ScrollView>
     </CustomBackground>
   );
 }
-
-export default CategoryDetails;
-
