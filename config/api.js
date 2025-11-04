@@ -13,5 +13,5 @@
 
 ////////////////////////////////////////////////////////////////////////////local for web //////////////////////////////////////////////////////////////////////
 
-export const BASE_URL = "https://rohanishop.net/api/rohanishop";
-export const BASE_URL_IMG = "https://rohanishop.net";
+export const BASE_URL = "http://localhost:3000/api/rohanishop";
+export const BASE_URL_IMG = "http://localhost:3000";
