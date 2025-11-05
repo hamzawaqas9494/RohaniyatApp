@@ -5,7 +5,7 @@ export default function NakoshLawazmat() {
   return (
     <CustomBackground>
       <ScrollView>
-        <View>
+          <View style={mainStyles.container}>
           <Text style={mainStyles.heading}>نقوش کے لوازمات</Text>
           <Text style={mainStyles.description}>
             نقوش کے لوازمات میں قلم ، سیاہی ، کاغذات ، بخورات اور ساتھ ہی نقوش

@@ -5,7 +5,7 @@ export default function JagaTashkhess() {
   return (
     <CustomBackground>
       <ScrollView>
-        <View>
+         <View style={mainStyles.container}>
           <Text style={mainStyles.tashkhesHeading}>جگہ کی تشخیص کرنے کا طریقہ</Text>
           <Text style={mainStyles.description}>
             اگر کسی کو شک ہو کہ اس کے گھر، پلاٹ، یا کاروباری جگہ پر جادو، جنات

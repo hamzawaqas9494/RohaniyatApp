@@ -4,9 +4,20 @@ const { width } = Dimensions.get("window");
 
 ///////////////////////////////////static pages Styles start/////////////////////////////
 export const mainStyles = StyleSheet.create({
+
+
+  container: {
+    // flex:1,
+    padding: 15,
+    // height: "100%",
+    justifyContent: "center",
+  },
+
+
+
   heading: {
     fontSize: 28,
-    paddingRight: 6,
+    // paddingRight: 6,
     lineHeight: 45,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
@@ -18,7 +29,7 @@ export const mainStyles = StyleSheet.create({
   },
   subheading: {
     fontSize: 24,
-    paddingRight: 6,
+    // paddingRight: 6,
     lineHeight: 32,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
@@ -27,7 +38,7 @@ export const mainStyles = StyleSheet.create({
   },
   description: {
     fontSize: 20,
-    paddingRight: 4,
+    // paddingRight: 4,
     color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
@@ -36,7 +47,7 @@ export const mainStyles = StyleSheet.create({
   tashkhesHeading: {
     fontSize: 28,
     paddingTop: 5,
-    paddingRight: 6,
+    // paddingRight: 6,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -44,7 +55,7 @@ export const mainStyles = StyleSheet.create({
   },
   tashkhesDescription: {
     fontSize: 20,
-    paddingRight: 4,
+    // paddingRight: 4,
     paddingTop: 4,
     color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
@@ -96,6 +107,10 @@ imageListCenter: {
   flexGrow: 1,
     // justifyContent: "center",
     // paddingVertical: 16,
+        // flex:1,
+    padding: 15,
+    // height: "100%",
+    // justifyContent: "center",
 },
 
 imageCard: {
@@ -118,7 +133,8 @@ imageCard: {
   fehristcenter: {
     flexGrow: 1,
     justifyContent: "center",
-    paddingVertical: 16,
+    // paddingVertical: 16,
+    padding:15, //add new padding
 
   },
   card: {
@@ -482,16 +498,16 @@ export const backGround = StyleSheet.create({
     width: "100%",
   },
   container: {
-    padding: 15,
+    // padding: 15,
     height: "100%",
     justifyContent: "center",
   },
 });
 export const links = StyleSheet.create({
   mainRow: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 10,
+    // paddingLeft: 20,
+    // paddingRight: 20,
+    padding: 10,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",

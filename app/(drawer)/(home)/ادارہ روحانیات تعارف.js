@@ -5,7 +5,7 @@ export default function IdaraRohaniyatScreen() {
   return (
     <CustomBackground>
       <ScrollView>
-        <View>
+     <View style={mainStyles.container}>
           <Text style={mainStyles.heading}>ادارہ روحانیات </Text>
           <Text style={mainStyles.description}>
             ادارہ روحانیات 2001 میں قائم کیا گیا۔ ادارہ روحانیات کے تحت بہت سارے

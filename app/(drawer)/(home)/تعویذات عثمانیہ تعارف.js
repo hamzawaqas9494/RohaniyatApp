@@ -5,7 +5,7 @@ export default function TavezatUsmaniaTaruf() {
   return (
     <CustomBackground>
       <ScrollView>
-        <View>
+         <View style={mainStyles.container}>
           <Text style={mainStyles.heading}>تعویذات عثمانیہ کا مختصر تعارف</Text>
           <Text style={mainStyles.description}>
             یہ تعویذات ہمارے ادارے کے خاص الخاص تعویذات ہیں۔ امت مسلمہ کی خدمت کیلئے حضرت پیر صاحب دامت برکاتہم نے ان تعویذات کی طاقت کو حاصل کرنے کیلئے بہت دن و رات کی اَن تھک محنت کی ہے اور کثیر تعداد میں سرمایہ خرچ کیا ہے۔

@@ -141,6 +141,7 @@ export default function CategoryDetails() {
   return (
     <CustomBackground>
       <ScrollView>
+         <View style={mainStyles.container}>
         <Text style={mainStyles.heading}>{item.title}</Text>
         <View style={fehristStyles.deatilContentWrapper}>
           <RenderHTML
@@ -158,6 +159,7 @@ export default function CategoryDetails() {
         <View style={customButton.container}>
           {allowedTables.includes(tableName) && <BuyButton link="https://wa.me/923008440979" />}
           <YoutubeButton link={item.youtube_link} />
+        </View>
         </View>
       </ScrollView>
     </CustomBackground>

@@ -5,7 +5,7 @@ export default function FardkiTashkhess() {
   return (
     <CustomBackground>
       <ScrollView>
-        <View>
+          <View style={mainStyles.container}>
            <Text style={mainStyles.tashkhesHeading}>فرد کی تشخیص کرنے کا طریقہ</Text> 
           <Text style={mainStyles.tashkhesDescription}>
             انسانوں کی روحانی تشخیص کرنے کے مختلف طریقے:

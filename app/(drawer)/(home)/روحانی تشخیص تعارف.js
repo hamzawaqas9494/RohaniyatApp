@@ -5,7 +5,7 @@ export default function RohaniIshayatashkhesTaruf() {
   return (
     <CustomBackground>
       <ScrollView>
-        <View>
+       <View style={mainStyles.container}>
           <Text style={mainStyles.tashkhesHeading}> روحانی تشخیص.... </Text>
           <Text style={mainStyles.description}>
             عملیات کورس میں روحانی علوم اور عملیات کے اصول سکھائے جاتے ہیں تاکہ

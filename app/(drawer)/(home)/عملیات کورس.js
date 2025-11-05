@@ -5,7 +5,7 @@ export default function AmliyatCourseScreen() {
   return (
     <CustomBackground>
       <ScrollView>
-        <View>
+         <View style={mainStyles.container}>
           <Text style={mainStyles.heading}> روحانی عملیات کورسز</Text>
           <Text style={mainStyles.description}>
             ادارہ روحانیات کے زیر تحت یہ شعبہ روحانی عملیات کورسز 2001 میں قائم
