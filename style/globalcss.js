@@ -94,32 +94,24 @@ export const mainStyles = StyleSheet.create({
 ////////////////////////////////////// static pages Styles  end ////////////////////////////////////
 ////////////////////////////////////// fehrist pages style start ////////////////////////////////////
 export const fehristStyles = StyleSheet.create({
-
-
-
-  ////////////////////////////////////////////
-
 imageContainer: {
   flex: 1,
 },
 
 imageListCenter: {
   flexGrow: 1,
-    // justifyContent: "center",
-    // paddingVertical: 16,
-        // flex:1,
     padding: 15,
-    // height: "100%",
-    // justifyContent: "center",
 },
+
 
 imageCard: {
-  width: "100%",  
-  height: 200,
+  width: "100%",         
+  aspectRatio: 1,      
+  // height: undefined, 
+  // height:"100%",
   resizeMode: "contain",
+  borderRadius: 5, 
 },
-
-  ///////////////////////////////
   container: {
     flex: 1,
   },
@@ -133,8 +125,7 @@ imageCard: {
   fehristcenter: {
     flexGrow: 1,
     justifyContent: "center",
-    // paddingVertical: 16,
-    padding:15, //add new padding
+    padding:15,
 
   },
   card: {

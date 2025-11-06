@@ -33,6 +33,7 @@ export default function StackNavigator() {
           },
           headerTintColor: "#6C472D",
           headerTitleStyle: {
+             textAlignVertical: "center",
             fontFamily: "NotoNastaliqUrdu-Regular",
              overflow: "visible", 
             fontSize: 14,

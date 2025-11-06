@@ -62,6 +62,7 @@ export default function Layout() {
           headerShown: false,
           headerLeft: () => null,
           headerTitleStyle: {
+            textAlignVertical: "center",
             fontFamily: "NotoNastaliqUrdu-Regular",
             fontSize: 16,
             color: "#6C472D",
