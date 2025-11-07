@@ -91,6 +91,7 @@ import { sortUrduData } from "../../../components/SortUrduData/SortUrduData";
 import { fehristStyles } from "../../../style/globalcss";
 
 export default function SubCategoryList() {
+  console.log("subcatagory")
   const { tableName, category } = useRoute().params || {};
   const navigation = useNavigation();
   const { fetchSubcategories } = useData();
