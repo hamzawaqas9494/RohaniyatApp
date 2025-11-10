@@ -5,7 +5,7 @@ export default function RohaniIlahkaMukhtasirtaruf() {
   return (
     <CustomBackground>
       <ScrollView>
-        <View>
+         <View style={mainStyles.container}>
         <Text style={mainStyles.heading}>روحانی علاج کا مختصر تعارف </Text>
           <Text style={mainStyles.description}>
             دعا، وظائف، حصار، روحانی علاج، دم، جھاڑ یہ سب احادیث سے ثابت ہیں۔

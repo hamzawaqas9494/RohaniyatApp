@@ -5,7 +5,7 @@ export default function HisarAmaalScreen() {
   return (
     <CustomBackground>
       <ScrollView>
-        <View>
+         <View style={mainStyles.container}>
           <Text style={mainStyles.heading}>حصار</Text>
           <Text style={mainStyles.description}>
             عملیات کورس میں روحانی علوم اور عملیات کے اصول سکھائے جاتے ہیں تاکہ لوگ قرآنی اور اسلامی طریقے سے اپنی زندگی بہتر بنا سکیں۔

@@ -6,7 +6,7 @@ export default function HamaraTrikaIlaj() {
   return (
     <CustomBackground>
       <ScrollView>
-        <View>
+          <View style={mainStyles.container}>
           <Text style={mainStyles.heading}>روحانی علاج کا مختصر تعارف </Text>
           <Text style={mainStyles.description}>
             ادارہ روحانیات کے شعبہ روحانی کی بنیاد 2001 میں اپنے اساتذہ کی دعاؤں

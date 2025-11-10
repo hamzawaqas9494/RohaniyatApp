@@ -1,7 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
 import { FlatList, Text, TouchableOpacity, View } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-import { fehristStyles } from "../../../style/globalcss";
+import { fehristStyles, mainStyles } from "../../../style/globalcss";
 
 const DATA = [
   { id: "1", screen: "نقوش کا مزاج" , label: "نقوش کا مزاج اور طریقہ" },
@@ -29,7 +29,7 @@ export default function TavezatFehrist() {
 
   return (
     <CustomBackground>
-      <View>
+      <View style={mainStyles.container}>
         <FlatList
           data={DATA}
           keyExtractor={(item) => item.id}

@@ -42,7 +42,7 @@ export default function MarizooKeLiyeRohaniIlaaj() {
 
   const handlePress = (item) => {
     if (item.id === "4") {
-      navigation.navigate("CategoryList", {
+      navigation.replace("ItemList", { 
         tableName: item.tableName,
         label: item.label,
       });

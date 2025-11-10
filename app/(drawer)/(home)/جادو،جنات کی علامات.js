@@ -6,7 +6,7 @@ export default function JaduJinnatKiAlamat() {
   return (
     <CustomBackground>
       <ScrollView>
-        <View>
+        <View style={mainStyles.container}>
           <Text style={mainStyles.heading}>
             جادو، جنات اور نظر بد کی علامات
           </Text>

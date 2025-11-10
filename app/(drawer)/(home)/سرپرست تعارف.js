@@ -5,13 +5,13 @@ export default function SirparastScreen() {
   return (
     <CustomBackground>
       <ScrollView>
-        <View style={mainStyles.image_section}>
+        <View style={mainStyles.container}>
+          <View style={mainStyles.image_section}>
           <Image
             source={require("../../../assets/images/sarparast.png")}
             style={mainStyles.image}
           />
         </View>
-        <View>
           <Text style={mainStyles.heading}>مختصر تعارف</Text>
           <Text style={mainStyles.description}>
             بانی و سرپرست اعلیٰ ادارہ روحانیات و مدرسہ تعلیم القرآن لاہور، پیر

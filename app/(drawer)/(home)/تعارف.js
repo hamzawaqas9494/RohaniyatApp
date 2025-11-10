@@ -1,12 +1,13 @@
 import { useNavigation } from "@react-navigation/native";
 import {
-    FlatList,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  FlatList,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
+import { mainStyles } from "../../../style/globalcss";
 const DATA = [
   { id: "1", screen: "سرپرست تعارف", text: "سرپرست" },
   { id: "2", screen: "ادارہ روحانیات تعارف", text: "ادارہ روحانیات" },
@@ -20,7 +21,7 @@ export default function Taaruf() {
   const navigation = useNavigation();
   return (
     <CustomBackground>
-      <View>
+      <View style={mainStyles.container}>
         <FlatList
           data={DATA}
           keyExtractor={(item) => item.id}

@@ -1,50 +1,53 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext } from "react";
 import { BASE_URL } from "../../config/api";
 
 const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
-  const [tablesData, setTablesData] = useState({});
-  const [loadingTables, setLoadingTables] = useState({});
+  const fetchData = async (params = {}) => {
+    const url = new URL(`${BASE_URL}/get`);
+    Object.keys(params).forEach(key => {
+      if (params[key] != null) url.searchParams.append(key, params[key]);
+    });
 
-  // ✅ Always check if data changed before updating cache
-  const fetchTableData = async (tableName) => {
-    if (!tableName) return [];
     try {
-      setLoadingTables((prev) => ({ ...prev, [tableName]: true }));
-
-      // 1️⃣ Fetch fresh data from API
-      const res = await fetch(`${BASE_URL}/get?tableName=${tableName}`);
-      const result = await res.json();
-      const rows = result.rows || [];
-
-      // 2️⃣ Get old cached data (if any)
-      const oldData = tablesData[tableName];
-
-      // 3️⃣ Compare new and old
-      const isChanged =
-        !oldData ||
-        oldData.length !== rows.length ||
-        JSON.stringify(oldData) !== JSON.stringify(rows);
-
-      // 4️⃣ Update only if changed
-      if (isChanged) {
-        setTablesData((prev) => ({ ...prev, [tableName]: rows }));
-      } 
-
-      return isChanged ? rows : oldData;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error("Network error");
+      const json = await res.json();
+      return Array.isArray(json) ? json : (json.rows || []);
     } catch (err) {
-      return tablesData[tableName] || [];
-    } finally {
-      setLoadingTables((prev) => ({ ...prev, [tableName]: false }));
+      console.error("API فیل:", err.message);
+      return [];
     }
+  };
+  const fetchCategories = (tableName) =>
+    fetchData({ tableName, list: "category" });
+
+  const fetchSubcategories = (tableName, category) =>
+    fetchData({ tableName, list: "subcategory", category });
+
+  const fetchItems = (tableName, category = null, subcategory = null) =>
+    fetchData({ tableName, category, subcategory });
+
+  const fetchItemById = async (tableName, id) => {
+    const data = await fetchData({ tableName, id });
+    return data[0] || null;
   };
 
   return (
-    <DataContext.Provider value={{ tablesData, loadingTables, fetchTableData }}>
+    <DataContext.Provider value={{
+      fetchCategories,
+      fetchSubcategories,
+      fetchItems,
+      fetchItemById
+    }}>
       {children}
     </DataContext.Provider>
   );
 };
 
-export const useData = () => useContext(DataContext);
+export const useData = () => {
+  const context = useContext(DataContext);
+  if (!context) throw new Error("useData must be used within DataProvider");
+  return context;
+};

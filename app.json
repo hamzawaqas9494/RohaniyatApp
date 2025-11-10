@@ -6,15 +6,17 @@
     "orientation": "portrait",
     "icon": "./assets/images/logo.png",
     "scheme": "idararohaniyat",
-    "userInterfaceStyle": "automatic",
+    "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/images/defultsplash.png",
+      "resizeMode": "contain",
       "backgroundColor": "#E4DAC1"
     },
     "ios": {
       "bundleIdentifier": "com.creationnext.idararohaniyat",
       "supportsTablet": true,
-      "icon": "./assets/images/app-icon.png"
+      "icon": "./assets/images/app-icon.png",
+      "userInterfaceStyle": "light"
     },
     "android": {
       "package": "com.creationnext.idararohaniyat",
@@ -28,12 +30,13 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/logo.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "userInterfaceStyle": "light"
     },
     "web": {
       "favicon": "./assets/images/main-logo.png",
       "name": "Idara Rohaniyat",
-      "themeColor": "#E4DAC1",
+     "themeColor": "#E4DAC1",
       "backgroundColor": "#E4DAC1",
       "display": "standalone"
     },
@@ -45,3 +48,5 @@
     "owner": "rohaniyat"
   }
 }
+
+

@@ -5,7 +5,7 @@ export default function RohaniIshaya() {
   return (
     <CustomBackground>
       <ScrollView>
-        <View>
+          <View style={mainStyles.container}>
           <Text style={mainStyles.heading}>روحانی اشیاء</Text>
           <Text style={mainStyles.description}>
             ادارہ روحانیات کے زیرِ تحت "روحانی دکان" روحانی علاج کرنے والے
