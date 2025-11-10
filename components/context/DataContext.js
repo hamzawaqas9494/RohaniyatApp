@@ -14,7 +14,6 @@ export const DataProvider = ({ children }) => {
       const res = await fetch(url);
       if (!res.ok) throw new Error("Network error");
       const json = await res.json();
-      console.log(json,"json")
       return Array.isArray(json) ? json : (json.rows || []);
     } catch (err) {
       console.error("API فیل:", err.message);

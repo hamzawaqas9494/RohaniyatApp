@@ -102,7 +102,7 @@ onPress={() => {
     });
   } 
   else if (item.id === "6") {
-    navigation.navigate("CategoryList", {
+    navigation.navigate("ItemList", {
       tableName: "qutb",
       label: "چہل کاف"
     });

@@ -17,9 +17,6 @@ import { BASE_URL_IMG } from "../../../config/api";
 import { fehristStyles } from "../../../style/globalcss";
 
 export default function ItemList() {
-
-console.log("ItemList")
-
   const { tableName, category, subcategory, label } = useRoute().params || {};
   const navigation = useNavigation();
   const { fetchItems } = useData();

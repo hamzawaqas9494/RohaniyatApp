@@ -27,7 +27,6 @@ export default function RohaniIlaj() {
         <FlatList
           data={DATA}
           keyExtractor={(item) => item.id}
-          // contentContainerStyle={fehristStyles.list}
           renderItem={({ item }) => (
             <TouchableOpacity
               style={fehristStyles.card}
