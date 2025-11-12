@@ -52,12 +52,7 @@ export default function ItemList() {
   const cardPadding = 10;
   const containerPadding = 30;
   const cardWidth =
-    (width - containerPadding - (cardMargin + cardPadding) * numColumns) /
-    numColumns;
-
-  const dummyImage =
-    "https://placehold.co/300x300/e0e0e0/555?text=Image+Not+Available";
-
+    (width - containerPadding - (cardMargin + cardPadding) * numColumns) / numColumns;
   useEffect(() => {
     const load = async () => {
       if (!tableName) return;
@@ -130,17 +125,24 @@ export default function ItemList() {
               navigation.navigate("CategoryDetails", { id: item.id, tableName })
             }
           >
-            {isSpecialTable ? (
-              <Image
-                source={{
-                  uri: item.image ? `${BASE_URL_IMG}${item.image}` : dummyImage,
-                }}
-                style={fehristStyles.imageCard}
-                resizeMode="contain"
-              />
-            ) : (
-              <Text style={fehristStyles.fehristText}>{item.title}</Text>
-            )}
+          {isSpecialTable ? (
+  item.image ? (
+    <Image
+      source={{ uri: `${BASE_URL_IMG}${item.image}` }}
+      style={fehristStyles.imageCard}
+      resizeMode="contain"
+    />
+  ) : (
+    <Text
+      style={{textAlign: 'center',color:'#6C472D',fontSize: 12,}}
+    >
+      Image not available
+    </Text>
+  )
+) : (
+  <Text style={fehristStyles.fehristText}>{item.title}</Text>
+)}
+
           </TouchableOpacity>
         )}
       />

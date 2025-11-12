@@ -4,7 +4,7 @@
     "slug": "rohaniyatversion",
     "version": "1.0.2",
     "orientation": "portrait",
-    "icon": "./assets/images/logo.png",
+    "icon":"./assets/images/app-icon.png",
     "scheme": "idararohaniyat",
     "userInterfaceStyle": "light",
     "splash": {
@@ -28,13 +28,13 @@
       ],
       "icon": "./assets/images/app-icon.png",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/logo.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage":"./assets/images/app-icon.png",
+        "backgroundColor": "#E4DAC1"
       },
       "userInterfaceStyle": "light"
     },
     "web": {
-      "favicon": "./assets/images/main-logo.png",
+      "favicon": "./assets/images/favicon.png",
       "name": "Idara Rohaniyat",
      "themeColor": "#E4DAC1",
       "backgroundColor": "#E4DAC1",

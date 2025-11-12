@@ -42,7 +42,7 @@ export default function CustomSplash() {
         ]}
       >
         <Image
-          source={require("../../assets/images/main-logo.png")} 
+          source={require("../../assets/images/SplashScreenLogo.png")} 
           style={splash.mainLogo}
           resizeMode="contain"
         />
