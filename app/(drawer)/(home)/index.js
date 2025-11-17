@@ -161,7 +161,7 @@ export default function HomeScreen() {
       <View style={styles.circleContainer}>
         <View style={styles.centerCard}>
           <Image
-            source={require("../../../assets/images/CircleLogo.png")}
+            source={require("../../../assets/images/MainCircleLogo.png")}
             style={styles.centerLogo}
           />
         </View>
