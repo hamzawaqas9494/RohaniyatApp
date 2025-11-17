@@ -7,9 +7,7 @@ export const mainStyles = StyleSheet.create({
 
 
   container: {
-    // flex:1,
     padding: 15,
-    // height: "100%",
     justifyContent: "center",
   },
 
@@ -17,7 +15,6 @@ export const mainStyles = StyleSheet.create({
 
   heading: {
     fontSize: 28,
-    // paddingRight: 6,
     lineHeight: 45,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
@@ -29,7 +26,6 @@ export const mainStyles = StyleSheet.create({
   },
   subheading: {
     fontSize: 24,
-    // paddingRight: 6,
     lineHeight: 32,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
@@ -38,7 +34,6 @@ export const mainStyles = StyleSheet.create({
   },
   description: {
     fontSize: 20,
-    // paddingRight: 4,
     color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
@@ -47,7 +42,6 @@ export const mainStyles = StyleSheet.create({
   tashkhesHeading: {
     fontSize: 28,
     paddingTop: 5,
-    // paddingRight: 6,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -55,7 +49,6 @@ export const mainStyles = StyleSheet.create({
   },
   tashkhesDescription: {
     fontSize: 20,
-    // paddingRight: 4,
     paddingTop: 4,
     color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
@@ -94,26 +87,13 @@ export const mainStyles = StyleSheet.create({
 ////////////////////////////////////// static pages Styles  end ////////////////////////////////////
 ////////////////////////////////////// fehrist pages style start ////////////////////////////////////
 export const fehristStyles = StyleSheet.create({
-// imageContainer: {
-//   flex: 1,
-// },
 
 imageListCenter: {
    flexGrow: 1,
-    // justifyContent: "center",
-        // alignItems: "center",
     padding:10,
 },
 
 
-// imageCard: {
-//   width: "100%",         
-//   aspectRatio: 1,      
-//   // height: undefined, 
-//   // height:"100%",
-//   resizeMode: "contain",
-//   borderRadius: 5, 
-// },
   container: {
     flex: 1,
   },
@@ -212,40 +192,25 @@ export const htmlStyles = StyleSheet.create({
   },
 
 dfn: {
-  // margin: 0,
-  // fontSize: 20,
-  // fontFamily: "Jameel-Noori-Regular",
-  // color: "#6C472D",
-  // writingDirection: "rtl",
-  // lineHeight: 30,
   whiteSpace: "pre-wrap",
   display: "flex",
-  justifyContent: "center", // ✅ vertical center (if block)
-  alignItems: "center", // ✅ horizontal center
+  justifyContent: "center",
+  alignItems: "center", 
 },
 
 kbd: {
-  // margin: 0,
-  // fontSize: 20,
-  // fontFamily: "Jameel-Noori-Regular",
-  // color: "#6C472D",
-  // writingDirection: "rtl",
-  // lineHeight: 30,
   whiteSpace: "pre-wrap",
   display: "flex",
-  justifyContent: "center", // ✅ vertically center
-  alignItems: "flex-end", // ✅ right side (RTL style)
+  justifyContent: "center",
+  alignItems: "flex-end",
 },
 
 samp: {
-  // fontSize: 20,
-  // fontFamily: "Jameel-Noori-Regular",
-  // color: "#6C472D",
-  // writingDirection: "rtl",
+
     whiteSpace: "pre-wrap",
   display: "flex",
   justifyContent: "center",
-  alignItems: "flex-start", // ✅ left align element position
+  alignItems: "flex-start",
 },
 
   h1: {
@@ -310,7 +275,6 @@ samp: {
   ul: {
     margin: 0,
     direction: "rtl",
-    // marginTop: 6,
     fontFamily: "Jameel-Noori-Regular",
     color: "red",
     textAlign: "right",
@@ -351,7 +315,6 @@ samp: {
     padding: 40,
   },
   strong: {
-    // fontSize: 20,
     color: "red",
     lineHeight: undefined,
     textAlign: "right",
@@ -363,7 +326,6 @@ samp: {
     color: "#6C472D",
     borderRadius: 2,
     paddingHorizontal: 2,
-    // fontSize: 20,
     fontFamily: "Jameel-Noori-Regular",
     lineHeight: 30,
   },
@@ -491,15 +453,12 @@ export const backGround = StyleSheet.create({
     width: "100%",
   },
   container: {
-    // padding: 15,
     height: "100%",
     justifyContent: "center",
   },
 });
 export const links = StyleSheet.create({
   mainRow: {
-    // paddingLeft: 20,
-    // paddingRight: 20,
     padding: 10,
     flexDirection: "row",
     justifyContent: "space-between",
