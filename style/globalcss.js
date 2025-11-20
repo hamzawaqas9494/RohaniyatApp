@@ -301,37 +301,6 @@ export const customButton = StyleSheet.create({
   },
 });
 /////////////////////////////////component style end /////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // //////////////////////////////////// blog-detail-pages style start /////////////////////////////
 export const htmlStyles = StyleSheet.create({
   body: {
@@ -442,7 +411,6 @@ samp: {
   ul: {
     margin: 0,
     direction: "rtl",
-    // marginTop: 6,
     fontFamily: "Jameel-Noori-Regular",
     color: "red",
     textAlign: "right",
@@ -483,7 +451,7 @@ samp: {
     padding: 40,
   },
   strong: {
-    // fontSize: 20,
+
     color: "red",
     lineHeight: undefined,
     textAlign: "right",
@@ -495,7 +463,6 @@ samp: {
     color: "#6C472D",
     borderRadius: 2,
     paddingHorizontal: 2,
-    // fontSize: 20,
     fontFamily: "Jameel-Noori-Regular",
     lineHeight: 30,
   },
