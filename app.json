@@ -4,24 +4,23 @@
     "slug": "rohaniyatversion",
     "version": "1.0.4",
     "orientation": "portrait",
-
     "icon": "./assets/images/app-icon.png",
     "scheme": "idararohaniyat",
     "userInterfaceStyle": "light",
-
     "splash": {
       "image": "./assets/images/defultsplash.png",
       "resizeMode": "contain",
       "backgroundColor": "#E4DAC1"
     },
-
     "ios": {
       "bundleIdentifier": "com.creationnext.idararohaniyat",
       "supportsTablet": true,
       "icon": "./assets/images/app-icon.png",
-      "userInterfaceStyle": "light"
+      "userInterfaceStyle": "light",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
-
     "android": {
       "package": "com.creationnext.idararohaniyat",
       "versionCode": 1,
@@ -35,7 +34,6 @@
       },
       "userInterfaceStyle": "light"
     },
-
     "web": {
       "favicon": "./assets/images/favicon.png",
       "name": "Idara Rohaniyat",
@@ -43,13 +41,11 @@
       "backgroundColor": "#E4DAC1",
       "display": "standalone"
     },
-
     "extra": {
       "eas": {
         "projectId": "0cb97dfe-79a2-4acb-8736-bd10f15a3c55"
       }
     },
-
     "owner": "rohaniyat"
   }
 }
