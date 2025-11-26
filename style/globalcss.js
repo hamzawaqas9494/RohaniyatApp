@@ -58,50 +58,17 @@ description: {
   },
    rohaniishayacolumn: {
     flex: 1,
-    // paddingRight: 10,
   },
    rohaniishayaContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
   },
-  // list: {
-  //   // paddingRight: 10,
-  // },
   rohaniishayaitem: {
     fontSize: 20,
     color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
-    // writingDirection: "rtl",
-    // lineHeight: 30,
-    // paddingVertical: 6,
   },
-
-
-
-
-
-  // carditems: {
-  //   width: "100%",
-  //   backgroundColor: "#E4DAC1",
-  //   paddingVertical: 2,
-  //   marginTop: 8,
-  //   marginBottom: 8,
-  //   borderRadius: 5,
-  //   alignItems: "center",
-  // },
-  //  carditemstext: {
-  //   paddingTop:2,
-  //   fontSize: 20,
-  //   fontFamily: "Jameel-Noori-Regular",
-  //   color: "#6C472D",
-  //   textAlign: "center",
-  // },
-
-
-
-
-
 
 carditems: {
   width: "100%",
@@ -120,59 +87,15 @@ carditemstext: {
   textAlign: "center",
 
 },
-
   noRecordText: {
     fontSize: 22,
     fontWeight: "600",
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "center",
-    // writingDirection: "rtl",
-    // width:"100%"
   },
-//  centerContent: {
-//     flex: 1,
-//     justifyContent: "center",
-//     writingDirection: "rtl",
-//     textAlign: "right",
-//     alignItems: "center",
-//   },
 });
 ////////////////////////////////////// static pages Styles  end ////////////////////////////////////
-////////////////////////////////////// fehrist pages style start ////////////////////////////////////
-// export const fehristStyles = StyleSheet.create({
-// // imageListCenter: {
-// //    flexGrow: 1,
-// //     padding:15,
-// // },
-//   // container: {
-//   //   flex: 1,
-//   // },
- 
-//   // fehristcenter: {
-//   //   flexGrow: 1,
-//   //   justifyContent: "center",
-//   //   padding:15,
-
-//   // },
-
-
-
-//   // text: {
-//   //   fontSize: 22,
-//   //   fontFamily: "Jameel-Noori-Regular",
-//   //   color: "#6C472D",
-//   //   textAlign: "center",
-//   // },
-//   // tashkhesText: {
-//   //   fontSize: 22,
-//   //   paddingTop: 2,
-//   //   fontFamily: "Jameel-Noori-Regular",
-//   //   color: "#6C472D",
-//   //   textAlign: "center",
-//   // },
-// });
-////////////////////////////////////// fehrist pages style end ////////////////////////////////////
 /////////////////////////////////component style start /////////////////////////////////
 export const backGround = StyleSheet.create({
   background: {
@@ -319,13 +242,6 @@ export const customButton = StyleSheet.create({
 /////////////////////////////////component style end /////////////////////////////////
 // //////////////////////////////////// blog-detail-pages style start /////////////////////////////
 export const htmlStyles = StyleSheet.create({
-  body: {
-    // backgroundColor:"lightblue",
-    // color: "#6C472D",
-    // textAlign: "right",
-    // fontSize: 20,
-    // writingDirection: "rtl",
-  },
   htmlBaseStyle: {
     whiteSpace: "pre-wrap",
     writingDirection: "rtl",
@@ -333,19 +249,9 @@ export const htmlStyles = StyleSheet.create({
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
   },
-
-
   ContentWrapper: {
-    // textAlign: "right",
-    // direction: "right",
-    // marginTop: 10,
     writingDirection: "rtl",
   },
-
-
-
-
-
   p: {
     margin: 0,
     fontSize: 20,
@@ -353,15 +259,10 @@ export const htmlStyles = StyleSheet.create({
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
-    // lineHeight: 30,
-    whiteSpace: "pre-wrap",
-     
+    whiteSpace: "pre-wrap",   
   },
-
-
-
   h1: {
-      margin: 0,
+    margin: 0,
     fontSize: 28,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
@@ -377,7 +278,7 @@ export const htmlStyles = StyleSheet.create({
     writingDirection: "rtl",
   },
   h3: {
-          margin: 0,
+    margin: 0,
     fontSize: 22,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
@@ -385,7 +286,7 @@ export const htmlStyles = StyleSheet.create({
     writingDirection: "rtl",
   },
   h4: {
-          margin: 0,
+    margin: 0,
     fontSize: 20,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
@@ -393,20 +294,12 @@ export const htmlStyles = StyleSheet.create({
     writingDirection: "rtl",
   },
   h5: {
-          margin: 0,
+    margin: 0,
     fontSize: 18,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl", 
-    // ...(Platform.OS === "web" && {
-    //  fontSize: 18,
-    // fontFamily: "Jameel-Noori-Regular",
-    // color: "#6C472D",
-    // lineHeight:0,
-    // textAlign: "right",
-    // writingDirection: "rtl",
-    // }),
   },
   h6: {
     margin: 0,
@@ -415,14 +308,6 @@ export const htmlStyles = StyleSheet.create({
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
-    // ...(Platform.OS === "web" && {
-    //  fontSize: 16,
-    // fontFamily: "Jameel-Noori-Regular",
-    // color: "#6C472D",
-    // lineHeight:0,
-    // textAlign: "right",
-    // writingDirection: "rtl",
-    // }),
   },
   ul: {
     margin: 0,
@@ -444,98 +329,26 @@ ol: {
 },
   li: {
     paddingRight: 10,
-    // fontFamily: "Jameel-Noori-Regular",
-    // color: "#6C472D",
     direction: "ltr",
-    // textAlign: "start",
-    // writingDirection: "rtl",
     lineHeight:undefined
-
   },
   u: {
     textDecorationLine: "underline",
-    //  fontFamily: "JameelNooriNastaleeq-Italic",
   },
-
-
-//  em: {
-//    fontFamily: "JameelNooriNastaleeq-Italic",
-//     // fontStyle:"italic",
-//   },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // hr: {
-  //   borderBottomColor: "#6C472D",
-  //   borderBottomWidth: 1,
-  //   marginVertical: 10,
-  // },
-  // br: {
-  //   marginBottom: 10,
-  //   padding: 100,
-  //   backgroundColor:"red"
-  // },
-
    mark: {
     backgroundColor: "yellow",
-        // color: "#6C472D",
-            // fontFamily: "Jameel-Noori-Regular",
-        // color:undefined,
     color: Platform.OS === "web" ? "#6C472D" : undefined, // sirf web pe color
-    // lineHeight: undefined,
+  
   },
   strong: {
-    // fontSize:24,
-    // color:"black",
-    // textDecorationStyle:"dashed"
-    //  fontFamily: "Jameel-Noori-Regular",
-     
-  
-    // fontWeight:undefined
-    // color: "red",
-    // lineHeight: undefined,
-    // // textAlign: "right",
-    // // writingDirection: "rtl",
-    // fontFamily: "ScheherazadeNew-Bold",
       fontFamily: "NotoNastaliqUrdu-Bold",
-          
-    // color:undefined,
   },
-
-
-  
-
  var: {
-  // backgroundColor:"red",
     color: "red",
-    // lineHeight: undefined,
-    // textAlign: "right",
-    // writingDirection: "rtl",
-    // fontFamily: "Jameel-Noori-Regular",
     fontFamily: "ScheherazadeNew-Bold",
-      // fontFamily: "JameelNooriNastaleeq-Italic",
-      // fontFamily: "  NotoNastaliqUrdu-Regular",
-      // fontFamily:"Amiri-Bold",
-            // fontFamily:"AmiriQuran-Regular"
-            fontStyle:"normal"
+    fontStyle:"normal"
  
   },
-
-
   itemimage: {
   marginTop: 10,
   width: "100%",  
@@ -563,6 +376,5 @@ samp: {
   justifyContent: "center",
   alignItems: "flex-start", 
 },
-
 });
 //// ///////////////////////////////////blog-detail-pages style end ////////////////////
