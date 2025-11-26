@@ -1,20 +1,3 @@
-<<<<<<< Updated upstream
-
-import { Dimensions, Platform, StyleSheet } from "react-native";
-const { width } = Dimensions.get("window");
-
-///////////////////////////////////static pages Styles start/////////////////////////////
-export const mainStyles = StyleSheet.create({
-
-
-  container: {
-    padding: 15,
-    justifyContent: "center",
-  },
-
-
-
-=======
 import { Platform, StyleSheet } from "react-native";
 ///////////////////////////////////static pages Styles start/////////////////////////////
 export const mainStyles = StyleSheet.create({
@@ -22,7 +5,6 @@ export const mainStyles = StyleSheet.create({
   flex: 1,
   padding: 15,
 },
->>>>>>> Stashed changes
   heading: {
     fontSize: 28,
     fontFamily: "Jameel-Noori-Regular",
@@ -94,34 +76,6 @@ description: {
     // lineHeight: 30,
     // paddingVertical: 6,
   },
-<<<<<<< Updated upstream
-});
-////////////////////////////////////// static pages Styles  end ////////////////////////////////////
-////////////////////////////////////// fehrist pages style start ////////////////////////////////////
-export const fehristStyles = StyleSheet.create({
-
-imageListCenter: {
-   flexGrow: 1,
-    padding:10,
-},
-
-
-  container: {
-    flex: 1,
-  },
-  centerContent: {
-    flex: 1,
-    justifyContent: "center",
-    writingDirection: "rtl",
-    textAlign: "right",
-    alignItems: "center",
-  },
-  fehristcenter: {
-    flexGrow: 1,
-    justifyContent: "center",
-    padding:15,
-=======
->>>>>>> Stashed changes
 
 
 
@@ -219,286 +173,6 @@ carditemstext: {
 //   // },
 // });
 ////////////////////////////////////// fehrist pages style end ////////////////////////////////////
-// //////////////////////////////////// blog-detail-pages style start /////////////////////////////
-export const htmlStyles = StyleSheet.create({
-  body: {
-    color: "#6C472D",
-    textAlign: "right",
-    fontSize: 20,
-    writingDirection: "rtl",
-  },
-  htmlBaseStyle: {
-    whiteSpace: "pre-wrap",
-    writingDirection: "rtl",
-    textAlign: "right",
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-  },
-  p: {
-    margin: 0,
-    fontSize: 20,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-    lineHeight: 30,
-    whiteSpace: "pre-wrap",
-     
-  },
-
-dfn: {
-  whiteSpace: "pre-wrap",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center", 
-},
-
-kbd: {
-  whiteSpace: "pre-wrap",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "flex-end",
-},
-
-samp: {
-
-    whiteSpace: "pre-wrap",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "flex-start",
-},
-
-  h1: {
-    fontSize: 28,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-      overflow: "visible", 
-  },
-  h2: {
-    fontSize: 24,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  h3: {
-    fontSize: 22,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  h4: {
-    fontSize: 20,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  h5: {
-    fontSize: 18,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl", 
-    ...(Platform.OS === "web" && {
-     fontSize: 18,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    lineHeight:0,
-    textAlign: "right",
-    writingDirection: "rtl",
-    }),
-  },
-  h6: {
-    fontSize: 16,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-    ...(Platform.OS === "web" && {
-     fontSize: 16,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    lineHeight:0,
-    textAlign: "right",
-    writingDirection: "rtl",
-    }),
-  },
-  ul: {
-    margin: 0,
-    direction: "rtl",
-    fontFamily: "Jameel-Noori-Regular",
-    color: "red",
-    textAlign: "right",
-    writingDirection: "rtl",
-    lineHeight: 30,
-  },
-  ol: {
-    margin: 0,
-    direction: "rtl",
-    fontFamily: "Jameel-Noori-Regular",
-    color: "red",
-    textAlign: "right",
-    writingDirection: "rtl",
-    lineHeight: 30,
-  },
-  li: {
-    paddingRight: 10,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    direction: "ltr",
-    textAlign: "start",
-    writingDirection: "rtl",
-  },
-  u: {
-    textDecorationLine: "underline",
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  hr: {
-    borderBottomColor: "#6C472D",
-    borderBottomWidth: 1,
-    marginVertical: 10,
-  },
-  br: {
-    marginBottom: 10,
-    padding: 40,
-  },
-  strong: {
-    color: "red",
-    lineHeight: undefined,
-    textAlign: "right",
-    writingDirection: "rtl",
-    fontFamily: "ScheherazadeNew-Bold",
-  },
-  mark: {
-    backgroundColor: "yellow",
-    color: "#6C472D",
-    borderRadius: 2,
-    paddingHorizontal: 2,
-    fontFamily: "Jameel-Noori-Regular",
-    lineHeight: 30,
-  },
-   em: {
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-    fontFamily: 'Jameel-Noori-Italic',
-  },
-});
-//// ///////////////////////////////////blog-detail-pages style end ////////////////////
-///////////////////////////////rohani dokan or kutb style start/////////////////////////////////
-const CARD_MARGIN = 5;
-export const rohaniDokan = StyleSheet.create({
-  container: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "center",
-  },
-  
-card: {
-  flex: 1,
-  margin: CARD_MARGIN,
-  borderRadius: 5,
-  backgroundColor: "#fff",
-  padding: 5,
-  alignItems: "center",
-  justifyContent: "flex-start",
-  overflow: "hidden",
-  width: "100%"- CARD_MARGIN,
-},
-
-  image: {
-    width: "100%",
-    height: "100%",
-    borderRadius: 5,
-    objectFit: "cover",
-  },
-});
-
-//////////////////////rohani dokan or kutb style end////////////////////////////////
-///////////////////////////////////form style start/////////////////////////////////
-export const formStyles = StyleSheet.create({
-  formContainer: {
-    flex: 1,
-    overflow: "scroll",
-  },
-  inputRow: {
-    flex: 1,
-    marginBottom: 8,
-  },
-  label: {
-    color: "#6C472D",
-    fontWeight: "bold",
-    marginBottom: 6,
-    fontSize: 14,
-  },
-  inputBox: {
-    paddingHorizontal: 10,
-    paddingVertical: 14,
-    color: "#6C472D",
-    fontSize: 16,
-    backgroundColor: "#fff",
-    ...(Platform.OS === "web" && {
-      borderWidth: 1,
-      borderColor: "transparent",
-      outlineStyle: "none",
-    }),
-  },
-  datePickers: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  pickerInput: {
-    color: "#6C472D",
-    padding: 1,
-    flex: 1,
-    marginHorizontal: 2,
-    flex: 1,
-    backgroundColor: "#fff",
-    ...(Platform.OS === "web" && {
-      paddingVertical: 14,
-      borderWidth: 1,
-      borderColor: "transparent",
-      outlineStyle: "none",
-    }),
-  },
-  button: {
-    backgroundColor: "#6C472D",
-    paddingVertical: 14,
-    borderRadius: 5,
-    alignItems: "center",
-    marginTop: 6,
-  },
-  buttonText: {
-    color: "#fff",
-    fontSize: 18,
-    fontWeight: "bold",
-  },
-  modalBackground: {
-    flex: 1,
-    backgroundColor: "rgba(0,0,0,0.5)",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  modalContainer: {
-    width: "80%",
-    backgroundColor: "#fff",
-    padding: 10,
-    borderRadius: 5,
-    elevation: 10,
-  },
-  modalText: {
-    fontSize: 16,
-    color: "#333",
-  },
-});
-///////////////////////////////////////////form style end///////////////////////////////////////
 /////////////////////////////////component style start /////////////////////////////////
 export const backGround = StyleSheet.create({
   background: {
@@ -518,7 +192,7 @@ export const links = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    width: width,
+    width: "100%",
   },
   userSection: {
     alignItems: "center",
@@ -643,8 +317,6 @@ export const customButton = StyleSheet.create({
   },
 });
 /////////////////////////////////component style end /////////////////////////////////
-<<<<<<< Updated upstream
-=======
 // //////////////////////////////////// blog-detail-pages style start /////////////////////////////
 export const htmlStyles = StyleSheet.create({
   body: {
@@ -894,4 +566,3 @@ samp: {
 
 });
 //// ///////////////////////////////////blog-detail-pages style end ////////////////////
->>>>>>> Stashed changes
