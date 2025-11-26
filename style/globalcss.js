@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
 import { Dimensions, Platform, StyleSheet } from "react-native";
 const { width } = Dimensions.get("window");
@@ -13,16 +14,22 @@ export const mainStyles = StyleSheet.create({
 
 
 
+=======
+import { Platform, StyleSheet } from "react-native";
+///////////////////////////////////static pages Styles start/////////////////////////////
+export const mainStyles = StyleSheet.create({
+ container: {
+  flex: 1,
+  padding: 15,
+},
+>>>>>>> Stashed changes
   heading: {
     fontSize: 28,
-    lineHeight: 45,
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
-    overflow: "visible", 
-    
-    
+    includeFontPadding: false,
   },
   subheading: {
     fontSize: 24,
@@ -32,13 +39,15 @@ export const mainStyles = StyleSheet.create({
     textAlign: "right",
     writingDirection: "rtl",
   },
-  description: {
-    fontSize: 20,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
+description: {
+  fontSize: 20,
+  color: "#6C472D",
+  fontFamily: "Jameel-Noori-Regular",
+  textAlign: "right",    
+  includeFontPadding: false,
+},
+
+// working after client disscusion
   tashkhesHeading: {
     fontSize: 28,
     paddingTop: 5,
@@ -55,34 +64,37 @@ export const mainStyles = StyleSheet.create({
     textAlign: "right",
     writingDirection: "rtl",
   },
-  image_section: {
-    justifyContent: "center",
+
+// working after client disscusion
+
+ sirparastimagesection: {
     alignItems: "center",
   },
-  image: {
+  sirparastimage: {
     width: 200,
     height: 240,
   },
-  column: {
+   rohaniishayacolumn: {
     flex: 1,
-    paddingRight: 10,
+    // paddingRight: 10,
   },
-  listContainer: {
+   rohaniishayaContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
   },
-  list: {
-    paddingRight: 10,
-  },
-  item: {
+  // list: {
+  //   // paddingRight: 10,
+  // },
+  rohaniishayaitem: {
     fontSize: 20,
     color: "#6C472D",
     fontFamily: "Jameel-Noori-Regular",
     textAlign: "right",
-    writingDirection: "rtl",
-    lineHeight: 30,
-    paddingVertical: 6,
+    // writingDirection: "rtl",
+    // lineHeight: 30,
+    // paddingVertical: 6,
   },
+<<<<<<< Updated upstream
 });
 ////////////////////////////////////// static pages Styles  end ////////////////////////////////////
 ////////////////////////////////////// fehrist pages style start ////////////////////////////////////
@@ -108,61 +120,104 @@ imageListCenter: {
     flexGrow: 1,
     justifyContent: "center",
     padding:15,
+=======
+>>>>>>> Stashed changes
 
-  },
-  card: {
-    width: "100%",
-    backgroundColor: "#E4DAC1",
-    paddingVertical: 2,
-    marginTop: 8,
-    marginBottom: 8,
-    borderRadius: 5,
-    alignItems: "center",
-  },
-  fehristText: {
-    paddingTop:2,
-    fontSize: 20,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "center",
-  },
+
+
+
+
+  // carditems: {
+  //   width: "100%",
+  //   backgroundColor: "#E4DAC1",
+  //   paddingVertical: 2,
+  //   marginTop: 8,
+  //   marginBottom: 8,
+  //   borderRadius: 5,
+  //   alignItems: "center",
+  // },
+  //  carditemstext: {
+  //   paddingTop:2,
+  //   fontSize: 20,
+  //   fontFamily: "Jameel-Noori-Regular",
+  //   color: "#6C472D",
+  //   textAlign: "center",
+  // },
+
+
+
+
+
+
+carditems: {
+  width: "100%",
+  backgroundColor: "#E4DAC1",
+  paddingVertical: 8,
+  marginTop: 8,
+  marginBottom: 8,
+  borderRadius: 5,
+  alignItems: "center",
+},
+
+carditemstext: {
+  fontSize: 20,
+  fontFamily: "Jameel-Noori-Regular",
+  color: "#6C472D",
+  textAlign: "center",
+
+},
+
   noRecordText: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: "600",
     fontFamily: "Jameel-Noori-Regular",
     color: "#6C472D",
     textAlign: "center",
-    writingDirection: "rtl",
-    width:"100%"
+    // writingDirection: "rtl",
+    // width:"100%"
   },
-image: {
-   marginTop: 10,
-  width: "100%",  
-  height: 200,
-  resizeMode: "contain",
-},
-
-
-  deatilContentWrapper: {
-    textAlign: "right",
-    direction: "right",
-    marginTop: 10,
-    writingDirection: "rtl",
-  },
-  text: {
-    fontSize: 22,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "center",
-  },
-  tashkhesText: {
-    fontSize: 22,
-    paddingTop: 2,
-    fontFamily: "Jameel-Noori-Regular",
-    color: "#6C472D",
-    textAlign: "center",
-  },
+//  centerContent: {
+//     flex: 1,
+//     justifyContent: "center",
+//     writingDirection: "rtl",
+//     textAlign: "right",
+//     alignItems: "center",
+//   },
 });
+////////////////////////////////////// static pages Styles  end ////////////////////////////////////
+////////////////////////////////////// fehrist pages style start ////////////////////////////////////
+// export const fehristStyles = StyleSheet.create({
+// // imageListCenter: {
+// //    flexGrow: 1,
+// //     padding:15,
+// // },
+//   // container: {
+//   //   flex: 1,
+//   // },
+ 
+//   // fehristcenter: {
+//   //   flexGrow: 1,
+//   //   justifyContent: "center",
+//   //   padding:15,
+
+//   // },
+
+
+
+//   // text: {
+//   //   fontSize: 22,
+//   //   fontFamily: "Jameel-Noori-Regular",
+//   //   color: "#6C472D",
+//   //   textAlign: "center",
+//   // },
+//   // tashkhesText: {
+//   //   fontSize: 22,
+//   //   paddingTop: 2,
+//   //   fontFamily: "Jameel-Noori-Regular",
+//   //   color: "#6C472D",
+//   //   textAlign: "center",
+//   // },
+// });
 ////////////////////////////////////// fehrist pages style end ////////////////////////////////////
 // //////////////////////////////////// blog-detail-pages style start /////////////////////////////
 export const htmlStyles = StyleSheet.create({
@@ -588,3 +643,255 @@ export const customButton = StyleSheet.create({
   },
 });
 /////////////////////////////////component style end /////////////////////////////////
+<<<<<<< Updated upstream
+=======
+// //////////////////////////////////// blog-detail-pages style start /////////////////////////////
+export const htmlStyles = StyleSheet.create({
+  body: {
+    // backgroundColor:"lightblue",
+    // color: "#6C472D",
+    // textAlign: "right",
+    // fontSize: 20,
+    // writingDirection: "rtl",
+  },
+  htmlBaseStyle: {
+    whiteSpace: "pre-wrap",
+    writingDirection: "rtl",
+    textAlign: "right",
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+  },
+
+
+  ContentWrapper: {
+    // textAlign: "right",
+    // direction: "right",
+    // marginTop: 10,
+    writingDirection: "rtl",
+  },
+
+
+
+
+
+  p: {
+    margin: 0,
+    fontSize: 20,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+    // lineHeight: 30,
+    whiteSpace: "pre-wrap",
+     
+  },
+
+
+
+  h1: {
+      margin: 0,
+    fontSize: 28,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+  h2: {
+    margin: 0,
+    fontSize: 24,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+  h3: {
+          margin: 0,
+    fontSize: 22,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+  h4: {
+          margin: 0,
+    fontSize: 20,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+  h5: {
+          margin: 0,
+    fontSize: 18,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl", 
+    // ...(Platform.OS === "web" && {
+    //  fontSize: 18,
+    // fontFamily: "Jameel-Noori-Regular",
+    // color: "#6C472D",
+    // lineHeight:0,
+    // textAlign: "right",
+    // writingDirection: "rtl",
+    // }),
+  },
+  h6: {
+    margin: 0,
+    fontSize: 16,
+    fontFamily: "Jameel-Noori-Regular",
+    color: "#6C472D",
+    textAlign: "right",
+    writingDirection: "rtl",
+    // ...(Platform.OS === "web" && {
+    //  fontSize: 16,
+    // fontFamily: "Jameel-Noori-Regular",
+    // color: "#6C472D",
+    // lineHeight:0,
+    // textAlign: "right",
+    // writingDirection: "rtl",
+    // }),
+  },
+  ul: {
+    margin: 0,
+    direction: "rtl",
+    fontFamily: "Jameel-Noori-Regular",
+    color: "red",
+    textAlign: "right",
+    writingDirection: "rtl",
+   lineHeight: Platform.OS === "web" ? 36 : 42,
+  },
+ol: {
+  margin: 0,
+  direction: "rtl",
+  fontFamily: "Jameel-Noori-Regular",
+  color: "red",
+  textAlign: "right",
+  writingDirection: "rtl",
+  lineHeight: Platform.OS === "web" ? 36 : 42,
+},
+  li: {
+    paddingRight: 10,
+    // fontFamily: "Jameel-Noori-Regular",
+    // color: "#6C472D",
+    direction: "ltr",
+    // textAlign: "start",
+    // writingDirection: "rtl",
+    lineHeight:undefined
+
+  },
+  u: {
+    textDecorationLine: "underline",
+    //  fontFamily: "JameelNooriNastaleeq-Italic",
+  },
+
+
+//  em: {
+//    fontFamily: "JameelNooriNastaleeq-Italic",
+//     // fontStyle:"italic",
+//   },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // hr: {
+  //   borderBottomColor: "#6C472D",
+  //   borderBottomWidth: 1,
+  //   marginVertical: 10,
+  // },
+  // br: {
+  //   marginBottom: 10,
+  //   padding: 100,
+  //   backgroundColor:"red"
+  // },
+
+   mark: {
+    backgroundColor: "yellow",
+        // color: "#6C472D",
+            // fontFamily: "Jameel-Noori-Regular",
+        // color:undefined,
+    color: Platform.OS === "web" ? "#6C472D" : undefined, // sirf web pe color
+    // lineHeight: undefined,
+  },
+  strong: {
+    // fontSize:24,
+    // color:"black",
+    // textDecorationStyle:"dashed"
+    //  fontFamily: "Jameel-Noori-Regular",
+     
+  
+    // fontWeight:undefined
+    // color: "red",
+    // lineHeight: undefined,
+    // // textAlign: "right",
+    // // writingDirection: "rtl",
+    // fontFamily: "ScheherazadeNew-Bold",
+      fontFamily: "NotoNastaliqUrdu-Bold",
+          
+    // color:undefined,
+  },
+
+
+  
+
+ var: {
+  // backgroundColor:"red",
+    color: "red",
+    // lineHeight: undefined,
+    // textAlign: "right",
+    // writingDirection: "rtl",
+    // fontFamily: "Jameel-Noori-Regular",
+    fontFamily: "ScheherazadeNew-Bold",
+      // fontFamily: "JameelNooriNastaleeq-Italic",
+      // fontFamily: "  NotoNastaliqUrdu-Regular",
+      // fontFamily:"Amiri-Bold",
+            // fontFamily:"AmiriQuran-Regular"
+            fontStyle:"normal"
+ 
+  },
+
+
+  itemimage: {
+  marginTop: 10,
+  width: "100%",  
+  height: 200,
+  resizeMode: "contain",
+},
+
+dfn: {
+  whiteSpace: "pre-wrap",
+  display: "flex",
+  justifyContent: "center", 
+  alignItems: "center",
+},
+
+kbd: {
+  whiteSpace: "pre-wrap",
+  display: "flex",
+  justifyContent: "center", 
+  alignItems: "flex-end", 
+},
+
+samp: {
+  whiteSpace: "pre-wrap",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "flex-start", 
+},
+
+});
+//// ///////////////////////////////////blog-detail-pages style end ////////////////////
+>>>>>>> Stashed changes

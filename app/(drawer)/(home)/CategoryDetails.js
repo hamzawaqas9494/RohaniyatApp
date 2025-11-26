@@ -9,7 +9,7 @@ import Loader from "../../../components/Loader/Loader";
 import { useData } from "../../../components/context/DataContext";
 import YoutubeButton from "../../../components/youtubeButton/youtubeVideo";
 import { BASE_URL_IMG } from "../../../config/api";
-import { customButton, fehristStyles, htmlBaseStyle, htmlStyles, mainStyles } from "../../../style/globalcss";
+import { customButton, htmlBaseStyle, htmlStyles, mainStyles } from "../../../style/globalcss";
 
 export default function CategoryDetails() {
   const { id, tableName } = useRoute().params || {};
@@ -57,18 +57,18 @@ export default function CategoryDetails() {
       <ScrollView>
          <View style={mainStyles.container}>
         <Text style={mainStyles.heading}>{item.title}</Text>
-        <View style={fehristStyles.deatilContentWrapper}>
+        <View style={htmlStyles.ContentWrapper}>
           <RenderHTML
             contentWidth={width}
             source={{ html: item.content || "<p>کوئی مواد نہیں</p>" }}
             tagsStyles={htmlStyles}
-            systemFonts={["Jameel-Noori-Regular", "Amiri-Bold", "ScheherazadeNew-Bold"]}
+            systemFonts={["Jameel-Noori-Regular", "ScheherazadeNew-Bold","JameelNooriNastaleeq-Italic","NotoNastaliqUrdu-Regular","AmiriQuran-Regular","Amiri-Bold","NotoNastaliqUrdu-Bold"]}
             defaultTextProps={{ selectable: true }}
             baseStyle={htmlBaseStyle}
           />
         </View>
         {item.image && (
-          <Image source={{ uri: `${BASE_URL_IMG}${item.image}` }} style={fehristStyles.image} resizeMode="contain" />
+          <Image source={{ uri: `${BASE_URL_IMG}${item.itemimage}` }} style={htmlStyles.image} resizeMode="contain" />
         )}
         <View style={customButton.container}>
           {allowedTables.includes(tableName) && <BuyButton link="https://wa.me/923008440979" />}

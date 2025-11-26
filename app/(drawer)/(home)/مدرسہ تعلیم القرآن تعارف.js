@@ -34,21 +34,21 @@ export default function RohaniIlajScreen() {
             مستقبل قریب میں پانچ درجات میں کام کرنے کیلئے کوشاں ہیں :
           </Text>
           <View>
-            <Text style={mainStyles.item}>
+            <Text style={mainStyles.rohaniishayaitem}>
               • طلبہ و طالبات کیلئے حفظ القرآن کی پُر سکون کلاسز کا اہتمام کرنا
               ہے۔
             </Text>
-            <Text style={mainStyles.item}>
+            <Text style={mainStyles.rohaniishayaitem}>
               • طلبہ و طالبات کیلئے درس نظامی کی کلاسز کا اہتمام کرنا ہے۔
             </Text>
-            <Text style={mainStyles.item}>
+            <Text style={mainStyles.rohaniishayaitem}>
               • محلے، علاقے کے بچوں، بچیوں اور خواتین کیلئے تربیتی کورسز کا
               اہتمام کرنا ہے۔
             </Text>
-            <Text style={mainStyles.item}>
+            <Text style={mainStyles.rohaniishayaitem}>
               • بچوں، بچیوں اور علاقے کی خواتین کے لیے دستکاری سکول۔
             </Text>
-            <Text style={mainStyles.item}>
+            <Text style={mainStyles.rohaniishayaitem}>
               • جدید علوم سے آراستہ کرنا اور معاشرے میں بے روزگاری کو ختم کرنے
               کے لیے توسیع کا منصوبہ ہے۔
             </Text>

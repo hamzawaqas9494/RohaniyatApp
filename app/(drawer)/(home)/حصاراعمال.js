@@ -29,24 +29,24 @@ export default function HisarAmaalScreen() {
           </Text>
           <Text style={mainStyles.heading}>خواتین کیلئے (ناپاکی کے ایام میں):</Text>
           <View>
-          <Text style={mainStyles.item}>
+          <Text style={mainStyles.rohaniishayaitem}>
             • يا حَافِظُ يَا حَفِيْظُ (100 مرتبہ)</Text>
-            <Text style={mainStyles.item}>
+            <Text style={mainStyles.rohaniishayaitem}>
             • اَعُوْذُ بِکَلِمَاتِ اللہِ التَّامَّۃِ... (7 مرتبہ)</Text>
-             <Text style={mainStyles.item}>
+             <Text style={mainStyles.rohaniishayaitem}>
             • لَا حَوْلَ وَلَا قُوَّةَ... (7 مرتبہ)</Text>
-            <Text style={mainStyles.item}>
+            <Text style={mainStyles.rohaniishayaitem}>
             • بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ... (7 مرتبہ)</Text>
           </View>
           <Text style={mainStyles.heading}>مرد حضرات و خواتین (پاکی کیلئے):</Text>
          <View>
-          <Text style={mainStyles.item}>
+          <Text style={mainStyles.rohaniishayaitem}>
             • آیت الکرسی (7 مرتبہ) </Text>
-             <Text style={mainStyles.item}>
+             <Text style={mainStyles.rohaniishayaitem}>
             • سورۃ الفلق، سورۃ الناس (7 مرتبہ)</Text>
-             <Text style={mainStyles.item}>
+             <Text style={mainStyles.rohaniishayaitem}>
             • سورۃ اخلاص، الفلق، الناس (3 مرتبہ)</Text>
-             <Text style={mainStyles.item}>
+             <Text style={mainStyles.rohaniishayaitem}>
             • سورۃ البقرہ کی آخری 2 آیات (1 مرتبہ)</Text>
            </View>
         </View>

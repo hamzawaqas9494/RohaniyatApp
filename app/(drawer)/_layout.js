@@ -1,6 +1,6 @@
 import { FontAwesome } from "@expo/vector-icons";
 import { DrawerActions, useNavigation } from "@react-navigation/native";
-import { useFonts } from "expo-font";
+import { useFonts } from 'expo-font';
 import { Drawer } from "expo-router/drawer";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect, useLayoutEffect, useState } from "react";
@@ -19,8 +19,12 @@ export default function Layout() {
   const [fontsLoaded] = useFonts({
     "Jameel-Noori-Regular": require("../../assets/fonts/JameelNooriNastaleeqRegular.ttf"),
     "Amiri-Bold": require("../../assets/fonts/Amiri-Bold.ttf"),
+      "AmiriQuran-Regular": require("../../assets/fonts/AmiriQuran-Regular.ttf"),
      "ScheherazadeNew-Bold": require("../../assets/fonts/ScheherazadeNew-Bold.ttf"),
        "NotoNastaliqUrdu-Regular": require("../../assets/fonts/NotoNastaliqUrdu-Regular.ttf"),
+          "NotoNastaliqUrdu-Bold": require("../../assets/fonts/NotoNastaliqUrdu-Bold.ttf"),
+           "JameelNooriNastaleeq-Italic": require("../../assets/fonts/JameelNooriNastaleeqItalic.ttf"),
+       
   });
   const [isSplashVisible, setSplashVisible] = useState(true);
   useLayoutEffect(() => {

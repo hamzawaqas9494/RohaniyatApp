@@ -7,7 +7,7 @@ import { useData } from "../../../components/context/DataContext";
 import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
 import Loader from "../../../components/Loader/Loader";
 import { sortUrduData } from "../../../components/SortUrduData/SortUrduData";
-import { fehristStyles } from "../../../style/globalcss";
+import { mainStyles } from "../../../style/globalcss";
 
 export default function CategoryList() {
   const { tableName, label } = useRoute().params || {};
@@ -93,20 +93,25 @@ export default function CategoryList() {
   if (errorMsg) return <ErrorMessage text={errorMsg} />;
 
   return (
-    <CustomBackground>
-      <FlatList
-        data={categories}
-        keyExtractor={(item, index) => index.toString()}
-        contentContainerStyle={fehristStyles.fehristcenter}
-        renderItem={({ item }) => (
-          <TouchableOpacity
-            style={fehristStyles.card}
-            onPress={() => handleCategoryPress(item.label)}
-          >
-            <Text style={fehristStyles.fehristText}>{item.label}</Text>
-          </TouchableOpacity>
-        )}
-      />
-    </CustomBackground>
+ <CustomBackground>
+  <FlatList
+    data={categories}
+    keyExtractor={(item, index) => index.toString()}
+    contentContainerStyle={{
+      flexGrow: 1,
+      justifyContent: "center",
+      padding: 15,
+    }}
+    renderItem={({ item }) => (
+      <TouchableOpacity
+         style={mainStyles.carditems}
+        onPress={() => handleCategoryPress(item.label)}
+      >
+        <Text  style={mainStyles.carditemstext}>{item.label}</Text>
+      </TouchableOpacity>
+    )}
+  />
+</CustomBackground>
+
   );
 }

@@ -1,7 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
-import { FlatList, Text, TouchableOpacity, View } from "react-native";
+import { FlatList, Text, TouchableOpacity } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-import { fehristStyles, mainStyles } from "../../../style/globalcss";
+import { mainStyles } from "../../../style/globalcss";
 
 const DATA = [
   { id: "1", tableName: "wazaif", label: "وظائف" },
@@ -27,20 +27,23 @@ export default function TitleScreen() {
 
   return (
     <CustomBackground>
-        <View style={mainStyles.container}>
-        <FlatList
-          data={DATA}
-          keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (
-            <TouchableOpacity
-              style={fehristStyles.card}
-              onPress={() => handlePress(item)}
-            >
-              <Text style={fehristStyles.text}>{item.label}</Text>
-            </TouchableOpacity>
-          )}
-        />
-      </View>
+      <FlatList
+        data={DATA}
+        keyExtractor={(item) => item.id}
+        contentContainerStyle={{
+          flexGrow: 1,
+          justifyContent: "center",
+          padding: 15,
+        }}
+        renderItem={({ item }) => (
+          <TouchableOpacity
+            style={mainStyles.carditems}
+            onPress={() => handlePress(item)}
+          >
+            <Text style={mainStyles.carditemstext}>{item.label}</Text>
+          </TouchableOpacity>
+        )}
+      />
     </CustomBackground>
   );
 }

@@ -29,10 +29,10 @@ export default function RohaniIshaya() {
             سہولت موجود ہے۔
           </Text>
           <Text style={mainStyles.heading}>روحانی دکان میں 2 شعبے ہیں</Text>
-          <View style={mainStyles.list}>
-            <Text style={mainStyles.item}>• دم شدہ اشیاء</Text>
-            <Text style={mainStyles.item}>• تیار روحانی علاج</Text>
-          </View>
+          
+            <Text style={mainStyles.rohaniishayaitem}>•  دم شدہ اشیاء</Text>
+            <Text style={mainStyles.rohaniishayaitem}>• تیار روحانی علاج</Text>
+         
           <Text style={mainStyles.description}>
             سب کی تفصیل ذیل میں دی گئی ہے۔گھر بیٹھے تمام اشیاء منگوائیں۔ ڈاک خرچ
             بذمہ خریدار۔ پیشگی رقم کے بغیر اشیاء نہیں بھیجیں جائیں گی۔
@@ -55,42 +55,42 @@ export default function RohaniIshaya() {
             اشیاء گھر بیٹھے منگوا سکتے ہیں۔
           </Text>
           <View>
-            <ScrollView contentContainerStyle={mainStyles.listContainer}>
-              <View style={mainStyles.column}>
-                <Text style={mainStyles.item}>• الشفاء اگر بتی</Text>
-                <Text style={mainStyles.item}>• الشفاء پانی</Text>
-                <Text style={mainStyles.item}>• الشفاء تیل</Text>
-                <Text style={mainStyles.item}>• الشفاء شہد</Text>
-                <Text style={mainStyles.item}>• الشفاء عطر</Text>
-                <Text style={mainStyles.item}>• الشفاء باخور</Text>
-                <Text style={mainStyles.item}>• الشفاء پرفیوم سپرے</Text>
-                <Text style={mainStyles.item}>• الشفاء دھونی</Text>
-                <Text style={mainStyles.item}>• الشفاء گوگل</Text>
-                <Text style={mainStyles.item}>• الشفاء ہرمل</Text>
-                <Text style={mainStyles.item}>• الشفاء لوبان</Text>
-                <Text style={mainStyles.item}>• الشفاء صابن</Text>
-                <Text style={mainStyles.item}>• الشفاء مہندی</Text>
-                <Text style={mainStyles.item}>• الشفاء ابٹن</Text>
-                <Text style={mainStyles.item}>• الشفاء کلونجی</Text>
-                <Text style={mainStyles.item}>• الشفاء چھوہارے</Text>
+            <ScrollView contentContainerStyle={mainStyles.rohaniishayaContainer}>
+              <View style={mainStyles.rohaniishayacolumn}>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء اگر بتی</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء پانی</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء تیل</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء شہد</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء عطر</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء باخور</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء پرفیوم سپرے</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء دھونی</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء گوگل</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء ہرمل</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء لوبان</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء صابن</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء مہندی</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء ابٹن</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء کلونجی</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء چھوہارے</Text>
               </View>
-              <View style={mainStyles.column}>
-                <Text style={mainStyles.item}>• الشفاء چھلہ</Text>
-                <Text style={mainStyles.item}>• الشفاء کڑا</Text>
-                <Text style={mainStyles.item}>• الشفاء دھاگہ</Text>
-                <Text style={mainStyles.item}>• الشفاء ڈوری</Text>
-                <Text style={mainStyles.item}>• الشفاء گنڈا</Text>
-                <Text style={mainStyles.item}>• الشفاء چراغ</Text>
-                <Text style={mainStyles.item}>• الشفاء موم بتی</Text>
-                <Text style={mainStyles.item}>• الشفاء مٹی</Text>
-                <Text style={mainStyles.item}>• الشفاء راکھ</Text>
-                <Text style={mainStyles.item}>• الشفاء کیل</Text>
-                <Text style={mainStyles.item}>• الشفاء مرچیں</Text>
-                <Text style={mainStyles.item}>• الشفاء چینی</Text>
-                <Text style={mainStyles.item}>• الشفاء نمک</Text>
-                <Text style={mainStyles.item}>• الشفاء پھکی</Text>
-                <Text style={mainStyles.item}>• الشفاء شکر</Text>
-                <Text style={mainStyles.item}>• الشفاء عرق گلاب</Text>
+              <View style={mainStyles.rohaniishayacolumn}>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء چھلہ</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء کڑا</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء دھاگہ</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء ڈوری</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء گنڈا</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء چراغ</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء موم بتی</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء مٹی</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء راکھ</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء کیل</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء مرچیں</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء چینی</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء نمک</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء پھکی</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء شکر</Text>
+                <Text style={mainStyles.rohaniishayaitem}>• الشفاء عرق گلاب</Text>
               </View>
             </ScrollView>
           </View>

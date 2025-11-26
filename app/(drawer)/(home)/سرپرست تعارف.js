@@ -6,10 +6,10 @@ export default function SirparastScreen() {
     <CustomBackground>
       <ScrollView>
         <View style={mainStyles.container}>
-          <View style={mainStyles.image_section}>
+          <View style={mainStyles.sirparastimagesection}>
           <Image
             source={require("../../../assets/images/sarparast.png")}
-            style={mainStyles.image}
+            style={mainStyles.sirparastimage}
           />
         </View>
           <Text style={mainStyles.heading}>مختصر تعارف</Text>

@@ -2,11 +2,10 @@ import { useNavigation } from "@react-navigation/native";
 import {
   FlatList,
   Text,
-  TouchableOpacity,
-  View
+  TouchableOpacity
 } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
-import { fehristStyles, mainStyles } from "../../../style/globalcss";
+import { mainStyles } from "../../../style/globalcss";
 const DATA = [
   {
     id: "1",
@@ -22,21 +21,25 @@ const DATA = [
 export default function RohaniIlaj() {
   const navigation = useNavigation();
   return (
-    <CustomBackground>
-     <View style={mainStyles.container}>
-        <FlatList
-          data={DATA}
-          keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (
-            <TouchableOpacity
-              style={fehristStyles.card}
-              onPress={() => navigation.navigate(item.screen)}
-            >
-              <Text style={fehristStyles.text}>{item.text}</Text>
-            </TouchableOpacity>
-          )}
-        />
-      </View>
-    </CustomBackground>
+   <CustomBackground>
+  <FlatList
+    data={DATA}
+    keyExtractor={(item) => item.id}
+    contentContainerStyle={{
+      flexGrow: 1,
+      justifyContent: "center", 
+      padding: 15,            
+    }}
+    renderItem={({ item }) => (
+      <TouchableOpacity
+        style={mainStyles.carditems}
+        onPress={() => navigation.navigate(item.screen)}
+      >
+        <Text style={mainStyles.carditemstext}>{item.text}</Text>
+      </TouchableOpacity>
+    )}
+  />
+</CustomBackground>
+
   );
 }

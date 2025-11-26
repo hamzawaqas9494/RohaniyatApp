@@ -57,9 +57,9 @@ export default function AmliyatCourseScreen() {
             کروانے کا سلسلہ چل رہا ہے۔ چند اہم اور خاص اوقات یہ ہیں:۔
           </Text>
           <View >
-            <Text style={mainStyles.item}>• چاند گرہن</Text>
-            <Text style={mainStyles.item}>• سورج گرہن</Text>
-            <Text style={mainStyles.item}>• نوروز</Text>
+            <Text style={mainStyles.rohaniishayaitem}>• چاند گرہن</Text>
+            <Text style={mainStyles.rohaniishayaitem}>• سورج گرہن</Text>
+            <Text style={mainStyles.rohaniishayaitem}>• نوروز</Text>
           </View>
           <Text style={mainStyles.description}>
             سال میں کئی خاص مہینے آتے ہیں جو عملیات کی زکوٰۃ کے لئے بہت مفید
@@ -68,10 +68,10 @@ export default function AmliyatCourseScreen() {
             کروانے کا سلسلہ چل رہا ہے۔ چند اہم اور خاص مہینے یہ ہیں:۔
           </Text>
           <View >
-            <Text style={mainStyles.item}>• محرم الحرام</Text>
-            <Text style={mainStyles.item}>• صفر المظفر</Text>
-            <Text style={mainStyles.item}>• ربیع الاول</Text>
-            <Text style={mainStyles.item}>• رمضان المبارک</Text>
+            <Text style={mainStyles.rohaniishayaitem}>• محرم الحرام</Text>
+            <Text style={mainStyles.rohaniishayaitem}>• صفر المظفر</Text>
+            <Text style={mainStyles.rohaniishayaitem}>• ربیع الاول</Text>
+            <Text style={mainStyles.rohaniishayaitem}>• رمضان المبارک</Text>
           </View>
           <Text style={mainStyles.description}>
             پورا سال کروائے جانے والے اعمال جن کے پیچھے باقاعدہ غائبانہ روحانی
@@ -80,12 +80,12 @@ export default function AmliyatCourseScreen() {
             نام روشن کر سکتے ہیں ۔
           </Text>
           <View >
-            <Text style={mainStyles.item}>• نورانی اعمال</Text>
-            <Text style={mainStyles.item}>• نورانی علوی اعمال</Text>
-            <Text style={mainStyles.item}>• علوی اعمال </Text>
-            <Text style={mainStyles.item}>• باموکل اعمال </Text>
-            <Text style={mainStyles.item}>• اولیاءاللہ کے اعمال </Text>
-            <Text style={mainStyles.item}>• خاص الخاص اعمال </Text>
+            <Text style={mainStyles.rohaniishayaitem}>• نورانی اعمال</Text>
+            <Text style={mainStyles.rohaniishayaitem}>• نورانی علوی اعمال</Text>
+            <Text style={mainStyles.rohaniishayaitem}>• علوی اعمال </Text>
+            <Text style={mainStyles.rohaniishayaitem}>• باموکل اعمال </Text>
+            <Text style={mainStyles.rohaniishayaitem}>• اولیاءاللہ کے اعمال </Text>
+            <Text style={mainStyles.rohaniishayaitem}>• خاص الخاص اعمال </Text>
           </View>
         </View>
       </ScrollView>

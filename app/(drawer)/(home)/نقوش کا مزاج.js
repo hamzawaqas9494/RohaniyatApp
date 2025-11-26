@@ -14,10 +14,10 @@ export default function NakoshKaMazaj() {
             نقوش طبیت کے اعتبار سے چار طرح کے ہوتے ہیں
           </Text>
           <View>
-            <Text style={mainStyles.item}>• آتشی</Text>
-            <Text style={mainStyles.item}>• بادی</Text>
-            <Text style={mainStyles.item}>• آبی</Text>
-            <Text style={mainStyles.item}>• خاکی</Text>
+            <Text style={mainStyles.rohaniishayaitem}>• آتشی</Text>
+            <Text style={mainStyles.rohaniishayaitem}>• بادی</Text>
+            <Text style={mainStyles.rohaniishayaitem}>• آبی</Text>
+            <Text style={mainStyles.rohaniishayaitem}>• خاکی</Text>
           </View>
           <Text style={mainStyles.heading}>
             1. آتشی نقوش (برائے زکات آگ میں جلائے جاتے ہیں۔)

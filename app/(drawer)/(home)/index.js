@@ -255,7 +255,7 @@ const styles = StyleSheet.create({
         fontFamily: "Jameel-Noori-Regular",
   },
   rateButton: {
-     color:"black",
+    //  color:"black",
     marginTop:10,
     backgroundColor: "rgb(228, 218, 193)",
     paddingVertical: 10,
