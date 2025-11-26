@@ -10,21 +10,14 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import SplashScreenComponent from "../../components/SplashScreen/splash";
 import { DataProvider } from "../../components/context/DataContext";
 
-
-
-
 SplashScreen.preventAutoHideAsync();
 export default function Layout() {
 
   const [fontsLoaded] = useFonts({
-    "Jameel-Noori-Regular": require("../../assets/fonts/JameelNooriNastaleeqRegular.ttf"),
-    "Amiri-Bold": require("../../assets/fonts/Amiri-Bold.ttf"),
-      "AmiriQuran-Regular": require("../../assets/fonts/AmiriQuran-Regular.ttf"),
-     "ScheherazadeNew-Bold": require("../../assets/fonts/ScheherazadeNew-Bold.ttf"),
-       "NotoNastaliqUrdu-Regular": require("../../assets/fonts/NotoNastaliqUrdu-Regular.ttf"),
-          "NotoNastaliqUrdu-Bold": require("../../assets/fonts/NotoNastaliqUrdu-Bold.ttf"),
-           "JameelNooriNastaleeq-Italic": require("../../assets/fonts/JameelNooriNastaleeqItalic.ttf"),
-       
+    "Jameel-Noori-Regular": require("../../assets/fonts/JameelNooriNastaleeqRegular.ttf"), // For OverAll Urdu Text
+    "ScheherazadeNew-Bold": require("../../assets/fonts/ScheherazadeNew-Bold.ttf"), // For Arabic Ayaat Text
+    "NotoNastaliqUrdu-Regular": require("../../assets/fonts/NotoNastaliqUrdu-Regular.ttf"), // For Header Text
+    "NotoNastaliqUrdu-Bold": require("../../assets/fonts/NotoNastaliqUrdu-Bold.ttf"), // For Bold Text 
   });
   const [isSplashVisible, setSplashVisible] = useState(true);
   useLayoutEffect(() => {
@@ -72,12 +65,13 @@ export default function Layout() {
             color: "#6C472D",
           },
           headerTitleAlign: "center",
-          headerStyle: { height: 56, backgroundColor: "#E4DAC1" },
-          drawerStyle: { backgroundColor: "#E4DAC1", width: 240 },
+          headerStyle: { height: 56, backgroundColor: "#E4DAC1"},
+          drawerStyle: { backgroundColor: "#E4DAC1" },
           drawerActiveTintColor: "#6C472D",
           drawerInactiveTintColor: "black",
-          drawerLabelStyle: { fontSize: 16 },
+          drawerLabelStyle: {fontSize: 18, fontFamily: "Jameel-Noori-Regular"},
           gestureEnabled: true,
+          
         }}
       >
         <Drawer.Screen

@@ -62,7 +62,7 @@ export default function CategoryDetails() {
             contentWidth={width}
             source={{ html: item.content || "<p>کوئی مواد نہیں</p>" }}
             tagsStyles={htmlStyles}
-            systemFonts={["Jameel-Noori-Regular", "ScheherazadeNew-Bold","JameelNooriNastaleeq-Italic","NotoNastaliqUrdu-Regular","AmiriQuran-Regular","Amiri-Bold","NotoNastaliqUrdu-Bold"]}
+            systemFonts={["Jameel-Noori-Regular", "ScheherazadeNew-Bold","NotoNastaliqUrdu-Bold"]}
             defaultTextProps={{ selectable: true }}
             baseStyle={htmlBaseStyle}
           />
