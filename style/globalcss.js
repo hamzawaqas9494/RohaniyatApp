@@ -252,6 +252,14 @@ export const htmlStyles = StyleSheet.create({
   ContentWrapper: {
     writingDirection: "rtl",
   },
+  itemimage: {
+  marginTop: 10,
+  width: "100%",  
+  height: 200,
+  resizeMode: "contain",
+},
+
+// taypography start
   p: {
     margin: 0,
     fontSize: 20,
@@ -337,25 +345,20 @@ ol: {
   },
    mark: {
     backgroundColor: "yellow",
-    color: Platform.OS === "web" ? "#6C472D" : undefined, // sirf web pe color
+    color: Platform.OS === "web" ? "#6C472D" : undefined,
   
   },
   strong: {
       fontFamily: "NotoNastaliqUrdu-Bold",
   },
+// taypography end
+// custom tag style start
  var: {
     color: "red",
     fontFamily: "ScheherazadeNew-Bold",
     fontStyle:"normal"
  
   },
-  itemimage: {
-  marginTop: 10,
-  width: "100%",  
-  height: 200,
-  resizeMode: "contain",
-},
-
 dfn: {
   whiteSpace: "pre-wrap",
   display: "flex",
@@ -377,4 +380,5 @@ samp: {
   alignItems: "flex-start", 
 },
 });
+// custom tag style end
 //// ///////////////////////////////////blog-detail-pages style end ////////////////////

@@ -69,7 +69,7 @@ export default function Layout() {
           drawerStyle: { backgroundColor: "#E4DAC1" },
           drawerActiveTintColor: "#6C472D",
           drawerInactiveTintColor: "black",
-          drawerLabelStyle: {fontSize: 18, fontFamily: "Jameel-Noori-Regular"},
+          drawerLabelStyle: {fontSize: 16, fontFamily: "Jameel-Noori-Regular"},
           gestureEnabled: true,
           
         }}
