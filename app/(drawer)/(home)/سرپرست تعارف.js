@@ -4,7 +4,7 @@ import { mainStyles } from "../../../style/globalcss";
 export default function SirparastScreen() {
   return (
     <CustomBackground>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={mainStyles.container}>
           <View style={mainStyles.sirparastimagesection}>
           <Image

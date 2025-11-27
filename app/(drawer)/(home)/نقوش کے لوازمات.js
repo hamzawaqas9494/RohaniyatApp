@@ -4,7 +4,7 @@ import { mainStyles } from "../../../style/globalcss";
 export default function NakoshLawazmat() {
   return (
     <CustomBackground>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
           <View style={mainStyles.container}>
           <Text style={mainStyles.heading}>نقوش کے لوازمات</Text>
           <Text style={mainStyles.description}>

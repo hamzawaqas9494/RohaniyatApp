@@ -61,12 +61,7 @@ export default function CategoryList() {
 
   const handleCategoryPress = async (categoryLabel) => {
     try {
-      const netState = await NetInfo.fetch();
-      if (!netState.isConnected) {
-        alert("انٹرنیٹ کنکشن چیک کریں");
-        return;
-      }
-
+     
       const subcats = await fetchSubcategories(tableName, categoryLabel);
 
       if (subcats && subcats.length > 0) {
@@ -102,6 +97,7 @@ export default function CategoryList() {
       justifyContent: "center",
       padding: 15,
     }}
+      showsVerticalScrollIndicator={false}  
     renderItem={({ item }) => (
       <TouchableOpacity
          style={mainStyles.carditems}

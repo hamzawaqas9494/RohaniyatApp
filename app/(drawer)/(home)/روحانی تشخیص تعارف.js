@@ -4,7 +4,7 @@ import { mainStyles } from "../../../style/globalcss";
 export default function RohaniIshayatashkhesTaruf() {
   return (
     <CustomBackground>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
        <View style={mainStyles.container}>
           <Text style={mainStyles.tashkhesHeading}> روحانی تشخیص.... </Text>
           <Text style={mainStyles.description}>

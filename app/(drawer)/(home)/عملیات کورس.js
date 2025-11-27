@@ -4,7 +4,7 @@ import { mainStyles } from "../../../style/globalcss";
 export default function AmliyatCourseScreen() {
   return (
     <CustomBackground>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
          <View style={mainStyles.container}>
           <Text style={mainStyles.heading}> روحانی عملیات کورسز</Text>
           <Text style={mainStyles.description}>

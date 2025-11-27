@@ -4,7 +4,7 @@ import { mainStyles } from "../../../style/globalcss";
 export default function JagaTashkhess() {
   return (
     <CustomBackground>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
          <View style={mainStyles.container}>
           <Text style={mainStyles.tashkhesHeading}>جگہ کی تشخیص کرنے کا طریقہ</Text>
           <Text style={mainStyles.description}>

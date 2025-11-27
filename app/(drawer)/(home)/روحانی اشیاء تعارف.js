@@ -4,7 +4,7 @@ import { mainStyles } from "../../../style/globalcss";
 export default function RohaniIshaya() {
   return (
     <CustomBackground>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
           <View style={mainStyles.container}>
           <Text style={mainStyles.heading}>روحانی اشیاء</Text>
           <Text style={mainStyles.description}>

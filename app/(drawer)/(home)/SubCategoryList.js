@@ -71,6 +71,7 @@ export default function SubCategoryList() {
     justifyContent: "center",
     padding: 15,
   }}
+    showsVerticalScrollIndicator={false}  
   renderItem={({ item }) => (
     <TouchableOpacity
       style={mainStyles.carditems}

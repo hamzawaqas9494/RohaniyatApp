@@ -4,7 +4,7 @@ import { mainStyles } from "../../../style/globalcss";
 export default function Taruf() {
   return (
     <CustomBackground>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
          <View style={mainStyles.container}>
           <Text style={mainStyles.heading}>روحانی علاج کا مختصر تعارف </Text>
           <Text style={mainStyles.description}>

@@ -4,7 +4,7 @@ import { mainStyles } from "../../../style/globalcss";
 export default function NakoshKaMazaj() {
   return (
     <CustomBackground>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
          <View style={mainStyles.container}>
           <Text style={mainStyles.heading}>نقوش کا مزاج اور طریقہ زکات</Text>
           <Text style={mainStyles.description}>

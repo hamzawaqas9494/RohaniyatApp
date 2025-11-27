@@ -4,7 +4,7 @@ import { mainStyles } from "../../../style/globalcss";
 export default function RohaniIlajScreen() {
   return (
     <CustomBackground>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
           <View style={mainStyles.container}>
           <Text style={mainStyles.tashkhesHeading}>
             مدرسہ تعلیم القرآن کا مختصر تعارف

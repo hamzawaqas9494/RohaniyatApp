@@ -5,7 +5,7 @@ import { mainStyles } from "../../../style/globalcss";
 export default function JaduJinnatKiAlamat() {
   return (
     <CustomBackground>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={mainStyles.container}>
           <Text style={mainStyles.heading}>
             جادو، جنات اور نظر بد کی علامات

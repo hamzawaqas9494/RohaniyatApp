@@ -37,7 +37,6 @@ export default function ItemList() {
     "hamzad_ka_amal",
   ].includes(tableName);
 
-  // Dynamic columns
   const getNumColumns = () => {
     if (width < 640) return 1;
     if (width < 768) return 2;
@@ -45,35 +44,31 @@ export default function ItemList() {
     if (width < 1280) return 4;
     return 4;
   };
+  
   const numColumns = isSpecialTable ? getNumColumns() : 1;
 
   const cardMargin = 10;
   const cardPadding = 10;
-  const imageListCenter = 20;
+  const imageListCenter = 15;
 
   const totalWidth = width-imageListCenter;
   const cardWidth = isSpecialTable
-    ? (totalWidth - cardMargin * 2 * numColumns) / numColumns
+    ? (totalWidth -  cardMargin * 2 * numColumns) / numColumns
     : totalWidth - cardMargin * 2;
 
-  // 🔥 RESPONSIVE CARD HEIGHT
   const getCardHeight = () => {
-       if (width < 375) return 200; // small phones
-       if (width < 400) return 250; // small phones
-    if (width < 475) return 240; // small phones
-    if (width < 640) return 300; // medium phones
-    if (width < 768) return 200; // tablets portrait
-    if (width < 1024) return 180; // tablets landscape
-    if (width < 1280) return 200; // small desktops
-       
-       
-    return 240; // large screens
+    if (width < 375) return 200; 
+    if (width < 400) return 250; 
+    if (width < 475) return 240; 
+    if (width < 640) return 300; 
+    if (width < 768) return 200; 
+    if (width < 1024) return 180; 
+    if (width < 1280) return 200; 
+    return 240; 
   };
 
   const FIXED_CARD_HEIGHT = getCardHeight();
   const FIXED_IMAGE_HEIGHT = FIXED_CARD_HEIGHT - cardPadding * 2;
-
-  // Fetch items
   useEffect(() => {
     const load = async () => {
       if (!tableName) return;
@@ -122,9 +117,10 @@ export default function ItemList() {
   keyExtractor={(item) => item.id.toString()}
   contentContainerStyle={{
     flexGrow: 1,
-    padding: 15,
     justifyContent: isSpecialTable ? undefined : "center",
+    padding: isSpecialTable ? 7.5 : 15,
   }}
+  showsVerticalScrollIndicator={false}  
   removeClippedSubviews={true}
   renderItem={({ item }) => (
     <TouchableOpacity

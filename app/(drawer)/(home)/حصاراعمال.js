@@ -4,7 +4,7 @@ import { mainStyles } from "../../../style/globalcss";
 export default function HisarAmaalScreen() {
   return (
     <CustomBackground>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
          <View style={mainStyles.container}>
           <Text style={mainStyles.heading}>حصار</Text>
           <Text style={mainStyles.description}>
