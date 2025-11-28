@@ -30,7 +30,7 @@ export default function ItemList() {
 
   const isSpecialTable = [
     "qutb",
-    "rohaniilaaj",
+    // "rohaniilaaj",
     "tawizatusmaniya",
     "rohanidokan",
     "amliyatcourse",
