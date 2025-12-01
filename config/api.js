@@ -7,11 +7,12 @@
 
 ////////////////////////////////////////////////////////////////////////////local for mobile //////////////////////////////////////////////////////////////////////
 
-// export const BASE_URL = "http://192.168.1.17:3000/api/rohanishop";
-// export const BASE_URL_IMG = "http://192.168.1.17:3000";
+export const BASE_URL = "http://192.168.100.51:3000/api/rohanishop";
+export const BASE_URL_IMG = "http://192.168.100.51:3000";
+
 
 
 ////////////////////////////////////////////////////////////////////////////local for web //////////////////////////////////////////////////////////////////////
 
-export const BASE_URL = "http://localhost:3000/api/rohanishop";
-export const BASE_URL_IMG = "http://localhost:3000";
+// export const BASE_URL = "http://localhost:3000/api/rohanishop";
+// export const BASE_URL_IMG = "http://localhost:3000";

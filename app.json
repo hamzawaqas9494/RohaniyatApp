@@ -20,6 +20,7 @@
     },
     "android": {
       "package": "com.creationnext.idararohaniyat",
+         "usesCleartextTraffic": true,
       "versionCode": 1,
       "permissions": [
         "INTERNET",

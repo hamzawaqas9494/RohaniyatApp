@@ -346,11 +346,28 @@ ol: {
    mark: {
     backgroundColor: "yellow",
     color: Platform.OS === "web" ? "#6C472D" : undefined,
+      textShadowOffset: { width: 0, height: 0 },
+       textShadowRadius: 0,
+    
   
   },
-  strong: {
-      fontFamily: "NotoNastaliqUrdu-Bold",
-  },
+ strong: {
+  ...(Platform.OS !== "web" && {
+    textShadowColor: "#6C472D",
+    textShadowOffset: { width: 0.6, height: 0 },
+    textShadowRadius: 0.1,
+  }),
+},
+
+
+
+//   em:{
+// fontStyle:"normal",
+// lineHeight:undefined
+//   },
+
+
+
 // taypography end
 // custom tag style start
  var: {
@@ -377,7 +394,7 @@ samp: {
   whiteSpace: "pre-wrap",
   display: "flex",
   justifyContent: "center",
-  alignItems: "flex-start", 
+  alignItems: Platform.OS === "web" ? "flex-end" : "flex-start",
 },
 });
 // custom tag style end

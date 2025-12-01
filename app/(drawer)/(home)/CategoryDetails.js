@@ -67,7 +67,7 @@ export default function CategoryDetails() {
           />
         </View>
         {item.image && (
-          <Image source={{ uri: `${BASE_URL_IMG}${item.itemimage}` }} style={htmlStyles.image} resizeMode="contain" />
+          <Image source={{ uri: `${BASE_URL_IMG}${item.image}` }} style={htmlStyles.itemimage} resizeMode="contain" />
         )}
         <View style={customButton.container}>
 
