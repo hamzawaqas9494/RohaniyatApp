@@ -29,12 +29,11 @@ export default function ItemList() {
   const { width } = useWindowDimensions();
 
   const isSpecialTable = [
-    "qutb",
-    // "rohaniilaaj",
+    "chehalkaaf",
     "tawizatusmaniya",
     "rohanidokan",
     "amliyatcourse",
-    "hamzad_ka_amal",
+    "hamzadkaamal",
   ].includes(tableName);
 
   const getNumColumns = () => {

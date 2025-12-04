@@ -9,12 +9,12 @@ import { mainStyles } from "../../../style/globalcss";
 const DATA = [
   {
     id: "1",
-    screen:"ہمارا طریقہ علاج",
+    screen:"Hamara-Tareeqa-e-Ilaj",
     text: "ہمارا طریقہ علاج",
   },
   {
     id: "2",
-    screen:"مریض کے لیے روحانی علاج",
+    screen:"Mareez-Ke-Liye-Rohani-Ilaj",
     text: "سائل/مریض کے لیے روحانی علاج",
   }
 ];

@@ -9,17 +9,17 @@ import { mainStyles } from "../../../style/globalcss";
 const DATA = [
   {
     id: "1",
-    screen: "روحانی تشخیص تعارف",
+    screen: "rohani-tashkhees-taaruf",
     text: "روحانی تشخیص کا تعارف",
   },
   {
     id: "2",
-    screen: "فرد کی تشخیص",
+    screen:"fard-ki-tashkhees",
     text: "فرد کی تشخیص کرنے کا طریقہ",
   },
   {
     id: "3",
-    screen: "جگہ کی تشخیص",
+    screen:"jagah-ki-tashkhees",
     text: " جگہ کی تشخیص کرنے کا طریقہ",
   },
 ];

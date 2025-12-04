@@ -360,10 +360,11 @@ ol: {
 },
 
 
-
 //   em:{
-// fontStyle:"normal",
-// lineHeight:undefined
+// color:"red",
+//  fontSize: 20,
+//     // color: "#000",
+//     transform: [{ skewX: "-12deg" }], // main italic effect
 //   },
 
 

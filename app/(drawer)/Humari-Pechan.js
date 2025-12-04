@@ -13,9 +13,8 @@ export default function AboutUsScreen() {
 }
 const styles = StyleSheet.create({
   container: { flex: 1, justifyContent: "center", alignItems: "center" },
-  text: {   fontSize: 18,
+     text: {   fontSize: 18,
     color: "#6C472D",
-    // fontWeight: "600",
     fontFamily: "Jameel-Noori-Regular",
     textAlign: "center", },
 });

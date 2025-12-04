@@ -27,6 +27,7 @@ export default function StackNavigator() {
       <Stack
         screenOptions={{
           headerShown: true,
+          gestureEnabled: true,
           headerStyle: {
             height: 56,
             backgroundColor: "#E4DAC1",
@@ -47,6 +48,161 @@ export default function StackNavigator() {
           name="index"
           options={{
             title: "ادارہ روحانیات",
+            gestureEnabled: true,
+          }}
+        />
+         <Stack.Screen
+          name="Taaruf"
+          options={{
+            title: "تعارف",
+            gestureEnabled: true,
+          }}
+        />
+          <Stack.Screen
+          name="Wazaif"
+          options={{
+            title: "وظائف",
+            gestureEnabled: true,
+          }}
+        />
+         <Stack.Screen
+          name="Taweezat"
+          options={{
+            title: "تعویذات",
+            gestureEnabled: true,
+          }}
+        />
+
+         <Stack.Screen
+          name="Sarparast-Taaruf"
+          options={{
+            title: "سرپرست تعارف",
+            gestureEnabled: true,
+          }}
+        />
+          <Stack.Screen
+          name="Idara-Rohaniyat-Taaruf"
+          options={{
+            title: "ادارہ روحانیات تعارف",
+            gestureEnabled: true,
+          }}
+        />
+          <Stack.Screen
+          name="Taweezat-Usmania-Taaruf"
+          options={{
+            title: "تعویذات عثمانیہ تعارف",
+            gestureEnabled: true,
+          }}
+        />
+          <Stack.Screen
+          name="Rohani-Ashya-Taaruf"
+          options={{
+            title: "روحانی اشیاء تعارف",
+            gestureEnabled: true,
+          }}
+        />
+          <Stack.Screen
+          name="Rohani-Ilaj-Taaruf"
+          options={{
+            title:"روحانی علاج تعارف",
+            gestureEnabled: true,
+          }}
+        />
+          <Stack.Screen
+          name="Amliyat-Course"
+          options={{
+            title:"عملیات کورس",
+            gestureEnabled: true,
+          }}
+        />
+          <Stack.Screen
+          name="Madrasa-Taleem-ul-Quran-Taaruf"
+          options={{
+            title: "مدرسہ تعلیم القرآن تعارف",
+            gestureEnabled: true,
+          }}
+        />
+         <Stack.Screen
+          name="Nuqoosh-Ka-Mizaj"
+          options={{
+            title: "نقوش کا مزاج",
+            gestureEnabled: true,
+          }}
+        />
+         <Stack.Screen
+          name="Nuqoosh-Ke-Lawazmaat"
+          options={{
+            title:"نقوش کے لوازمات",
+            gestureEnabled: true,
+          }}
+        />
+          <Stack.Screen
+          name="Hamara-Tareeqa-e-Ilaj"
+          options={{
+            title:"ہمارا طریقہ علاج",
+            gestureEnabled: true,
+          }}
+        />
+           <Stack.Screen
+          name="Mareez-Ke-Liye-Rohani-Ilaj"
+          options={{
+            title:"مریض کے لیے روحانی علاج",
+            gestureEnabled: true,
+          }}
+        />
+           <Stack.Screen
+          name="Rohani-Ilaj-Fehrist"
+          options={{
+            title:"روحانی علاج فہرست",
+            gestureEnabled: true,
+          }}
+        />
+           <Stack.Screen
+          name="Rohani-Ilaj-Ka-Taaruf"
+          options={{
+            title:"روحانی علاج کا مختصر تعارف",
+            gestureEnabled: true,
+          }}
+        />
+           <Stack.Screen
+          name= "Jadu-Jinnat-Ki-Alamaat"
+          options={{
+            title: "جادو، جنات کی علامات",
+            gestureEnabled: true,
+          }}
+        />
+          <Stack.Screen
+          name= "Rohani-Tashkhees-Tareeqa"
+          options={{
+            title: "روحانی تشخیص کے طریقے",
+            gestureEnabled: true,
+          }}
+        />
+            <Stack.Screen
+          name= "Hisaar-Aamaal"
+          options={{
+            title: "حصار اعمال",
+            gestureEnabled: true,
+          }}
+        />
+         <Stack.Screen
+          name= "rohani-tashkhees-taaruf"
+          options={{
+            title:"روحانی تشخیص کا تعارف",
+            gestureEnabled: true,
+          }}
+        />
+          <Stack.Screen
+          name= "fard-ki-tashkhees"
+          options={{
+            title:"فرد کی تشخیص کرنے کا طریقہ",
+            gestureEnabled: true,
+          }}
+        />
+             <Stack.Screen
+          name= "jagah-ki-tashkhees"
+          options={{
+            title: " جگہ کی تشخیص کرنے کا طریقہ",
             gestureEnabled: true,
           }}
         />

@@ -84,7 +84,7 @@ export default function Layout() {
           }}
         />
         <Drawer.Screen
-          name="پہچان"
+          name="Humari-Pechan"
           options={{
             title: "ہماری پہچان",
             headerShown: true,

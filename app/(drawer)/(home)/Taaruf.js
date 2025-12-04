@@ -4,13 +4,13 @@ import CustomBackground from "../../../components/Background/Background";
 import { mainStyles } from "../../../style/globalcss";
 
 const DATA = [
-  { id: "1", screen: "سرپرست تعارف", text: "سرپرست" },
-  { id: "2", screen: "ادارہ روحانیات تعارف", text: "ادارہ روحانیات" },
-  { id: "3", screen: "تعویذات عثمانیہ تعارف", text: "تعویذات عثمانیہ" },
-  { id: "4", screen: "روحانی اشیاء تعارف", text: "روحانی اشیاء" },
-  { id: "5", screen: "روحانی علاج تعارف", text: "روحانی علاج" },
-  { id: "6", screen: "عملیات کورس", text: "عملیات کورس" },
-  { id: "7", screen: "مدرسہ تعلیم القرآن تعارف", text: "مدرسہ تعلیم القرآن" },
+  { id: "1", screen: "Sarparast-Taaruf", text: "سرپرست" },
+  { id: "2", screen: "Idara-Rohaniyat-Taaruf", text: "ادارہ روحانیات" },
+  { id: "3", screen:"Taweezat-Usmania-Taaruf", text: "تعویذات عثمانیہ" },
+  { id: "4", screen: "Rohani-Ashya-Taaruf", text: "روحانی اشیاء" },
+  { id: "5", screen: "Rohani-Ilaj-Taaruf", text: "روحانی علاج" },
+  { id: "6", screen: "Amliyat-Course", text: "عملیات کورس" },
+  { id: "7", screen: "Madrasa-Taleem-ul-Quran-Taaruf", text: "مدرسہ تعلیم القرآن" },
 ];
 
 export default function Taaruf() {

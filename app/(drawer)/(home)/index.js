@@ -57,7 +57,7 @@ const DATA = [
   {
     id: "2",
     icon: require("../../../assets/images/rohanielajIcon.png"),
-    screen: "روحانی علاج فہرست",
+    screen: "Rohani-Ilaj-Fehrist",
     text: "روحانی علاج",
     image: require("../../../assets/images/item2-bg-path.png"),
   },
@@ -92,14 +92,14 @@ const DATA = [
   {
     id: "7",
     icon: require("../../../assets/images/introductionIcons.png"),
-    screen: "تعارف",
+    screen: "Taaruf",
     text: "تعارف",
     image: require("../../../assets/images/item1-bg-path.png"),
   },
   {
     id: "8",
     icon: require("../../../assets/images/wazafIcon.png"),
-    screen: "وظائف",
+    screen: "Wazaif",
     text: "وظائف",
     image: require("../../../assets/images/item2-bg-path.png"),
   },

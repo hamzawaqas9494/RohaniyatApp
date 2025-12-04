@@ -10,28 +10,29 @@ import { mainStyles } from "../../../style/globalcss";
 const DATA = [
   {
     id: "1",
-    screen: "روحانی علاج کا تعارف",
+    screen: "Rohani-Ilaj-Ka-Taaruf",
     label: "روحانی علاج کا مختصر تعارف",
   },
   {
     id: "2",
-    screen: "جادو،جنات کی علامات",
+    screen: "Jadu-Jinnat-Ki-Alamaat",
     label: "جادو، جنات اور نظر بد کی علامات",
   },
   {
     id: "3",
-    screen: "روحانی تشخیص طریقہ ",
+    screen: "Rohani-Tashkhees-Tareeqa",
     label: "روحانی تشخیص کے طریقے",
   },
   {
     id: "4",
+     screen: "Jadu-Jinnat-Bemariyaan-Ka-Rohani-Ilaj",
     tableName: "rohaniilaaj",
     label: "جادو، جنات، بیماریاں کا روحانی علاج",
   
   },
   {
     id: "5",
-    screen: "حصاراعمال",
+    screen: "Hisaar-Aamaal",
     label: "روحانی حفاظت (حصار) کا طریقہ",
   },
 ];

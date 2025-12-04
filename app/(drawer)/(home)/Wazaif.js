@@ -4,8 +4,8 @@ import CustomBackground from "../../../components/Background/Background";
 import { mainStyles } from "../../../style/globalcss";
 
 const DATA = [
-  { id: "1", tableName: "wazaif", label: "وظائف" },
-  { id: "2", tableName: "taweez", label: "تعویذات" },
+  { id: "1",screen: "Wazaif", tableName: "wazaif", label: "وظائف" },
+  { id: "2",screen: "Taweezat", label: "تعویذات" },
 ];
 
 export default function TitleScreen() {
@@ -18,10 +18,7 @@ export default function TitleScreen() {
         label: item.label,
       });
     } else {
-      navigation.navigate("تعویذات", {
-        tableName: item.tableName,
-        label: item.label,
-      });
+      navigation.navigate(item.screen);
     }
   };
 
