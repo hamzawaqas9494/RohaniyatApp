@@ -10,12 +10,13 @@ import {
   Pressable,
   StyleSheet,
   Text,
-  TouchableOpacity,
-  View,
+  View
 } from "react-native";
 import AnimatedItem from "../../../components/Animation/animation";
 import IdaraRohaniyat from "../../../components/link/link";
 import ShareApp from "../../../components/ShareApp/shareApp";
+import UniversalButton from "../../../components/UniversalButton/UniversalButton";
+
 
 const { height } = Dimensions.get("window");
 const screenWidth = Dimensions.get("window").width;
@@ -56,7 +57,7 @@ const DATA = [
   {
     id: "2",
     icon: require("../../../assets/images/rohanielajIcon.png"),
-    screen: "روحانی علاج فہرست",
+    screen: "Rohani-Ilaj-Fehrist",
     text: "روحانی علاج",
     image: require("../../../assets/images/item2-bg-path.png"),
   },
@@ -91,14 +92,14 @@ const DATA = [
   {
     id: "7",
     icon: require("../../../assets/images/introductionIcons.png"),
-    screen: "تعارف",
+    screen: "Taaruf",
     text: "تعارف",
     image: require("../../../assets/images/item1-bg-path.png"),
   },
   {
     id: "8",
     icon: require("../../../assets/images/wazafIcon.png"),
-    screen: "وظائف",
+    screen: "Wazaif",
     text: "وظائف",
     image: require("../../../assets/images/item2-bg-path.png"),
   },
@@ -150,9 +151,16 @@ export default function HomeScreen() {
               ))}
             </View>
             <Text style={styles.modalText}>اور اچھے اخلاق کا مظاہرہ کرتے ہوئے اپنے تاثرات لکھیں۔</Text>
-            <TouchableOpacity style={styles.rateButton} onPress={handleRateApp}>
-              <Text style={{ color: "rgb(108, 71, 45)", fontWeight: "bold" }}>RATE US NOW</Text>
-            </TouchableOpacity>
+          <UniversalButton
+  icon="star"
+  text="RATE US NOW"
+  color="rgb(108, 71, 45)"
+  iconColor="#FFD700"
+  backgroundColor="#F0E6D2"
+  style={{ fontWeight: "bold" }}
+  onPress={handleRateApp}
+/>
+
           </View>
         </View>
       </Modal>
@@ -253,13 +261,5 @@ const styles = StyleSheet.create({
     textAlign: "center",
    color:"white",
         fontFamily: "Jameel-Noori-Regular",
-  },
-  rateButton: {
-     color:"black",
-    marginTop:10,
-    backgroundColor: "rgb(228, 218, 193)",
-    paddingVertical: 10,
-    paddingHorizontal: 10,
-    borderRadius: 5,
   },
 });

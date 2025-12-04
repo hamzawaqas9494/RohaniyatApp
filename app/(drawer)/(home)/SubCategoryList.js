@@ -7,7 +7,7 @@ import { useData } from "../../../components/context/DataContext";
 import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
 import Loader from "../../../components/Loader/Loader";
 import { sortUrduData } from "../../../components/SortUrduData/SortUrduData";
-import { fehristStyles } from "../../../style/globalcss";
+import { mainStyles } from "../../../style/globalcss";
 
 export default function SubCategoryList() {
   const { tableName, category } = useRoute().params || {};
@@ -62,25 +62,32 @@ export default function SubCategoryList() {
 
   return (
     <CustomBackground>
-      <FlatList
-        data={subcategories}
-        keyExtractor={(item, index) => index.toString()}
-        contentContainerStyle={fehristStyles.fehristcenter}
-        renderItem={({ item }) => (
-          <TouchableOpacity
-            style={fehristStyles.card}
-            onPress={() =>
-              navigation.navigate("ItemList", {
-                tableName,
-                category,
-                subcategory: item.label,
-              })
-            }
-          >
-            <Text style={fehristStyles.fehristText}>{item.label}</Text>
-          </TouchableOpacity>
-        )}
-      />
+    <FlatList
+  data={subcategories}
+  keyExtractor={(item, index) => index.toString()}
+ 
+  contentContainerStyle={{
+    flexGrow: 1,
+    justifyContent: "center",
+    padding: 15,
+  }}
+    showsVerticalScrollIndicator={false}  
+  renderItem={({ item }) => (
+    <TouchableOpacity
+      style={mainStyles.carditems}
+      onPress={() =>
+        navigation.navigate("ItemList", {
+          tableName,
+          category,
+          subcategory: item.label,
+        })
+      }
+    >
+      <Text style={mainStyles.carditemstext}>{item.label}</Text> 
+    </TouchableOpacity>
+  )}
+/>
+
     </CustomBackground>
   );
 }

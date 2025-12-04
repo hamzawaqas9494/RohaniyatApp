@@ -3,13 +3,12 @@ import { useEffect, useState } from "react";
 import { Dimensions, Image, ScrollView, Text, View } from "react-native";
 import RenderHTML from "react-native-render-html";
 import CustomBackground from "../../../components/Background/Background";
-import BuyButton from "../../../components/BuyButton/BuyButton";
+import { useData } from "../../../components/context/DataContext";
 import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
 import Loader from "../../../components/Loader/Loader";
-import { useData } from "../../../components/context/DataContext";
-import YoutubeButton from "../../../components/youtubeButton/youtubeVideo";
+import UniversalButton from "../../../components/UniversalButton/UniversalButton";
 import { BASE_URL_IMG } from "../../../config/api";
-import { customButton, fehristStyles, htmlBaseStyle, htmlStyles, mainStyles } from "../../../style/globalcss";
+import { customButton, htmlBaseStyle, htmlStyles, mainStyles } from "../../../style/globalcss";
 
 export default function CategoryDetails() {
   const { id, tableName } = useRoute().params || {};
@@ -54,26 +53,51 @@ export default function CategoryDetails() {
 
   return (
     <CustomBackground>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
          <View style={mainStyles.container}>
         <Text style={mainStyles.heading}>{item.title}</Text>
-        <View style={fehristStyles.deatilContentWrapper}>
+        <View style={htmlStyles.ContentWrapper}>
           <RenderHTML
             contentWidth={width}
             source={{ html: item.content || "<p>کوئی مواد نہیں</p>" }}
             tagsStyles={htmlStyles}
-            systemFonts={["Jameel-Noori-Regular", "Amiri-Bold", "ScheherazadeNew-Bold"]}
+            systemFonts={["Jameel-Noori-Regular", "ScheherazadeNew-Bold","NotoNastaliqUrdu-Bold"]}
             defaultTextProps={{ selectable: true }}
             baseStyle={htmlBaseStyle}
           />
         </View>
         {item.image && (
-          <Image source={{ uri: `${BASE_URL_IMG}${item.image}` }} style={fehristStyles.image} resizeMode="contain" />
+          <Image source={{ uri: `${BASE_URL_IMG}${item.image}` }} style={htmlStyles.itemimage} resizeMode="contain" />
         )}
         <View style={customButton.container}>
-          {allowedTables.includes(tableName) && <BuyButton link="https://wa.me/923008440979" />}
-          <YoutubeButton link={item.youtube_link} />
-        </View>
+
+  <View style={customButton.container}>
+  {/* WhatsApp Button */}
+  {allowedTables.includes(tableName) && (
+    <UniversalButton
+      icon="whatsapp"
+     iconColor="#fff"               
+      text="رابطہ برائے خریداری"
+      color="#fff"                  
+     backgroundColor="#6C472D" 
+      link="https://wa.me/923008440979"
+    />
+  )}
+
+  {/* YouTube Button */}
+  <UniversalButton
+    icon="youtube-play"
+    iconColor="#fff"         
+    text="مزید تفصیلات کے لیے یوٹیوب وزٹ کریں"
+    color="#fff"                   
+    backgroundColor="#6C472D"   
+    link={item.youtube_link}
+  />
+</View>
+
+
+</View>
+
         </View>
       </ScrollView>
     </CustomBackground>

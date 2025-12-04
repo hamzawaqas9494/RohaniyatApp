@@ -1,6 +1,6 @@
 import { FontAwesome } from "@expo/vector-icons";
 import { DrawerActions, useNavigation } from "@react-navigation/native";
-import { useFonts } from "expo-font";
+import { useFonts } from 'expo-font';
 import { Drawer } from "expo-router/drawer";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect, useLayoutEffect, useState } from "react";
@@ -10,17 +10,14 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import SplashScreenComponent from "../../components/SplashScreen/splash";
 import { DataProvider } from "../../components/context/DataContext";
 
-
-
-
 SplashScreen.preventAutoHideAsync();
 export default function Layout() {
 
   const [fontsLoaded] = useFonts({
-    "Jameel-Noori-Regular": require("../../assets/fonts/JameelNooriNastaleeqRegular.ttf"),
-    "Amiri-Bold": require("../../assets/fonts/Amiri-Bold.ttf"),
-     "ScheherazadeNew-Bold": require("../../assets/fonts/ScheherazadeNew-Bold.ttf"),
-       "NotoNastaliqUrdu-Regular": require("../../assets/fonts/NotoNastaliqUrdu-Regular.ttf"),
+    "Jameel-Noori-Regular": require("../../assets/fonts/JameelNooriNastaleeqRegular.ttf"), // For OverAll Urdu Text
+    "ScheherazadeNew-Bold": require("../../assets/fonts/ScheherazadeNew-Bold.ttf"), // For Arabic Ayaat Text
+    "NotoNastaliqUrdu-Regular": require("../../assets/fonts/NotoNastaliqUrdu-Regular.ttf"), // For Header Text
+    "NotoNastaliqUrdu-Bold": require("../../assets/fonts/NotoNastaliqUrdu-Bold.ttf"), // For Bold Text 
   });
   const [isSplashVisible, setSplashVisible] = useState(true);
   useLayoutEffect(() => {
@@ -68,12 +65,13 @@ export default function Layout() {
             color: "#6C472D",
           },
           headerTitleAlign: "center",
-          headerStyle: { height: 56, backgroundColor: "#E4DAC1" },
-          drawerStyle: { backgroundColor: "#E4DAC1", width: 240 },
+          headerStyle: { height: 56, backgroundColor: "#E4DAC1"},
+          drawerStyle: { backgroundColor: "#E4DAC1" },
           drawerActiveTintColor: "#6C472D",
           drawerInactiveTintColor: "black",
-          drawerLabelStyle: { fontSize: 16 },
+          drawerLabelStyle: {fontSize: 16, fontFamily: "Jameel-Noori-Regular"},
           gestureEnabled: true,
+          
         }}
       >
         <Drawer.Screen
@@ -86,7 +84,7 @@ export default function Layout() {
           }}
         />
         <Drawer.Screen
-          name="پہچان"
+          name="Humari-Pechan"
           options={{
             title: "ہماری پہچان",
             headerShown: true,

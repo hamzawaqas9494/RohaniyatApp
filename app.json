@@ -2,7 +2,7 @@
   "expo": {
     "name": "IdaraRohaniyat",
     "slug": "rohaniyatversion",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "orientation": "portrait",
     "icon":"./assets/images/app-icon.png",
     "scheme": "idararohaniyat",
@@ -20,6 +20,7 @@
     },
     "android": {
       "package": "com.creationnext.idararohaniyat",
+         "usesCleartextTraffic": true,
       "versionCode": 1,
       "permissions": [
         "INTERNET",

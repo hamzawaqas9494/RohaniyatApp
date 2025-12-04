@@ -79,7 +79,7 @@ const AnimatedItem = ({
 onPress={() => {
   if (item.id === "1") {
     navigation.navigate("CategoryList", {
-      tableName: "hamzad_ka_amal",
+      tableName: "hamzadkaamal",
       label:  "ہمزاد کا عمل"
     });
   }
@@ -103,7 +103,7 @@ onPress={() => {
   } 
   else if (item.id === "6") {
     navigation.navigate("ItemList", {
-      tableName: "qutb",
+      tableName: "chehalkaaf",
       label: "چہل کاف"
     });
   } 
