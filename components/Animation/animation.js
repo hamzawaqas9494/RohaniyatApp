@@ -141,17 +141,17 @@ style={{
                 height: iconWidth * 0.2,
               }}
             />
-            <Text
-              style={{
-                color: "#6C472D",
-                fontFamily: "Jameel-Noori-Regular",
-                fontSize: iconWidth * 0.18,
-                textAlign: "center",
-                   width:"100%",
-              }}
-            >
-              {item.text}
-            </Text>
+          <Text
+  style={{
+    color: "#6C472D",
+    fontFamily: Platform.OS === "ios" ? undefined : "Jameel-Noori-Regular", 
+    fontSize: Platform.OS === "ios" ? iconWidth * 0.12 : iconWidth * 0.18,
+    textAlign: "center",
+    width: "100%",
+  }}
+>
+  {item.text}
+</Text>
           </View>
         </Pressable>
       </ImageBackground>
