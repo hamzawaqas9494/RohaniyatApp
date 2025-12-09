@@ -144,7 +144,7 @@ style={{
           <Text
   style={{
     color: "#6C472D",
-    marginTop:5,
+    marginTop:2,
     fontFamily: Platform.OS === "ios" ? undefined : "Jameel-Noori-Regular", 
     fontSize: Platform.OS === "ios" ? iconWidth * 0.13 : iconWidth * 0.18,
     textAlign: "center",
