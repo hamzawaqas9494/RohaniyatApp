@@ -94,9 +94,7 @@ carditemstext: {
   color: "#6C472D",
   textAlign: "center",
   justifyContent:"center",
-  // paddingBottom:5
-  // lineHeight:60
-  // height:"100%"
+
 
 },
   noRecordText: {
