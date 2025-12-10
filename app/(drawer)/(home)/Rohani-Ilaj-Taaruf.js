@@ -33,7 +33,7 @@ export default function Taruf() {
             اجازت دی جاتی ہے اور چلہ کشی بھی کروائی جاتی ہے تاکہ وہ اس قابل ہوں
             کہ آئندہ خودسے اپنا اور اپنے اہل و عیال کا روحانی علاج کر سکیں۔
           </Text>
-          <Text style={mainStyles.tashkhesHeading}>
+          <Text style={mainStyles.heading}>
             تشخیص کی ضرورت اور عاملین اور عوام کی غفلت
           </Text>
           <Text style={mainStyles.description}>
@@ -49,8 +49,8 @@ export default function Taruf() {
             کیس کو اتنا بگاڑ لیتے ہیں کہ کیس کو سنبھالنے کے لیے بہت وقت اور بہت
             محنت درکار ہوتی ہے۔
           </Text>
-          <Text style={mainStyles.tashkhesHeading}>روحانی تشخیص </Text>
-          <Text style={mainStyles.tashkhesDescription}>
+          <Text style={mainStyles.heading}>روحانی تشخیص </Text>
+          <Text style={mainStyles.description}>
             روحانی تشخیص سے مراد یہ ہے کہ کسی بھی انسان یا جگہ کے بارے میں معلوم
             کیا جائے کہ اس پر سحر، جنات و آسیب یا نظرِ بد کا اثر ہے یا نہیں؟
             عمومًا روحانی تشخیص کی ضرورت اس وقت پڑتی ہے جب کسی بیماری، پریشانی،
@@ -59,7 +59,7 @@ export default function Taruf() {
             جنات یا نظرِ بد کا اثر ہو نہیں؟ اگر ہو تو پھر اس کا علاج کیا جائے
             اور ساتھ ساتھ اپنی تدابیر جاری رکھی جائیں۔
           </Text>
-          <Text style={mainStyles.tashkhesDescription}>
+          <Text style={mainStyles.description}>
             ادارہ روحانیات میں جس طریقے سے تشخیص کی جاتی ہے، اس کے چند فوائد درج
             ذیل ہیں:۔
           </Text>

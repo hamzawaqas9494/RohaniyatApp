@@ -7,16 +7,18 @@ export const mainStyles = StyleSheet.create({
 },
   heading: {
     fontSize: 22,
-    fontFamily: "NotoNastaliqUrdu-Regular",
+     //  fontFamily: "Jameel-Noori-Regular",
+   fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
     includeFontPadding: false,
   },
   subheading: {
-    fontSize: 24,
+    fontSize: 18,
     lineHeight: 32,
-    fontFamily: "Jameel-Noori-Regular",
+    //  fontFamily: "Jameel-Noori-Regular",
+   fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
@@ -30,24 +32,24 @@ description: {
   includeFontPadding: false,
 },
 
-// working after client disscusion
-  tashkhesHeading: {
-    fontSize: 28,
-    paddingTop: 5,
-   fontFamily: "NotoNastaliqUrdu-Regular",
-    color: "#6C472D",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
-  tashkhesDescription: {
-    fontSize: 20,
-    paddingTop: 4,
-    color: "#6C472D",
-    // fontFamily: "Jameel-Noori-Regular",
-    fontFamily: "NotoNastaliqUrdu-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
-  },
+// // working after client disscusion
+//   tashkhesHeading: {
+//         fontSize: 22,
+//     // paddingTop: 5,
+//    fontFamily: "NotoNastaliqUrdu-Regular",
+//     color: "#6C472D",
+//     textAlign: "right",
+//     writingDirection: "rtl",
+//   },
+//   tashkhesDescription: {
+//     fontSize: 16,
+//     // paddingTop: 4,
+//     color: "#6C472D",
+//     // fontFamily: "Jameel-Noori-Regular",
+//     fontFamily: "NotoNastaliqUrdu-Regular",
+//     textAlign: "right",
+//     writingDirection: "rtl",
+//   },
 
 // working after client disscusion
 
@@ -66,22 +68,23 @@ description: {
     justifyContent: "space-between",
   },
   rohaniishayaitem: {
-    fontSize: 20,
+    fontSize: 14,
     color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
+      //  fontFamily: "Jameel-Noori-Regular",
+   fontFamily: "NotoNastaliqUrdu-Regular",
     textAlign: "right",
   },
 
 carditems: {
   width: "100%",
   backgroundColor: "#E4DAC1",
-  // paddingVertical: 8,
+  paddingVertical: 8,
   marginTop: 8,
   marginBottom: 8,
   borderRadius: 5,
-  alignItems: "center",
+  // alignItems: "center",
   height:60,
-  justifyContent:"center"
+  // justifyContent:"center"
 },
 
 carditemstext: {
@@ -90,13 +93,14 @@ carditemstext: {
      fontFamily: "NotoNastaliqUrdu-Regular",
   color: "#6C472D",
   textAlign: "center",
-  paddingBottom:5
+  // paddingBottom:5
 
 },
   noRecordText: {
-    fontSize: 22,
+    fontSize: 16,
     fontWeight: "600",
-    fontFamily: "Jameel-Noori-Regular",
+       //  fontFamily: "Jameel-Noori-Regular",
+   fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "center",
   },
@@ -227,7 +231,7 @@ export const customButton = StyleSheet.create({
     marginTop: 20,
   },
   button: {
-        marginTop: 10,
+    marginTop: 10,
     flexDirection: "row",
     backgroundColor: "rgb(108, 71, 45)",
     paddingVertical: 10,

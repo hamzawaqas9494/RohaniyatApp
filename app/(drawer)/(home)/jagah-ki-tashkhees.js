@@ -6,14 +6,14 @@ export default function JagaTashkhess() {
     <CustomBackground>
       <ScrollView showsVerticalScrollIndicator={false}>
          <View style={mainStyles.container}>
-          <Text style={mainStyles.tashkhesHeading}>جگہ کی تشخیص کرنے کا طریقہ</Text>
+          <Text style={mainStyles.heading}>جگہ کی تشخیص کرنے کا طریقہ</Text>
           <Text style={mainStyles.description}>
             اگر کسی کو شک ہو کہ اس کے گھر، پلاٹ، یا کاروباری جگہ پر جادو، جنات
             یا بد اثرات ہیں جس کی وجہ سے پلاٹ بک نہیں رہا، گھر میں لڑائی جھگڑے
             اور بے سکونی ہے، یا بلا وجہ کاروباری مسائل دن بدن بڑھ رہے ہیں۔ تو
             جگہ کی تشخیص کر کے اس کا علاج شروع کریں۔
           </Text>
-          <Text style={mainStyles.tashkhesHeading}>کپڑے سے تشخیص کرنا:</Text>
+          <Text style={mainStyles.heading}>کپڑے سے تشخیص کرنا:</Text>
           <Text style={mainStyles.description}>
             مطلوبہ جگہ پر کاٹن کے کپڑے کے تقریباً ۴ × ۱۸ انچ کے پیس کاٹ کر رات
             کو رکھ دیں اور صبح ان کو سامنے بجھا کر سکیل کی مدد سے ۲ نشان لگائیں۔
@@ -24,13 +24,13 @@ export default function JagaTashkhess() {
             فیکٹری، کاروباری جگہ اور پلاٹ وغیرہ پر بھی استعمال کر سکتے ہیں۔
           </Text>
 
-          <Text style={mainStyles.tashkhesHeading}>مٹی سے تشخیص:</Text>
+          <Text style={mainStyles.heading}>مٹی سے تشخیص:</Text>
           <Text style={mainStyles.description}>
             مطلوبہ جگہ کی مٹی حاصل کریں اور اس کو سونگھ لیں۔ پھر 7 مرتبہ آیت
             الکرسی یا 1 مرتبہ منزل پڑھ کے دم کریں۔ پھر دوبارہ سونگھیں۔ اگر مٹی
             میں سے پاخانے کی بدبو آئے تو جادو ہے، اگر مچھلی کی آئے تو جنات ہیں۔
           </Text>
-          <Text style={mainStyles.tashkhesHeading}>دیواروں سے تشخیص کرنا:</Text>
+          <Text style={mainStyles.heading}>دیواروں سے تشخیص کرنا:</Text>
           <Text style={mainStyles.description}>
             مطلوبہ جگہ کے کمرے کے چاروں کونوں کی علیحدہ علیحدہ تشخیص کریں۔ ایک
             کونے میں سکیل کی مدد سے 2 نشان لگائیں، اس پر 7 مرتبہ آیت الکرسی یا 1
