@@ -70,23 +70,47 @@ description: {
     textAlign: "right",
   },
 
-carditems: {
-  width: "100%",
-  backgroundColor: "#E4DAC1",
-  paddingVertical: 8,
-  marginTop: 8,
-  marginBottom: 8,
-  borderRadius: 5,
-  alignItems: "center",
-},
+// carditems: {
+//   width: "100%",
+//   backgroundColor: "#E4DAC1",
+//   paddingVertical: 8,
+//   marginTop: 8,
+//   marginBottom: 8,
+//   borderRadius: 5,
+//   alignItems: "center",
+// },
 
-carditemstext: {
-  fontSize: 20,
-  fontFamily: "Jameel-Noori-Regular",
-  color: "#6C472D",
-  textAlign: "center",
+// carditemstext: {
+//   fontSize: 20,
+//   fontFamily: "Jameel-Noori-Regular",
+//   color: "#6C472D",
+//   textAlign: "center",
 
-},
+// },
+
+ carditems: {
+    width: "100%",
+    backgroundColor: "#E4DAC1",
+    paddingVertical: 8,
+    marginTop: 8,
+    marginBottom: 8,
+    borderRadius: 5,
+    alignItems: "center",
+  },
+
+  carditemstext: {
+    fontSize: 20,
+
+    // 👉 Android = Jameel Noori apply
+    // 👉 iOS = system default font
+    fontFamily: Platform.OS === "android" ? "Jameel-Noori-Regular" : undefined,
+
+    color: "#6C472D",
+    textAlign: "center",
+
+    // 👉 Line height adjust for both
+    lineHeight: Platform.OS === "ios" ? 24 : undefined,
+  },
   noRecordText: {
     fontSize: 22,
     fontWeight: "600",

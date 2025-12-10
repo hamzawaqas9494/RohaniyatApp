@@ -1,14 +1,14 @@
 
 
 ////////////////////////////////////////////////////////////////////////////live for web and mobile //////////////////////////////////////////////////////////////////////
-export const BASE_URL = "https://rohanishop.net/api/rohanishop";
-export const BASE_URL_IMG = "https://rohanishop.net";
+// export const BASE_URL = "https://rohanishop.net/api/rohanishop";
+// export const BASE_URL_IMG = "https://rohanishop.net";
 
 
 ////////////////////////////////////////////////////////////////////////////local for mobile //////////////////////////////////////////////////////////////////////
 
-// export const BASE_URL = "http://192.168.100.51:3000/api/rohanishop";
-// export const BASE_URL_IMG = "http://192.168.100.51:3000";
+export const BASE_URL = "http://192.168.100.51:3000/api/rohanishop";
+export const BASE_URL_IMG = "http://192.168.100.51:3000";
 
 
 
