@@ -6,8 +6,8 @@ export const mainStyles = StyleSheet.create({
   padding: 15,
 },
   heading: {
-    fontSize: 28,
-    fontFamily: "Jameel-Noori-Regular",
+    fontSize: 22,
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
@@ -22,9 +22,10 @@ export const mainStyles = StyleSheet.create({
     writingDirection: "rtl",
   },
 description: {
-  fontSize: 20,
+  fontSize: 16,
   color: "#6C472D",
-  fontFamily: "Jameel-Noori-Regular",
+    //  fontFamily: "Jameel-Noori-Regular",
+   fontFamily: "NotoNastaliqUrdu-Regular",
   textAlign: "right",    
   includeFontPadding: false,
 },
@@ -82,11 +83,9 @@ carditems: {
 
 carditemstext: {
   fontSize: 20,
-  fontFamily: "NotoNastaliqUrdu-Regular",
+  fontFamily: "Jameel-Noori-Regular",
   color: "#6C472D",
   textAlign: "center",
-  paddingBottom:5,
-  
 
 },
   noRecordText: {
