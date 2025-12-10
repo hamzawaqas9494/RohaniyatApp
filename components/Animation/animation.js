@@ -144,12 +144,12 @@ style={{
           <Text
   style={{
     color: "#6C472D",
-    marginTop:2,
+    // marginTop:2,
     // fontFamily: Platform.OS === "ios" ? undefined : "Jameel-Noori-Regular", 
           //  fontFamily: "Jameel-Noori-Regular",
    fontFamily: "NotoNastaliqUrdu-Regular",
     // fontSize: Platform.OS === "ios" ? iconWidth * 0.13 : iconWidth * 0.18,
-    fontSize:14,
+    fontSize:15,
     textAlign: "center",
     width: "100%",
   }}
