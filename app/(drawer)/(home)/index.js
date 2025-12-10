@@ -236,8 +236,8 @@ const styles = StyleSheet.create({
 
   modalContent: {
     backgroundColor: "rgb(108, 71, 45)",
-    borderRadius: 10,
-    padding: 20,
+    borderRadius: 5,
+    padding: 10,
     alignItems: "center",
     position: "relative",
   },
@@ -257,7 +257,7 @@ const styles = StyleSheet.create({
    fontFamily: "NotoNastaliqUrdu-Regular",
   },
   modalText: {
-    fontSize: 12,
+    fontSize: 14,
     textAlign: "center",
     color:"white",
    fontFamily: "NotoNastaliqUrdu-Regular",
