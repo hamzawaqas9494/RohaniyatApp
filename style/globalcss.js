@@ -94,6 +94,7 @@ carditemstext: {
   color: "#6C472D",
   textAlign: "center",
   justifyContent:"center",
+  paddingBottom:10
 
 
 },
