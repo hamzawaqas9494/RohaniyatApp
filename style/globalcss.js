@@ -82,9 +82,11 @@ carditems: {
 
 carditemstext: {
   fontSize: 20,
-  fontFamily: "Jameel-Noori-Regular",
+  fontFamily: "NotoNastaliqUrdu-Regular",
   color: "#6C472D",
   textAlign: "center",
+  paddingBottom:5,
+  
 
 },
   noRecordText: {
