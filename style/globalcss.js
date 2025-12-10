@@ -74,7 +74,7 @@ description: {
 carditems: {
   width: "100%",
   backgroundColor: "#E4DAC1",
-  paddingVertical: 8,
+  // paddingVertical: 8,
   marginTop: 8,
   marginBottom: 8,
   borderRadius: 5,
@@ -83,9 +83,11 @@ carditems: {
 
 carditemstext: {
   fontSize: 20,
-  fontFamily: "Jameel-Noori-Regular",
+  // fontFamily: "Jameel-Noori-Regular",
+     fontFamily: "NotoNastaliqUrdu-Regular",
   color: "#6C472D",
   textAlign: "center",
+  // paddingBottom:5
 
 },
   noRecordText: {
