@@ -148,8 +148,8 @@ style={{
     // fontFamily: Platform.OS === "ios" ? undefined : "Jameel-Noori-Regular", 
           //  fontFamily: "Jameel-Noori-Regular",
    fontFamily: "NotoNastaliqUrdu-Regular",
-    // fontSize: Platform.OS === "ios" ? iconWidth * 0.13 : iconWidth * 0.18,
-    fontSize:15,
+    fontSize: iconWidth * 0.12,
+    // fontSize:16,
     textAlign: "center",
     width: "100%",
   }}
