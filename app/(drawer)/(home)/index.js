@@ -250,16 +250,16 @@ const styles = StyleSheet.create({
     outlineWidth: 0, 
   },
   modalTitle: {
-    lineHeight:50,
-    fontSize: 35,
-    textAlign: "center",
-    color:"white",
-    fontFamily: "Jameel-Noori-Regular",
-  },
-  modalText: {
+    // lineHeight:50,
     fontSize: 20,
     textAlign: "center",
-   color:"white",
-        fontFamily: "Jameel-Noori-Regular",
+    color:"white",
+   fontFamily: "NotoNastaliqUrdu-Regular",
+  },
+  modalText: {
+    fontSize: 12,
+    textAlign: "center",
+    color:"white",
+   fontFamily: "NotoNastaliqUrdu-Regular",
   },
 });
