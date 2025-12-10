@@ -45,7 +45,7 @@ export default function CategoryDetails() {
 }, [id, tableName]);
 
 
-  const allowedTables = ["rohaniilaaj",  "chehalkaaf","tawizatusmaniya","rohanidokan","amliyatcourse","hamzadkaamal"];
+  const allowedTables = ["rohaniilaaj","chehalkaaf","tawizatusmaniya","rohanidokan","amliyatcourse","hamzadkaamal"];
 
   if (loading) return <Loader />;
 
