@@ -140,7 +140,7 @@ export default function HomeScreen() {
         <View style={styles.modalOverlay}>
           <View style={styles.modalContent}>
             <Pressable style={styles.closeButton} onPress={() => setShowModal(false)}>
-              <Text style={{  color:"rgb(228, 218, 193)" , fontSize: 25 }}>✖</Text>
+              <Text style={{color:"white", fontSize: 25 }}>✖</Text>
             </Pressable>
             <Text style={styles.modalTitle}>ادارہ روحانیات</Text>
             <Text style={styles.modalText}>ہماری ٹیم کی حوصلہ افزائی کے لیے</Text>
