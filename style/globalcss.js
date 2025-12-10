@@ -16,7 +16,7 @@ export const mainStyles = StyleSheet.create({
   },
   subheading: {
     fontSize: 18,
-    lineHeight: 32,
+    // lineHeight: 32,
     //  fontFamily: "Jameel-Noori-Regular",
    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
