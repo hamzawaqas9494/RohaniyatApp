@@ -34,7 +34,7 @@ description: {
   tashkhesHeading: {
     fontSize: 28,
     paddingTop: 5,
-    fontFamily: "Jameel-Noori-Regular",
+   fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
@@ -43,7 +43,8 @@ description: {
     fontSize: 20,
     paddingTop: 4,
     color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
+    // fontFamily: "Jameel-Noori-Regular",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     textAlign: "right",
     writingDirection: "rtl",
   },
@@ -79,15 +80,17 @@ carditems: {
   marginBottom: 8,
   borderRadius: 5,
   alignItems: "center",
+  height:60,
+  justifyContent:"center"
 },
 
 carditemstext: {
-  fontSize: 20,
+  fontSize: 16,
   // fontFamily: "Jameel-Noori-Regular",
      fontFamily: "NotoNastaliqUrdu-Regular",
   color: "#6C472D",
   textAlign: "center",
-  // paddingBottom:5
+  paddingBottom:5
 
 },
   noRecordText: {
