@@ -201,7 +201,7 @@ export const customButton = StyleSheet.create({
   container: {
     width: "100%",
     alignItems: "center",
-    marginTop: 20,
+    marginTop: 10,
   },
   button: {
     marginTop: 10,

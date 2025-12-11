@@ -69,7 +69,7 @@ export default function CategoryDetails() {
         {item.image && (
           <Image source={{ uri: `${BASE_URL_IMG}${item.image}` }} style={htmlStyles.itemimage} resizeMode="contain" />
         )}
-        <View style={customButton.container}>
+      
 
   <View style={customButton.container}>
   {/* WhatsApp Button */}
@@ -96,7 +96,7 @@ export default function CategoryDetails() {
 </View>
 
 
-</View>
+
 
         </View>
       </ScrollView>
