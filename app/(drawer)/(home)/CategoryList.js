@@ -99,12 +99,14 @@ export default function CategoryList() {
     }}
       showsVerticalScrollIndicator={false}  
     renderItem={({ item }) => (
-      <TouchableOpacity
-         style={mainStyles.carditems}
-        onPress={() => handleCategoryPress(item.label)}
-      >
-        <Text  style={mainStyles.carditemstext}>{item.label}</Text>
-      </TouchableOpacity>
+     <TouchableOpacity
+  style={mainStyles.carditems}
+  onPress={() => handleCategoryPress(item.label)}>
+    <Text style={mainStyles.carditemstext}>
+      {item.label}
+    </Text>
+</TouchableOpacity>
+
     )}
   />
 </CustomBackground>

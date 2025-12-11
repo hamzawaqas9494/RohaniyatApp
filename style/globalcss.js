@@ -7,8 +7,7 @@ export const mainStyles = StyleSheet.create({
 },
   heading: {
     fontSize: 22,
-     //  fontFamily: "Jameel-Noori-Regular",
-   fontFamily: "NotoNastaliqUrdu-Regular",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
@@ -16,42 +15,18 @@ export const mainStyles = StyleSheet.create({
   },
   subheading: {
     fontSize: 18,
-    // lineHeight: 32,
-    //  fontFamily: "Jameel-Noori-Regular",
-   fontFamily: "NotoNastaliqUrdu-Regular",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
   },
 description: {
-  fontSize: 16,
-  color: "#6C472D",
-    //  fontFamily: "Jameel-Noori-Regular",
+   fontSize: 16,
+   color: "#6C472D",
    fontFamily: "NotoNastaliqUrdu-Regular",
   textAlign: "right",    
   includeFontPadding: false,
 },
-
-// // working after client disscusion
-//   tashkhesHeading: {
-//         fontSize: 22,
-//     // paddingTop: 5,
-//    fontFamily: "NotoNastaliqUrdu-Regular",
-//     color: "#6C472D",
-//     textAlign: "right",
-//     writingDirection: "rtl",
-//   },
-//   tashkhesDescription: {
-//     fontSize: 16,
-//     // paddingTop: 4,
-//     color: "#6C472D",
-//     // fontFamily: "Jameel-Noori-Regular",
-//     fontFamily: "NotoNastaliqUrdu-Regular",
-//     textAlign: "right",
-//     writingDirection: "rtl",
-//   },
-
-// working after client disscusion
 
  sirparastimagesection: {
     alignItems: "center",
@@ -70,44 +45,38 @@ description: {
   rohaniishayaitem: {
     fontSize: 14,
     color: "#6C472D",
-      //  fontFamily: "Jameel-Noori-Regular",
-   fontFamily: "NotoNastaliqUrdu-Regular",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     textAlign: "right",
   },
-
+  
 carditems: {
   width: "100%",
   backgroundColor: "#E4DAC1",
-  // paddingVertical: 8,
-  marginTop: 8,
-  marginBottom: 8,
+  paddingVertical: 5,
+  marginTop: 5,
+  marginBottom: 5,
   borderRadius: 5,
-  // alignItems: "center",
-  height:60,
-  justifyContent:"center"
+  justifyContent: "center",  
+  alignItems: "center",
 },
 
 carditemstext: {
-  fontSize: 20,
-  // fontFamily: "Jameel-Noori-Regular",
-     fontFamily: "NotoNastaliqUrdu-Regular",
+  fontFamily: "NotoNastaliqUrdu-Regular",
   color: "#6C472D",
   textAlign: "center",
-  justifyContent:"center",
-  paddingBottom:10
-
-
+  flexWrap: "wrap",
+  paddingBottom: Platform.OS === "web" ? 5 : 0,
 },
+
   noRecordText: {
     fontSize: 16,
     fontWeight: "600",
-       //  fontFamily: "Jameel-Noori-Regular",
    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "center",
   },
 });
-////////////////////////////////////// static pages Styles  end ////////////////////////////////////
+//////////////////////////////////static pages Styles  end ////////////////////////////////////
 /////////////////////////////////component style start /////////////////////////////////
 export const backGround = StyleSheet.create({
   background: {
@@ -258,7 +227,7 @@ export const htmlStyles = StyleSheet.create({
     whiteSpace: "pre-wrap",
     writingDirection: "rtl",
     textAlign: "right",
-      //  fontFamily: "Jameel-Noori-Regular",
+
    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
   },
@@ -276,7 +245,7 @@ export const htmlStyles = StyleSheet.create({
   p: {
     margin: 0,
     fontSize: 16,
-       //  fontFamily: "Jameel-Noori-Regular",
+  
    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -286,7 +255,7 @@ export const htmlStyles = StyleSheet.create({
   h1: {
     margin: 0,
     fontSize: 22,
-         //  fontFamily: "Jameel-Noori-Regular",
+    
    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -295,7 +264,6 @@ export const htmlStyles = StyleSheet.create({
   h2: {
     margin: 0,
     fontSize: 18,
-          //  fontFamily: "Jameel-Noori-Regular",
    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -304,7 +272,6 @@ export const htmlStyles = StyleSheet.create({
   h3: {
     margin: 0,
     fontSize: 16,
-        //  fontFamily: "Jameel-Noori-Regular",
    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -313,8 +280,7 @@ export const htmlStyles = StyleSheet.create({
   h4: {
     margin: 0,
     fontSize: 14,
-          //  fontFamily: "Jameel-Noori-Regular",
-   fontFamily: "NotoNastaliqUrdu-Regular",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
@@ -322,8 +288,7 @@ export const htmlStyles = StyleSheet.create({
   h5: {
     margin: 0,
     fontSize: 12,
-          //  fontFamily: "Jameel-Noori-Regular",
-   fontFamily: "NotoNastaliqUrdu-Regular",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl", 
@@ -331,8 +296,7 @@ export const htmlStyles = StyleSheet.create({
   h6: {
     margin: 0,
     fontSize: 10,
-        //  fontFamily: "Jameel-Noori-Regular",
-   fontFamily: "NotoNastaliqUrdu-Regular",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
@@ -340,8 +304,7 @@ export const htmlStyles = StyleSheet.create({
   ul: {
     margin: 0,
     direction: "rtl",
-       //  fontFamily: "Jameel-Noori-Regular",
-   fontFamily: "NotoNastaliqUrdu-Regular",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "red",
     textAlign: "right",
     writingDirection: "rtl",
@@ -350,8 +313,7 @@ export const htmlStyles = StyleSheet.create({
 ol: {
   margin: 0,
   direction: "rtl",
-       //  fontFamily: "Jameel-Noori-Regular",
-   fontFamily: "NotoNastaliqUrdu-Regular",
+  fontFamily: "NotoNastaliqUrdu-Regular",
   color: "red",
   textAlign: "right",
   writingDirection: "rtl",
@@ -368,10 +330,8 @@ ol: {
    mark: {
     backgroundColor: "yellow",
     color: Platform.OS === "web" ? "#6C472D" : undefined,
-      textShadowOffset: { width: 0, height: 0 },
-       textShadowRadius: 0,
-    
-  
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 0,
   },
  strong: {
   ...(Platform.OS !== "web" && {
@@ -380,24 +340,12 @@ ol: {
     textShadowRadius: 0.1,
   }),
 },
-
-
-//   em:{
-// color:"red",
-//  fontSize: 20,
-//     // color: "#000",
-//     transform: [{ skewX: "-12deg" }], // main italic effect
-//   },
-
-
-
 // taypography end
 // custom tag style start
  var: {
     color: "red",
     fontFamily: "ScheherazadeNew-Bold",
     fontStyle:"normal"
- 
   },
 dfn: {
   whiteSpace: "pre-wrap",
