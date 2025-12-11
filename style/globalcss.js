@@ -310,7 +310,7 @@ export const htmlStyles = StyleSheet.create({
     color: "red",
     textAlign: "right",
     writingDirection: "rtl",
-   lineHeight: Platform.OS === "web" ? 36 : 42,
+   lineHeight: 45,
   },
 ol: {
   margin: 0,
@@ -319,7 +319,7 @@ ol: {
   color: "red",
   textAlign: "right",
   writingDirection: "rtl",
-  lineHeight: Platform.OS === "web" ? 36 : 42,
+   lineHeight: 45,
 },
   li: {
     paddingRight: 10,
