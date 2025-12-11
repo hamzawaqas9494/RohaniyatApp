@@ -71,7 +71,7 @@ carditemstext: {
   // textAlign: "center",
   // flexWrap: "wrap",
   paddingBottom: Platform.OS === "web" ? 5 : 0,
-  lineHeight:50,
+  lineHeight:Platform.OS === "web"? undefined : 50,
     // includeFontPadding: false,
 },
 
