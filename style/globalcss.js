@@ -56,23 +56,18 @@ carditems: {
   marginTop: 5,
   marginBottom: 5,
   borderRadius: 5,
-  // justifyContent: "center",  
-  // alignItems: "center",
-    flexDirection: "row",
   justifyContent: "center",
   alignItems: "center",
-  // flexWrap: "wrap",
+
   height:60
 },
 
 carditemstext: {
   fontFamily: "NotoNastaliqUrdu-Regular",
   color: "#6C472D",
-  // textAlign: "center",
-  // flexWrap: "wrap",
+  flexWrap: "wrap",
   paddingBottom: Platform.OS === "web" ? 5 : 0,
-  lineHeight:Platform.OS === "web"? undefined : 50,
-    // includeFontPadding: false,
+  lineHeight:Platform.OS === "android" ? undefined : 50,
 },
 
   noRecordText: {
