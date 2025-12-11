@@ -48,7 +48,7 @@ description: {
     fontFamily: "NotoNastaliqUrdu-Regular",
     textAlign: "right",
   },
-  
+
 carditems: {
   width: "100%",
   backgroundColor: "#E4DAC1",
@@ -56,16 +56,23 @@ carditems: {
   marginTop: 5,
   marginBottom: 5,
   borderRadius: 5,
-  justifyContent: "center",  
+  // justifyContent: "center",  
+  // alignItems: "center",
+    flexDirection: "row",
+  justifyContent: "center",
   alignItems: "center",
+  // flexWrap: "wrap",
+  height:60
 },
 
 carditemstext: {
   fontFamily: "NotoNastaliqUrdu-Regular",
   color: "#6C472D",
-  textAlign: "center",
-  flexWrap: "wrap",
+  // textAlign: "center",
+  // flexWrap: "wrap",
   paddingBottom: Platform.OS === "web" ? 5 : 0,
+  // lineHeight:40,
+    // includeFontPadding: false,
 },
 
   noRecordText: {
