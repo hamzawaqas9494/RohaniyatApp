@@ -58,7 +58,6 @@ carditems: {
   borderRadius: 5,
   justifyContent: "center",
   alignItems: "center",
-
   height:60
 },
 
@@ -73,7 +72,7 @@ carditemstext: {
   noRecordText: {
     fontSize: 16,
     fontWeight: "600",
-   fontFamily: "NotoNastaliqUrdu-Regular",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "center",
   },
