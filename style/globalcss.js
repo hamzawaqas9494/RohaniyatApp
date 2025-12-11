@@ -222,14 +222,13 @@ export const customButton = StyleSheet.create({
     fontFamily: "Jameel-Noori-Regular",
   },
 });
-/////////////////////////////////component style end /////////////////////////////////
+///////////////////////////////// component style end /////////////////////////////////
 // //////////////////////////////////// blog-detail-pages style start /////////////////////////////
 export const htmlStyles = StyleSheet.create({
   htmlBaseStyle: {
     whiteSpace: "pre-wrap",
     writingDirection: "rtl",
     textAlign: "right",
-
    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
   },
@@ -247,7 +246,6 @@ export const htmlStyles = StyleSheet.create({
   p: {
     margin: 0,
     fontSize: 16,
-  
    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
@@ -257,8 +255,7 @@ export const htmlStyles = StyleSheet.create({
   h1: {
     margin: 0,
     fontSize: 22,
-    
-   fontFamily: "NotoNastaliqUrdu-Regular",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
@@ -266,7 +263,7 @@ export const htmlStyles = StyleSheet.create({
   h2: {
     margin: 0,
     fontSize: 18,
-   fontFamily: "NotoNastaliqUrdu-Regular",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
@@ -274,7 +271,7 @@ export const htmlStyles = StyleSheet.create({
   h3: {
     margin: 0,
     fontSize: 16,
-   fontFamily: "NotoNastaliqUrdu-Regular",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
