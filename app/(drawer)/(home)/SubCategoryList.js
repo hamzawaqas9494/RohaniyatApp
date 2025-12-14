@@ -263,7 +263,7 @@ export default function SubCategoryList() {
           navigation.replace("ItemList", {
             tableName,
             categoryId,
-            label: categoryLabel || "آئٹمز"
+            label: categoryLabel || "آئٹمز"  // ← کیٹیگری کا لیبل دکھے گا
           });
           setLoading(false);
           return;

@@ -349,7 +349,7 @@ export default function ItemList() {
             onPress={() =>
               navigation.navigate("CategoryDetails", {
                 id: item.id,
-                // tableName,
+                tableName,
               })
             }
           >
