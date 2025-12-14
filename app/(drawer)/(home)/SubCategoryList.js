@@ -260,11 +260,10 @@ export default function SubCategoryList() {
 
         if (!data || data.length === 0) {
           setErrorMsg("📂 کوئی سب کیٹیگری موجود نہیں ہے۔");
-          // جب کوئی سب کیٹیگری نہ ہو → ItemList پر جاؤ اور کیٹیگری کا لیبل دکھاؤ
           navigation.replace("ItemList", {
             tableName,
             categoryId,
-            label: categoryLabel || "آئٹمز"  // ← کیٹیگری کا لیبل دکھے گا
+            label: categoryLabel || "آئٹمز"
           });
           setLoading(false);
           return;
