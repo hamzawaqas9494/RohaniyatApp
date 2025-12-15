@@ -15,6 +15,6 @@ const styles = StyleSheet.create({
   container: { flex: 1, justifyContent: "center", alignItems: "center" },
      text: {   fontSize: 18,
     color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
+     fontFamily: "NotoNastaliqUrdu-Regular",
     textAlign: "center", },
 });

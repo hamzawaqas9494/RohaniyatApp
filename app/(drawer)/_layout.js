@@ -14,9 +14,8 @@ SplashScreen.preventAutoHideAsync();
 export default function Layout() {
 
   const [fontsLoaded] = useFonts({
-    "Jameel-Noori-Regular": require("../../assets/fonts/JameelNooriNastaleeqRegular.ttf"), // For OverAll Urdu Text
     "ScheherazadeNew-Bold": require("../../assets/fonts/ScheherazadeNew-Bold.ttf"), // For Arabic Ayaat Text
-    "NotoNastaliqUrdu-Regular": require("../../assets/fonts/NotoNastaliqUrdu-Regular.ttf"), // For Header Text
+    "NotoNastaliqUrdu-Regular": require("../../assets/fonts/NotoNastaliqUrdu-Regular.ttf"), // For overall Text
     "NotoNastaliqUrdu-Bold": require("../../assets/fonts/NotoNastaliqUrdu-Bold.ttf"), // For Bold Text 
   });
   const [isSplashVisible, setSplashVisible] = useState(true);
@@ -71,8 +70,7 @@ export default function Layout() {
           drawerInactiveTintColor: "black",
           drawerLabelStyle: {
              fontSize: 11,
-            //  fontFamily: "Jameel-Noori-Regular",
-               fontFamily: "NotoNastaliqUrdu-Regular",
+            fontFamily: "NotoNastaliqUrdu-Regular",
             },
           gestureEnabled: true,
           
