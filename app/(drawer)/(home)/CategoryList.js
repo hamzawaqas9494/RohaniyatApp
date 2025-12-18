@@ -163,10 +163,10 @@ export default function CategoryList() {
   const getCurrentLimit = () => {
     const { height } = Dimensions.get("window");
     const headerHeight = 150; // اپنے header کی اونچائی ایڈجسٹ کریں اگر مختلف ہو
-    const cardHeight = 75; // تمہارا card 60 + margins/padding ≈75
+    const cardHeight = 70; // تمہارا card 60 + margins/padding ≈75
     const available = height - headerHeight;
     const items = Math.ceil(available / cardHeight);
-    return Math.max(items + 1, 1); // تھوڑے زیادہ تاکہ scroll بنے
+    return Math.max(items + 1, 10); // تھوڑے زیادہ تاکہ scroll بنے
   };
 
   const loadCategories = async (pageNum = 1, append = false) => {
@@ -236,6 +236,8 @@ export default function CategoryList() {
     try {
       const subcats = await fetchSubcategories(tableName, category.id);
       if (subcats && subcats.length > 0) {
+
+      
         navigation.navigate("SubCategoryList", {
           tableName,
           categoryId: category.id,

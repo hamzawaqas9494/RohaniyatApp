@@ -109,7 +109,7 @@ const getTableId = async (tableName) => {
   }
 };
 
-const fetchPaginated = async (baseParams, page = 1, limit = 20) => {
+const fetchPaginated = async (baseParams, page = 1, limit = 5) => {
   const url = new URL(`${BASE_URL}/get`);
   Object.entries(baseParams).forEach(([key, value]) => {
     if (value != null) url.searchParams.append(key, value);
@@ -166,19 +166,19 @@ export const DataProvider = ({ children }) => {
   };
 
   // نئی paginated functions — limit باہر سے آئے گی
-  const fetchCategoriesPaginated = async (tableName, page = 1, limit = 20) => {
+  const fetchCategoriesPaginated = async (tableName, page = 1, limit = 5) => {
     const tableId = await getTableId(tableName);
     if (!tableId) return { rows: [], hasMore: false };
     return await fetchPaginated({ tableId, list: "category" }, page, limit);
   };
 
-  const fetchSubcategoriesPaginated = async (tableName, categoryId, page = 1, limit = 20) => {
+  const fetchSubcategoriesPaginated = async (tableName, categoryId, page = 1, limit = 5) => {
     const tableId = await getTableId(tableName);
     if (!tableId) return { rows: [], hasMore: false };
     return await fetchPaginated({ tableId, list: "subcategory", category: categoryId }, page, limit);
   };
 
-  const fetchItemsPaginated = async (tableName, category = null, subcategory = null, page = 1, limit = 20) => {
+  const fetchItemsPaginated = async (tableName, category = null, subcategory = null, page = 1, limit = 5) => {
     const tableId = await getTableId(tableName);
     if (!tableId) return { rows: [], hasMore: false };
     const params = { tableId };
