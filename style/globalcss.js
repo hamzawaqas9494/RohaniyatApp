@@ -58,10 +58,13 @@ carditems: {
   borderRadius: 5,
   justifyContent: "center",
   alignItems: "center",
-  height:60
+  height:60,
+   flex:1,
 },
 
 carditemstext: {
+  width:"100%",
+  textAlign:"center",
   fontFamily: "NotoNastaliqUrdu-Regular",
   color: "#6C472D",
   flexWrap: "wrap",
