@@ -19,30 +19,106 @@ export default function CategoryDetails() {
   const [item, setItem] = useState(null);
   const [loading, setLoading] = useState(true);
 
- useEffect(() => {
+//  useEffect(() => {
+//   const load = async () => {
+//     if (!tableName || !id) return;
+//     setLoading(true);
+
+
+//     navigation.setOptions({ title: "..." });
+
+//     try {
+//       const found = await fetchItemById(tableName, id);
+//       setItem(found);
+
+//       if (found?.title) {
+//         navigation.setOptions({ title: found.title });
+//       }
+//     } catch (err) {
+//       console.error("آئٹم لوڈنگ فیل:", err);
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+
+//   load();
+// }, [id, tableName]);
+
+
+
+
+useEffect(() => {
   const load = async () => {
     if (!tableName || !id) return;
     setLoading(true);
 
-
-    navigation.setOptions({ title: "..." });
+    // loading کے دوران چھوٹا title یا ... دکھاؤ
+    navigation.setOptions({ 
+      title: "...", 
+      headerTitle: () => (
+        <Text
+          style={{
+            fontFamily: "NotoNastaliqUrdu-Regular",
+            fontSize: 16,
+            color: "#6C472D",
+            textAlign: "center",
+          }}
+          numberOfLines={1}
+          ellipsizeMode="tail"
+        >
+          ...
+        </Text>
+      ),
+    });
 
     try {
       const found = await fetchItemById(tableName, id);
       setItem(found);
 
       if (found?.title) {
-        navigation.setOptions({ title: found.title });
+        // اصل title سیٹ کرو، لیکن truncate کے ساتھ
+        navigation.setOptions({
+          title: found.title, // drawer menu میں پورا title دکھے گا
+
+          headerTitle: () => (
+            <Text
+              style={{
+                fontFamily: "NotoNastaliqUrdu-Regular",
+                fontSize: 16,
+                color: "#6C472D",
+                textAlign: "center",
+              }}
+              numberOfLines={1}
+              ellipsizeMode="tail"
+            >
+              {found.title}
+            </Text>
+          ),
+        });
       }
     } catch (err) {
       console.error("آئٹم لوڈنگ فیل:", err);
+      navigation.setOptions({
+        title: "خطا",
+        headerTitle: () => (
+          <Text
+            style={{
+              fontFamily: "NotoNastaliqUrdu-Regular",
+              fontSize: 16,
+              color: "#6C472D",
+            }}
+          >
+            خطا
+          </Text>
+        ),
+      });
     } finally {
       setLoading(false);
     }
   };
 
   load();
-}, [id, tableName]);
+}, [id, tableName, navigation]); // navigation بھی dependency میں ایڈ کر لو
 
 
   const allowedTables = ["rohaniilaaj","chehalkaaf","tawizatusmaniya","rohanidokan","amliyatcourse","hamzadkaamal"];
