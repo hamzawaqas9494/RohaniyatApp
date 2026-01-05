@@ -59,7 +59,6 @@ carditems: {
   justifyContent: "center",
   alignItems: "center",
   height:60,
-   flex:1,
 },
 
 carditemstext: {
