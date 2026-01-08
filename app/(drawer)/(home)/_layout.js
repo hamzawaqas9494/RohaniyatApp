@@ -237,7 +237,7 @@ export default function StackNavigator() {
           headerStyle: {
             height: 56,
             backgroundColor: "#E4DAC1",
-            paddingRight:100,
+            // paddingRight:100,
           },
         
 
