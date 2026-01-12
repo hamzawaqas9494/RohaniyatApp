@@ -237,7 +237,6 @@ export default function StackNavigator() {
           headerStyle: {
             height: 56,
             backgroundColor: "#E4DAC1",
-            // paddingRight:100,
           },
         
 
@@ -245,12 +244,17 @@ export default function StackNavigator() {
              textAlignVertical: "center",
              fontFamily: "NotoNastaliqUrdu-Regular",
              overflow: "visible", 
-            fontSize: 14,
-            color: "#6C472D",
+             fontSize: 14,
+             color: "#6C472D",
+              // backgroundColor: "red",
+              // width:"100%",
+              // padding:20,
+              //  includeFontPadding: false, // Android
           },
           
           headerTitleAlign: "center",
           headerTintColor: "#6C472D",
+          
        headerRight: () => (
   <View style={{ marginRight:Platform.OS ==="web"?0: -16}}>
     <DrawerToggleButton tintColor="#6C472D" />

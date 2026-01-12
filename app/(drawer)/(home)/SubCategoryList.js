@@ -53,9 +53,47 @@ export default function SubCategoryList() {
     load();
   }, [tableName, category, navigation]);
 
-  useEffect(() => {
-    navigation.setOptions({ title: category || "..."  });
-  }, [navigation, category]);
+  // useEffect(() => {
+  //   navigation.setOptions({ title: category || "..."  });
+  // }, [navigation, category]);
+
+
+
+
+
+useEffect(() => {
+  const titleText = category || "...";
+
+  navigation.setOptions({
+    headerTitle: () => (
+      <Text
+        style={{
+          color: "#6C472D",
+          fontFamily: "NotoNastaliqUrdu-Regular",
+          textAlign: "center",
+          fontSize: 14,
+          width:"100%"
+        }}
+      >
+        {titleText}
+      </Text>
+    ),
+  });
+}, [navigation, category]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   if (loading) return <Loader />;
   if (errorMsg) return <ErrorMessage text={errorMsg} />;

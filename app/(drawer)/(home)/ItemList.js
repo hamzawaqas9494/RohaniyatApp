@@ -99,9 +99,25 @@ export default function ItemList() {
     load();
   }, [tableName, category, subcategory, fetchItems]);
 
-  useEffect(() => {
-    navigation.setOptions({ title: subcategory || category || label || "..." });
-  }, [navigation, subcategory, category, label]);
+useEffect(() => {
+  const titleText = subcategory || category || label || "...";
+
+  navigation.setOptions({
+    headerTitle: () => (
+      <Text
+        style={{
+          color: "#6C472D",
+          fontFamily: "NotoNastaliqUrdu-Regular",
+          textAlign: "center",
+          fontSize: 14,
+          width:"100%"
+        }}
+      >
+        {titleText}
+      </Text>
+    ),
+  });
+}, [navigation, subcategory, category, label]);
 
   if (loading) return <Loader />;
   if (errorMsg) return <ErrorMessage text={errorMsg} />;

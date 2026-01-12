@@ -55,9 +55,35 @@ export default function CategoryList() {
     load();
   }, [tableName, navigation, label]);
 
-  useEffect(() => {
-    navigation.setOptions({ title: label || "کیٹیگریز" });
-  }, [navigation, label]);
+
+
+  // useEffect(() => {
+  //   navigation.setOptions({ title: label || "..." });
+  // }, [navigation, label]);
+
+
+useEffect(() => {
+  const titleText =  label || "..." ;
+
+  navigation.setOptions({
+    headerTitle: () => (
+      <Text
+        style={{
+          color: "#6C472D",
+          fontFamily: "NotoNastaliqUrdu-Regular",
+          textAlign: "center",
+          fontSize: 14,
+          width:"100%"
+        }}
+      >
+        {titleText}
+      </Text>
+    ),
+  });
+ }, [navigation, label]);
+
+
+
 
   const handleCategoryPress = async (categoryLabel) => {
     try {
