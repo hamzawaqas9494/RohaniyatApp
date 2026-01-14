@@ -318,7 +318,7 @@ export default function Layout() {
                   headerStyle: { 
                     height: Platform.select({
       web: 56,        // web height
-      android:98,    // android height
+      android:90,    // android height
       ios: undefined,       // ios height
     }), 
                     backgroundColor: "#E4DAC1",
