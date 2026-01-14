@@ -256,7 +256,11 @@ export default function StackNavigator() {
           headerTintColor: "#6C472D",
           
        headerRight: () => (
-  <View style={{ marginRight:Platform.OS ==="web"?0: -15}}>
+  <View style={{ marginRight: Platform.select({
+      web: 0,        // web height
+      android:-16,    // android height
+      ios: -15,       // ios height
+    }), }}>
     <DrawerToggleButton tintColor="#6C472D" />
   </View>
 )
