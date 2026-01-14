@@ -72,46 +72,35 @@ useEffect(() => {
     });
 
     try {
+      
       const found = await fetchItemById(tableName, id);
       setItem(found);
 
       if (found?.title) {
+          const titleText = found.title ||  "..."
         // اصل title سیٹ کرو، لیکن truncate کے ساتھ
         navigation.setOptions({
-          title: found.title, // drawer menu میں پورا title دکھے گا
+          // title: found.title ||  "...", // drawer menu میں پورا title دکھے گا
 
           headerTitle: () => (
             <Text
               style={{
                 fontFamily: "NotoNastaliqUrdu-Regular",
-                fontSize: 16,
+                fontSize: 14,
                 color: "#6C472D",
                 textAlign: "center",
+                width:"100%"
               }}
               numberOfLines={1}
               ellipsizeMode="tail"
             >
-              {found.title}
+              {titleText}
             </Text>
           ),
         });
       }
     } catch (err) {
       console.error("آئٹم لوڈنگ فیل:", err);
-      navigation.setOptions({
-        title: "خطا",
-        headerTitle: () => (
-          <Text
-            style={{
-              fontFamily: "NotoNastaliqUrdu-Regular",
-              fontSize: 16,
-              color: "#6C472D",
-            }}
-          >
-            خطا
-          </Text>
-        ),
-      });
     } finally {
       setLoading(false);
     }
@@ -152,10 +141,10 @@ useEffect(() => {
   {allowedTables.includes(tableName) && (
     <UniversalButton
       icon="whatsapp"
-     iconColor="#fff"               
+      iconColor="#fff"               
       text="رابطہ برائے خریداری"
       color="#fff"                  
-     backgroundColor="#6C472D" 
+      backgroundColor="#6C472D" 
       link="https://wa.me/923008440979"
     />
   )}

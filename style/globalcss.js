@@ -53,6 +53,7 @@ carditems: {
   width: "100%",
   backgroundColor: "#E4DAC1",
   paddingVertical: 5,
+  paddingHorizontal: 5,
   marginTop: 5,
   marginBottom: 5,
   borderRadius: 5,

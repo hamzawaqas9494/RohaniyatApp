@@ -195,7 +195,12 @@ useEffect(() => {
           </View>
         )
       ) : (
-        <Text style={mainStyles.carditemstext}>{item.title}</Text>
+        <Text style={mainStyles.carditemstext}
+
+          numberOfLines={1}
+  ellipsizeMode="tail"
+        
+        >{item.title}</Text>
       )}
     </TouchableOpacity>
   )}
