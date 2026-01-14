@@ -234,7 +234,7 @@ import { useFonts } from 'expo-font';
 import { Drawer } from "expo-router/drawer";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect, useLayoutEffect, useState } from "react";
-import { Platform } from 'react-native';
+import { Platform } from "react-native";
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { DataProvider } from "../../components/context/DataContext";
@@ -316,13 +316,17 @@ export default function Layout() {
                   headerLeft: () => null, 
                   headerRight: () => <DrawerToggleButton tintColor="#6C472D"/>,
                   headerStyle: { 
-                  height: Platform.OS === 'web' ? 56 : 90,  
+                    height: Platform.select({
+      web: 56,        // web height
+      android:98,    // android height
+      ios: undefined,       // ios height
+    }), 
                     backgroundColor: "#E4DAC1",
                   },
                   headerTitleStyle: {
                     textAlignVertical: "center",
                     fontFamily: "NotoNastaliqUrdu-Regular",
-                    fontSize: 16,
+                    fontSize: 14,
                     color: "#6C472D",
                   },
                   headerTitleAlign: "center",
