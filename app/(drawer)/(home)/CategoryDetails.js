@@ -90,7 +90,7 @@ useEffect(() => {
           fontFamily: "NotoNastaliqUrdu-Regular",
           textAlign: "center",
           fontSize: 14,
-            maxWidth: "90%",
+          maxWidth: "90%",
           width:"100%",
               }}
               numberOfLines={1}
