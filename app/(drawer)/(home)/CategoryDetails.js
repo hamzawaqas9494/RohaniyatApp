@@ -54,18 +54,19 @@ useEffect(() => {
 
     // loading کے دوران چھوٹا title یا ... دکھاؤ
     navigation.setOptions({ 
-      title: "...", 
+      // title: "...", 
       headerTitle: () => (
-        <Text
-          style={{
-            fontFamily: "NotoNastaliqUrdu-Regular",
-            fontSize: 16,
-            color: "#6C472D",
-            textAlign: "center",
-          }}
-          numberOfLines={1}
-          ellipsizeMode="tail"
-        >
+          <Text
+              style={{
+                fontFamily: "NotoNastaliqUrdu-Regular",
+                fontSize: 14,
+                color: "#6C472D",
+                textAlign: "center",
+                width:"100%"
+              }}
+              numberOfLines={1}
+              ellipsizeMode="tail"
+            >
           ...
         </Text>
       ),

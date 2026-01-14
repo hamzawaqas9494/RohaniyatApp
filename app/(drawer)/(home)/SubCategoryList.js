@@ -121,7 +121,7 @@ useEffect(() => {
         })
       }
     >
-      <Text style={mainStyles.carditemstext}>{item.label}</Text> 
+      <Text style={mainStyles.carditemstext} numberOfLines={1} ellipsizeMode="tail">{item.label}</Text> 
     </TouchableOpacity>
   )}
 />
