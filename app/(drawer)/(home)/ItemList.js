@@ -110,7 +110,8 @@ useEffect(() => {
           fontFamily: "NotoNastaliqUrdu-Regular",
           textAlign: "center",
           fontSize: 14,
-          width:"100%"
+          maxWidth: "90%",
+          width:"100%",
         }}
       >
         {titleText}

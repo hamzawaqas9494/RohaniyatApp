@@ -58,11 +58,11 @@ useEffect(() => {
       headerTitle: () => (
           <Text
               style={{
-                fontFamily: "NotoNastaliqUrdu-Regular",
-                fontSize: 14,
-                color: "#6C472D",
-                textAlign: "center",
-                width:"100%"
+          color: "#6C472D",
+          fontFamily: "NotoNastaliqUrdu-Regular",
+          textAlign: "center",
+          fontSize: 14,
+          width:"100%"
               }}
               numberOfLines={1}
               ellipsizeMode="tail"
@@ -81,16 +81,17 @@ useEffect(() => {
           const titleText = found.title ||  "..."
         // اصل title سیٹ کرو، لیکن truncate کے ساتھ
         navigation.setOptions({
-          // title: found.title ||  "...", // drawer menu میں پورا title دکھے گا
+          title: found.title ||  "...", // drawer menu میں پورا title دکھے گا
 
           headerTitle: () => (
             <Text
               style={{
-                fontFamily: "NotoNastaliqUrdu-Regular",
-                fontSize: 14,
-                color: "#6C472D",
-                textAlign: "center",
-                width:"100%"
+                 color: "#6C472D",
+          fontFamily: "NotoNastaliqUrdu-Regular",
+          textAlign: "center",
+          fontSize: 14,
+            maxWidth: "90%",
+          width:"100%",
               }}
               numberOfLines={1}
               ellipsizeMode="tail"
