@@ -19,42 +19,11 @@ export default function CategoryDetails() {
   const [item, setItem] = useState(null);
   const [loading, setLoading] = useState(true);
 
-//  useEffect(() => {
-//   const load = async () => {
-//     if (!tableName || !id) return;
-//     setLoading(true);
-
-
-//     navigation.setOptions({ title: "..." });
-
-//     try {
-//       const found = await fetchItemById(tableName, id);
-//       setItem(found);
-
-//       if (found?.title) {
-//         navigation.setOptions({ title: found.title });
-//       }
-//     } catch (err) {
-//       console.error("آئٹم لوڈنگ فیل:", err);
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
-
-//   load();
-// }, [id, tableName]);
-
-
-
-
 useEffect(() => {
   const load = async () => {
     if (!tableName || !id) return;
     setLoading(true);
-
-    // loading کے دوران چھوٹا title یا ... دکھاؤ
     navigation.setOptions({ 
-      // title: "...", 
       headerTitle: () => (
           <Text
               style={{
@@ -79,22 +48,18 @@ useEffect(() => {
 
       if (found?.title) {
           const titleText = found.title ||  "..."
-        // اصل title سیٹ کرو، لیکن truncate کے ساتھ
         navigation.setOptions({
           title: found.title ||  "...",
 
           headerTitle: () => (
             <Text
               style={{
-                 color: "#6C472D",
+          color: "#6C472D",
           fontFamily: "NotoNastaliqUrdu-Regular",
           textAlign: "center",
           fontSize: 14,
-             width: "100%",
-                     // maxWidth: "95%", 
-                 //  width: Platform.OS === "web" ? "100%" : "95%",
-                  // maxWidth: Platform.OS === "web" ? "100%" : "95%",  
-                   maxWidth: Platform.OS === "android" ? "95%" : undefined, 
+          width: "100%",
+          maxWidth: Platform.OS === "android" ? "95%" : undefined, 
               }}
               numberOfLines={1}
               ellipsizeMode="tail"
@@ -112,7 +77,7 @@ useEffect(() => {
   };
 
   load();
-}, [id, tableName, navigation]); // navigation بھی dependency میں ایڈ کر لو
+}, [id, tableName, navigation]);
 
 
   const allowedTables = ["rohaniilaaj","chehalkaaf","tawizatusmaniya","rohanidokan","amliyatcourse","hamzadkaamal"];

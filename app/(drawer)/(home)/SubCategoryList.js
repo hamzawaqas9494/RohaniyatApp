@@ -53,14 +53,6 @@ export default function SubCategoryList() {
     load();
   }, [tableName, category, navigation]);
 
-  // useEffect(() => {
-  //   navigation.setOptions({ title: category || "..."  });
-  // }, [navigation, category]);
-
-
-
-
-
 useEffect(() => {
   const titleText = category || "...";
 
@@ -72,11 +64,8 @@ useEffect(() => {
           fontFamily: "NotoNastaliqUrdu-Regular",
           textAlign: "center",
           fontSize: 14,
-              width: "100%",
-                     // maxWidth: "95%", 
-                 //  width: Platform.OS === "web" ? "100%" : "95%",
-                  // maxWidth: Platform.OS === "web" ? "100%" : "95%",  
-                   maxWidth: Platform.OS === "android" ? "95%" : undefined,
+          width: "100%",
+          maxWidth: Platform.OS === "android" ? "95%" : undefined,
         }}
       >
         {titleText}
@@ -84,19 +73,6 @@ useEffect(() => {
     ),
   });
 }, [navigation, category]);
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   if (loading) return <Loader />;
