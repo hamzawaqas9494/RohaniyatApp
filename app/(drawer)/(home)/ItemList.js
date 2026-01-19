@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import {
   FlatList,
   Image,
+  Platform,
   Text,
   TouchableOpacity,
   useWindowDimensions,
@@ -110,8 +111,9 @@ useEffect(() => {
           fontFamily: "NotoNastaliqUrdu-Regular",
           textAlign: "center",
           fontSize: 14,
-          maxWidth: "90%",
-          width:"100%",
+           width: "100%",
+          //  width: Platform.OS === "web" ? "100%" : "95%",
+           maxWidth: Platform.OS === "web" ? "100%" : "90%",
         }}
       >
         {titleText}
