@@ -81,7 +81,7 @@ useEffect(() => {
           const titleText = found.title ||  "..."
         // اصل title سیٹ کرو، لیکن truncate کے ساتھ
         navigation.setOptions({
-          title: found.title ||  "...", // drawer menu میں پورا title دکھے گا
+          title: found.title ||  "...",
 
           headerTitle: () => (
             <Text
