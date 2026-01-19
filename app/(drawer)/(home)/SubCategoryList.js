@@ -1,7 +1,7 @@
 import NetInfo from "@react-native-community/netinfo";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { useEffect, useState } from "react";
-import { FlatList, Platform, Text, TouchableOpacity } from "react-native";
+import { FlatList, Text, TouchableOpacity } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 import { useData } from "../../../components/context/DataContext";
 import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
@@ -73,8 +73,8 @@ useEffect(() => {
           textAlign: "center",
           fontSize: 14,
                    width: "100%",
-          //  width: Platform.OS === "web" ? "100%" : "95%",
-           maxWidth: Platform.OS === "web" ? "100%" : "90%",
+          // //  width: Platform.OS === "web" ? "100%" : "95%",
+          //  maxWidth: Platform.OS === "web" ? "100%" : "90%",
         }}
       >
         {titleText}

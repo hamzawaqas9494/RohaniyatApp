@@ -1,6 +1,6 @@
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { useEffect, useState } from "react";
-import { Dimensions, Image, Platform, ScrollView, Text, View } from "react-native";
+import { Dimensions, Image, ScrollView, Text, View } from "react-native";
 import RenderHTML from "react-native-render-html";
 import CustomBackground from "../../../components/Background/Background";
 import { useData } from "../../../components/context/DataContext";
@@ -92,8 +92,8 @@ useEffect(() => {
           fontSize: 14,
           overflow:"visible",
               width: "100%",
-          //  width: Platform.OS === "web" ? "100%" : "95%",
-           maxWidth: Platform.OS === "web" ? "100%" : "90%",
+          // //  width: Platform.OS === "web" ? "100%" : "95%",
+          //  maxWidth: Platform.OS === "web" ? "100%" : "90%",
               }}
               numberOfLines={1}
               ellipsizeMode="tail"
