@@ -113,9 +113,10 @@ useEffect(() => {
           textAlign: "center",
           fontSize: 14,
            width: "100%",
-                              // maxWidth: "95%", 
-                          //  width: Platform.OS === "web" ? "100%" : "95%",
-                           maxWidth: Platform.OS === "web" ? "100%" : "95%",  
+                     // maxWidth: "95%", 
+                 //  width: Platform.OS === "web" ? "100%" : "95%",
+                  // maxWidth: Platform.OS === "web" ? "100%" : "95%",  
+                   maxWidth: Platform.OS === "android" ? "95%" : undefined, 
         }}
       >
         {titleText}
