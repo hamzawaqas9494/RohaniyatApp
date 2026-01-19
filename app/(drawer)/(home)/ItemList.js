@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import {
   FlatList,
   Image,
+  Platform,
   Text,
   TouchableOpacity,
   useWindowDimensions,
@@ -16,6 +17,7 @@ import Loader from "../../../components/Loader/Loader";
 import { sortUrduData } from "../../../components/SortUrduData/SortUrduData";
 import { BASE_URL_IMG } from "../../../config/api";
 import { mainStyles } from "../../../style/globalcss";
+
 
 export default function ItemList() {
   const { tableName, category, subcategory, label } = useRoute().params || {};
@@ -110,9 +112,10 @@ useEffect(() => {
           fontFamily: "NotoNastaliqUrdu-Regular",
           textAlign: "center",
           fontSize: 14,
-          //  width: "100%",
-          // //  width: Platform.OS === "web" ? "100%" : "95%",
-          //  maxWidth: Platform.OS === "web" ? "100%" : "90%",
+           width: "100%",
+                              // maxWidth: "95%", 
+                          //  width: Platform.OS === "web" ? "100%" : "95%",
+                           maxWidth: Platform.OS === "web" ? "100%" : "95%",  
         }}
       >
         {titleText}
