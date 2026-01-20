@@ -1,10 +1,10 @@
 import { Platform, StyleSheet } from "react-native";
 ///////////////////////////////////static pages Styles start/////////////////////////////
 export const mainStyles = StyleSheet.create({
- container: {
-  flex: 1,
-  padding: 15,
-},
+  container: {
+    flex: 1,
+    padding: 15,
+  },
   heading: {
     fontSize: 22,
     fontFamily: "NotoNastaliqUrdu-Regular",
@@ -20,25 +20,25 @@ export const mainStyles = StyleSheet.create({
     textAlign: "right",
     writingDirection: "rtl",
   },
-description: {
-   fontSize: 16,
-   color: "#6C472D",
-   fontFamily: "NotoNastaliqUrdu-Regular",
-  textAlign: "right",    
-  includeFontPadding: false,
-},
+  description: {
+    fontSize: 16,
+    color: "#6C472D",
+    fontFamily: "NotoNastaliqUrdu-Regular",
+    textAlign: "right",
+    includeFontPadding: false,
+  },
 
- sirparastimagesection: {
+  sirparastimagesection: {
     alignItems: "center",
   },
   sirparastimage: {
     width: 200,
     height: 240,
   },
-   rohaniishayacolumn: {
+  rohaniishayacolumn: {
     flex: 1,
   },
-   rohaniishayaContainer: {
+  rohaniishayaContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
   },
@@ -49,28 +49,28 @@ description: {
     textAlign: "right",
   },
 
-carditems: {
-  width: "100%",
-  backgroundColor: "#E4DAC1",
-  paddingVertical: 5,
-  paddingHorizontal: 5,
-  marginTop: 5,
-  marginBottom: 5,
-  borderRadius: 5,
-  justifyContent: "center",
-  alignItems: "center",
-  height:60,
-},
+  carditems: {
+    width: "100%",
+    backgroundColor: "#E4DAC1",
+    paddingVertical: 5,
+    paddingHorizontal: 5,
+    marginTop: 5,
+    marginBottom: 5,
+    borderRadius: 5,
+    justifyContent: "center",
+    alignItems: "center",
+    height: 60,
+  },
 
-carditemstext: {
-  width:"100%",
-  textAlign:"center",
-  fontFamily: "NotoNastaliqUrdu-Regular",
-  color: "#6C472D",
-  flexWrap: "wrap",
-  paddingBottom: Platform.OS === "web" ? 5 : 0,
-  lineHeight:Platform.OS === "android" ? undefined : 50,
-},
+  carditemstext: {
+    width: "100%",
+    textAlign: "center",
+    fontFamily: "NotoNastaliqUrdu-Regular",
+    color: "#6C472D",
+    flexWrap: "wrap",
+    paddingBottom: Platform.OS === "web" ? 5 : 0,
+    lineHeight: Platform.OS === "android" ? undefined : 50,
+  },
 
   noRecordText: {
     fontSize: 16,
@@ -221,7 +221,7 @@ export const customButton = StyleSheet.create({
   text: {
     color: "rgba(255, 255, 255, 1)",
     fontSize: 12,
-     fontFamily: "NotoNastaliqUrdu-Regular",
+    fontFamily: "NotoNastaliqUrdu-Regular",
   },
 });
 ///////////////////////////////// component style end /////////////////////////////////
@@ -231,28 +231,28 @@ export const htmlStyles = StyleSheet.create({
     whiteSpace: "pre-wrap",
     writingDirection: "rtl",
     textAlign: "right",
-   fontFamily: "NotoNastaliqUrdu-Regular",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
   },
   ContentWrapper: {
     writingDirection: "rtl",
   },
   itemimage: {
-  marginTop: 10,
-  width: "100%",  
-  height: 200,
-  resizeMode: "contain",
-},
+    marginTop: 10,
+    width: "100%",
+    height: 200,
+    resizeMode: "contain",
+  },
 
-// taypography start
+  // taypography start
   p: {
     margin: 0,
     fontSize: 16,
-   fontFamily: "NotoNastaliqUrdu-Regular",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
-    whiteSpace: "pre-wrap",   
+    whiteSpace: "pre-wrap",
   },
   h1: {
     margin: 0,
@@ -292,7 +292,7 @@ export const htmlStyles = StyleSheet.create({
     fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
-    writingDirection: "rtl", 
+    writingDirection: "rtl",
   },
   h6: {
     margin: 0,
@@ -309,65 +309,65 @@ export const htmlStyles = StyleSheet.create({
     color: "red",
     textAlign: "right",
     writingDirection: "rtl",
-   lineHeight: 45,
+    lineHeight: 45,
   },
-ol: {
-  margin: 0,
-  direction: "rtl",
-  fontFamily: "NotoNastaliqUrdu-Regular",
-  color: "red",
-  textAlign: "right",
-  writingDirection: "rtl",
-   lineHeight: 45,
-},
+  ol: {
+    margin: 0,
+    direction: "rtl",
+    fontFamily: "NotoNastaliqUrdu-Regular",
+    color: "red",
+    textAlign: "right",
+    writingDirection: "rtl",
+    lineHeight: 45,
+  },
   li: {
     paddingRight: 10,
     direction: "ltr",
-    lineHeight:undefined
+    lineHeight: undefined,
   },
   u: {
     textDecorationLine: "underline",
   },
-   mark: {
+  mark: {
     backgroundColor: "yellow",
     color: Platform.OS === "web" ? "#6C472D" : undefined,
     textShadowOffset: { width: 0, height: 0 },
     textShadowRadius: 0,
   },
- strong: {
-  ...(Platform.OS !== "web" && {
-    textShadowColor: "#6C472D",
-    textShadowOffset: { width: 0.6, height: 0 },
-    textShadowRadius: 0.1,
-  }),
-},
-// taypography end
-// custom tag style start
- var: {
+  strong: {
+    ...(Platform.OS !== "web" && {
+      textShadowColor: "#6C472D",
+      textShadowOffset: { width: 0.6, height: 0 },
+      textShadowRadius: 0.1,
+    }),
+  },
+  // taypography end
+  // custom tag style start
+  var: {
     color: "red",
     fontFamily: "ScheherazadeNew-Bold",
-    fontStyle:"normal"
+    fontStyle: "normal",
   },
-dfn: {
-  whiteSpace: "pre-wrap",
-  display: "flex",
-  justifyContent: "center", 
-  alignItems: "center",
-},
+  dfn: {
+    whiteSpace: "pre-wrap",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 
-kbd: {
-  whiteSpace: "pre-wrap",
-  display: "flex",
-  justifyContent: "center", 
-  alignItems: "flex-end", 
-},
+  kbd: {
+    whiteSpace: "pre-wrap",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-end",
+  },
 
-samp: {
-  whiteSpace: "pre-wrap",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: Platform.OS === "web" ? "flex-end" : "flex-start",
-},
+  samp: {
+    whiteSpace: "pre-wrap",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: Platform.OS === "web" ? "flex-end" : "flex-start",
+  },
 });
 // custom tag style end
-//// /////////////////////////////////// blog-detail-pages style end ////////////////////
+//// /////////////////////////////////// blog-detail-pages style end
