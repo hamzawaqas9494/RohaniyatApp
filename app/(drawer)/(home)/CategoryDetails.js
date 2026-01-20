@@ -1,6 +1,6 @@
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { useEffect, useState } from "react";
-import { Dimensions, Image, ScrollView, Text, View } from "react-native";
+import { Dimensions, Image, Platform, ScrollView, Text, View } from "react-native";
 import RenderHTML from "react-native-render-html";
 import CustomBackground from "../../../components/Background/Background";
 import { useData } from "../../../components/context/DataContext";
@@ -19,20 +19,55 @@ export default function CategoryDetails() {
   const [item, setItem] = useState(null);
   const [loading, setLoading] = useState(true);
 
- useEffect(() => {
+useEffect(() => {
   const load = async () => {
     if (!tableName || !id) return;
     setLoading(true);
-
-
-    navigation.setOptions({ title: "..." });
+    navigation.setOptions({ 
+      headerTitle: () => (
+          <Text
+              style={{
+          color: "#6C472D",
+          fontFamily: "NotoNastaliqUrdu-Regular",
+          textAlign: "center",
+          fontSize: 14,
+          width:"100%"
+              }}
+              numberOfLines={1}
+              ellipsizeMode="tail"
+            >
+          ...
+        </Text>
+      ),
+    });
 
     try {
+      
       const found = await fetchItemById(tableName, id);
       setItem(found);
 
       if (found?.title) {
-        navigation.setOptions({ title: found.title });
+          const titleText = found.title ||  "..."
+        navigation.setOptions({
+          title: found.title ||  "...",
+
+          headerTitle: () => (
+            <Text
+              style={{
+          color: "#6C472D",
+          fontFamily: "NotoNastaliqUrdu-Regular",
+          textAlign: "center",
+          fontSize: 14,
+          width: "100%",
+          maxWidth: Platform.OS === "android" ? "95%" : undefined, 
+              }}
+              numberOfLines={1}
+              ellipsizeMode="tail"
+            >
+              {titleText}
+            </Text>
+          ),
+        });
       }
     } catch (err) {
       console.error("آئٹم لوڈنگ فیل:", err);
@@ -42,10 +77,10 @@ export default function CategoryDetails() {
   };
 
   load();
-}, [id, tableName]);
+}, [id, tableName, navigation]);
 
 
-  const allowedTables = ["qutb", "rohaniilaaj", "tawizatusmaniya", "rohanidokan", "amliyatcourse", "hamzad_ka_amal"];
+  const allowedTables = ["rohaniilaaj","chehalkaaf","tawizatusmaniya","rohanidokan","amliyatcourse","hamzadkaamal"];
 
   if (loading) return <Loader />;
 
@@ -61,7 +96,7 @@ export default function CategoryDetails() {
             contentWidth={width}
             source={{ html: item.content || "<p>کوئی مواد نہیں</p>" }}
             tagsStyles={htmlStyles}
-            systemFonts={["Jameel-Noori-Regular", "ScheherazadeNew-Bold","NotoNastaliqUrdu-Bold"]}
+            systemFonts={["Jameel-Noori-Regular", "ScheherazadeNew-Bold","NotoNastaliqUrdu-Bold","NotoNastaliqUrdu-Regular"]}
             defaultTextProps={{ selectable: true }}
             baseStyle={htmlBaseStyle}
           />
@@ -69,17 +104,17 @@ export default function CategoryDetails() {
         {item.image && (
           <Image source={{ uri: `${BASE_URL_IMG}${item.image}` }} style={htmlStyles.itemimage} resizeMode="contain" />
         )}
-        <View style={customButton.container}>
+      
 
   <View style={customButton.container}>
   {/* WhatsApp Button */}
   {allowedTables.includes(tableName) && (
     <UniversalButton
       icon="whatsapp"
-     iconColor="#fff"               
+      iconColor="#fff"               
       text="رابطہ برائے خریداری"
       color="#fff"                  
-     backgroundColor="#6C472D" 
+      backgroundColor="#6C472D" 
       link="https://wa.me/923008440979"
     />
   )}
@@ -96,7 +131,7 @@ export default function CategoryDetails() {
 </View>
 
 
-</View>
+
 
         </View>
       </ScrollView>

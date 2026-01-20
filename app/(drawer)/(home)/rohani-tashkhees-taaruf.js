@@ -6,7 +6,7 @@ export default function RohaniIshayatashkhesTaruf() {
     <CustomBackground>
       <ScrollView showsVerticalScrollIndicator={false}>
        <View style={mainStyles.container}>
-          <Text style={mainStyles.tashkhesHeading}> روحانی تشخیص.... </Text>
+          <Text style={mainStyles.heading}> روحانی تشخیص.... </Text>
           <Text style={mainStyles.description}>
             عملیات کورس میں روحانی علوم اور عملیات کے اصول سکھائے جاتے ہیں تاکہ
             لوگ قرآنی اور اسلامی طریقے سے اپنی زندگی بہتر بنا سکیں۔

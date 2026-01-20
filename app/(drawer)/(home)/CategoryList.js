@@ -1,7 +1,7 @@
 import NetInfo from "@react-native-community/netinfo";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { useEffect, useState } from "react";
-import { FlatList, Text, TouchableOpacity } from "react-native";
+import { FlatList, Platform, Text, TouchableOpacity } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 import { useData } from "../../../components/context/DataContext";
 import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
@@ -55,9 +55,30 @@ export default function CategoryList() {
     load();
   }, [tableName, navigation, label]);
 
-  useEffect(() => {
-    navigation.setOptions({ title: label || "کیٹیگریز" });
-  }, [navigation, label]);
+
+useEffect(() => {
+  const titleText =  label || "..." ;
+
+  navigation.setOptions({
+    headerTitle: () => (
+      <Text
+        style={{
+          color: "#6C472D",
+          fontFamily: "NotoNastaliqUrdu-Regular",
+          textAlign: "center",
+          fontSize: 14,
+          width: "100%",  
+          maxWidth: Platform.OS === "android" ? "95%" : undefined,
+        }}
+      >
+        {titleText}
+      </Text>
+    ),
+  });
+ }, [navigation, label]);
+
+
+
 
   const handleCategoryPress = async (categoryLabel) => {
     try {
@@ -99,12 +120,12 @@ export default function CategoryList() {
     }}
       showsVerticalScrollIndicator={false}  
     renderItem={({ item }) => (
-      <TouchableOpacity
-         style={mainStyles.carditems}
-        onPress={() => handleCategoryPress(item.label)}
-      >
-        <Text  style={mainStyles.carditemstext}>{item.label}</Text>
-      </TouchableOpacity>
+     <TouchableOpacity
+  style={mainStyles.carditems}
+  onPress={() => handleCategoryPress(item.label)}>
+    <Text style={mainStyles.carditemstext} numberOfLines={1} ellipsizeMode="tail">{item.label}</Text>
+</TouchableOpacity>
+
     )}
   />
 </CustomBackground>

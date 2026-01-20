@@ -6,7 +6,7 @@ export default function RohaniIlajScreen() {
     <CustomBackground>
       <ScrollView showsVerticalScrollIndicator={false}>
           <View style={mainStyles.container}>
-          <Text style={mainStyles.tashkhesHeading}>
+          <Text style={mainStyles.heading}>
             مدرسہ تعلیم القرآن کا مختصر تعارف
           </Text>
           <Text style={mainStyles.description}>

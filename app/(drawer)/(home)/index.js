@@ -140,7 +140,7 @@ export default function HomeScreen() {
         <View style={styles.modalOverlay}>
           <View style={styles.modalContent}>
             <Pressable style={styles.closeButton} onPress={() => setShowModal(false)}>
-              <Text style={{  color:"rgb(228, 218, 193)" , fontSize: 25 }}>✖</Text>
+              <Text style={{color:"white", fontSize: 25 }}>✖</Text>
             </Pressable>
             <Text style={styles.modalTitle}>ادارہ روحانیات</Text>
             <Text style={styles.modalText}>ہماری ٹیم کی حوصلہ افزائی کے لیے</Text>
@@ -236,8 +236,8 @@ const styles = StyleSheet.create({
 
   modalContent: {
     backgroundColor: "rgb(108, 71, 45)",
-    borderRadius: 10,
-    padding: 20,
+    borderRadius: 5,
+    padding: 10,
     alignItems: "center",
     position: "relative",
   },
@@ -250,16 +250,16 @@ const styles = StyleSheet.create({
     outlineWidth: 0, 
   },
   modalTitle: {
-    lineHeight:50,
-    fontSize: 35,
-    textAlign: "center",
-    color:"white",
-    fontFamily: "Jameel-Noori-Regular",
-  },
-  modalText: {
+    // lineHeight:50,
     fontSize: 20,
     textAlign: "center",
-   color:"white",
-        fontFamily: "Jameel-Noori-Regular",
+    color:"white",
+   fontFamily: "NotoNastaliqUrdu-Regular",
+  },
+  modalText: {
+    fontSize: 14,
+    textAlign: "center",
+    color:"white",
+   fontFamily: "NotoNastaliqUrdu-Regular",
   },
 });

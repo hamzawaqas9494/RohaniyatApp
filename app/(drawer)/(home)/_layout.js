@@ -1,47 +1,41 @@
-import { FontAwesome } from '@expo/vector-icons';
-import { DrawerActions, useNavigation } from '@react-navigation/native';
+import { DrawerToggleButton } from '@react-navigation/drawer';
 import { Stack } from "expo-router";
-import { Platform, StyleSheet, TouchableWithoutFeedback, View } from 'react-native';
-
-const DrawerButton = () => {
-  const navigation = useNavigation();
-  const handleTap = () => {
-    navigation.dispatch(DrawerActions.openDrawer());
-  };
-  return (
-    <TouchableWithoutFeedback onPress={handleTap}>
-      <View style={{
-          cursor: Platform.OS === "web" ? "pointer" : "default",
-        }}>
-        <FontAwesome name="bars" size={25} color="#6C472D" />
-      </View>
-    </TouchableWithoutFeedback>
-  );
-};
+import { Platform, View } from 'react-native';
 export default function StackNavigator() {
   return (
-  <>  
-      <View style={styles.floatingButton}>
-        <DrawerButton />
-      </View>
       <Stack
         screenOptions={{
           headerShown: true,
           gestureEnabled: true,
+          
           headerStyle: {
             height: 56,
             backgroundColor: "#E4DAC1",
           },
-          headerTintColor: "#6C472D",
+        
+
           headerTitleStyle: {
              textAlignVertical: "center",
-            fontFamily: "NotoNastaliqUrdu-Regular",
+             fontFamily: "NotoNastaliqUrdu-Regular",
              overflow: "visible", 
-            fontSize: 14,
-            color: "#6C472D",
+             fontSize: 14,
+             color: "#6C472D",
           },
-          headerTitleAlign: "center",
           
+          headerTitleAlign: "center",
+          headerTintColor: "#6C472D",
+          
+       headerRight: () => (
+  <View style={{ marginRight: Platform.select({
+      web: 0,        
+      android:-16,    
+      ios: -15,     
+    }), }}>
+    <DrawerToggleButton tintColor="#6C472D" />
+  </View>
+)
+
+
         }}
       >
         <Stack.Screen
@@ -208,16 +202,9 @@ export default function StackNavigator() {
         />
       </Stack>
       
-    </>
+   
   );
 }
-const styles = StyleSheet.create({
-  floatingButton: {
-    position: "absolute",
-    top: 16,     
-    right: 20,    
-    zIndex: 999,
-  },
-});
+
  
  

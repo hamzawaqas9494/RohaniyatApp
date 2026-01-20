@@ -4,7 +4,7 @@
     "slug": "rohaniyatversion",
     "version": "1.0.4",
     "orientation": "portrait",
-    "icon":"./assets/images/app-icon.png",
+    "icon": "./assets/images/app-icon.png",
     "scheme": "idararohaniyat",
     "userInterfaceStyle": "light",
     "splash": {
@@ -20,7 +20,7 @@
     },
     "android": {
       "package": "com.creationnext.idararohaniyat",
-         "usesCleartextTraffic": true,
+      "usesCleartextTraffic": true,
       "versionCode": 1,
       "permissions": [
         "INTERNET",
@@ -29,7 +29,7 @@
       ],
       "icon": "./assets/images/app-icon.png",
       "adaptiveIcon": {
-        "foregroundImage":"./assets/images/app-icon.png",
+        "foregroundImage": "./assets/images/app-icon.png",
         "backgroundColor": "#E4DAC1"
       },
       "userInterfaceStyle": "light"
@@ -37,7 +37,7 @@
     "web": {
       "favicon": "./assets/images/favicon.png",
       "name": "Idara Rohaniyat",
-     "themeColor": "#E4DAC1",
+      "themeColor": "#E4DAC1",
       "backgroundColor": "#E4DAC1",
       "display": "standalone"
     },
@@ -46,8 +46,9 @@
         "projectId": "0cb97dfe-79a2-4acb-8736-bd10f15a3c55"
       }
     },
-    "owner": "rohaniyat"
+    "owner": "rohaniyat",
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
-
-

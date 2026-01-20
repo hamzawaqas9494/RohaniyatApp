@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import {
   FlatList,
   Image,
+  Platform,
   Text,
   TouchableOpacity,
   useWindowDimensions,
@@ -16,6 +17,7 @@ import Loader from "../../../components/Loader/Loader";
 import { sortUrduData } from "../../../components/SortUrduData/SortUrduData";
 import { BASE_URL_IMG } from "../../../config/api";
 import { mainStyles } from "../../../style/globalcss";
+
 
 export default function ItemList() {
   const { tableName, category, subcategory, label } = useRoute().params || {};
@@ -99,9 +101,26 @@ export default function ItemList() {
     load();
   }, [tableName, category, subcategory, fetchItems]);
 
-  useEffect(() => {
-    navigation.setOptions({ title: subcategory || category || label || "..." });
-  }, [navigation, subcategory, category, label]);
+useEffect(() => {
+  const titleText = subcategory || category || label || "...";
+
+  navigation.setOptions({
+    headerTitle: () => (
+      <Text
+        style={{
+          color: "#6C472D",
+          fontFamily: "NotoNastaliqUrdu-Regular",
+          textAlign: "center",
+          fontSize: 14,
+          width: "100%",
+          maxWidth: Platform.OS === "android" ? "95%" : undefined, 
+        }}
+      >
+        {titleText}
+      </Text>
+    ),
+  });
+}, [navigation, subcategory, category, label]);
 
   if (loading) return <Loader />;
   if (errorMsg) return <ErrorMessage text={errorMsg} />;
@@ -179,7 +198,7 @@ export default function ItemList() {
           </View>
         )
       ) : (
-        <Text style={mainStyles.carditemstext}>{item.title}</Text>
+        <Text style={mainStyles.carditemstext} numberOfLines={1} ellipsizeMode="tail">{item.title}</Text>
       )}
     </TouchableOpacity>
   )}

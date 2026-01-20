@@ -1,101 +1,86 @@
 import { Platform, StyleSheet } from "react-native";
 ///////////////////////////////////static pages Styles start/////////////////////////////
 export const mainStyles = StyleSheet.create({
- container: {
-  flex: 1,
-  padding: 15,
-},
+  container: {
+    flex: 1,
+    padding: 15,
+  },
   heading: {
-    fontSize: 28,
-    fontFamily: "Jameel-Noori-Regular",
+    fontSize: 22,
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
     includeFontPadding: false,
   },
   subheading: {
-    fontSize: 24,
-    lineHeight: 32,
-    fontFamily: "Jameel-Noori-Regular",
+    fontSize: 18,
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
   },
-description: {
-  fontSize: 20,
-  color: "#6C472D",
-  fontFamily: "Jameel-Noori-Regular",
-  textAlign: "right",    
-  includeFontPadding: false,
-},
-
-// working after client disscusion
-  tashkhesHeading: {
-    fontSize: 28,
-    paddingTop: 5,
-    fontFamily: "Jameel-Noori-Regular",
+  description: {
+    fontSize: 16,
     color: "#6C472D",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     textAlign: "right",
-    writingDirection: "rtl",
-  },
-  tashkhesDescription: {
-    fontSize: 20,
-    paddingTop: 4,
-    color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
-    textAlign: "right",
-    writingDirection: "rtl",
+    includeFontPadding: false,
   },
 
-// working after client disscusion
-
- sirparastimagesection: {
+  sirparastimagesection: {
     alignItems: "center",
   },
   sirparastimage: {
     width: 200,
     height: 240,
   },
-   rohaniishayacolumn: {
+  rohaniishayacolumn: {
     flex: 1,
   },
-   rohaniishayaContainer: {
+  rohaniishayaContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
   },
   rohaniishayaitem: {
-    fontSize: 20,
+    fontSize: 14,
     color: "#6C472D",
-    fontFamily: "Jameel-Noori-Regular",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     textAlign: "right",
   },
 
-carditems: {
-  width: "100%",
-  backgroundColor: "#E4DAC1",
-  paddingVertical: 8,
-  marginTop: 8,
-  marginBottom: 8,
-  borderRadius: 5,
-  alignItems: "center",
-},
+  carditems: {
+    width: "100%",
+    backgroundColor: "#E4DAC1",
+    paddingVertical: 5,
+    paddingHorizontal: 5,
+    marginTop: 5,
+    marginBottom: 5,
+    borderRadius: 5,
+    justifyContent: "center",
+    alignItems: "center",
+    height: 60,
+  },
 
-carditemstext: {
-  fontSize: 20,
-  fontFamily: "Jameel-Noori-Regular",
-  color: "#6C472D",
-  textAlign: "center",
+  carditemstext: {
+    width: "100%",
+    textAlign: "center",
+    fontFamily: "NotoNastaliqUrdu-Regular",
+    color: "#6C472D",
+    flexWrap: "wrap",
+    paddingBottom: Platform.OS === "web" ? 5 : 0,
+    lineHeight: Platform.OS === "android" ? undefined : 50,
+  },
 
-},
   noRecordText: {
-    fontSize: 22,
+    fontSize: 16,
     fontWeight: "600",
-    fontFamily: "Jameel-Noori-Regular",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "center",
   },
 });
-////////////////////////////////////// static pages Styles  end ////////////////////////////////////
+//////////////////////////////////static pages Styles  end ////////////////////////////////////
 /////////////////////////////////component style start /////////////////////////////////
 export const backGround = StyleSheet.create({
   background: {
@@ -218,10 +203,10 @@ export const customButton = StyleSheet.create({
   container: {
     width: "100%",
     alignItems: "center",
-    marginTop: 20,
+    marginTop: 10,
   },
   button: {
-        marginTop: 10,
+    marginTop: 10,
     flexDirection: "row",
     backgroundColor: "rgb(108, 71, 45)",
     paddingVertical: 10,
@@ -235,84 +220,84 @@ export const customButton = StyleSheet.create({
   },
   text: {
     color: "rgba(255, 255, 255, 1)",
-    fontSize: 18,
-    fontFamily: "Jameel-Noori-Regular",
+    fontSize: 12,
+    fontFamily: "NotoNastaliqUrdu-Regular",
   },
 });
-/////////////////////////////////component style end /////////////////////////////////
+///////////////////////////////// component style end /////////////////////////////////
 // //////////////////////////////////// blog-detail-pages style start /////////////////////////////
 export const htmlStyles = StyleSheet.create({
   htmlBaseStyle: {
     whiteSpace: "pre-wrap",
     writingDirection: "rtl",
     textAlign: "right",
-    fontFamily: "Jameel-Noori-Regular",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
   },
   ContentWrapper: {
     writingDirection: "rtl",
   },
   itemimage: {
-  marginTop: 10,
-  width: "100%",  
-  height: 200,
-  resizeMode: "contain",
-},
+    marginTop: 10,
+    width: "100%",
+    height: 200,
+    resizeMode: "contain",
+  },
 
-// taypography start
+  // taypography start
   p: {
     margin: 0,
-    fontSize: 20,
-    fontFamily: "Jameel-Noori-Regular",
+    fontSize: 16,
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
-    whiteSpace: "pre-wrap",   
+    whiteSpace: "pre-wrap",
   },
   h1: {
     margin: 0,
-    fontSize: 28,
-    fontFamily: "Jameel-Noori-Regular",
+    fontSize: 22,
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
   },
   h2: {
     margin: 0,
-    fontSize: 24,
-    fontFamily: "Jameel-Noori-Regular",
+    fontSize: 18,
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
   },
   h3: {
     margin: 0,
-    fontSize: 22,
-    fontFamily: "Jameel-Noori-Regular",
+    fontSize: 16,
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
   },
   h4: {
     margin: 0,
-    fontSize: 20,
-    fontFamily: "Jameel-Noori-Regular",
+    fontSize: 14,
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
   },
   h5: {
     margin: 0,
-    fontSize: 18,
-    fontFamily: "Jameel-Noori-Regular",
+    fontSize: 12,
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
-    writingDirection: "rtl", 
+    writingDirection: "rtl",
   },
   h6: {
     margin: 0,
-    fontSize: 16,
-    fontFamily: "Jameel-Noori-Regular",
+    fontSize: 10,
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     textAlign: "right",
     writingDirection: "rtl",
@@ -320,83 +305,69 @@ export const htmlStyles = StyleSheet.create({
   ul: {
     margin: 0,
     direction: "rtl",
-    fontFamily: "Jameel-Noori-Regular",
+    fontFamily: "NotoNastaliqUrdu-Regular",
     color: "red",
     textAlign: "right",
     writingDirection: "rtl",
-   lineHeight: Platform.OS === "web" ? 36 : 42,
+    lineHeight: 45,
   },
-ol: {
-  margin: 0,
-  direction: "rtl",
-  fontFamily: "Jameel-Noori-Regular",
-  color: "red",
-  textAlign: "right",
-  writingDirection: "rtl",
-  lineHeight: Platform.OS === "web" ? 36 : 42,
-},
+  ol: {
+    margin: 0,
+    direction: "rtl",
+    fontFamily: "NotoNastaliqUrdu-Regular",
+    color: "red",
+    textAlign: "right",
+    writingDirection: "rtl",
+    lineHeight: 45,
+  },
   li: {
     paddingRight: 10,
     direction: "ltr",
-    lineHeight:undefined
+    lineHeight: undefined,
   },
   u: {
     textDecorationLine: "underline",
   },
-   mark: {
+  mark: {
     backgroundColor: "yellow",
     color: Platform.OS === "web" ? "#6C472D" : undefined,
-      textShadowOffset: { width: 0, height: 0 },
-       textShadowRadius: 0,
-    
-  
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 0,
   },
- strong: {
-  ...(Platform.OS !== "web" && {
-    textShadowColor: "#6C472D",
-    textShadowOffset: { width: 0.6, height: 0 },
-    textShadowRadius: 0.1,
-  }),
-},
-
-
-//   em:{
-// color:"red",
-//  fontSize: 20,
-//     // color: "#000",
-//     transform: [{ skewX: "-12deg" }], // main italic effect
-//   },
-
-
-
-// taypography end
-// custom tag style start
- var: {
+  strong: {
+    ...(Platform.OS !== "web" && {
+      textShadowColor: "#6C472D",
+      textShadowOffset: { width: 0.6, height: 0 },
+      textShadowRadius: 0.1,
+    }),
+  },
+  // taypography end
+  // custom tag style start
+  var: {
     color: "red",
     fontFamily: "ScheherazadeNew-Bold",
-    fontStyle:"normal"
- 
+    fontStyle: "normal",
   },
-dfn: {
-  whiteSpace: "pre-wrap",
-  display: "flex",
-  justifyContent: "center", 
-  alignItems: "center",
-},
+  dfn: {
+    whiteSpace: "pre-wrap",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 
-kbd: {
-  whiteSpace: "pre-wrap",
-  display: "flex",
-  justifyContent: "center", 
-  alignItems: "flex-end", 
-},
+  kbd: {
+    whiteSpace: "pre-wrap",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-end",
+  },
 
-samp: {
-  whiteSpace: "pre-wrap",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: Platform.OS === "web" ? "flex-end" : "flex-start",
-},
+  samp: {
+    whiteSpace: "pre-wrap",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: Platform.OS === "web" ? "flex-end" : "flex-start",
+  },
 });
 // custom tag style end
-//// ///////////////////////////////////blog-detail-pages style end ////////////////////
+//// /////////////////////////////////// blog-detail-pages style end
