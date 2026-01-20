@@ -343,31 +343,31 @@ export const htmlStyles = StyleSheet.create({
   },
   // taypography end
   // custom tag style start
-  // var: {
-  //   color: "red",
-  //   fontFamily: "ScheherazadeNew-Bold",
-  //   fontStyle: "normal",
-  // },
-  // dfn: {
-  //   whiteSpace: "pre-wrap",
-  //   display: "flex",
-  //   justifyContent: "center",
-  //   alignItems: "center",
-  // },
+  var: {
+    color: "red",
+    fontFamily: "ScheherazadeNew-Bold",
+    fontStyle: "normal",
+  },
+  dfn: {
+    whiteSpace: "pre-wrap",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 
-  // kbd: {
-  //   whiteSpace: "pre-wrap",
-  //   display: "flex",
-  //   justifyContent: "center",
-  //   alignItems: "flex-end",
-  // },
+  kbd: {
+    whiteSpace: "pre-wrap",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-end",
+  },
 
-  // samp: {
-  //   whiteSpace: "pre-wrap",
-  //   display: "flex",
-  //   justifyContent: "center",
-  //   alignItems: Platform.OS === "web" ? "flex-end" : "flex-start",
-  // },
+  samp: {
+    whiteSpace: "pre-wrap",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: Platform.OS === "web" ? "flex-end" : "flex-start",
+  },
 });
 // custom tag style end
 //// /////////////////////////////////// blog-detail-pages style end
