@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="36f49bd1-ef11-4c52-b3f1-4005766c8861" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.expo-shared/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/.expo-shared/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.expo-shared/assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo-shared/assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/Amliyat-Course.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/Amliyat-Course.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/CategoryDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/CategoryDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/CategoryList.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/CategoryList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/Hamara-Tareeqa-e-Ilaj.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/Hamara-Tareeqa-e-Ilaj.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/Hisaar-Aamaal.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/Hisaar-Aamaal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/Idara-Rohaniyat-Taaruf.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/Idara-Rohaniyat-Taaruf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/ItemList.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/ItemList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/Jadu-Jinnat-Ki-Alamaat.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/Jadu-Jinnat-Ki-Alamaat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/Madrasa-Taleem-ul-Quran-Taaruf.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/Madrasa-Taleem-ul-Quran-Taaruf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/Mareez-Ke-Liye-Rohani-Ilaj.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/Mareez-Ke-Liye-Rohani-Ilaj.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/Nuqoosh-Ka-Mizaj.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/Nuqoosh-Ka-Mizaj.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/Nuqoosh-Ke-Lawazmaat.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/Nuqoosh-Ke-Lawazmaat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/Rohani-Ashya-Taaruf.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/Rohani-Ashya-Taaruf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/Rohani-Ilaj-Fehrist.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/Rohani-Ilaj-Fehrist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/Rohani-Ilaj-Ka-Taaruf.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/Rohani-Ilaj-Ka-Taaruf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/Rohani-Ilaj-Taaruf.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/Rohani-Ilaj-Taaruf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/Rohani-Tashkhees-Tareeqa.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/Rohani-Tashkhees-Tareeqa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/Sarparast-Taaruf.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/Sarparast-Taaruf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/SubCategoryList.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/SubCategoryList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/Taaruf.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/Taaruf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/Taweezat-Usmania-Taaruf.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/Taweezat-Usmania-Taaruf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/Taweezat.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/Taweezat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/Wazaif.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/Wazaif.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/_layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/_layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/fard-ki-tashkhees.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/fard-ki-tashkhees.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/jagah-ki-tashkhees.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/jagah-ki-tashkhees.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/(home)/rohani-tashkhees-taaruf.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/(home)/rohani-tashkhees-taaruf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/Humari-Pechan.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/Humari-Pechan.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/_layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/_layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/+not-found.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/+not-found.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Animation/animation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Animation/animation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Background/Background.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Background/Background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ErrorMessage/ErrorMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ErrorMessage/ErrorMessage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Loader/Loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Loader/Loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ShareApp/shareApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ShareApp/shareApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SortUrduData/SortUrduData.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/SortUrduData/SortUrduData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SplashScreen/splash.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/SplashScreen/splash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UniversalButton/UniversalButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UniversalButton/UniversalButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/context/DataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/context/DataContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/link/link.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/link/link.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eas.json" beforeDir="false" afterPath="$PROJECT_DIR$/eas.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eslint.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/eslint.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/reset-project.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/reset-project.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/globalcss.js" beforeDir="false" afterPath="$PROJECT_DIR$/style/globalcss.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="38EjGqqRxQbkAI2UvXLdA9OzZz4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "git-widget-placeholder": "RohaniyatApp-Phase-4-testing",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="36f49bd1-ef11-4c52-b3f1-4005766c8861" name="Changes" comment="" />
+      <created>1768371532960</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1768371532960</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
