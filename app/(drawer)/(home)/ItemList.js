@@ -245,14 +245,7 @@
 //                 </View>
 //               )
 //             ) : (
-//               // <Text style={mainStyles.carditemstext}>{item.title}</Text>
-//               <Text
-//                 style={mainStyles.carditemstext}
-//                 numberOfLines={1}
-//                 ellipsizeMode="tail"
-//               >
-//                 {item.title}
-//               </Text>
+//               <Text style={mainStyles.carditemstext}>{item.title}</Text>
 //             )}
 //           </TouchableOpacity>
 //         )}
@@ -495,7 +488,6 @@ export default function ItemList() {
                 </View>
               )
             ) : (
-              // <Text style={mainStyles.carditemstext}>{item.title}</Text>
               <Text
                 style={mainStyles.carditemstext}
                 numberOfLines={1}
