@@ -1,46 +1,47 @@
 import { useNavigation } from "@react-navigation/native";
-import {
-  FlatList,
-  Text,
-  TouchableOpacity
-} from "react-native";
+import { FlatList, Text, TouchableOpacity } from "react-native";
 import CustomBackground from "../../../components/Background/Background";
 import { mainStyles } from "../../../style/globalcss";
 const DATA = [
   {
     id: "1",
-    screen:"Hamara-Tareeqa-e-Ilaj",
+    screen: "Hamara-Tareeqa-e-Ilaj",
     text: "ہمارا طریقہ علاج",
   },
   {
     id: "2",
-    screen:"Mareez-Ke-Liye-Rohani-Ilaj",
+    screen: "Mareez-Ke-Liye-Rohani-Ilaj",
     text: "سائل/مریض کے لیے روحانی علاج",
-  }
+  },
 ];
 export default function RohaniIlaj() {
   const navigation = useNavigation();
   return (
-   <CustomBackground>
-  <FlatList
-    data={DATA}
-    keyExtractor={(item) => item.id}
-    contentContainerStyle={{
-      flexGrow: 1,
-      justifyContent: "center", 
-      padding: 15,            
-    }}
-      showsVerticalScrollIndicator={false}  
-    renderItem={({ item }) => (
-      <TouchableOpacity
-        style={mainStyles.carditems}
-        onPress={() => navigation.navigate(item.screen)}
-      >
-        <Text style={mainStyles.carditemstext}>{item.text}</Text>
-      </TouchableOpacity>
-    )}
-  />
-</CustomBackground>
-
+    <CustomBackground>
+      <FlatList
+        data={DATA}
+        keyExtractor={(item) => item.id}
+        contentContainerStyle={{
+          flexGrow: 1,
+          justifyContent: "center",
+          padding: 15,
+        }}
+        showsVerticalScrollIndicator={false}
+        renderItem={({ item }) => (
+          <TouchableOpacity
+            style={mainStyles.carditems}
+            onPress={() => navigation.navigate(item.screen)}
+          >
+            <Text
+              style={mainStyles.carditemstext}
+              numberOfLines={1}
+              ellipsizeMode="tail"
+            >
+              {item.text}
+            </Text>
+          </TouchableOpacity>
+        )}
+      />
+    </CustomBackground>
   );
 }
