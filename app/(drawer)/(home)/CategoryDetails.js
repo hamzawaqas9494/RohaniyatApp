@@ -1,4 +1,3 @@
-
 "use client";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { useEffect, useState } from "react";
@@ -11,19 +10,23 @@ import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
 import Loader from "../../../components/Loader/Loader";
 import UniversalButton from "../../../components/UniversalButton/UniversalButton";
 import { BASE_URL_IMG } from "../../../config/api";
-import { customButton, htmlBaseStyle, htmlStyles, mainStyles } from "../../../style/globalcss";
+import {
+  customButton,
+  htmlBaseStyle,
+  htmlStyles,
+  mainStyles,
+} from "../../../style/globalcss";
 
 export default function CategoryDetails() {
   const route = useRoute();
   const navigation = useNavigation();
-  const { id, tableName } = route.params || {}; 
+  const { id, tableName } = route.params || {};
 
   const { width } = Dimensions.get("window");
   const { fetchItemById } = useData();
 
   const [item, setItem] = useState(null);
   const [loading, setLoading] = useState(true);
-
 
   const FALLBACK_YOUTUBE_LINK = "https://www.youtube.com/@IdaraRohaniyat";
 
@@ -43,9 +46,6 @@ export default function CategoryDetails() {
         if (found) {
           setItem(found);
           navigation.setOptions({ title: found.title || "تفصیلات" });
-
-          console.log("Item loaded successfully:", found);
-          console.log("TableName from params:", tableName); 
         } else {
           setItem(null);
         }
@@ -60,7 +60,6 @@ export default function CategoryDetails() {
     load();
   }, [id, navigation]);
 
-
   const allowedTablesForWhatsApp = [
     "rohaniilaaj",
     "chehalkaaf",
@@ -70,10 +69,9 @@ export default function CategoryDetails() {
     "hamzadkaamal",
   ];
 
-
   const normalizedTableName = (tableName || "").toLowerCase().trim();
-  const showWhatsAppButton = allowedTablesForWhatsApp.includes(normalizedTableName);
-
+  const showWhatsAppButton =
+    allowedTablesForWhatsApp.includes(normalizedTableName);
 
   const youtubeLink = item?.youtube_link?.trim() || FALLBACK_YOUTUBE_LINK;
 

@@ -85,10 +85,7 @@
 //   return context;
 // };
 
-
-
-// testing pase based on height 
-
+// testing pase based on height
 
 import { createContext, useContext } from "react";
 import { BASE_URL, BASE_URL_TABLE } from "../../config/api";
@@ -122,10 +119,9 @@ const fetchPaginated = async (baseParams, page = 1, limit = 5) => {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const json = await res.json();
 
-    console.log(json,)
     return {
       rows: json.rows || [],
-      hasMore: json.success && (json.rows || []).length === limit
+      hasMore: json.success && (json.rows || []).length === limit,
     };
   } catch (err) {
     console.error("fetchPaginated ایشو:", err);
@@ -138,14 +134,22 @@ export const DataProvider = ({ children }) => {
   const fetchCategories = async (tableName) => {
     const tableId = await getTableId(tableName);
     if (!tableId) return [];
-    const { rows } = await fetchPaginated({ tableId, list: "category" }, 1, 1000);
+    const { rows } = await fetchPaginated(
+      { tableId, list: "category" },
+      1,
+      1000,
+    );
     return rows;
   };
 
   const fetchSubcategories = async (tableName, category) => {
     const tableId = await getTableId(tableName);
     if (!tableId) return [];
-    const { rows } = await fetchPaginated({ tableId, list: "subcategory", category }, 1, 1000);
+    const { rows } = await fetchPaginated(
+      { tableId, list: "subcategory", category },
+      1,
+      1000,
+    );
     return rows;
   };
 
@@ -172,13 +176,28 @@ export const DataProvider = ({ children }) => {
     return await fetchPaginated({ tableId, list: "category" }, page, limit);
   };
 
-  const fetchSubcategoriesPaginated = async (tableName, categoryId, page = 1, limit = 5) => {
+  const fetchSubcategoriesPaginated = async (
+    tableName,
+    categoryId,
+    page = 1,
+    limit = 5,
+  ) => {
     const tableId = await getTableId(tableName);
     if (!tableId) return { rows: [], hasMore: false };
-    return await fetchPaginated({ tableId, list: "subcategory", category: categoryId }, page, limit);
+    return await fetchPaginated(
+      { tableId, list: "subcategory", category: categoryId },
+      page,
+      limit,
+    );
   };
 
-  const fetchItemsPaginated = async (tableName, category = null, subcategory = null, page = 1, limit = 5) => {
+  const fetchItemsPaginated = async (
+    tableName,
+    category = null,
+    subcategory = null,
+    page = 1,
+    limit = 5,
+  ) => {
     const tableId = await getTableId(tableName);
     if (!tableId) return { rows: [], hasMore: false };
     const params = { tableId };
@@ -188,15 +207,17 @@ export const DataProvider = ({ children }) => {
   };
 
   return (
-    <DataContext.Provider value={{
-      fetchCategories,
-      fetchSubcategories,
-      fetchItems,
-      fetchItemById,
-      fetchCategoriesPaginated,
-      fetchSubcategoriesPaginated,
-      fetchItemsPaginated,
-    }}>
+    <DataContext.Provider
+      value={{
+        fetchCategories,
+        fetchSubcategories,
+        fetchItems,
+        fetchItemById,
+        fetchCategoriesPaginated,
+        fetchSubcategoriesPaginated,
+        fetchItemsPaginated,
+      }}
+    >
       {children}
     </DataContext.Provider>
   );
