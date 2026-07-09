@@ -156,7 +156,13 @@ export default function SubCategoryList() {
             }
             ref={index === subcategories.length - 1 ? lastItemRef : null}
           >
-            <Text style={mainStyles.carditemstext}>{item.label}</Text>
+            <Text
+              style={mainStyles.carditemstext}
+              numberOfLines={1}
+              ellipsizeMode="tail"
+            >
+              {item.label}
+            </Text>
           </TouchableOpacity>
         )}
       />
