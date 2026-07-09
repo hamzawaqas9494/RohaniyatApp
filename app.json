@@ -2,7 +2,7 @@
   "expo": {
     "name": "IdaraRohaniyat",
     "slug": "rohaniyatversion",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "orientation": "portrait",
     "icon": "./assets/images/app-icon.png",
     "scheme": "idararohaniyat",
@@ -25,11 +25,7 @@
       "package": "com.creationnext.idararohaniyat",
       "usesCleartextTraffic": true,
       "versionCode": 1,
-      "permissions": [
-        "INTERNET",
-        "ACCESS_FINE_LOCATION",
-        "CAMERA"
-      ],
+      "permissions": ["INTERNET", "ACCESS_FINE_LOCATION", "CAMERA"],
       "icon": "./assets/images/app-icon.png",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/app-icon.png",
