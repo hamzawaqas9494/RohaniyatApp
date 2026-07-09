@@ -207,6 +207,7 @@ export default function Layout() {
                     fontFamily: "NotoNastaliqUrdu-Regular",
                     fontSize: 14,
                     color: "#6C472D",
+                    overflow: "visible",
                   },
                   headerTitleAlign: "center",
                   drawerIcon: ({ color, size }) => (
