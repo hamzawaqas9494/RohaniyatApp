@@ -35,9 +35,10 @@ const AppMenuDropdown = () => {
     }
   };
 
- 
   const playStoreLink =
     "https://play.google.com/store/apps/details?id=com.creationnext.idararohaniyat";
+  const appStoreLink =
+    "https://apps.apple.com/us/app/idararohaniyat/id6759970886";
 
   const handleShare = async () => {
     try {
@@ -51,10 +52,7 @@ const AppMenuDropdown = () => {
   };
 
   const handleRate = () => {
-    const url =
-      Platform.OS === "ios"
-        ? "itms-apps://itunes.apple.com/app/idXXXXXXXXX"
-        : playStoreLink; // 👈 same link used here
+    const url = Platform.OS === "ios" ? appStoreLink : playStoreLink;
     Linking.openURL(url);
     toggleDropdown();
   };
