@@ -1,4 +1,4 @@
-import { FontAwesome } from "@expo/vector-icons";
+import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import { useEffect, useState } from "react";
 import {
   Dimensions,
@@ -141,7 +141,9 @@ export default function HomeScreen() {
               style={styles.closeButton}
               onPress={() => setShowModal(false)}
             >
-              <Text style={{ color: "white", fontSize: 25 }}>✖</Text>
+              {/* <Text style={{ color: "white", fontSize: 25 }}>✖</Text> */}
+              <Ionicons name="close" size={28} color="white" />
+              {/* <FontAwesome name="close" size={25} color="white" /> */}
             </Pressable>
             <Text style={styles.modalTitle}>ادارہ روحانیات</Text>
             <Text style={styles.modalText}>
@@ -253,7 +255,7 @@ const styles = StyleSheet.create({
   },
   closeButton: {
     position: "absolute",
-    top: 0,
+    top: 5,
     right: 5,
     zIndex: 1,
     borderWidth: 0,
