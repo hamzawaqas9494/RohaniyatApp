@@ -49,7 +49,6 @@ const DATA = [
   {
     id: "1",
     icon: require("../../../assets/images/istakhraIcon.png"),
-    screen: "ہمزاد کا عمل",
     text: "ہمزاد کا عمل",
     image: require("../../../assets/images/item1-bg-path.png"),
   },
@@ -63,28 +62,24 @@ const DATA = [
   {
     id: "3",
     icon: require("../../../assets/images/tawizatusmaniyaIcon.png"),
-    screen: "تعویذات عثمانیہ",
     text: "تعویذات عثمانیہ",
     image: require("../../../assets/images/item1-bg-path.png"),
   },
   {
     id: "4",
     icon: require("../../../assets/images/bookicon.png"),
-    screen: "عملیات کورسز تفصیلات",
     text: "عملیات کورس",
     image: require("../../../assets/images/item2-bg-path.png"),
   },
   {
     id: "5",
     icon: require("../../../assets/images/rohanidokanIcon.png"),
-    screen: "روحانی دکان",
     text: "روحانی دکان",
     image: require("../../../assets/images/item1-bg-path.png"),
   },
   {
     id: "6",
     icon: require("../../../assets/images/bookicon.png"),
-    screen: "چہل کاف",
     text: "چہل کاف",
     image: require("../../../assets/images/item2-bg-path.png"),
   },
