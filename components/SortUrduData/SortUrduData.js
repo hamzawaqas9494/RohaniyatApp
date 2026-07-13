@@ -1,31 +1,87 @@
-// ✅ Urdu alphabet order
 const urduAlphabet = [
-  "ا","ب","پ","ت","ٹ","ث","ج","چ","ح","خ","د","ڈ","ذ",
-  "ر","ڑ","ز","ژ","س","ش","ص","ض","ط","ظ","ع","غ","ف",
-  "ق","ک","گ","ل","م","ن","و","ہ","ء","ی"
+  "ا",
+  "آ",
+  "أ",
+  "إ",
+  "ٱ",
+  "ب",
+  "پ",
+  "ت",
+  "ٹ",
+  "ث",
+  "ج",
+  "چ",
+  "ح",
+  "خ",
+  "د",
+  "ڈ",
+  "ذ",
+  "ر",
+  "ڑ",
+  "ز",
+  "ژ",
+  "س",
+  "ش",
+  "ص",
+  "ض",
+  "ط",
+  "ظ",
+  "ع",
+  "غ",
+  "ف",
+  "ق",
+  "ک",
+  "گ",
+  "ل",
+  "م",
+  "ن",
+  "ں",
+  "و",
+  "ہ",
+  "ھ",
+  "ء",
+  "ی",
+  "ي",
+  "ئے",
 ];
 
-// ✅ helper to get position of Urdu character
-const getUrduIndex = (char) => urduAlphabet.indexOf(char);
+const normalizeUrdu = (text = "") => {
+  return text
+    .toString()
+    .trim()
+    .replace(/[آأإٱ]/g, "ا")
+    .replace(/[يى]/g, "ی")
+    .replace(/ھ/g, "ہ");
+};
 
-/**
- * Sorts data in Urdu alphabetical order + stable ID order
- * @param {Array} data - the array of objects to sort
- * @param {string} primaryField - usually 'category' or 'title'
- * @returns {Array} sorted data
- */
-export function sortUrduData(data, primaryField = "category") {
-  if (!Array.isArray(data)) return [];
+export function sortUrduData(data) {
+  if (!Array.isArray(data) || data.length === 0) return [];
 
-  // Step 1: sort by ID (oldest → newest)
-  const sortedById = [...data].sort((a, b) => a.id - b.id);
+  return [...data].sort((a, b) => {
+    const getText = (item) => {
+      if (!item) return "";
+      return normalizeUrdu(
+        item.label ||
+          item.name ||
+          item.title ||
+          item.category ||
+          item.category_label ||
+          "",
+      );
+    };
 
-  // Step 2: sort alphabetically based on first Urdu letter
-  const sortedFinal = sortedById.sort((a, b) => {
-    const firstA = (a[primaryField] || a.title || "").trim().charAt(0);
-    const firstB = (b[primaryField] || b.title || "").trim().charAt(0);
-    return getUrduIndex(firstA) - getUrduIndex(firstB);
+    const textA = getText(a);
+    const textB = getText(b);
+
+    if (!textA) return 1;
+    if (!textB) return -1;
+
+    const firstA = textA.charAt(0);
+    const firstB = textB.charAt(0);
+
+    const indexA = urduAlphabet.indexOf(firstA);
+    const indexB = urduAlphabet.indexOf(firstB);
+
+    return indexA - indexB;
   });
-
-  return sortedFinal;
 }

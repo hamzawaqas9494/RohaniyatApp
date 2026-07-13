@@ -53,7 +53,6 @@ export const mainStyles = StyleSheet.create({
     width: "100%",
     backgroundColor: "#E4DAC1",
     paddingVertical: 5,
-    paddingHorizontal: 5,
     marginTop: 5,
     marginBottom: 5,
     borderRadius: 5,
@@ -63,8 +62,6 @@ export const mainStyles = StyleSheet.create({
   },
 
   carditemstext: {
-    width: "100%",
-    textAlign: "center",
     fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     flexWrap: "wrap",
@@ -370,4 +367,4 @@ export const htmlStyles = StyleSheet.create({
   },
 });
 // custom tag style end
-//// /////////////////////////////////// blog-detail-pages style end
+//// /////////////////////////////////// blog-detail-pages style end ////////////////////

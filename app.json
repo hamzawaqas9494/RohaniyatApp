@@ -2,7 +2,7 @@
   "expo": {
     "name": "IdaraRohaniyat",
     "slug": "rohaniyatversion",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "orientation": "portrait",
     "icon": "./assets/images/app-icon.png",
     "scheme": "idararohaniyat",
@@ -16,7 +16,10 @@
       "bundleIdentifier": "com.creationnext.idararohaniyat",
       "supportsTablet": true,
       "icon": "./assets/images/app-icon.png",
-      "userInterfaceStyle": "light"
+      "userInterfaceStyle": "light",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "package": "com.creationnext.idararohaniyat",
@@ -48,7 +51,8 @@
     },
     "owner": "rohaniyat",
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-web-browser"
     ]
   }
 }

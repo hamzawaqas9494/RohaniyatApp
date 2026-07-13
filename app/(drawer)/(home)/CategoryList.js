@@ -1,7 +1,179 @@
+// import NetInfo from "@react-native-community/netinfo";
+// import { useNavigation, useRoute } from "@react-navigation/native";
+// import { useCallback, useEffect, useRef, useState } from "react";
+// import { Dimensions, FlatList, Text, TouchableOpacity } from "react-native";
+
+// import CustomBackground from "../../../components/Background/Background";
+// import { useData } from "../../../components/context/DataContext";
+// import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
+// import Loader from "../../../components/Loader/Loader";
+// import { sortUrduData } from "../../../components/SortUrduData/SortUrduData";
+// import { mainStyles } from "../../../style/globalcss";
+
+// export default function CategoryList() {
+//   const route = useRoute();
+//   const navigation = useNavigation();
+//   const { tableName, label } = route.params || {};
+//   const { fetchCategoriesPaginated, fetchSubcategories } = useData();
+
+//   const [categories, setCategories] = useState([]);
+//   const [loading, setLoading] = useState(true);
+//   const [errorMsg, setErrorMsg] = useState("");
+//   const [hasMore, setHasMore] = useState(true);
+//   const [page, setPage] = useState(1);
+
+//   const observer = useRef();
+
+//   // Dynamic limit height
+//   const getCurrentLimit = () => {
+//     const { height } = Dimensions.get("window");
+//     const headerHeight = 150;
+//     const cardHeight = 70;
+//     const available = height - headerHeight;
+//     const items = Math.ceil(available / cardHeight);
+//     return Math.max(items + 1, 10);
+//   };
+
+//   const loadCategories = async (pageNum = 1, append = false) => {
+//     if (!tableName) {
+//       setErrorMsg("ٹیبل کی معلومات غائب ہے");
+//       setLoading(false);
+//       return;
+//     }
+
+//     try {
+//       const netState = await NetInfo.fetch();
+//       if (!netState.isConnected) {
+//         setErrorMsg("انٹرنیٹ کنکشن موجود نہیں ہے۔");
+//         setLoading(false);
+//         return;
+//       }
+
+//       const limit = getCurrentLimit();
+//       const { rows, hasMore: more } = await fetchCategoriesPaginated(
+//         tableName,
+//         pageNum,
+//         limit,
+//       );
+
+//       if (rows.length === 0 && pageNum === 1) {
+//         navigation.replace("ItemList", { tableName, label });
+//         setLoading(false);
+//         return;
+//       }
+//       const sorted = sortUrduData(rows);
+
+//       if (append) {
+//         setCategories((prev) => [...prev, ...sorted]);
+//       } else {
+//         setCategories(sorted);
+//       }
+
+//       setHasMore(more);
+//     } catch (e) {
+//       setErrorMsg("ڈیٹا لوڈ کرنے میں مسئلہ ہے");
+//       setHasMore(false);
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+
+//   useEffect(() => {
+//     setCategories([]);
+//     setPage(1);
+//     setHasMore(true);
+//     loadCategories(1);
+//   }, [tableName]);
+
+//   useEffect(() => {
+//     if (page > 1) {
+//       loadCategories(page, true);
+//     }
+//   }, [page]);
+
+//   useEffect(() => {
+//     navigation.setOptions({ title: label || "کیٹیگریز" });
+//   }, [navigation, label]);
+
+//   const handleCategoryPress = async (category) => {
+//     try {
+//       const subcats = await fetchSubcategories(tableName, category.id);
+//       if (subcats && subcats.length > 0) {
+//         navigation.navigate("SubCategoryList", {
+//           tableName,
+//           categoryId: category.id,
+//           categoryLabel: category.label,
+//         });
+//       } else {
+//         navigation.navigate("ItemList", {
+//           tableName,
+//           categoryId: category.id,
+//           categoryLabel: category.label,
+//         });
+//       }
+//     } catch (err) {
+//       navigation.navigate("ItemList", {
+//         tableName,
+//         categoryId: category.id,
+//       });
+//     }
+//   };
+
+//   const lastItemRef = useCallback(
+//     (node) => {
+//       if (!hasMore || loading) return;
+//       if (observer.current) observer.current.disconnect();
+
+//       observer.current = new IntersectionObserver((entries) => {
+//         if (entries[0].isIntersecting) {
+//           setPage((prev) => prev + 1);
+//         }
+//       });
+
+//       if (node) observer.current.observe(node);
+//     },
+//     [hasMore, loading],
+//   );
+
+//   if (loading && categories.length === 0) return <Loader />;
+//   if (errorMsg) return <ErrorMessage text={errorMsg} />;
+
+//   return (
+//     <CustomBackground>
+//       <FlatList
+//         data={categories}
+//         keyExtractor={(item, index) => item.id?.toString() || index.toString()}
+//         contentContainerStyle={{
+//           flexGrow: 1,
+//           justifyContent: "center",
+//           padding: 15,
+//         }}
+//         showsVerticalScrollIndicator={false}
+//         renderItem={({ item, index }) => (
+//           <TouchableOpacity
+//             style={mainStyles.carditems}
+//             onPress={() => handleCategoryPress(item)}
+//             ref={index === categories.length - 1 ? lastItemRef : null}
+//           >
+//             <Text style={mainStyles.carditemstext}>{item.label}</Text>
+//           </TouchableOpacity>
+//         )}
+//       />
+//     </CustomBackground>
+//   );
+// }
+
 import NetInfo from "@react-native-community/netinfo";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { useEffect, useState } from "react";
-import { FlatList, Platform, Text, TouchableOpacity } from "react-native";
+import {
+  ActivityIndicator,
+  Dimensions,
+  FlatList,
+  Text,
+  TouchableOpacity,
+} from "react-native";
+
 import CustomBackground from "../../../components/Background/Background";
 import { useData } from "../../../components/context/DataContext";
 import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
@@ -10,104 +182,128 @@ import { sortUrduData } from "../../../components/SortUrduData/SortUrduData";
 import { mainStyles } from "../../../style/globalcss";
 
 export default function CategoryList() {
-  const { tableName, label } = useRoute().params || {};
+  const route = useRoute();
   const navigation = useNavigation();
-  const { fetchCategories, fetchSubcategories } = useData();
+  const { tableName, label } = route.params || {};
+  const { fetchCategoriesPaginated, fetchSubcategories } = useData();
 
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [errorMsg, setErrorMsg] = useState("");
+  const [hasMore, setHasMore] = useState(true);
+  const [page, setPage] = useState(1);
 
-  useEffect(() => {
-    const load = async () => {
-      if (!tableName) return;
-      setLoading(true);
-      setErrorMsg("");
+  const getCurrentLimit = () => {
+    const { height } = Dimensions.get("window");
+    const headerHeight = 150;
+    const cardHeight = 70;
+    const available = height - headerHeight;
+    const items = Math.ceil(available / cardHeight);
+    return Math.max(items + 1, 10);
+  };
 
-      try {
-        const netState = await NetInfo.fetch();
-        if (!netState.isConnected) {
-          setErrorMsg("انٹرنیٹ کنکشن موجود نہیں ہے۔");
-          return;
-        }
+  const loadCategories = async (pageNum = 1, append = false) => {
+    if (!tableName) {
+      setErrorMsg("ٹیبل کی معلومات غائب ہے");
+      setLoading(false);
+      return;
+    }
 
-        const data = await fetchCategories(tableName);
-
-        if (!data || data.length === 0) {
-          setErrorMsg("کوئی مواد موجود نہیں ہے۔");
-          navigation.replace("ItemList", { tableName, label });
-          return;
-        }
-
-        const sorted = sortUrduData(
-          data.map((item) => ({ label: item.category })),
-        );
-
-        setCategories(sorted);
-      } catch (e) {
-        console.warn("کیٹیگریز فیل:", e);
+    try {
+      const netState = await NetInfo.fetch();
+      if (!netState.isConnected) {
         setErrorMsg("انٹرنیٹ کنکشن موجود نہیں ہے۔");
-      } finally {
         setLoading(false);
+        return;
       }
-    };
 
-    load();
-  }, [tableName, navigation, label]);
+      const limit = getCurrentLimit();
+      const { rows, hasMore: more } = await fetchCategoriesPaginated(
+        tableName,
+        pageNum,
+        limit,
+      );
+
+      if (rows.length === 0 && pageNum === 1) {
+        navigation.replace("ItemList", { tableName, label });
+        setLoading(false);
+        return;
+      }
+
+      const sorted = sortUrduData(rows);
+
+      if (append) {
+        setCategories((prev) => [...prev, ...sorted]);
+      } else {
+        setCategories(sorted);
+      }
+
+      setHasMore(more);
+    } catch (e) {
+      console.error(e);
+      setErrorMsg("ڈیٹا لوڈ کرنے میں مسئلہ ہے");
+      setHasMore(false);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    const titleText = label || "...";
+    setCategories([]);
+    setPage(1);
+    setHasMore(true);
+    loadCategories(1);
+  }, [tableName]);
 
-    navigation.setOptions({
-      headerTitle: () => (
-        <Text
-          style={{
-            color: "#6C472D",
-            fontFamily: "NotoNastaliqUrdu-Regular",
-            textAlign: "center",
-            fontSize: 14,
-            width: "100%",
-            maxWidth: Platform.OS === "android" ? "95%" : undefined,
-          }}
-        >
-          {titleText}
-        </Text>
-      ),
-    });
+  useEffect(() => {
+    if (page > 1) {
+      loadCategories(page, true);
+    }
+  }, [page]);
+
+  useEffect(() => {
+    navigation.setOptions({ title: label || "کیٹیگریز" });
   }, [navigation, label]);
 
-  const handleCategoryPress = async (categoryLabel) => {
+  const handleCategoryPress = async (category) => {
     try {
-      const subcats = await fetchSubcategories(tableName, categoryLabel);
-
+      const subcats = await fetchSubcategories(tableName, category.id);
       if (subcats && subcats.length > 0) {
         navigation.navigate("SubCategoryList", {
           tableName,
-          category: categoryLabel,
+          categoryId: category.id,
+          categoryLabel: category.label,
         });
       } else {
         navigation.navigate("ItemList", {
           tableName,
-          category: categoryLabel,
+          categoryId: category.id,
+          categoryLabel: category.label,
         });
       }
     } catch (err) {
-      console.warn("سب کیٹیگری چیک کرنے میں ایشو:", err);
       navigation.navigate("ItemList", {
         tableName,
-        category: categoryLabel,
+        categoryId: category.id,
       });
     }
   };
 
-  if (loading) return <Loader />;
+  const loadMore = () => {
+    if (!loading && hasMore) {
+      setPage((prev) => prev + 1);
+    }
+  };
+
+  if (loading && categories.length === 0) return <Loader />;
+
   if (errorMsg) return <ErrorMessage text={errorMsg} />;
 
   return (
     <CustomBackground>
       <FlatList
         data={categories}
-        keyExtractor={(item, index) => index.toString()}
+        keyExtractor={(item, index) => item.id?.toString() || index.toString()}
         contentContainerStyle={{
           flexGrow: 1,
           justifyContent: "center",
@@ -117,7 +313,7 @@ export default function CategoryList() {
         renderItem={({ item }) => (
           <TouchableOpacity
             style={mainStyles.carditems}
-            onPress={() => handleCategoryPress(item.label)}
+            onPress={() => handleCategoryPress(item)}
           >
             <Text
               style={mainStyles.carditemstext}
@@ -128,189 +324,18 @@ export default function CategoryList() {
             </Text>
           </TouchableOpacity>
         )}
+        onEndReached={loadMore}
+        onEndReachedThreshold={0.3}
+        ListFooterComponent={
+          loading ? (
+            <ActivityIndicator
+              size="large"
+              color="#6C472D"
+              style={{ marginVertical: 20 }}
+            />
+          ) : null
+        }
       />
     </CustomBackground>
   );
 }
-
-// import NetInfo from "@react-native-community/netinfo";
-// import { useNavigation, useRoute } from "@react-navigation/native";
-// import { useEffect, useState } from "react";
-// import { FlatList, Platform, Text, TouchableOpacity } from "react-native";
-
-// import CustomBackground from "../../../components/Background/Background";
-// import { useData } from "../../../components/context/DataContext";
-// import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
-// import Loader from "../../../components/Loader/Loader";
-// import { sortUrduData } from "../../../components/SortUrduData/SortUrduData";
-// import { mainStyles } from "../../../style/globalcss";
-
-// export default function CategoryList() {
-//   const { tableName, label } = useRoute().params || {};
-//   const navigation = useNavigation();
-
-//   const {
-//     fetchCategories,
-//     fetchSubcategories,
-//     translateText, // 👈 NEW
-//   } = useData();
-
-//   const [categories, setCategories] = useState([]);
-//   const [loading, setLoading] = useState(true);
-//   const [errorMsg, setErrorMsg] = useState("");
-
-//   // 🔹 Language states
-//   const [language, setLanguage] = useState("ur"); // ur | en
-//   const [translatedMap, setTranslatedMap] = useState({});
-//   const [translating, setTranslating] = useState(false);
-
-//   // 🔹 Load categories (Urdu only)
-//   useEffect(() => {
-//     const load = async () => {
-//       if (!tableName) return;
-
-//       setLoading(true);
-//       setErrorMsg("");
-
-//       try {
-//         const netState = await NetInfo.fetch();
-//         if (!netState.isConnected) {
-//           setErrorMsg("انٹرنیٹ کنکشن موجود نہیں ہے۔");
-//           return;
-//         }
-
-//         const data = await fetchCategories(tableName);
-
-//         if (!data || data.length === 0) {
-//           setErrorMsg("کوئی مواد موجود نہیں ہے۔");
-//           navigation.replace("ItemList", { tableName, label });
-//           return;
-//         }
-
-//         const sorted = sortUrduData(
-//           data.map((item) => ({ label: item.category })),
-//         );
-
-//         setCategories(sorted);
-//       } catch (e) {
-//         console.warn("کیٹیگریز فیل:", e);
-//         setErrorMsg("انٹرنیٹ کنکشن موجود نہیں ہے۔");
-//       } finally {
-//         setLoading(false);
-//       }
-//     };
-
-//     load();
-//   }, [tableName, navigation, label]);
-
-//   // 🔹 Toggle Urdu ↔ English
-//   const toggleLanguage = async () => {
-//     if (language === "ur") {
-//       setTranslating(true);
-
-//       const map = {};
-//       for (const item of categories) {
-//         map[item.label] = await translateText(item.label);
-//         console.log(item.label, "item.label");
-//       }
-
-//       setTranslatedMap(map);
-//       setLanguage("en");
-//       setTranslating(false);
-//     } else {
-//       setLanguage("ur");
-//     }
-//   };
-
-//   // 🔹 Header title + toggle button
-//   useEffect(() => {
-//     const titleText = label || "...";
-
-//     navigation.setOptions({
-//       headerTitle: () => (
-//         <Text
-//           style={{
-//             color: "#6C472D",
-//             fontFamily: "NotoNastaliqUrdu-Regular",
-//             textAlign: "center",
-//             fontSize: 14,
-//             width: "100%",
-//             maxWidth: Platform.OS === "android" ? "95%" : undefined,
-//           }}
-//         >
-//           {titleText}
-//         </Text>
-//       ),
-//       headerRight: () => (
-//         <TouchableOpacity
-//           onPress={toggleLanguage}
-//           style={{ paddingRight: 12 }}
-//           disabled={translating}
-//         >
-//           <Text style={{ color: "#6C472D", fontSize: 12 }}>
-//             {translating ? "..." : language === "ur" ? "EN" : "اردو"}
-//           </Text>
-//         </TouchableOpacity>
-//       ),
-//     });
-//   }, [navigation, label, language, translating, categories]);
-
-//   // 🔹 Category click
-//   const handleCategoryPress = async (categoryLabel) => {
-//     try {
-//       const subcats = await fetchSubcategories(tableName, categoryLabel);
-
-//       if (subcats && subcats.length > 0) {
-//         navigation.navigate("SubCategoryList", {
-//           tableName,
-//           category: categoryLabel,
-//         });
-//       } else {
-//         navigation.navigate("ItemList", {
-//           tableName,
-//           category: categoryLabel,
-//         });
-//       }
-//     } catch (err) {
-//       console.warn("سب کیٹیگری چیک کرنے میں ایشو:", err);
-//       navigation.navigate("ItemList", {
-//         tableName,
-//         category: categoryLabel,
-//       });
-//     }
-//   };
-
-//   if (loading) return <Loader />;
-//   if (errorMsg) return <ErrorMessage text={errorMsg} />;
-
-//   return (
-//     <CustomBackground>
-//       <FlatList
-//         data={categories}
-//         keyExtractor={(item, index) => index.toString()}
-//         contentContainerStyle={{
-//           flexGrow: 1,
-//           justifyContent: "center",
-//           padding: 15,
-//         }}
-//         showsVerticalScrollIndicator={false}
-//         renderItem={({ item }) => (
-//           <TouchableOpacity
-//             style={mainStyles.carditems}
-//             onPress={() => handleCategoryPress(item.label)}
-//           >
-//             <Text
-//               style={mainStyles.carditemstext}
-//               numberOfLines={1}
-//               ellipsizeMode="tail"
-//             >
-//               {language === "ur"
-//                 ? item.label
-//                 : translatedMap[item.label] || item.label}
-//             </Text>
-//           </TouchableOpacity>
-//         )}
-//       />
-//     </CustomBackground>
-//   );
-// }

@@ -8,13 +8,11 @@ import {
   Platform,
   Pressable,
   Text,
-  View
+  View,
 } from "react-native";
 
-const screenWidth = Dimensions.get('window').width;
-const width = Platform.OS === 'web'
-  ? Math.min(screenWidth, 1024)
-  : screenWidth;
+const screenWidth = Dimensions.get("window").width;
+const width = Platform.OS === "web" ? Math.min(screenWidth, 1024) : screenWidth;
 
 const AnimatedItem = ({
   item,
@@ -73,65 +71,52 @@ const AnimatedItem = ({
         resizeMode="contain"
         imageStyle={{ transform: [{ rotate: `${rotation}deg` }] }}
       >
-       
-
-<Pressable
-onPress={() => {
-  if (item.id === "1") {
-    navigation.navigate("CategoryList", {
-      tableName: "hamzadkaamal",
-      label:  "ہمزاد کا عمل"
-    });
-  }
-  else if (item.id === "3") {
-    navigation.navigate("CategoryList", {
-      tableName: "tawizatusmaniya",
-      label: "تعویذات عثمانیہ"
-    });
-  } 
-  else if (item.id === "4") {
-    navigation.navigate("CategoryList", {
-      tableName: "amliyatcourse",
-      label: "عملیات کورس"
-    });
-  } 
-  else if (item.id === "5") {
-    navigation.navigate("CategoryList", {
-      tableName: "rohanidokan",
-      label: "روحانی دکان"
-    });
-  } 
-  else if (item.id === "6") {
-    navigation.navigate("ItemList", {
-      tableName: "chehalkaaf",
-      label: "چہل کاف"
-    });
-  } 
-  else {
-    navigation.navigate(item.screen);
-  }
-}}
-style={{
-  alignItems: "center",
-  justifyContent: "center",
-  width: iconWidth * 0.85,
-  height: iconWidth * 0.78,
-  transform: [{ rotate: `${rotation}deg` }],
-  overflow: "hidden"
-}}
-
->
-
-
+        <Pressable
+          onPress={() => {
+            if (item.id === "1") {
+              navigation.navigate("CategoryList", {
+                tableName: "hamzadKaAmal",
+                label: "ہمزاد کا عمل",
+              });
+            } else if (item.id === "3") {
+              navigation.navigate("CategoryList", {
+                tableName: "tawizatusmaniya",
+                label: "تعویذات عثمانیہ",
+              });
+            } else if (item.id === "4") {
+              navigation.navigate("CategoryList", {
+                tableName: "amliyatcourse",
+                label: "عملیات کورس",
+              });
+            } else if (item.id === "5") {
+              navigation.navigate("CategoryList", {
+                tableName: "rohanidokan",
+                label: "روحانی دکان",
+              });
+            } else if (item.id === "6") {
+              navigation.navigate("ItemList", {
+                tableName: "chehalkaaf",
+                label: "چہل کاف",
+              });
+            } else {
+              navigation.navigate(item.screen);
+            }
+          }}
+          style={{
+            alignItems: "center",
+            justifyContent: "center",
+            width: iconWidth * 0.85,
+            height: iconWidth * 0.78,
+            transform: [{ rotate: `${rotation}deg` }],
+            overflow: "hidden",
+          }}
+        >
           <View
             style={{
-              width:"100%",
+              width: "100%",
               alignItems: "center",
               transform: [{ rotate: `${-rotation}deg` }],
               justifyContent: "center",
-             
-             
-          
             }}
           >
             <Image
@@ -141,21 +126,17 @@ style={{
                 height: iconWidth * 0.2,
               }}
             />
-          <Text
-  style={{
-    color: "#6C472D",
-    // marginTop:2,
-    // fontFamily: Platform.OS === "ios" ? undefined : "Jameel-Noori-Regular", 
-          //  fontFamily: "Jameel-Noori-Regular",
-   fontFamily: "NotoNastaliqUrdu-Regular",
-    fontSize: iconWidth * 0.12,
-    // fontSize:16,
-    textAlign: "center",
-    width: "100%",
-  }}
->
-  {item.text}
-</Text>
+            <Text
+              style={{
+                color: "#6C472D",
+                fontFamily: "NotoNastaliqUrdu-Regular",
+                fontSize: iconWidth * 0.12,
+                textAlign: "center",
+                width: "100%",
+              }}
+            >
+              {item.text}
+            </Text>
           </View>
         </Pressable>
       </ImageBackground>

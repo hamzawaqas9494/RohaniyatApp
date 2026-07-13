@@ -10,13 +10,12 @@ import {
   Pressable,
   StyleSheet,
   Text,
-  View
+  View,
 } from "react-native";
 import AnimatedItem from "../../../components/Animation/animation";
 import IdaraRohaniyat from "../../../components/link/link";
 import ShareApp from "../../../components/ShareApp/shareApp";
 import UniversalButton from "../../../components/UniversalButton/UniversalButton";
-
 
 const { height } = Dimensions.get("window");
 const screenWidth = Dimensions.get("window").width;
@@ -50,8 +49,8 @@ const DATA = [
   {
     id: "1",
     icon: require("../../../assets/images/istakhraIcon.png"),
-    screen:  "ہمزاد کا عمل",
-    text:  "ہمزاد کا عمل",
+    screen: "ہمزاد کا عمل",
+    text: "ہمزاد کا عمل",
     image: require("../../../assets/images/item1-bg-path.png"),
   },
   {
@@ -111,18 +110,21 @@ export default function HomeScreen() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowModal(true);
-    }, 2000); 
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
 
   const handleRateApp = () => {
     setShowModal(false);
-    const ANDROID_APP_URL = "https://play.google.com/store/apps/details?id=com.creationnext.idararohaniyat";
-    const IOS_APP_URL =    "itms-apps://itunes.apple.com/app/idYOUR_APP_ID";
+    const ANDROID_APP_URL =
+      "https://play.google.com/store/apps/details?id=com.creationnext.idararohaniyat";
+    const IOS_APP_URL = "itms-apps://itunes.apple.com/app/idYOUR_APP_ID";
 
     const url = Platform.OS === "ios" ? IOS_APP_URL : ANDROID_APP_URL;
-    Linking.openURL(url).catch((err) => console.error("Failed to open store URL", err));
+    Linking.openURL(url).catch((err) =>
+      console.error("Failed to open store URL", err),
+    );
   };
 
   return (
@@ -139,28 +141,40 @@ export default function HomeScreen() {
       >
         <View style={styles.modalOverlay}>
           <View style={styles.modalContent}>
-            <Pressable style={styles.closeButton} onPress={() => setShowModal(false)}>
-              <Text style={{color:"white", fontSize: 25 }}>✖</Text>
+            <Pressable
+              style={styles.closeButton}
+              onPress={() => setShowModal(false)}
+            >
+              <Text style={{ color: "white", fontSize: 25 }}>✖</Text>
             </Pressable>
             <Text style={styles.modalTitle}>ادارہ روحانیات</Text>
-            <Text style={styles.modalText}>ہماری ٹیم کی حوصلہ افزائی کے لیے</Text>
+            <Text style={styles.modalText}>
+              ہماری ٹیم کی حوصلہ افزائی کے لیے
+            </Text>
 
             <View style={{ flexDirection: "row", marginVertical: 5 }}>
               {[1, 2, 3, 4, 5].map((star) => (
-                <FontAwesome key={star} name="star" size={20} color="#FFD700" style={{ marginHorizontal: 2 }} />
+                <FontAwesome
+                  key={star}
+                  name="star"
+                  size={20}
+                  color="#FFD700"
+                  style={{ marginHorizontal: 2 }}
+                />
               ))}
             </View>
-            <Text style={styles.modalText}>اور اچھے اخلاق کا مظاہرہ کرتے ہوئے اپنے تاثرات لکھیں۔</Text>
-          <UniversalButton
-  icon="star"
-  text="RATE US NOW"
-  color="rgb(108, 71, 45)"
-  iconColor="#FFD700"
-  backgroundColor="#F0E6D2"
-  style={{ fontWeight: "bold" }}
-  onPress={handleRateApp}
-/>
-
+            <Text style={styles.modalText}>
+              اور اچھے اخلاق کا مظاہرہ کرتے ہوئے اپنے تاثرات لکھیں۔
+            </Text>
+            <UniversalButton
+              icon="star"
+              text="RATE US NOW"
+              color="rgb(108, 71, 45)"
+              iconColor="#FFD700"
+              backgroundColor="#F0E6D2"
+              style={{ fontWeight: "bold" }}
+              onPress={handleRateApp}
+            />
           </View>
         </View>
       </Modal>
@@ -228,11 +242,11 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 0,
   },
- modalOverlay: {
-  flex: 1,
-  justifyContent: "center",
-  alignItems: "center",
-},
+  modalOverlay: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
 
   modalContent: {
     backgroundColor: "rgb(108, 71, 45)",
@@ -247,19 +261,19 @@ const styles = StyleSheet.create({
     right: 5,
     zIndex: 1,
     borderWidth: 0,
-    outlineWidth: 0, 
+    outlineWidth: 0,
   },
   modalTitle: {
     // lineHeight:50,
     fontSize: 20,
     textAlign: "center",
-    color:"white",
-   fontFamily: "NotoNastaliqUrdu-Regular",
+    color: "white",
+    fontFamily: "NotoNastaliqUrdu-Regular",
   },
   modalText: {
     fontSize: 14,
     textAlign: "center",
-    color:"white",
-   fontFamily: "NotoNastaliqUrdu-Regular",
+    color: "white",
+    fontFamily: "NotoNastaliqUrdu-Regular",
   },
 });
