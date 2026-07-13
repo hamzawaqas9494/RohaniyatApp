@@ -219,8 +219,7 @@ export const customButton = StyleSheet.create({
   },
   text: {
     color: "rgba(255, 255, 255, 1)",
-    fontSize: 12,
-    fontFamily: "NotoNastaliqUrdu-Regular",
+    fontSize: 14,
   },
 });
 // --- Component Style End ---
