@@ -141,9 +141,7 @@ export default function HomeScreen() {
               style={styles.closeButton}
               onPress={() => setShowModal(false)}
             >
-              {/* <Text style={{ color: "white", fontSize: 25 }}>✖</Text> */}
               <Ionicons name="close" size={28} color="white" />
-              {/* <FontAwesome name="close" size={25} color="white" /> */}
             </Pressable>
             <Text style={styles.modalTitle}>ادارہ روحانیات</Text>
             <Text style={styles.modalText}>
@@ -262,7 +260,6 @@ const styles = StyleSheet.create({
     outlineWidth: 0,
   },
   modalTitle: {
-    // lineHeight:50,
     fontSize: 20,
     textAlign: "center",
     color: "white",
