@@ -1,5 +1,6 @@
 import { Platform, StyleSheet } from "react-native";
-///////////////////////////////////static pages Styles start/////////////////////////////
+
+// --- Static Pages Styles start ---
 export const mainStyles = StyleSheet.create({
   container: {
     flex: 1,
@@ -77,8 +78,9 @@ export const mainStyles = StyleSheet.create({
     textAlign: "center",
   },
 });
-//////////////////////////////////static pages Styles  end ////////////////////////////////////
-/////////////////////////////////component style start /////////////////////////////////
+// --- Static Pages Styles End ---
+
+// --- Component Style Start ---
 export const backGround = StyleSheet.create({
   background: {
     flex: 1,
@@ -221,8 +223,9 @@ export const customButton = StyleSheet.create({
     fontFamily: "NotoNastaliqUrdu-Regular",
   },
 });
-///////////////////////////////// component style end /////////////////////////////////
-// //////////////////////////////////// blog-detail-pages style start /////////////////////////////
+// --- Component Style End ---
+
+// --- Blog Detail Pages Style Start ---
 export const htmlStyles = StyleSheet.create({
   htmlBaseStyle: {
     whiteSpace: "pre-wrap",
@@ -241,7 +244,7 @@ export const htmlStyles = StyleSheet.create({
     resizeMode: "contain",
   },
 
-  // taypography start
+  // --- Typography Start ---
   p: {
     margin: 0,
     fontSize: 16,
@@ -338,8 +341,9 @@ export const htmlStyles = StyleSheet.create({
       textShadowRadius: 0.1,
     }),
   },
-  // taypography end
-  // custom tag style start
+  // --- Typography End ---
+
+  // --- Custom Tag Style Start ---
   var: {
     color: "red",
     fontFamily: "ScheherazadeNew-Bold",
@@ -366,5 +370,6 @@ export const htmlStyles = StyleSheet.create({
     alignItems: Platform.OS === "web" ? "flex-end" : "flex-start",
   },
 });
-// custom tag style end
-//// /////////////////////////////////// blog-detail-pages style end ////////////////////
+// --- Custom Tag Style End ---
+
+// --- Blog Detail Pages Style End ---
