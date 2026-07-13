@@ -11,7 +11,7 @@ const DATA = [
   {
     id: "2",
     screen: "Mareez-Ke-Liye-Rohani-Ilaj",
-    text: "سائل/مریض کے لیے روحانی علاج",
+    title: "مریض کے لیے روحانی علاج",
   },
 ];
 export default function RohaniIlaj() {
