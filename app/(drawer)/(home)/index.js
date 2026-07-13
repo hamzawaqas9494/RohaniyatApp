@@ -119,7 +119,8 @@ export default function HomeScreen() {
     setShowModal(false);
     const ANDROID_APP_URL =
       "https://play.google.com/store/apps/details?id=com.creationnext.idararohaniyat";
-    const IOS_APP_URL = "itms-apps://itunes.apple.com/app/idYOUR_APP_ID";
+    const IOS_APP_URL =
+      "https://apps.apple.com/us/app/idararohaniyat/id6759970886";
 
     const url = Platform.OS === "ios" ? IOS_APP_URL : ANDROID_APP_URL;
     Linking.openURL(url).catch((err) =>
