@@ -1,4 +1,4 @@
-import { FontAwesome } from "@expo/vector-icons";
+import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import * as Linking from "expo-linking";
 import { useRef, useState } from "react";
 import {
@@ -61,7 +61,7 @@ const AppMenuDropdown = () => {
     <View style={[shareApp.container, { maxWidth: isWeb ? 600 : "100%" }]}>
       <Pressable onPress={toggleDropdown} style={shareApp.dotButton}>
         {visible ? (
-          <FontAwesome name="close" size={24} color="#6C472D" />
+          <Ionicons name="close" size={28} color="#6C472D" />
         ) : (
           <FontAwesome name="ellipsis-v" size={24} color="#6C472D" />
         )}

@@ -1,4 +1,4 @@
-import { FontAwesome } from "@expo/vector-icons";
+import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import { useEffect, useState } from "react";
 import {
   Dimensions,
@@ -49,7 +49,6 @@ const DATA = [
   {
     id: "1",
     icon: require("../../../assets/images/istakhraIcon.png"),
-    screen: "ہمزاد کا عمل",
     text: "ہمزاد کا عمل",
     image: require("../../../assets/images/item1-bg-path.png"),
   },
@@ -63,28 +62,24 @@ const DATA = [
   {
     id: "3",
     icon: require("../../../assets/images/tawizatusmaniyaIcon.png"),
-    screen: "تعویذات عثمانیہ",
     text: "تعویذات عثمانیہ",
     image: require("../../../assets/images/item1-bg-path.png"),
   },
   {
     id: "4",
     icon: require("../../../assets/images/bookicon.png"),
-    screen: "عملیات کورسز تفصیلات",
     text: "عملیات کورس",
     image: require("../../../assets/images/item2-bg-path.png"),
   },
   {
     id: "5",
     icon: require("../../../assets/images/rohanidokanIcon.png"),
-    screen: "روحانی دکان",
     text: "روحانی دکان",
     image: require("../../../assets/images/item1-bg-path.png"),
   },
   {
     id: "6",
     icon: require("../../../assets/images/bookicon.png"),
-    screen: "چہل کاف",
     text: "چہل کاف",
     image: require("../../../assets/images/item2-bg-path.png"),
   },
@@ -119,7 +114,8 @@ export default function HomeScreen() {
     setShowModal(false);
     const ANDROID_APP_URL =
       "https://play.google.com/store/apps/details?id=com.creationnext.idararohaniyat";
-    const IOS_APP_URL = "itms-apps://itunes.apple.com/app/idYOUR_APP_ID";
+    const IOS_APP_URL =
+      "https://apps.apple.com/us/app/idararohaniyat/id6759970886";
 
     const url = Platform.OS === "ios" ? IOS_APP_URL : ANDROID_APP_URL;
     Linking.openURL(url).catch((err) =>
@@ -145,7 +141,7 @@ export default function HomeScreen() {
               style={styles.closeButton}
               onPress={() => setShowModal(false)}
             >
-              <Text style={{ color: "white", fontSize: 25 }}>✖</Text>
+              <Ionicons name="close" size={28} color="white" />
             </Pressable>
             <Text style={styles.modalTitle}>ادارہ روحانیات</Text>
             <Text style={styles.modalText}>
@@ -257,14 +253,13 @@ const styles = StyleSheet.create({
   },
   closeButton: {
     position: "absolute",
-    top: 0,
+    top: 5,
     right: 5,
     zIndex: 1,
     borderWidth: 0,
     outlineWidth: 0,
   },
   modalTitle: {
-    // lineHeight:50,
     fontSize: 20,
     textAlign: "center",
     color: "white",
