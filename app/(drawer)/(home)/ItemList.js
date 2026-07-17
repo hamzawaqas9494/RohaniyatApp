@@ -40,7 +40,7 @@ export default function ItemList() {
     "tawizatusmaniya",
     "rohanidokan",
     "amliyatcourse",
-    "hamzadkaamal",
+    "hamzadKaAmal",
   ].includes(tableName);
 
   const getNumColumns = () => {
