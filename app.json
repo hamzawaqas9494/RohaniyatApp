@@ -25,11 +25,7 @@
       "package": "com.creationnext.idararohaniyat",
       "usesCleartextTraffic": true,
       "versionCode": 1,
-      "permissions": [
-        "INTERNET",
-        "ACCESS_FINE_LOCATION",
-        "CAMERA"
-      ],
+      "permissions": ["INTERNET", "ACCESS_FINE_LOCATION", "CAMERA"],
       "icon": "./assets/images/app-icon.png",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/app-icon.png",
@@ -52,7 +48,13 @@
     "owner": "rohaniyat",
     "plugins": [
       "expo-router",
-      "expo-web-browser"
+      "expo-web-browser",
+      [
+        "expo-localization",
+        {
+          "locales": ["ur", "ar"]
+        }
+      ]
     ]
   }
 }

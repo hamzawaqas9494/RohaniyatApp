@@ -53,7 +53,7 @@ export const mainStyles = StyleSheet.create({
   carditems: {
     width: "100%",
     backgroundColor: "#E4DAC1",
-    paddingVertical: 5,
+    // paddingVertical: 5,
     marginTop: 5,
     marginBottom: 5,
     borderRadius: 5,
@@ -63,11 +63,17 @@ export const mainStyles = StyleSheet.create({
   },
 
   carditemstext: {
+    width: "100%",
+    // backgroundColor: "red",
+    // paddingLeft: 20,
+    // paddingRight: 20,
+    // textAlignVertical: "center",
+    textAlign: "center",
     fontFamily: "NotoNastaliqUrdu-Regular",
     color: "#6C472D",
     flexWrap: "wrap",
-    paddingBottom: Platform.OS === "web" ? 5 : 0,
-    lineHeight: Platform.OS === "android" ? undefined : 50,
+    // paddingBottom: Platform.OS === "web" ? 5 : 0,
+    lineHeight: Platform.OS === "android" ? 60 : 60,
   },
 
   noRecordText: {
