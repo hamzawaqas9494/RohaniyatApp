@@ -1,3 +1,119 @@
+// import { FontAwesome } from "@expo/vector-icons";
+// import { DrawerToggleButton } from "@react-navigation/drawer";
+// import { useFonts } from "expo-font";
+// import { Drawer } from "expo-router/drawer";
+// import * as SplashScreen from "expo-splash-screen";
+// import { useEffect, useLayoutEffect, useState } from "react";
+// import { Platform } from "react-native";
+// import { GestureHandlerRootView } from "react-native-gesture-handler";
+// import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+// import { DataProvider } from "../../components/context/DataContext";
+// import SplashScreenComponent from "../../components/SplashScreen/splash";
+
+// SplashScreen.preventAutoHideAsync();
+
+// export default function Layout() {
+//   const [fontsLoaded] = useFonts({
+//     "ScheherazadeNew-Bold": require("../../assets/fonts/ScheherazadeNew-Bold.ttf"), // For Arabic Ayaat Text
+//     "NotoNastaliqUrdu-Regular": require("../../assets/fonts/NotoNastaliqUrdu-Regular.ttf"), // For overall Text
+//     "NotoNastaliqUrdu-Bold": require("../../assets/fonts/NotoNastaliqUrdu-Bold.ttf"), // For Bold Text
+//   });
+
+//   const [isSplashVisible, setSplashVisible] = useState(true);
+
+//   useLayoutEffect(() => {
+//     const hide = async () => {
+//       await SplashScreen.hideAsync();
+//     };
+//     hide();
+//   }, []);
+
+//   useEffect(() => {
+//     if (fontsLoaded) {
+//       const timer = setTimeout(() => {
+//         setSplashVisible(false);
+//       }, 2000);
+//       return () => clearTimeout(timer);
+//     }
+//   }, [fontsLoaded]);
+
+//   if (!fontsLoaded || isSplashVisible) {
+//     return <SplashScreenComponent />;
+//   }
+
+//   return (
+//     <GestureHandlerRootView style={{ flex: 1 }}>
+//       <SafeAreaProvider>
+//         <DataProvider>
+//           <SafeAreaView style={{ flex: 1 }} edges={["left", "right", "bottom"]}>
+//             <Drawer
+//               screenOptions={{
+//                 headerShown: false,
+//                 drawerStyle: {
+//                   backgroundColor: "#E4DAC1",
+//                   width: 280,
+//                 },
+//                 drawerActiveTintColor: "#6C472D",
+//                 drawerInactiveTintColor: "black",
+//                 drawerLabelStyle: {
+//                   fontSize: 11,
+//                   fontFamily: "NotoNastaliqUrdu-Regular",
+//                 },
+//                 gestureEnabled: true,
+//                 drawerType: "front",
+//                 sceneContainerStyle: { backgroundColor: "#E4DAC1" },
+//                 overlayColor: "rgba(0, 0, 0, 0.4)",
+//               }}
+//             >
+//               <Drawer.Screen
+//                 name="(home)"
+//                 options={{
+//                   title: "ادارہ روحانیت",
+//                   drawerIcon: ({ color, size }) => (
+//                     <FontAwesome name="home" size={size} color={color} />
+//                   ),
+//                 }}
+//               />
+//               <Drawer.Screen
+//                 name="Humari-Pechan"
+//                 options={{
+//                   title: "ہماری پہچان",
+//                   headerShown: true,
+//                   headerLeft: () => null,
+//                   headerRight: () => <DrawerToggleButton tintColor="#6C472D" />,
+//                   headerStyle: {
+//                     height: Platform.select({
+//                       web: 56,
+//                       android: 90,
+//                       ios: undefined,
+//                     }),
+//                     backgroundColor: "#E4DAC1",
+//                   },
+//                   headerTitleStyle: {
+//                     textAlignVertical: "center",
+//                     fontFamily: "NotoNastaliqUrdu-Regular",
+//                     fontSize: 14,
+//                     color: "#6C472D",
+//                     overflow: "visible",
+//                   },
+//                   headerTitleAlign: "center",
+//                   drawerIcon: ({ color, size }) => (
+//                     <FontAwesome
+//                       name="address-card"
+//                       size={size}
+//                       color={color}
+//                     />
+//                   ),
+//                 }}
+//               />
+//             </Drawer>
+//           </SafeAreaView>
+//         </DataProvider>
+//       </SafeAreaProvider>
+//     </GestureHandlerRootView>
+//   );
+// }
+
 import { FontAwesome } from "@expo/vector-icons";
 import { DrawerToggleButton } from "@react-navigation/drawer";
 import { useFonts } from "expo-font";
@@ -7,7 +123,10 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import { Platform } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+
 import { DataProvider } from "../../components/context/DataContext";
+import { NotificationProvider } from "../../components/Notifications/NotificationContext";
+import NotificationSetup from "../../components/Notifications/NotificationSetup";
 import SplashScreenComponent from "../../components/SplashScreen/splash";
 
 SplashScreen.preventAutoHideAsync();
@@ -45,69 +164,79 @@ export default function Layout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <DataProvider>
-          <SafeAreaView style={{ flex: 1 }} edges={["left", "right", "bottom"]}>
-            <Drawer
-              screenOptions={{
-                headerShown: false,
-                drawerStyle: {
-                  backgroundColor: "#E4DAC1",
-                  width: 280,
-                },
-                drawerActiveTintColor: "#6C472D",
-                drawerInactiveTintColor: "black",
-                drawerLabelStyle: {
-                  fontSize: 11,
-                  fontFamily: "NotoNastaliqUrdu-Regular",
-                },
-                gestureEnabled: true,
-                drawerType: "front",
-                sceneContainerStyle: { backgroundColor: "#E4DAC1" },
-                overlayColor: "rgba(0, 0, 0, 0.4)",
-              }}
+          <NotificationProvider>
+            <NotificationSetup />
+
+            <SafeAreaView
+              style={{ flex: 1 }}
+              edges={["left", "right", "bottom"]}
             >
-              <Drawer.Screen
-                name="(home)"
-                options={{
-                  title: "ادارہ روحانیت",
-                  drawerIcon: ({ color, size }) => (
-                    <FontAwesome name="home" size={size} color={color} />
-                  ),
-                }}
-              />
-              <Drawer.Screen
-                name="Humari-Pechan"
-                options={{
-                  title: "ہماری پہچان",
-                  headerShown: true,
-                  headerLeft: () => null,
-                  headerRight: () => <DrawerToggleButton tintColor="#6C472D" />,
-                  headerStyle: {
-                    height: Platform.select({
-                      web: 56,
-                      android: 90,
-                      ios: undefined,
-                    }),
+              <Drawer
+                screenOptions={{
+                  headerShown: false,
+                  drawerStyle: {
                     backgroundColor: "#E4DAC1",
+                    width: 280,
                   },
-                  headerTitleStyle: {
-                    textAlignVertical: "center",
+                  drawerActiveTintColor: "#6C472D",
+                  drawerInactiveTintColor: "black",
+                  drawerLabelStyle: {
+                    fontSize: 11,
                     fontFamily: "NotoNastaliqUrdu-Regular",
-                    fontSize: 14,
-                    color: "#6C472D",
-                    overflow: "visible",
                   },
-                  headerTitleAlign: "center",
-                  drawerIcon: ({ color, size }) => (
-                    <FontAwesome
-                      name="address-card"
-                      size={size}
-                      color={color}
-                    />
-                  ),
+                  gestureEnabled: true,
+                  drawerType: "front",
+                  sceneContainerStyle: { backgroundColor: "#E4DAC1" },
+                  overlayColor: "rgba(0, 0, 0, 0.4)",
                 }}
-              />
-            </Drawer>
-          </SafeAreaView>
+              >
+                <Drawer.Screen
+                  name="(home)"
+                  options={{
+                    title: "ادارہ روحانیت",
+                    drawerIcon: ({ color, size }) => (
+                      <FontAwesome name="home" size={size} color={color} />
+                    ),
+                  }}
+                />
+
+                <Drawer.Screen
+                  name="Humari-Pechan"
+                  options={{
+                    title: "ہماری پہچان",
+                    headerShown: true,
+                    headerLeft: () => null,
+                    headerRight: () => (
+                      <DrawerToggleButton tintColor="#6C472D" />
+                    ),
+                    headerStyle: {
+                      height: Platform.select({
+                        web: 56,
+                        android: 90,
+                        ios: undefined,
+                      }),
+                      backgroundColor: "#E4DAC1",
+                    },
+                    headerTitleStyle: {
+                      textAlignVertical: "center",
+                      fontFamily: "NotoNastaliqUrdu-Regular",
+                      fontSize: 14,
+                      color: "#6C472D",
+                      overflow: "visible",
+                    },
+                    headerTitleAlign: "center",
+                    drawerIcon: ({ color, size }) => (
+                      <FontAwesome
+                        name="address-card"
+                        size={size}
+                        color={color}
+                      />
+                    ),
+                  }}
+                />
+              </Drawer>
+            </SafeAreaView>
+          </NotificationProvider>
         </DataProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>
